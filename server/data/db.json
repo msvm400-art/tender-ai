@@ -1,0 +1,4338 @@
+{
+  "users": [
+    {
+      "id": "u-1",
+      "email": "demo@tenderai.in",
+      "passwordHash": "demo123",
+      "name": "Ramesh Sharma",
+      "phone": "+91 98765 43210",
+      "plan": "STARTER",
+      "role": "ADMIN",
+      "emailVerified": true,
+      "verificationToken": null,
+      "resetPasswordToken": null,
+      "resetPasswordExpires": null,
+      "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJ1LTEiLCJpYXQiOjE3ODMxNzUyNTgsImV4cCI6MTc4Mzc4MDA1OH0.j48AjVYPjOVCo1J4whsWOOLHWJErLuHyqzP2rQGavoA",
+      "organizationId": null,
+      "trialDaysElapsed": 1,
+      "isTrialActive": true,
+      "trialStartDate": "2026-07-04T14:18:59.067Z",
+      "createdAt": "2026-07-04T14:18:59.068Z",
+      "updatedAt": "2026-07-04T14:18:59.068Z"
+    }
+  ],
+  "companyProfiles": [
+    {
+      "id": "cp-1",
+      "userId": "u-1",
+      "companyName": "Sharma Construction & Infra, Pvt Ltd",
+      "registrationNumber": "U45201BR2015PTC024501",
+      "gstNumber": "10AAAXX0000Z1Z5",
+      "panNumber": "AAACX1234F",
+      "annualTurnover": 5.2,
+      "yearsOfExperience": 8,
+      "categories": [
+        "Construction",
+        "Civil",
+        "Roads",
+        "Electrical"
+      ],
+      "certifications": [
+        "ISO 9001",
+        "MSME (Udyam)",
+        "Class A Contractor License"
+      ],
+      "states": [
+        "Bihar",
+        "Jharkhand",
+        "Uttar Pradesh"
+      ],
+      "msmeRegistered": true,
+      "employeeCount": 45,
+      "pastProjects": [
+        {
+          "name": "Construction of Bypass Road, Patna Outer Ring",
+          "value": 3.2,
+          "client": "Bihar PWD",
+          "year": 2024
+        },
+        {
+          "name": "Electrical Layout and Substations for Ara Complex",
+          "value": 1.1,
+          "client": "Power Grid Corp Bihar",
+          "year": 2023
+        },
+        {
+          "name": "Sewerage Line Construction and Excavation, Muzaffarpur",
+          "value": 0.85,
+          "client": "Muzaffarpur Municipal Corp",
+          "year": 2022
+        }
+      ],
+      "isActive": true,
+      "createdAt": "2026-07-04T14:18:59.068Z",
+      "updatedAt": "2026-07-04T14:18:59.068Z"
+    },
+    {
+      "id": "cp-partner-turnover",
+      "userId": "u-partner-1",
+      "companyName": "Vardhan Infrastructure & Holdings Ltd",
+      "registrationNumber": "U45201MH2012PLC230981",
+      "gstNumber": "27AAACV4891M1Z4",
+      "panNumber": "AAACV4891M",
+      "annualTurnover": 25,
+      "yearsOfExperience": 12,
+      "categories": [
+        "Construction",
+        "Civil",
+        "Roads",
+        "Mega Projects"
+      ],
+      "certifications": [
+        "ISO 9001",
+        "Class A civil License",
+        "Class A Electrical License"
+      ],
+      "states": [
+        "Bihar",
+        "Jharkhand",
+        "Delhi",
+        "Maharashtra"
+      ],
+      "msmeRegistered": false,
+      "employeeCount": 150,
+      "pastProjects": [
+        {
+          "name": "NH Road Widening Phase III",
+          "value": 18.5,
+          "client": "NHAI",
+          "year": 2024
+        },
+        {
+          "name": "Government Medical College Complex",
+          "value": 14,
+          "client": "CPWD",
+          "year": 2023
+        }
+      ],
+      "isActive": true,
+      "createdAt": "2026-07-04T14:18:59.068Z",
+      "updatedAt": "2026-07-04T14:18:59.068Z"
+    },
+    {
+      "id": "cp-partner-tech",
+      "userId": "u-partner-2",
+      "companyName": "Apex Green Energy Technologies",
+      "registrationNumber": "U40106UP2018PTC105432",
+      "gstNumber": "09AAACA3321A1Za",
+      "panNumber": "AAACA3321A",
+      "annualTurnover": 6.5,
+      "yearsOfExperience": 5,
+      "categories": [
+        "Solar",
+        "Electrical",
+        "Technology",
+        "Construction"
+      ],
+      "certifications": [
+        "ISO 14001",
+        "PESO Safety License",
+        "Class A Electrical License",
+        "MNRE Empaneled"
+      ],
+      "states": [
+        "Bihar",
+        "Jharkhand",
+        "Uttar Pradesh",
+        "West Bengal"
+      ],
+      "msmeRegistered": true,
+      "employeeCount": 30,
+      "pastProjects": [
+        {
+          "name": "100kW Rooftop Solar Power Plant Installation",
+          "value": 0.95,
+          "client": "BREDA",
+          "year": 2023
+        },
+        {
+          "name": "Industrial Electrical Substations Array",
+          "value": 2.1,
+          "client": "IOCL",
+          "year": 2024
+        }
+      ],
+      "isActive": true,
+      "createdAt": "2026-07-04T14:18:59.069Z",
+      "updatedAt": "2026-07-04T14:18:59.069Z"
+    },
+    {
+      "id": "cp-partner-local",
+      "userId": "u-partner-3",
+      "companyName": "Mithila Civil Associates",
+      "registrationNumber": "U45203BR2016PTC031204",
+      "gstNumber": "10AAACM7741R2ZC",
+      "panNumber": "AAACM7741R",
+      "annualTurnover": 3,
+      "yearsOfExperience": 10,
+      "categories": [
+        "Construction",
+        "Roads",
+        "Civil"
+      ],
+      "certifications": [
+        "Class A Contractor License",
+        "ISO 9001"
+      ],
+      "states": [
+        "Bihar"
+      ],
+      "msmeRegistered": true,
+      "employeeCount": 20,
+      "pastProjects": [
+        {
+          "name": "District Hospital PWD Ward Construction",
+          "value": 1.2,
+          "client": "Bihar Health Dept",
+          "year": 2023
+        }
+      ],
+      "isActive": true,
+      "createdAt": "2026-07-04T14:18:59.069Z",
+      "updatedAt": "2026-07-04T14:18:59.069Z"
+    }
+  ],
+  "tenders": [
+    {
+      "id": "t-1",
+      "externalId": "CPPP/2026/BR/001",
+      "sourcePortal": "CPPP",
+      "title": "Construction of Academic Block and Hostel Building at IIT Patna",
+      "department": "Central Public Works Department (CPWD)",
+      "state": "Bihar",
+      "category": "Construction",
+      "subCategory": "Civil Work",
+      "tenderValue": 8.5,
+      "emdAmount": 17,
+      "publishedDate": "2026-05-25T10:00:00Z",
+      "bidSubmissionDeadline": "2026-06-25T15:00:00Z",
+      "openingDate": "2026-06-26T15:30:00Z",
+      "workDescription": "Comprehensive construction of academic block (G+4) and boys hostel building (G+3) with allied internal/external electrification, water supply, sewage treatment plant, and landscape developments at IIT Patna permanent campus.",
+      "eligibilityCriteria": {
+        "minTurnover": 4,
+        "minExperience": 5,
+        "requiredCertifications": [
+          "Class A Contractor License",
+          "ISO 9001"
+        ],
+        "msmeOnly": false,
+        "statesAllowed": [
+          "Bihar",
+          "Jharkhand",
+          "Uttar Pradesh"
+        ]
+      },
+      "technicalSpecs": "Reinforced cement concrete structure, AAC block masonry, high-end vitrified tile flooring, smart fire security layout, aluminum glazed windows, and structured cabling for IT networks.",
+      "documents": [
+        {
+          "name": "Tender Notice.pdf",
+          "url": "#",
+          "type": "NOTICE"
+        },
+        {
+          "name": "SBD_Civil_Construction.pdf",
+          "url": "#",
+          "type": "BOQ"
+        },
+        {
+          "name": "GCC_CPWD_2024.pdf",
+          "url": "#",
+          "type": "GENERAL_CONDITIONS"
+        }
+      ],
+      "rawText": "RE-TENDER NOTICE. Central Public Works Department CPWD invites bids for academics block at IIT Patna. Total project budget cost Estimate: Rs. 8,50,00,000/- (Rupees Eight Crores Fifty Lakhs Only). EMD: Rs. 17 Lakhs. The bidder must have completed at least one single road/building civil work of Rs. 4 Crore in last 5 years. Average financial turnover in last 3 financial years must be at least 4.0 Crore. Registration in Class-A under civil category is mandatory. ISO 9001 certification highly preferred.",
+      "status": "ACTIVE",
+      "location": "Patna, Bihar",
+      "pineconeVectorId": null
+    },
+    {
+      "id": "t-2",
+      "externalId": "GEM/2026/B/88122",
+      "sourcePortal": "GEM",
+      "title": "Supply and Commissioning of 200kW Grid-Connected Solar Rooftop Panels",
+      "department": "Bihar Renewable Energy Development Agency (BREDA)",
+      "state": "Bihar",
+      "category": "Electrical",
+      "subCategory": "Solar Systems",
+      "tenderValue": 1.2,
+      "emdAmount": 2.4,
+      "publishedDate": "2026-06-01T09:00:00Z",
+      "bidSubmissionDeadline": "2026-06-15T17:00:00Z",
+      "openingDate": "2026-06-16T11:00:00Z",
+      "workDescription": "Supply, installing testing and commercial commissioning of 200kW grid-interactive SPV power plant at government medical college, Bettiah, Bihar including 5 years of post-commissioning maintenance.",
+      "eligibilityCriteria": {
+        "minTurnover": 0.8,
+        "minExperience": 3,
+        "requiredCertifications": [
+          "MSME (Udyam)",
+          "ISO 9001",
+          "BREDA Empanelment"
+        ],
+        "msmeOnly": true,
+        "statesAllowed": [
+          "Bihar"
+        ]
+      },
+      "technicalSpecs": "Poly-crystalline Tier-1 panels, smart net metering array, hot-dip galvanized mounting structures capable of withstanding 150km/h wind speeds.",
+      "documents": [
+        {
+          "name": "GeM_Bid_ItemSpecification.xlsx",
+          "url": "#",
+          "type": "NOTICE"
+        },
+        {
+          "name": "SolarSpecsBREDA.pdf",
+          "url": "#",
+          "type": "TECHNICAL"
+        }
+      ],
+      "rawText": "BREDA Tender Notification on GeM. Solar PV Installation 200 kW Bettiah Medical Hospital. Estimated Tender Cost: INR 1,20,00,000 (INR One Crore Twenty Lakhs). EMD exemption applies for MSME-registered agencies. Required experience is minimum 3 years in Solar operations. Annual turnover must be above 80 Lakhs. Valid BREDA registration as Empanelled A-class solar agency or equivalent national empanelment required.",
+      "status": "ACTIVE",
+      "location": "Bettiah, Bihar",
+      "pineconeVectorId": null
+    },
+    {
+      "id": "t-3",
+      "externalId": "STATE/BH/PWD/26/4",
+      "sourcePortal": "STATE_PWD",
+      "title": "Widening and Amelioration Works of Hajipur-Mahua Roadway Section",
+      "department": "Bihar Road Construction Department (RCD)",
+      "state": "Bihar",
+      "category": "Construction",
+      "subCategory": "Road Work",
+      "tenderValue": 4.8,
+      "emdAmount": 9.6,
+      "publishedDate": "2026-05-30T11:00:00Z",
+      "bidSubmissionDeadline": "2026-06-10T14:00:00Z",
+      "openingDate": "2026-06-11T14:30:00Z",
+      "workDescription": "Widening and overlaying of 6.2 km stretch of road including earthwork, granular sub-base, wet mix macadam, prime coat, tack coat, and dense bituminous macadam.",
+      "eligibilityCriteria": {
+        "minTurnover": 2,
+        "minExperience": 4,
+        "requiredCertifications": [
+          "Class A Contractor License",
+          "GST registration"
+        ],
+        "msmeOnly": false,
+        "statesAllowed": [
+          "Bihar",
+          "Jharkhand"
+        ]
+      },
+      "technicalSpecs": "Standard highway bituminous concrete layer, drainage construction, and retroreflective safety sign boards.",
+      "documents": [
+        {
+          "name": "RoadTender_Hajipur_Mahua.pdf",
+          "url": "#",
+          "type": "DETAILED_NOTICE"
+        }
+      ],
+      "rawText": "Office of Executive Engineer, Hajipur Division RCD. Tender for Roadway Widening Mahua stretch. Total value: Rs 4,80,00,000. Under Class-A license categories. EMD of Rs 9,60,000 is to be submitted. Required average turnover of last 3 preceding years must exceed Rs 2.0 Crores. MSME incentives applicable as per state policy guidelines.",
+      "status": "ACTIVE",
+      "location": "Hajipur, Bihar",
+      "pineconeVectorId": null
+    },
+    {
+      "id": "t-4",
+      "externalId": "RAIL/ECR/ENGG/2361",
+      "sourcePortal": "RAILWAYS",
+      "title": "Platform Upgradation and Shed Extension at Muzaffarpur Junction Railway Station",
+      "department": "East Central Railway (ECR)",
+      "state": "Bihar",
+      "category": "Construction",
+      "subCategory": "Civil Structure",
+      "tenderValue": 2.1,
+      "emdAmount": 4.2,
+      "publishedDate": "2026-06-02T12:00:00Z",
+      "bidSubmissionDeadline": "2026-06-28T15:00:00Z",
+      "openingDate": "2026-06-28T16:00:00Z",
+      "workDescription": "Civil engineering upgradation works of platform surfaces 2 and 3, installation of steel framing structures for extended passenger weather sheds, and tactile pathway tile embedding.",
+      "eligibilityCriteria": {
+        "minTurnover": 1.5,
+        "minExperience": 5,
+        "requiredCertifications": [
+          "Indian Railways Registered Vendor",
+          "Class A Civil"
+        ],
+        "msmeOnly": false,
+        "statesAllowed": []
+      },
+      "technicalSpecs": "IS-2062 Grade Steel truss, corrugated aluminum sheeting, high-durability polymer concrete.",
+      "documents": [
+        {
+          "name": "RailwaysShedDraft.pdf",
+          "url": "#",
+          "type": "NOTICE"
+        }
+      ],
+      "rawText": "Muzaffarpur Junction Platform Refurbishment under ECR Hajipur division. Estimated budget 2.1 Crore. Experience of completing platform shed structures is mandatory. Registered Railway contractor license is required. Annual turnover requirement is 1.5 Crores or high-value similar project track records.",
+      "status": "ACTIVE",
+      "location": "Muzaffarpur, Bihar",
+      "pineconeVectorId": null
+    },
+    {
+      "id": "t-5",
+      "externalId": "NHAI/HQ/2026/667",
+      "sourcePortal": "NHAI",
+      "title": "Construction of Median Barriers and Solar Powered Blinkers on NH-57 Stretch",
+      "department": "National Highways Authority of India (NHAI)",
+      "state": "Bihar",
+      "category": "Construction",
+      "subCategory": "Traffic Safety",
+      "tenderValue": 5.4,
+      "emdAmount": 11,
+      "publishedDate": "2026-05-28T16:00:00Z",
+      "bidSubmissionDeadline": "2026-06-20T12:00:00Z",
+      "openingDate": "2026-06-21T14:00:00Z",
+      "workDescription": "Implementation of safety measures including Pre-cast RCC New Jersey crash barriers, retroreflective thermoplastic road markings, and installation of solar intelligent blinker lights over 25km stretch of NH-57.",
+      "eligibilityCriteria": {
+        "minTurnover": 3,
+        "minExperience": 6,
+        "requiredCertifications": [
+          "Class A Civil License",
+          "ISO 14001 Environment"
+        ],
+        "msmeOnly": false,
+        "statesAllowed": []
+      },
+      "technicalSpecs": "Crash barrier dynamic load resistance of 100kN, high durability polycarbonate blinkers.",
+      "documents": [
+        {
+          "name": "NHAI_Specs_CrashBarriers.pdf",
+          "url": "#",
+          "type": "SPECS"
+        }
+      ],
+      "rawText": "National Highways Authority of India HQ. Bid submission invitation. NH57 safety barrier precast sections. Value Rs 5.4 Crores. EMD of Rs 11 Lakhs. Required Class-A license. Turnovers of 3.0 Cr required. Experience is minimum 6 years of roadway safety or civil infrastructure projects.",
+      "status": "ACTIVE",
+      "location": "Darbhanga, Bihar",
+      "pineconeVectorId": null
+    },
+    {
+      "id": "t-6",
+      "externalId": "PSU/IOCL/ES-44",
+      "sourcePortal": "PSU",
+      "title": "Fire Hydrant and Fire Safety Upgradation at Barauni Refinery Terminal",
+      "department": "Indian Oil Corporation Limited (IOCL)",
+      "state": "Bihar",
+      "category": "Electrical",
+      "subCategory": "Safety Equipment",
+      "tenderValue": 2.8,
+      "emdAmount": 5.6,
+      "publishedDate": "2026-06-02T10:00:00Z",
+      "bidSubmissionDeadline": "2026-06-29T13:00:00Z",
+      "openingDate": "2026-06-30T14:30:00Z",
+      "workDescription": "Installation of high-pressure motor-driven safety pumps, automatic sprinkler systems, fire proof electrical cabling, clean gas fire control, and centralized warning consoles.",
+      "eligibilityCriteria": {
+        "minTurnover": 1.2,
+        "minExperience": 4,
+        "requiredCertifications": [
+          "PESO Safety License",
+          "ISO 9001"
+        ],
+        "msmeOnly": false
+      },
+      "technicalSpecs": "Pumps matching API-610 standards, electrical components Flameproof (Exd Zone 1 class).",
+      "documents": [
+        {
+          "name": "IOCL_Barauni_FireHydrant.pdf",
+          "url": "#",
+          "type": "NOTICE"
+        }
+      ],
+      "rawText": "IOCL Barauni Refinery Security Engineering Division. Fire safety automation grid commissioning. Value 2.8 Cr. Minimum experience of 4 years doing industrial PESO licensed work. Turnover over 1.2 Cr in last 3 years.",
+      "status": "ACTIVE",
+      "location": "Begusarai, Bihar",
+      "pineconeVectorId": null
+    },
+    {
+      "id": "t-7",
+      "externalId": "DEF/MESE/2026/97",
+      "sourcePortal": "DEFENSE",
+      "title": "Rewiring and Substation Renewal at Danapur Cantonment Housing Grid",
+      "department": "Military Engineer Services (MES)",
+      "state": "Bihar",
+      "category": "Electrical",
+      "subCategory": "Power Grid",
+      "tenderValue": 0.95,
+      "emdAmount": 1.9,
+      "publishedDate": "2026-05-15T08:00:00Z",
+      "bidSubmissionDeadline": "2026-06-08T15:00:00Z",
+      "openingDate": "2026-06-09T10:00:00Z",
+      "workDescription": "Phase-wise replacement of vintage residential overhead cables with LT insulated underground armored cables and replacement of 1x 250kVA transformer.",
+      "eligibilityCriteria": {
+        "minTurnover": 0.5,
+        "minExperience": 3,
+        "requiredCertifications": [
+          "MES Registered Contractor",
+          "Class A Electrical License"
+        ],
+        "msmeOnly": true
+      },
+      "technicalSpecs": "XLPE insulation, automatic breaker relays, vacuum circuit breakers.",
+      "documents": [
+        {
+          "name": "Danapur_Substation_Layout.pdf",
+          "url": "#",
+          "type": "DESIGN"
+        }
+      ],
+      "rawText": "MES Danapur Cantonment substation cables replacement. Value 95 Lakhs. Registered Class-A electrical contractor. EMD exemption for general MSME. Experience of 3 years required. MSME specific preferences.",
+      "status": "ACTIVE",
+      "location": "Danapur, Bihar",
+      "pineconeVectorId": null
+    },
+    {
+      "id": "t-8",
+      "externalId": "CPPP/2026/JH/012",
+      "sourcePortal": "CPPP",
+      "title": "Construction of District Hospital Ward at Ranchi Campus",
+      "department": "Jharkhand State PWD",
+      "state": "Jharkhand",
+      "category": "Construction",
+      "subCategory": "Medical Civil",
+      "tenderValue": 12,
+      "emdAmount": 24,
+      "publishedDate": "2026-05-10T10:00:00Z",
+      "bidSubmissionDeadline": "2026-06-01T15:00:00Z",
+      "openingDate": "2026-06-02T10:00:00Z",
+      "workDescription": "Multi-floor building block specialized for state medical treatment facilities.",
+      "eligibilityCriteria": {
+        "minTurnover": 8,
+        "minExperience": 7,
+        "requiredCertifications": [
+          "Class A civil License"
+        ],
+        "msmeOnly": false
+      },
+      "technicalSpecs": "",
+      "documents": [],
+      "rawText": "Ranchi PWD civil construction district hospital",
+      "status": "CLOSED",
+      "location": "Ranchi, Jharkhand",
+      "pineconeVectorId": null
+    },
+    {
+      "id": "t-9",
+      "externalId": "PSU/2026/SME/009",
+      "sourcePortal": "PSU",
+      "title": "Comprehensive Materials and Infrastructure Supply Task for Roads Utilities at Odisha Regional Complex",
+      "department": "CPWD Central Division",
+      "state": "Odisha",
+      "category": "Roads",
+      "subCategory": "Materials",
+      "tenderValue": 4.6,
+      "emdAmount": 9.2,
+      "publishedDate": "2026-06-24T14:18:59.069Z",
+      "bidSubmissionDeadline": "2026-07-16T14:18:59.069Z",
+      "openingDate": "2026-07-17T14:18:59.069Z",
+      "workDescription": "This is a public tender call issued by CPWD Central Division for execution of high durability Materials solutions. Detailed schedule of quantities (BOQ) is enclosed inside the tender bid documents. Strictly conforming to standard public procurement safety norms.",
+      "eligibilityCriteria": {
+        "minTurnover": 2.07,
+        "minExperience": 3,
+        "requiredCertifications": [
+          "ISO 9001"
+        ],
+        "msmeOnly": true,
+        "statesAllowed": [
+          "Odisha"
+        ]
+      },
+      "technicalSpecs": "Conforming to certified bureau standardizations under active monitoring. Materials checked by third party supervision before field dispatch.",
+      "documents": [
+        {
+          "name": "Detailed_SBD_9.pdf",
+          "url": "#",
+          "type": "BID_SPECIFICATION"
+        },
+        {
+          "name": "BOQ_Template_9.xlsx",
+          "url": "#",
+          "type": "FINANCIAL_SHEET"
+        }
+      ],
+      "rawText": "Ingested text: CPWD Central Division project with budgeted estimate: Rs 4.6 Crore. Full-scale project schedule. Average turnover requested: Rs 2.07 Crore. Standard credentials matching ISO procedures needed.",
+      "status": "ACTIVE",
+      "location": "Odisha Hub",
+      "pineconeVectorId": null
+    },
+    {
+      "id": "t-10",
+      "externalId": "CPPP/2026/SME/0010",
+      "sourcePortal": "CPPP",
+      "title": "Comprehensive Civil Work and Infrastructure Supply Task for Construction Utilities at Bihar Regional Complex",
+      "department": "GeM Buyer Cell Infrastructure",
+      "state": "Bihar",
+      "category": "Construction",
+      "subCategory": "Civil Work",
+      "tenderValue": 5.05,
+      "emdAmount": 10.1,
+      "publishedDate": "2026-06-24T14:18:59.069Z",
+      "bidSubmissionDeadline": "2026-07-19T14:18:59.069Z",
+      "openingDate": "2026-07-20T14:18:59.069Z",
+      "workDescription": "This is a public tender call issued by GeM Buyer Cell Infrastructure for execution of high durability Civil Work solutions. Detailed schedule of quantities (BOQ) is enclosed inside the tender bid documents. Strictly conforming to standard public procurement safety norms.",
+      "eligibilityCriteria": {
+        "minTurnover": 2.27,
+        "minExperience": 4,
+        "requiredCertifications": [
+          "Class A Contractor License"
+        ],
+        "msmeOnly": false,
+        "statesAllowed": [
+          "Bihar"
+        ]
+      },
+      "technicalSpecs": "Conforming to certified bureau standardizations under active monitoring. Materials checked by third party supervision before field dispatch.",
+      "documents": [
+        {
+          "name": "Detailed_SBD_10.pdf",
+          "url": "#",
+          "type": "BID_SPECIFICATION"
+        },
+        {
+          "name": "BOQ_Template_10.xlsx",
+          "url": "#",
+          "type": "FINANCIAL_SHEET"
+        }
+      ],
+      "rawText": "Ingested text: GeM Buyer Cell Infrastructure project with budgeted estimate: Rs 5.05 Crore. Full-scale project schedule. Average turnover requested: Rs 2.27 Crore. Standard credentials matching ISO procedures needed.",
+      "status": "ACTIVE",
+      "location": "Bihar Hub",
+      "pineconeVectorId": null
+    },
+    {
+      "id": "t-11",
+      "externalId": "GEM/2026/SME/0011",
+      "sourcePortal": "GEM",
+      "title": "Comprehensive Installation and Infrastructure Supply Task for Electrical Utilities at Jharkhand Regional Complex",
+      "department": "Bihar Urban Development Agency",
+      "state": "Jharkhand",
+      "category": "Electrical",
+      "subCategory": "Installation",
+      "tenderValue": 5.5,
+      "emdAmount": 11,
+      "publishedDate": "2026-06-24T14:18:59.069Z",
+      "bidSubmissionDeadline": "2026-07-22T14:18:59.069Z",
+      "openingDate": "2026-07-23T14:18:59.069Z",
+      "workDescription": "This is a public tender call issued by Bihar Urban Development Agency for execution of high durability Installation solutions. Detailed schedule of quantities (BOQ) is enclosed inside the tender bid documents. Strictly conforming to standard public procurement safety norms.",
+      "eligibilityCriteria": {
+        "minTurnover": 2.48,
+        "minExperience": 5,
+        "requiredCertifications": [
+          "ISO 9001"
+        ],
+        "msmeOnly": false,
+        "statesAllowed": [
+          "Jharkhand"
+        ]
+      },
+      "technicalSpecs": "Conforming to certified bureau standardizations under active monitoring. Materials checked by third party supervision before field dispatch.",
+      "documents": [
+        {
+          "name": "Detailed_SBD_11.pdf",
+          "url": "#",
+          "type": "BID_SPECIFICATION"
+        },
+        {
+          "name": "BOQ_Template_11.xlsx",
+          "url": "#",
+          "type": "FINANCIAL_SHEET"
+        }
+      ],
+      "rawText": "Ingested text: Bihar Urban Development Agency project with budgeted estimate: Rs 5.5 Crore. Full-scale project schedule. Average turnover requested: Rs 2.48 Crore. Standard credentials matching ISO procedures needed.",
+      "status": "ACTIVE",
+      "location": "Jharkhand Hub",
+      "pineconeVectorId": null
+    },
+    {
+      "id": "t-12",
+      "externalId": "STATE_PWD/2026/SME/0012",
+      "sourcePortal": "STATE_PWD",
+      "title": "Comprehensive Consultancy and Infrastructure Supply Task for IT Support Utilities at Uttar Pradesh Regional Complex",
+      "department": "Jharkhand Drinking Water Dept",
+      "state": "Uttar Pradesh",
+      "category": "IT Support",
+      "subCategory": "Consultancy",
+      "tenderValue": 5.95,
+      "emdAmount": 11.9,
+      "publishedDate": "2026-06-24T14:18:59.069Z",
+      "bidSubmissionDeadline": "2026-07-25T14:18:59.069Z",
+      "openingDate": "2026-07-26T14:18:59.069Z",
+      "workDescription": "This is a public tender call issued by Jharkhand Drinking Water Dept for execution of high durability Consultancy solutions. Detailed schedule of quantities (BOQ) is enclosed inside the tender bid documents. Strictly conforming to standard public procurement safety norms.",
+      "eligibilityCriteria": {
+        "minTurnover": 2.68,
+        "minExperience": 2,
+        "requiredCertifications": [
+          "Class A Contractor License"
+        ],
+        "msmeOnly": true,
+        "statesAllowed": [
+          "Uttar Pradesh"
+        ]
+      },
+      "technicalSpecs": "Conforming to certified bureau standardizations under active monitoring. Materials checked by third party supervision before field dispatch.",
+      "documents": [
+        {
+          "name": "Detailed_SBD_12.pdf",
+          "url": "#",
+          "type": "BID_SPECIFICATION"
+        },
+        {
+          "name": "BOQ_Template_12.xlsx",
+          "url": "#",
+          "type": "FINANCIAL_SHEET"
+        }
+      ],
+      "rawText": "Ingested text: Jharkhand Drinking Water Dept project with budgeted estimate: Rs 5.95 Crore. Full-scale project schedule. Average turnover requested: Rs 2.68 Crore. Standard credentials matching ISO procedures needed.",
+      "status": "ACTIVE",
+      "location": "Uttar Pradesh Hub",
+      "pineconeVectorId": null
+    },
+    {
+      "id": "t-13",
+      "externalId": "RAILWAYS/2026/SME/0013",
+      "sourcePortal": "RAILWAYS",
+      "title": "Comprehensive Maintenance and Infrastructure Supply Task for Water Supply Utilities at West Bengal Regional Complex",
+      "department": "NTPC Barh Power Complex Group",
+      "state": "West Bengal",
+      "category": "Water Supply",
+      "subCategory": "Maintenance",
+      "tenderValue": 6.4,
+      "emdAmount": 12.8,
+      "publishedDate": "2026-06-24T14:18:59.069Z",
+      "bidSubmissionDeadline": "2026-07-28T14:18:59.069Z",
+      "openingDate": "2026-07-29T14:18:59.069Z",
+      "workDescription": "This is a public tender call issued by NTPC Barh Power Complex Group for execution of high durability Maintenance solutions. Detailed schedule of quantities (BOQ) is enclosed inside the tender bid documents. Strictly conforming to standard public procurement safety norms.",
+      "eligibilityCriteria": {
+        "minTurnover": 2.88,
+        "minExperience": 3,
+        "requiredCertifications": [
+          "ISO 9001"
+        ],
+        "msmeOnly": false,
+        "statesAllowed": [
+          "West Bengal"
+        ]
+      },
+      "technicalSpecs": "Conforming to certified bureau standardizations under active monitoring. Materials checked by third party supervision before field dispatch.",
+      "documents": [
+        {
+          "name": "Detailed_SBD_13.pdf",
+          "url": "#",
+          "type": "BID_SPECIFICATION"
+        },
+        {
+          "name": "BOQ_Template_13.xlsx",
+          "url": "#",
+          "type": "FINANCIAL_SHEET"
+        }
+      ],
+      "rawText": "Ingested text: NTPC Barh Power Complex Group project with budgeted estimate: Rs 6.4 Crore. Full-scale project schedule. Average turnover requested: Rs 2.88 Crore. Standard credentials matching ISO procedures needed.",
+      "status": "ACTIVE",
+      "location": "West Bengal Hub",
+      "pineconeVectorId": null
+    },
+    {
+      "id": "t-14",
+      "externalId": "PSU/2026/SME/0014",
+      "sourcePortal": "PSU",
+      "title": "Comprehensive Materials and Infrastructure Supply Task for Roads Utilities at Odisha Regional Complex",
+      "department": "Braj Construction Corp Ltd",
+      "state": "Odisha",
+      "category": "Roads",
+      "subCategory": "Materials",
+      "tenderValue": 6.85,
+      "emdAmount": 13.7,
+      "publishedDate": "2026-06-24T14:18:59.069Z",
+      "bidSubmissionDeadline": "2026-07-31T14:18:59.069Z",
+      "openingDate": "2026-08-01T14:18:59.069Z",
+      "workDescription": "This is a public tender call issued by Braj Construction Corp Ltd for execution of high durability Materials solutions. Detailed schedule of quantities (BOQ) is enclosed inside the tender bid documents. Strictly conforming to standard public procurement safety norms.",
+      "eligibilityCriteria": {
+        "minTurnover": 3.08,
+        "minExperience": 4,
+        "requiredCertifications": [
+          "Class A Contractor License"
+        ],
+        "msmeOnly": false,
+        "statesAllowed": [
+          "Odisha"
+        ]
+      },
+      "technicalSpecs": "Conforming to certified bureau standardizations under active monitoring. Materials checked by third party supervision before field dispatch.",
+      "documents": [
+        {
+          "name": "Detailed_SBD_14.pdf",
+          "url": "#",
+          "type": "BID_SPECIFICATION"
+        },
+        {
+          "name": "BOQ_Template_14.xlsx",
+          "url": "#",
+          "type": "FINANCIAL_SHEET"
+        }
+      ],
+      "rawText": "Ingested text: Braj Construction Corp Ltd project with budgeted estimate: Rs 6.85 Crore. Full-scale project schedule. Average turnover requested: Rs 3.08 Crore. Standard credentials matching ISO procedures needed.",
+      "status": "ACTIVE",
+      "location": "Odisha Hub",
+      "pineconeVectorId": null
+    },
+    {
+      "id": "t-15",
+      "externalId": "CPPP/2026/SME/0015",
+      "sourcePortal": "CPPP",
+      "title": "Comprehensive Civil Work and Infrastructure Supply Task for Construction Utilities at Bihar Regional Complex",
+      "department": "Eastern Railway Engineering",
+      "state": "Bihar",
+      "category": "Construction",
+      "subCategory": "Civil Work",
+      "tenderValue": 7.3,
+      "emdAmount": 14.6,
+      "publishedDate": "2026-06-24T14:18:59.069Z",
+      "bidSubmissionDeadline": "2026-08-03T14:18:59.069Z",
+      "openingDate": "2026-08-04T14:18:59.069Z",
+      "workDescription": "This is a public tender call issued by Eastern Railway Engineering for execution of high durability Civil Work solutions. Detailed schedule of quantities (BOQ) is enclosed inside the tender bid documents. Strictly conforming to standard public procurement safety norms.",
+      "eligibilityCriteria": {
+        "minTurnover": 3.29,
+        "minExperience": 5,
+        "requiredCertifications": [
+          "ISO 9001"
+        ],
+        "msmeOnly": true,
+        "statesAllowed": [
+          "Bihar"
+        ]
+      },
+      "technicalSpecs": "Conforming to certified bureau standardizations under active monitoring. Materials checked by third party supervision before field dispatch.",
+      "documents": [
+        {
+          "name": "Detailed_SBD_15.pdf",
+          "url": "#",
+          "type": "BID_SPECIFICATION"
+        },
+        {
+          "name": "BOQ_Template_15.xlsx",
+          "url": "#",
+          "type": "FINANCIAL_SHEET"
+        }
+      ],
+      "rawText": "Ingested text: Eastern Railway Engineering project with budgeted estimate: Rs 7.3 Crore. Full-scale project schedule. Average turnover requested: Rs 3.29 Crore. Standard credentials matching ISO procedures needed.",
+      "status": "ACTIVE",
+      "location": "Bihar Hub",
+      "pineconeVectorId": null
+    },
+    {
+      "id": "t-16",
+      "externalId": "GEM/2026/SME/0016",
+      "sourcePortal": "GEM",
+      "title": "Comprehensive Installation and Infrastructure Supply Task for Electrical Utilities at Jharkhand Regional Complex",
+      "department": "North Bihar Power Distribution (NBPDCL)",
+      "state": "Jharkhand",
+      "category": "Electrical",
+      "subCategory": "Installation",
+      "tenderValue": 7.75,
+      "emdAmount": 15.5,
+      "publishedDate": "2026-06-24T14:18:59.069Z",
+      "bidSubmissionDeadline": "2026-08-06T14:18:59.069Z",
+      "openingDate": "2026-08-07T14:18:59.069Z",
+      "workDescription": "This is a public tender call issued by North Bihar Power Distribution (NBPDCL) for execution of high durability Installation solutions. Detailed schedule of quantities (BOQ) is enclosed inside the tender bid documents. Strictly conforming to standard public procurement safety norms.",
+      "eligibilityCriteria": {
+        "minTurnover": 3.49,
+        "minExperience": 2,
+        "requiredCertifications": [
+          "Class A Contractor License"
+        ],
+        "msmeOnly": false,
+        "statesAllowed": [
+          "Jharkhand"
+        ]
+      },
+      "technicalSpecs": "Conforming to certified bureau standardizations under active monitoring. Materials checked by third party supervision before field dispatch.",
+      "documents": [
+        {
+          "name": "Detailed_SBD_16.pdf",
+          "url": "#",
+          "type": "BID_SPECIFICATION"
+        },
+        {
+          "name": "BOQ_Template_16.xlsx",
+          "url": "#",
+          "type": "FINANCIAL_SHEET"
+        }
+      ],
+      "rawText": "Ingested text: North Bihar Power Distribution (NBPDCL) project with budgeted estimate: Rs 7.75 Crore. Full-scale project schedule. Average turnover requested: Rs 3.49 Crore. Standard credentials matching ISO procedures needed.",
+      "status": "ACTIVE",
+      "location": "Jharkhand Hub",
+      "pineconeVectorId": null
+    },
+    {
+      "id": "t-17",
+      "externalId": "STATE_PWD/2026/SME/0017",
+      "sourcePortal": "STATE_PWD",
+      "title": "Comprehensive Consultancy and Infrastructure Supply Task for IT Support Utilities at Uttar Pradesh Regional Complex",
+      "department": "South Bihar Power Distribution (SBPDCL)",
+      "state": "Uttar Pradesh",
+      "category": "IT Support",
+      "subCategory": "Consultancy",
+      "tenderValue": 8.2,
+      "emdAmount": 16.4,
+      "publishedDate": "2026-06-24T14:18:59.069Z",
+      "bidSubmissionDeadline": "2026-08-09T14:18:59.069Z",
+      "openingDate": "2026-08-10T14:18:59.069Z",
+      "workDescription": "This is a public tender call issued by South Bihar Power Distribution (SBPDCL) for execution of high durability Consultancy solutions. Detailed schedule of quantities (BOQ) is enclosed inside the tender bid documents. Strictly conforming to standard public procurement safety norms.",
+      "eligibilityCriteria": {
+        "minTurnover": 3.69,
+        "minExperience": 3,
+        "requiredCertifications": [
+          "ISO 9001"
+        ],
+        "msmeOnly": false,
+        "statesAllowed": [
+          "Uttar Pradesh"
+        ]
+      },
+      "technicalSpecs": "Conforming to certified bureau standardizations under active monitoring. Materials checked by third party supervision before field dispatch.",
+      "documents": [
+        {
+          "name": "Detailed_SBD_17.pdf",
+          "url": "#",
+          "type": "BID_SPECIFICATION"
+        },
+        {
+          "name": "BOQ_Template_17.xlsx",
+          "url": "#",
+          "type": "FINANCIAL_SHEET"
+        }
+      ],
+      "rawText": "Ingested text: South Bihar Power Distribution (SBPDCL) project with budgeted estimate: Rs 8.2 Crore. Full-scale project schedule. Average turnover requested: Rs 3.69 Crore. Standard credentials matching ISO procedures needed.",
+      "status": "ACTIVE",
+      "location": "Uttar Pradesh Hub",
+      "pineconeVectorId": null
+    },
+    {
+      "id": "t-18",
+      "externalId": "RAILWAYS/2026/SME/0018",
+      "sourcePortal": "RAILWAYS",
+      "title": "Comprehensive Maintenance and Infrastructure Supply Task for Water Supply Utilities at West Bengal Regional Complex",
+      "department": "CPWD Central Division",
+      "state": "West Bengal",
+      "category": "Water Supply",
+      "subCategory": "Maintenance",
+      "tenderValue": 8.65,
+      "emdAmount": 17.3,
+      "publishedDate": "2026-06-24T14:18:59.069Z",
+      "bidSubmissionDeadline": "2026-08-12T14:18:59.069Z",
+      "openingDate": "2026-08-13T14:18:59.069Z",
+      "workDescription": "This is a public tender call issued by CPWD Central Division for execution of high durability Maintenance solutions. Detailed schedule of quantities (BOQ) is enclosed inside the tender bid documents. Strictly conforming to standard public procurement safety norms.",
+      "eligibilityCriteria": {
+        "minTurnover": 3.89,
+        "minExperience": 4,
+        "requiredCertifications": [
+          "Class A Contractor License"
+        ],
+        "msmeOnly": true,
+        "statesAllowed": [
+          "West Bengal"
+        ]
+      },
+      "technicalSpecs": "Conforming to certified bureau standardizations under active monitoring. Materials checked by third party supervision before field dispatch.",
+      "documents": [
+        {
+          "name": "Detailed_SBD_18.pdf",
+          "url": "#",
+          "type": "BID_SPECIFICATION"
+        },
+        {
+          "name": "BOQ_Template_18.xlsx",
+          "url": "#",
+          "type": "FINANCIAL_SHEET"
+        }
+      ],
+      "rawText": "Ingested text: CPWD Central Division project with budgeted estimate: Rs 8.65 Crore. Full-scale project schedule. Average turnover requested: Rs 3.89 Crore. Standard credentials matching ISO procedures needed.",
+      "status": "ACTIVE",
+      "location": "West Bengal Hub",
+      "pineconeVectorId": null
+    },
+    {
+      "id": "t-19",
+      "externalId": "PSU/2026/SME/0019",
+      "sourcePortal": "PSU",
+      "title": "Comprehensive Materials and Infrastructure Supply Task for Roads Utilities at Odisha Regional Complex",
+      "department": "GeM Buyer Cell Infrastructure",
+      "state": "Odisha",
+      "category": "Roads",
+      "subCategory": "Materials",
+      "tenderValue": 9.1,
+      "emdAmount": 18.2,
+      "publishedDate": "2026-06-24T14:18:59.069Z",
+      "bidSubmissionDeadline": "2026-08-15T14:18:59.069Z",
+      "openingDate": "2026-08-16T14:18:59.069Z",
+      "workDescription": "This is a public tender call issued by GeM Buyer Cell Infrastructure for execution of high durability Materials solutions. Detailed schedule of quantities (BOQ) is enclosed inside the tender bid documents. Strictly conforming to standard public procurement safety norms.",
+      "eligibilityCriteria": {
+        "minTurnover": 4.09,
+        "minExperience": 5,
+        "requiredCertifications": [
+          "ISO 9001"
+        ],
+        "msmeOnly": false,
+        "statesAllowed": [
+          "Odisha"
+        ]
+      },
+      "technicalSpecs": "Conforming to certified bureau standardizations under active monitoring. Materials checked by third party supervision before field dispatch.",
+      "documents": [
+        {
+          "name": "Detailed_SBD_19.pdf",
+          "url": "#",
+          "type": "BID_SPECIFICATION"
+        },
+        {
+          "name": "BOQ_Template_19.xlsx",
+          "url": "#",
+          "type": "FINANCIAL_SHEET"
+        }
+      ],
+      "rawText": "Ingested text: GeM Buyer Cell Infrastructure project with budgeted estimate: Rs 9.1 Crore. Full-scale project schedule. Average turnover requested: Rs 4.09 Crore. Standard credentials matching ISO procedures needed.",
+      "status": "ACTIVE",
+      "location": "Odisha Hub",
+      "pineconeVectorId": null
+    },
+    {
+      "id": "t-20",
+      "externalId": "CPPP/2026/SME/0020",
+      "sourcePortal": "CPPP",
+      "title": "Comprehensive Civil Work and Infrastructure Supply Task for Construction Utilities at Bihar Regional Complex",
+      "department": "Bihar Urban Development Agency",
+      "state": "Bihar",
+      "category": "Construction",
+      "subCategory": "Civil Work",
+      "tenderValue": 9.55,
+      "emdAmount": 19.1,
+      "publishedDate": "2026-06-24T14:18:59.070Z",
+      "bidSubmissionDeadline": "2026-08-18T14:18:59.070Z",
+      "openingDate": "2026-08-19T14:18:59.070Z",
+      "workDescription": "This is a public tender call issued by Bihar Urban Development Agency for execution of high durability Civil Work solutions. Detailed schedule of quantities (BOQ) is enclosed inside the tender bid documents. Strictly conforming to standard public procurement safety norms.",
+      "eligibilityCriteria": {
+        "minTurnover": 4.3,
+        "minExperience": 2,
+        "requiredCertifications": [
+          "Class A Contractor License"
+        ],
+        "msmeOnly": false,
+        "statesAllowed": [
+          "Bihar"
+        ]
+      },
+      "technicalSpecs": "Conforming to certified bureau standardizations under active monitoring. Materials checked by third party supervision before field dispatch.",
+      "documents": [
+        {
+          "name": "Detailed_SBD_20.pdf",
+          "url": "#",
+          "type": "BID_SPECIFICATION"
+        },
+        {
+          "name": "BOQ_Template_20.xlsx",
+          "url": "#",
+          "type": "FINANCIAL_SHEET"
+        }
+      ],
+      "rawText": "Ingested text: Bihar Urban Development Agency project with budgeted estimate: Rs 9.55 Crore. Full-scale project schedule. Average turnover requested: Rs 4.3 Crore. Standard credentials matching ISO procedures needed.",
+      "status": "ACTIVE",
+      "location": "Bihar Hub",
+      "pineconeVectorId": null
+    },
+    {
+      "id": "t-21",
+      "externalId": "STATE/BH/RCD_ROAD/2026/940",
+      "sourcePortal": "STATE_PWD",
+      "title": "Pavement Milling and Re-carpeting of Darbhanga Radial Ring Road Stretch",
+      "department": "Road Construction Department (RCD) Bihar",
+      "state": "Bihar",
+      "category": "Construction",
+      "subCategory": "Road Recarpeting",
+      "tenderValue": 2.1,
+      "emdAmount": 4.2,
+      "publishedDate": "2026-07-04T10:30:00Z",
+      "bidSubmissionDeadline": "2026-07-19T14:40:15.119Z",
+      "openingDate": "2026-07-20T14:40:15.119Z",
+      "workDescription": "Controlled cold milling of deteriorated bitumen sheets, granular leveling, and heavy dense bituminous concrete layout over 4.8 km section.",
+      "eligibilityCriteria": {
+        "minTurnover": 1,
+        "minExperience": 3,
+        "requiredCertifications": [
+          "Class A Contractor License"
+        ],
+        "msmeOnly": false
+      },
+      "documents": [
+        {
+          "name": "SBD_DarbhangaRoad.pdf",
+          "url": "#",
+          "type": "NOTICE"
+        }
+      ],
+      "rawText": "RCD Darbhanga radial rings. Target budget 2.1 Crores. High-density asphalt concrete layout.",
+      "aiSummary": null,
+      "aiEligibilityChecklist": null,
+      "status": "ACTIVE",
+      "location": "Darbhanga, Bihar",
+      "pineconeVectorId": null,
+      "createdAt": "2026-07-04T14:40:15.119Z",
+      "updatedAt": "2026-07-04T14:40:15.119Z"
+    },
+    {
+      "id": "t-22",
+      "externalId": "PSU/PGCIL/BAY/2026/415",
+      "sourcePortal": "PSU",
+      "title": "Bay Extensions of 132kV Transformer Substations at Kishanganj Hub",
+      "department": "Power Grid Corporation of India (PowerGrid)",
+      "state": "Bihar",
+      "category": "Electrical",
+      "subCategory": "Substation Bay",
+      "tenderValue": 6.8,
+      "emdAmount": 13.6,
+      "publishedDate": "2026-07-04T07:15:00Z",
+      "bidSubmissionDeadline": "2026-08-01T14:40:15.122Z",
+      "openingDate": "2026-08-02T14:40:15.122Z",
+      "workDescription": "Supply, layout, civil foundation, electrical mounting, and grid telemetry integration of 1x fresh 132kV bay corridor.",
+      "eligibilityCriteria": {
+        "minTurnover": 3,
+        "minExperience": 6,
+        "requiredCertifications": [
+          "Class A Electrical License",
+          "PowerGrid Approved Vendor"
+        ],
+        "msmeOnly": false
+      },
+      "documents": [
+        {
+          "name": "PGCIL_Kishanganj_Layout.pdf",
+          "url": "#",
+          "type": "CIVIL_ELECTRICAL"
+        }
+      ],
+      "rawText": "PowerGrid substations bay layout additions Kishanganj Bihar, 6.8 Crore INR.",
+      "aiSummary": null,
+      "aiEligibilityChecklist": null,
+      "status": "ACTIVE",
+      "location": "Kishanganj, Bihar",
+      "pineconeVectorId": null,
+      "createdAt": "2026-07-04T14:40:15.122Z",
+      "updatedAt": "2026-07-04T14:40:15.122Z"
+    },
+    {
+      "id": "t-23",
+      "externalId": "PSU/ONGC/OFFSHORE/2026/212",
+      "sourcePortal": "PSU",
+      "title": "Precision Piping Welds and Rigging Supports at KG-Basin Deep Water Facility",
+      "department": "Oil and Natural Gas Corporation (ONGC)",
+      "state": "Andhra Pradesh",
+      "category": "Construction",
+      "subCategory": "Offshore Piping",
+      "tenderValue": 14.5,
+      "emdAmount": 29,
+      "publishedDate": "2026-07-04T09:45:00Z",
+      "bidSubmissionDeadline": "2026-08-08T14:40:17.123Z",
+      "openingDate": "2026-08-09T14:40:17.123Z",
+      "workDescription": "High pressure alloy welding operations, stress checking of risers and platform deck piping systems complying with API standards.",
+      "eligibilityCriteria": {
+        "minTurnover": 6,
+        "minExperience": 8,
+        "requiredCertifications": [
+          "PESO Safety License",
+          "ISO 9001",
+          "AWS Certified Welding Site Spec"
+        ],
+        "msmeOnly": false
+      },
+      "documents": [
+        {
+          "name": "ONGC_Offshore_KGSpecs.pdf",
+          "url": "#",
+          "type": "STANDARDS"
+        }
+      ],
+      "rawText": "ONGC KG Deepwater bay piping support, value Rs 14.5 Crore.",
+      "aiSummary": null,
+      "aiEligibilityChecklist": null,
+      "status": "ACTIVE",
+      "location": "Kakinada, Andhra Pradesh",
+      "pineconeVectorId": null,
+      "createdAt": "2026-07-04T14:40:17.123Z",
+      "updatedAt": "2026-07-04T14:40:17.123Z"
+    },
+    {
+      "id": "t-24",
+      "externalId": "PSU/NTPC/ASH/2026/529",
+      "sourcePortal": "PSU",
+      "title": "Ash Dyke Piping Upgradations and Concrete Laying at Barh Super Power Station",
+      "department": "National Thermal Power Corporation (NTPC)",
+      "state": "Bihar",
+      "category": "Water Supply",
+      "subCategory": "Slurry Transport",
+      "tenderValue": 5.9,
+      "emdAmount": 11.8,
+      "publishedDate": "2026-07-04T10:15:00Z",
+      "bidSubmissionDeadline": "2026-07-26T14:40:17.126Z",
+      "openingDate": "2026-07-27T14:40:17.126Z",
+      "workDescription": "Renewal of dynamic high wear steel alloy pipes, reinforcement of retaining concrete structures around slurry ash pond cells.",
+      "eligibilityCriteria": {
+        "minTurnover": 2.5,
+        "minExperience": 5,
+        "requiredCertifications": [
+          "Class A Civil",
+          "ISO 14001 Environment"
+        ],
+        "msmeOnly": false
+      },
+      "documents": [
+        {
+          "name": "NTPC_DykePipingspecs.pdf",
+          "url": "#",
+          "type": "SPECS"
+        }
+      ],
+      "rawText": "NTPC Barh power plant coal ash sludge transport corridors, estimate 5.9 Crores.",
+      "aiSummary": null,
+      "aiEligibilityChecklist": null,
+      "status": "ACTIVE",
+      "location": "Barh, Bihar",
+      "pineconeVectorId": null,
+      "createdAt": "2026-07-04T14:40:17.126Z",
+      "updatedAt": "2026-07-04T14:40:17.126Z"
+    },
+    {
+      "id": "t-25",
+      "externalId": "PSU/BHEL/GRID/2026/943",
+      "sourcePortal": "PSU",
+      "title": "Rigging and Panel Cable Layout of High Voltage Power Cabinets at Trichy Complex",
+      "department": "Bharat Heavy Electricals Limited (BHEL)",
+      "state": "Tamil Nadu",
+      "category": "Electrical",
+      "subCategory": "Switchgears",
+      "tenderValue": 4.2,
+      "emdAmount": 8.4,
+      "publishedDate": "2026-07-04T08:30:00Z",
+      "bidSubmissionDeadline": "2026-08-03T14:40:19.131Z",
+      "openingDate": "2026-08-04T14:40:19.131Z",
+      "workDescription": "Engineering switchgear bay panels assembly, insulation checkout, and armored copper connections laying within heavy manufacturing complex.",
+      "eligibilityCriteria": {
+        "minTurnover": 2,
+        "minExperience": 5,
+        "requiredCertifications": [
+          "Class A Electrical License",
+          "ISO 9001"
+        ],
+        "msmeOnly": false
+      },
+      "documents": [
+        {
+          "name": "BHEL_Switchgear_Layout.pdf",
+          "url": "#",
+          "type": "PLANS"
+        }
+      ],
+      "rawText": "BHEL switchgear engineering installation Trichy plant, value 4.2 Crore.",
+      "aiSummary": null,
+      "aiEligibilityChecklist": null,
+      "status": "ACTIVE",
+      "location": "Trichy, Tamil Nadu",
+      "pineconeVectorId": null,
+      "createdAt": "2026-07-04T14:40:19.131Z",
+      "updatedAt": "2026-07-04T14:40:19.131Z"
+    },
+    {
+      "id": "t-26",
+      "externalId": "NHAI/BH/EXP/2026/442",
+      "sourcePortal": "NHAI",
+      "title": "Deployment of Thermoplastic Road Marking Lines and Retroreflective Cat-Eyes on NH-31",
+      "department": "National Highways Authority of India (NHAI)",
+      "state": "Bihar",
+      "category": "Construction",
+      "subCategory": "Road Markings",
+      "tenderValue": 2.5,
+      "emdAmount": 5,
+      "publishedDate": "2026-07-04T12:00:00Z",
+      "bidSubmissionDeadline": "2026-07-24T14:40:19.133Z",
+      "openingDate": "2026-07-25T14:40:19.133Z",
+      "workDescription": "Full supply, safety layout, thermal paint coating, and dual aspect retroreflective stud indicators over 40km expressway stretch.",
+      "eligibilityCriteria": {
+        "minTurnover": 1,
+        "minExperience": 3,
+        "requiredCertifications": [
+          "Class A Contractor License"
+        ],
+        "msmeOnly": false
+      },
+      "documents": [
+        {
+          "name": "NH31_MarkingsSpecs.pdf",
+          "url": "#",
+          "type": "SPECS"
+        }
+      ],
+      "rawText": "NHAI lane markings contract, budget 2.5 Crore, EMD 5 Lakhs.",
+      "aiSummary": null,
+      "aiEligibilityChecklist": null,
+      "status": "ACTIVE",
+      "location": "Begusarai, Bihar",
+      "pineconeVectorId": null,
+      "createdAt": "2026-07-04T14:40:19.133Z",
+      "updatedAt": "2026-07-04T14:40:19.133Z"
+    },
+    {
+      "id": "t-27",
+      "externalId": "RAIL/IREPS/ENGG/31497",
+      "sourcePortal": "RAILWAYS",
+      "title": "Platform Drainage and Concrete Bed Overlay at Patna Station Yards",
+      "department": "East Central Railways (ECR)",
+      "state": "Bihar",
+      "category": "Construction",
+      "subCategory": "Drainage Work",
+      "tenderValue": 1.6,
+      "emdAmount": 3.2,
+      "publishedDate": "2026-07-04T11:00:00Z",
+      "bidSubmissionDeadline": "2026-07-22T14:40:21.134Z",
+      "openingDate": "2026-07-23T14:40:21.134Z",
+      "workDescription": "Civil engineering rebuild of rail track drainage lanes using high flow concrete base and robust discharge pathways.",
+      "eligibilityCriteria": {
+        "minTurnover": 1,
+        "minExperience": 4,
+        "requiredCertifications": [
+          "Indian Railways Registered Vendor",
+          "Class A Civil"
+        ],
+        "msmeOnly": false
+      },
+      "documents": [
+        {
+          "name": "PatnaYardsSpecs.pdf",
+          "url": "#",
+          "type": "DETAILED_NOTICE"
+        }
+      ],
+      "rawText": "ECR Platforms drainage refurbishment, budget 1.6 Crores.",
+      "aiSummary": null,
+      "aiEligibilityChecklist": null,
+      "status": "ACTIVE",
+      "location": "Patna, Bihar",
+      "pineconeVectorId": null,
+      "createdAt": "2026-07-04T14:40:21.134Z",
+      "updatedAt": "2026-07-04T14:40:21.134Z"
+    },
+    {
+      "id": "t-28",
+      "externalId": "CPPP/2026/CI/235",
+      "sourcePortal": "CPPP",
+      "title": "Rigging and Layout of Commercial Cold Storage Annex at Bihar Agricultural Complex",
+      "department": "Ministry of Agriculture (CPWD Central Ward)",
+      "state": "Bihar",
+      "category": "Construction",
+      "subCategory": "Refrigeration",
+      "tenderValue": 3.4,
+      "emdAmount": 6.8,
+      "publishedDate": "2026-07-04T10:00:00Z",
+      "bidSubmissionDeadline": "2026-07-29T14:40:21.137Z",
+      "openingDate": "2026-07-30T14:40:21.137Z",
+      "workDescription": "Layout, masonry construction, thermal proofing insulation, and allied refrigeration machinery setup of 1000MT capacity.",
+      "eligibilityCriteria": {
+        "minTurnover": 1.5,
+        "minExperience": 5,
+        "requiredCertifications": [
+          "Class A Contractor License"
+        ],
+        "msmeOnly": false
+      },
+      "technicalSpecs": "Polyurethane insulated panels, freon safety compressors, backup 125kVA generator setup.",
+      "documents": [
+        {
+          "name": "SBD_ColdStorage.pdf",
+          "url": "#",
+          "type": "NOTICE"
+        }
+      ],
+      "rawText": "CPWD Agricultural cold storage. Budget 3.4 Crores. Tender class A construction clearance.",
+      "aiSummary": null,
+      "aiEligibilityChecklist": null,
+      "status": "ACTIVE",
+      "location": "Muzaffarpur, Bihar",
+      "pineconeVectorId": null,
+      "createdAt": "2026-07-04T14:40:21.137Z",
+      "updatedAt": "2026-07-04T14:40:21.137Z"
+    },
+    {
+      "id": "t-29",
+      "externalId": "GEM/2026/B/89152",
+      "sourcePortal": "GEM",
+      "title": "Supply, Assembly, and Field Calibration of 45-Unit Acoustic Level Water Sensors",
+      "department": "Central Ground Water Board (CGWB) / GeM Cell",
+      "state": "Delhi",
+      "category": "Electrical",
+      "subCategory": "Sensors",
+      "tenderValue": 0.85,
+      "emdAmount": 1.7,
+      "publishedDate": "2026-07-04T09:00:00Z",
+      "bidSubmissionDeadline": "2026-07-16T14:40:23.143Z",
+      "openingDate": "2026-07-17T14:40:23.143Z",
+      "workDescription": "GeM marketplace request for smart electronic fluid sensors to deploy in watershed grids. Full terminal reporting systems included.",
+      "eligibilityCriteria": {
+        "minTurnover": 0.3,
+        "minExperience": 2,
+        "requiredCertifications": [
+          "MSME (Udyam)",
+          "ISO 9001"
+        ],
+        "msmeOnly": true,
+        "statesAllowed": [
+          "Delhi"
+        ]
+      },
+      "technicalSpecs": "IP68 waterproof shell, integrated LoRaWAN transmitter modules, 5 years maintenance contract.",
+      "documents": [
+        {
+          "name": "Notice_Specs.pdf",
+          "url": "#",
+          "type": "SPECS"
+        }
+      ],
+      "rawText": "CGWB fluid telemetry project. MSME registered. Average turnover above 30L INR.",
+      "aiSummary": null,
+      "aiEligibilityChecklist": null,
+      "status": "ACTIVE",
+      "location": "New Delhi",
+      "pineconeVectorId": null,
+      "createdAt": "2026-07-04T14:40:23.143Z",
+      "updatedAt": "2026-07-04T14:40:23.143Z"
+    },
+    {
+      "id": "t-30",
+      "externalId": "STATE/BH/RCD_ROAD/2026/126",
+      "sourcePortal": "STATE_PWD",
+      "title": "Pavement Milling and Re-carpeting of Darbhanga Radial Ring Road Stretch",
+      "department": "Road Construction Department (RCD) Bihar",
+      "state": "Bihar",
+      "category": "Construction",
+      "subCategory": "Road Recarpeting",
+      "tenderValue": 2.1,
+      "emdAmount": 4.2,
+      "publishedDate": "2026-07-04T10:30:00Z",
+      "bidSubmissionDeadline": "2026-07-19T14:55:15.121Z",
+      "openingDate": "2026-07-20T14:55:15.121Z",
+      "workDescription": "Controlled cold milling of deteriorated bitumen sheets, granular leveling, and heavy dense bituminous concrete layout over 4.8 km section.",
+      "eligibilityCriteria": {
+        "minTurnover": 1,
+        "minExperience": 3,
+        "requiredCertifications": [
+          "Class A Contractor License"
+        ],
+        "msmeOnly": false
+      },
+      "documents": [
+        {
+          "name": "SBD_DarbhangaRoad.pdf",
+          "url": "#",
+          "type": "NOTICE"
+        }
+      ],
+      "rawText": "RCD Darbhanga radial rings. Target budget 2.1 Crores. High-density asphalt concrete layout.",
+      "aiSummary": null,
+      "aiEligibilityChecklist": null,
+      "status": "ACTIVE",
+      "location": "Darbhanga, Bihar",
+      "pineconeVectorId": null,
+      "createdAt": "2026-07-04T14:55:15.121Z",
+      "updatedAt": "2026-07-04T14:55:15.121Z"
+    },
+    {
+      "id": "t-31",
+      "externalId": "PSU/PGCIL/BAY/2026/925",
+      "sourcePortal": "PSU",
+      "title": "Bay Extensions of 132kV Transformer Substations at Kishanganj Hub",
+      "department": "Power Grid Corporation of India (PowerGrid)",
+      "state": "Bihar",
+      "category": "Electrical",
+      "subCategory": "Substation Bay",
+      "tenderValue": 6.8,
+      "emdAmount": 13.6,
+      "publishedDate": "2026-07-04T07:15:00Z",
+      "bidSubmissionDeadline": "2026-08-01T14:55:15.124Z",
+      "openingDate": "2026-08-02T14:55:15.124Z",
+      "workDescription": "Supply, layout, civil foundation, electrical mounting, and grid telemetry integration of 1x fresh 132kV bay corridor.",
+      "eligibilityCriteria": {
+        "minTurnover": 3,
+        "minExperience": 6,
+        "requiredCertifications": [
+          "Class A Electrical License",
+          "PowerGrid Approved Vendor"
+        ],
+        "msmeOnly": false
+      },
+      "documents": [
+        {
+          "name": "PGCIL_Kishanganj_Layout.pdf",
+          "url": "#",
+          "type": "CIVIL_ELECTRICAL"
+        }
+      ],
+      "rawText": "PowerGrid substations bay layout additions Kishanganj Bihar, 6.8 Crore INR.",
+      "aiSummary": null,
+      "aiEligibilityChecklist": null,
+      "status": "ACTIVE",
+      "location": "Kishanganj, Bihar",
+      "pineconeVectorId": null,
+      "createdAt": "2026-07-04T14:55:15.124Z",
+      "updatedAt": "2026-07-04T14:55:15.124Z"
+    },
+    {
+      "id": "t-32",
+      "externalId": "PSU/ONGC/OFFSHORE/2026/166",
+      "sourcePortal": "PSU",
+      "title": "Precision Piping Welds and Rigging Supports at KG-Basin Deep Water Facility",
+      "department": "Oil and Natural Gas Corporation (ONGC)",
+      "state": "Andhra Pradesh",
+      "category": "Construction",
+      "subCategory": "Offshore Piping",
+      "tenderValue": 14.5,
+      "emdAmount": 29,
+      "publishedDate": "2026-07-04T09:45:00Z",
+      "bidSubmissionDeadline": "2026-08-08T14:55:17.133Z",
+      "openingDate": "2026-08-09T14:55:17.133Z",
+      "workDescription": "High pressure alloy welding operations, stress checking of risers and platform deck piping systems complying with API standards.",
+      "eligibilityCriteria": {
+        "minTurnover": 6,
+        "minExperience": 8,
+        "requiredCertifications": [
+          "PESO Safety License",
+          "ISO 9001",
+          "AWS Certified Welding Site Spec"
+        ],
+        "msmeOnly": false
+      },
+      "documents": [
+        {
+          "name": "ONGC_Offshore_KGSpecs.pdf",
+          "url": "#",
+          "type": "STANDARDS"
+        }
+      ],
+      "rawText": "ONGC KG Deepwater bay piping support, value Rs 14.5 Crore.",
+      "aiSummary": null,
+      "aiEligibilityChecklist": null,
+      "status": "ACTIVE",
+      "location": "Kakinada, Andhra Pradesh",
+      "pineconeVectorId": null,
+      "createdAt": "2026-07-04T14:55:17.133Z",
+      "updatedAt": "2026-07-04T14:55:17.133Z"
+    },
+    {
+      "id": "t-33",
+      "externalId": "PSU/NTPC/ASH/2026/834",
+      "sourcePortal": "PSU",
+      "title": "Ash Dyke Piping Upgradations and Concrete Laying at Barh Super Power Station",
+      "department": "National Thermal Power Corporation (NTPC)",
+      "state": "Bihar",
+      "category": "Water Supply",
+      "subCategory": "Slurry Transport",
+      "tenderValue": 5.9,
+      "emdAmount": 11.8,
+      "publishedDate": "2026-07-04T10:15:00Z",
+      "bidSubmissionDeadline": "2026-07-26T14:55:17.135Z",
+      "openingDate": "2026-07-27T14:55:17.135Z",
+      "workDescription": "Renewal of dynamic high wear steel alloy pipes, reinforcement of retaining concrete structures around slurry ash pond cells.",
+      "eligibilityCriteria": {
+        "minTurnover": 2.5,
+        "minExperience": 5,
+        "requiredCertifications": [
+          "Class A Civil",
+          "ISO 14001 Environment"
+        ],
+        "msmeOnly": false
+      },
+      "documents": [
+        {
+          "name": "NTPC_DykePipingspecs.pdf",
+          "url": "#",
+          "type": "SPECS"
+        }
+      ],
+      "rawText": "NTPC Barh power plant coal ash sludge transport corridors, estimate 5.9 Crores.",
+      "aiSummary": null,
+      "aiEligibilityChecklist": null,
+      "status": "ACTIVE",
+      "location": "Barh, Bihar",
+      "pineconeVectorId": null,
+      "createdAt": "2026-07-04T14:55:17.135Z",
+      "updatedAt": "2026-07-04T14:55:17.135Z"
+    },
+    {
+      "id": "t-34",
+      "externalId": "PSU/BHEL/GRID/2026/525",
+      "sourcePortal": "PSU",
+      "title": "Rigging and Panel Cable Layout of High Voltage Power Cabinets at Trichy Complex",
+      "department": "Bharat Heavy Electricals Limited (BHEL)",
+      "state": "Tamil Nadu",
+      "category": "Electrical",
+      "subCategory": "Switchgears",
+      "tenderValue": 4.2,
+      "emdAmount": 8.4,
+      "publishedDate": "2026-07-04T08:30:00Z",
+      "bidSubmissionDeadline": "2026-08-03T14:55:19.145Z",
+      "openingDate": "2026-08-04T14:55:19.145Z",
+      "workDescription": "Engineering switchgear bay panels assembly, insulation checkout, and armored copper connections laying within heavy manufacturing complex.",
+      "eligibilityCriteria": {
+        "minTurnover": 2,
+        "minExperience": 5,
+        "requiredCertifications": [
+          "Class A Electrical License",
+          "ISO 9001"
+        ],
+        "msmeOnly": false
+      },
+      "documents": [
+        {
+          "name": "BHEL_Switchgear_Layout.pdf",
+          "url": "#",
+          "type": "PLANS"
+        }
+      ],
+      "rawText": "BHEL switchgear engineering installation Trichy plant, value 4.2 Crore.",
+      "aiSummary": null,
+      "aiEligibilityChecklist": null,
+      "status": "ACTIVE",
+      "location": "Trichy, Tamil Nadu",
+      "pineconeVectorId": null,
+      "createdAt": "2026-07-04T14:55:19.145Z",
+      "updatedAt": "2026-07-04T14:55:19.145Z"
+    },
+    {
+      "id": "t-35",
+      "externalId": "NHAI/BH/EXP/2026/599",
+      "sourcePortal": "NHAI",
+      "title": "Deployment of Thermoplastic Road Marking Lines and Retroreflective Cat-Eyes on NH-31",
+      "department": "National Highways Authority of India (NHAI)",
+      "state": "Bihar",
+      "category": "Construction",
+      "subCategory": "Road Markings",
+      "tenderValue": 2.5,
+      "emdAmount": 5,
+      "publishedDate": "2026-07-04T12:00:00Z",
+      "bidSubmissionDeadline": "2026-07-24T14:55:19.148Z",
+      "openingDate": "2026-07-25T14:55:19.148Z",
+      "workDescription": "Full supply, safety layout, thermal paint coating, and dual aspect retroreflective stud indicators over 40km expressway stretch.",
+      "eligibilityCriteria": {
+        "minTurnover": 1,
+        "minExperience": 3,
+        "requiredCertifications": [
+          "Class A Contractor License"
+        ],
+        "msmeOnly": false
+      },
+      "documents": [
+        {
+          "name": "NH31_MarkingsSpecs.pdf",
+          "url": "#",
+          "type": "SPECS"
+        }
+      ],
+      "rawText": "NHAI lane markings contract, budget 2.5 Crore, EMD 5 Lakhs.",
+      "aiSummary": null,
+      "aiEligibilityChecklist": null,
+      "status": "ACTIVE",
+      "location": "Begusarai, Bihar",
+      "pineconeVectorId": null,
+      "createdAt": "2026-07-04T14:55:19.148Z",
+      "updatedAt": "2026-07-04T14:55:19.148Z"
+    },
+    {
+      "id": "t-36",
+      "externalId": "RAIL/IREPS/ENGG/31641",
+      "sourcePortal": "RAILWAYS",
+      "title": "Platform Drainage and Concrete Bed Overlay at Patna Station Yards",
+      "department": "East Central Railways (ECR)",
+      "state": "Bihar",
+      "category": "Construction",
+      "subCategory": "Drainage Work",
+      "tenderValue": 1.6,
+      "emdAmount": 3.2,
+      "publishedDate": "2026-07-04T11:00:00Z",
+      "bidSubmissionDeadline": "2026-07-22T14:55:21.164Z",
+      "openingDate": "2026-07-23T14:55:21.164Z",
+      "workDescription": "Civil engineering rebuild of rail track drainage lanes using high flow concrete base and robust discharge pathways.",
+      "eligibilityCriteria": {
+        "minTurnover": 1,
+        "minExperience": 4,
+        "requiredCertifications": [
+          "Indian Railways Registered Vendor",
+          "Class A Civil"
+        ],
+        "msmeOnly": false
+      },
+      "documents": [
+        {
+          "name": "PatnaYardsSpecs.pdf",
+          "url": "#",
+          "type": "DETAILED_NOTICE"
+        }
+      ],
+      "rawText": "ECR Platforms drainage refurbishment, budget 1.6 Crores.",
+      "aiSummary": null,
+      "aiEligibilityChecklist": null,
+      "status": "ACTIVE",
+      "location": "Patna, Bihar",
+      "pineconeVectorId": null,
+      "createdAt": "2026-07-04T14:55:21.164Z",
+      "updatedAt": "2026-07-04T14:55:21.164Z"
+    },
+    {
+      "id": "t-37",
+      "externalId": "CPPP/2026/CI/248",
+      "sourcePortal": "CPPP",
+      "title": "Rigging and Layout of Commercial Cold Storage Annex at Bihar Agricultural Complex",
+      "department": "Ministry of Agriculture (CPWD Central Ward)",
+      "state": "Bihar",
+      "category": "Construction",
+      "subCategory": "Refrigeration",
+      "tenderValue": 3.4,
+      "emdAmount": 6.8,
+      "publishedDate": "2026-07-04T10:00:00Z",
+      "bidSubmissionDeadline": "2026-07-29T14:55:21.166Z",
+      "openingDate": "2026-07-30T14:55:21.166Z",
+      "workDescription": "Layout, masonry construction, thermal proofing insulation, and allied refrigeration machinery setup of 1000MT capacity.",
+      "eligibilityCriteria": {
+        "minTurnover": 1.5,
+        "minExperience": 5,
+        "requiredCertifications": [
+          "Class A Contractor License"
+        ],
+        "msmeOnly": false
+      },
+      "technicalSpecs": "Polyurethane insulated panels, freon safety compressors, backup 125kVA generator setup.",
+      "documents": [
+        {
+          "name": "SBD_ColdStorage.pdf",
+          "url": "#",
+          "type": "NOTICE"
+        }
+      ],
+      "rawText": "CPWD Agricultural cold storage. Budget 3.4 Crores. Tender class A construction clearance.",
+      "aiSummary": null,
+      "aiEligibilityChecklist": null,
+      "status": "ACTIVE",
+      "location": "Muzaffarpur, Bihar",
+      "pineconeVectorId": null,
+      "createdAt": "2026-07-04T14:55:21.166Z",
+      "updatedAt": "2026-07-04T14:55:21.166Z"
+    },
+    {
+      "id": "t-38",
+      "externalId": "GEM/2026/B/89825",
+      "sourcePortal": "GEM",
+      "title": "Supply, Assembly, and Field Calibration of 45-Unit Acoustic Level Water Sensors",
+      "department": "Central Ground Water Board (CGWB) / GeM Cell",
+      "state": "Delhi",
+      "category": "Electrical",
+      "subCategory": "Sensors",
+      "tenderValue": 0.85,
+      "emdAmount": 1.7,
+      "publishedDate": "2026-07-04T09:00:00Z",
+      "bidSubmissionDeadline": "2026-07-16T14:55:23.180Z",
+      "openingDate": "2026-07-17T14:55:23.180Z",
+      "workDescription": "GeM marketplace request for smart electronic fluid sensors to deploy in watershed grids. Full terminal reporting systems included.",
+      "eligibilityCriteria": {
+        "minTurnover": 0.3,
+        "minExperience": 2,
+        "requiredCertifications": [
+          "MSME (Udyam)",
+          "ISO 9001"
+        ],
+        "msmeOnly": true,
+        "statesAllowed": [
+          "Delhi"
+        ]
+      },
+      "technicalSpecs": "IP68 waterproof shell, integrated LoRaWAN transmitter modules, 5 years maintenance contract.",
+      "documents": [
+        {
+          "name": "Notice_Specs.pdf",
+          "url": "#",
+          "type": "SPECS"
+        }
+      ],
+      "rawText": "CGWB fluid telemetry project. MSME registered. Average turnover above 30L INR.",
+      "aiSummary": null,
+      "aiEligibilityChecklist": null,
+      "status": "ACTIVE",
+      "location": "New Delhi",
+      "pineconeVectorId": null,
+      "createdAt": "2026-07-04T14:55:23.180Z",
+      "updatedAt": "2026-07-04T14:55:23.180Z"
+    },
+    {
+      "id": "t-39",
+      "externalId": "STATE/BH/RCD_ROAD/2026/446",
+      "sourcePortal": "STATE_PWD",
+      "title": "Pavement Milling and Re-carpeting of Darbhanga Radial Ring Road Stretch",
+      "department": "Road Construction Department (RCD) Bihar",
+      "state": "Bihar",
+      "category": "Construction",
+      "subCategory": "Road Recarpeting",
+      "tenderValue": 2.1,
+      "emdAmount": 4.2,
+      "publishedDate": "2026-07-04T10:30:00Z",
+      "bidSubmissionDeadline": "2026-07-19T15:10:15.130Z",
+      "openingDate": "2026-07-20T15:10:15.130Z",
+      "workDescription": "Controlled cold milling of deteriorated bitumen sheets, granular leveling, and heavy dense bituminous concrete layout over 4.8 km section.",
+      "eligibilityCriteria": {
+        "minTurnover": 1,
+        "minExperience": 3,
+        "requiredCertifications": [
+          "Class A Contractor License"
+        ],
+        "msmeOnly": false
+      },
+      "documents": [
+        {
+          "name": "SBD_DarbhangaRoad.pdf",
+          "url": "#",
+          "type": "NOTICE"
+        }
+      ],
+      "rawText": "RCD Darbhanga radial rings. Target budget 2.1 Crores. High-density asphalt concrete layout.",
+      "aiSummary": null,
+      "aiEligibilityChecklist": null,
+      "status": "ACTIVE",
+      "location": "Darbhanga, Bihar",
+      "pineconeVectorId": null,
+      "createdAt": "2026-07-04T15:10:15.130Z",
+      "updatedAt": "2026-07-04T15:10:15.130Z"
+    },
+    {
+      "id": "t-40",
+      "externalId": "PSU/PGCIL/BAY/2026/142",
+      "sourcePortal": "PSU",
+      "title": "Bay Extensions of 132kV Transformer Substations at Kishanganj Hub",
+      "department": "Power Grid Corporation of India (PowerGrid)",
+      "state": "Bihar",
+      "category": "Electrical",
+      "subCategory": "Substation Bay",
+      "tenderValue": 6.8,
+      "emdAmount": 13.6,
+      "publishedDate": "2026-07-04T07:15:00Z",
+      "bidSubmissionDeadline": "2026-08-01T15:10:15.132Z",
+      "openingDate": "2026-08-02T15:10:15.132Z",
+      "workDescription": "Supply, layout, civil foundation, electrical mounting, and grid telemetry integration of 1x fresh 132kV bay corridor.",
+      "eligibilityCriteria": {
+        "minTurnover": 3,
+        "minExperience": 6,
+        "requiredCertifications": [
+          "Class A Electrical License",
+          "PowerGrid Approved Vendor"
+        ],
+        "msmeOnly": false
+      },
+      "documents": [
+        {
+          "name": "PGCIL_Kishanganj_Layout.pdf",
+          "url": "#",
+          "type": "CIVIL_ELECTRICAL"
+        }
+      ],
+      "rawText": "PowerGrid substations bay layout additions Kishanganj Bihar, 6.8 Crore INR.",
+      "aiSummary": null,
+      "aiEligibilityChecklist": null,
+      "status": "ACTIVE",
+      "location": "Kishanganj, Bihar",
+      "pineconeVectorId": null,
+      "createdAt": "2026-07-04T15:10:15.132Z",
+      "updatedAt": "2026-07-04T15:10:15.132Z"
+    },
+    {
+      "id": "t-41",
+      "externalId": "PSU/ONGC/OFFSHORE/2026/977",
+      "sourcePortal": "PSU",
+      "title": "Precision Piping Welds and Rigging Supports at KG-Basin Deep Water Facility",
+      "department": "Oil and Natural Gas Corporation (ONGC)",
+      "state": "Andhra Pradesh",
+      "category": "Construction",
+      "subCategory": "Offshore Piping",
+      "tenderValue": 14.5,
+      "emdAmount": 29,
+      "publishedDate": "2026-07-04T09:45:00Z",
+      "bidSubmissionDeadline": "2026-08-08T15:10:17.143Z",
+      "openingDate": "2026-08-09T15:10:17.143Z",
+      "workDescription": "High pressure alloy welding operations, stress checking of risers and platform deck piping systems complying with API standards.",
+      "eligibilityCriteria": {
+        "minTurnover": 6,
+        "minExperience": 8,
+        "requiredCertifications": [
+          "PESO Safety License",
+          "ISO 9001",
+          "AWS Certified Welding Site Spec"
+        ],
+        "msmeOnly": false
+      },
+      "documents": [
+        {
+          "name": "ONGC_Offshore_KGSpecs.pdf",
+          "url": "#",
+          "type": "STANDARDS"
+        }
+      ],
+      "rawText": "ONGC KG Deepwater bay piping support, value Rs 14.5 Crore.",
+      "aiSummary": null,
+      "aiEligibilityChecklist": null,
+      "status": "ACTIVE",
+      "location": "Kakinada, Andhra Pradesh",
+      "pineconeVectorId": null,
+      "createdAt": "2026-07-04T15:10:17.143Z",
+      "updatedAt": "2026-07-04T15:10:17.143Z"
+    },
+    {
+      "id": "t-42",
+      "externalId": "PSU/NTPC/ASH/2026/499",
+      "sourcePortal": "PSU",
+      "title": "Ash Dyke Piping Upgradations and Concrete Laying at Barh Super Power Station",
+      "department": "National Thermal Power Corporation (NTPC)",
+      "state": "Bihar",
+      "category": "Water Supply",
+      "subCategory": "Slurry Transport",
+      "tenderValue": 5.9,
+      "emdAmount": 11.8,
+      "publishedDate": "2026-07-04T10:15:00Z",
+      "bidSubmissionDeadline": "2026-07-26T15:10:17.145Z",
+      "openingDate": "2026-07-27T15:10:17.145Z",
+      "workDescription": "Renewal of dynamic high wear steel alloy pipes, reinforcement of retaining concrete structures around slurry ash pond cells.",
+      "eligibilityCriteria": {
+        "minTurnover": 2.5,
+        "minExperience": 5,
+        "requiredCertifications": [
+          "Class A Civil",
+          "ISO 14001 Environment"
+        ],
+        "msmeOnly": false
+      },
+      "documents": [
+        {
+          "name": "NTPC_DykePipingspecs.pdf",
+          "url": "#",
+          "type": "SPECS"
+        }
+      ],
+      "rawText": "NTPC Barh power plant coal ash sludge transport corridors, estimate 5.9 Crores.",
+      "aiSummary": null,
+      "aiEligibilityChecklist": null,
+      "status": "ACTIVE",
+      "location": "Barh, Bihar",
+      "pineconeVectorId": null,
+      "createdAt": "2026-07-04T15:10:17.145Z",
+      "updatedAt": "2026-07-04T15:10:17.145Z"
+    },
+    {
+      "id": "t-43",
+      "externalId": "PSU/BHEL/GRID/2026/747",
+      "sourcePortal": "PSU",
+      "title": "Rigging and Panel Cable Layout of High Voltage Power Cabinets at Trichy Complex",
+      "department": "Bharat Heavy Electricals Limited (BHEL)",
+      "state": "Tamil Nadu",
+      "category": "Electrical",
+      "subCategory": "Switchgears",
+      "tenderValue": 4.2,
+      "emdAmount": 8.4,
+      "publishedDate": "2026-07-04T08:30:00Z",
+      "bidSubmissionDeadline": "2026-08-03T15:10:19.168Z",
+      "openingDate": "2026-08-04T15:10:19.168Z",
+      "workDescription": "Engineering switchgear bay panels assembly, insulation checkout, and armored copper connections laying within heavy manufacturing complex.",
+      "eligibilityCriteria": {
+        "minTurnover": 2,
+        "minExperience": 5,
+        "requiredCertifications": [
+          "Class A Electrical License",
+          "ISO 9001"
+        ],
+        "msmeOnly": false
+      },
+      "documents": [
+        {
+          "name": "BHEL_Switchgear_Layout.pdf",
+          "url": "#",
+          "type": "PLANS"
+        }
+      ],
+      "rawText": "BHEL switchgear engineering installation Trichy plant, value 4.2 Crore.",
+      "aiSummary": null,
+      "aiEligibilityChecklist": null,
+      "status": "ACTIVE",
+      "location": "Trichy, Tamil Nadu",
+      "pineconeVectorId": null,
+      "createdAt": "2026-07-04T15:10:19.168Z",
+      "updatedAt": "2026-07-04T15:10:19.168Z"
+    },
+    {
+      "id": "t-44",
+      "externalId": "NHAI/BH/EXP/2026/598",
+      "sourcePortal": "NHAI",
+      "title": "Deployment of Thermoplastic Road Marking Lines and Retroreflective Cat-Eyes on NH-31",
+      "department": "National Highways Authority of India (NHAI)",
+      "state": "Bihar",
+      "category": "Construction",
+      "subCategory": "Road Markings",
+      "tenderValue": 2.5,
+      "emdAmount": 5,
+      "publishedDate": "2026-07-04T12:00:00Z",
+      "bidSubmissionDeadline": "2026-07-24T15:10:19.170Z",
+      "openingDate": "2026-07-25T15:10:19.170Z",
+      "workDescription": "Full supply, safety layout, thermal paint coating, and dual aspect retroreflective stud indicators over 40km expressway stretch.",
+      "eligibilityCriteria": {
+        "minTurnover": 1,
+        "minExperience": 3,
+        "requiredCertifications": [
+          "Class A Contractor License"
+        ],
+        "msmeOnly": false
+      },
+      "documents": [
+        {
+          "name": "NH31_MarkingsSpecs.pdf",
+          "url": "#",
+          "type": "SPECS"
+        }
+      ],
+      "rawText": "NHAI lane markings contract, budget 2.5 Crore, EMD 5 Lakhs.",
+      "aiSummary": null,
+      "aiEligibilityChecklist": null,
+      "status": "ACTIVE",
+      "location": "Begusarai, Bihar",
+      "pineconeVectorId": null,
+      "createdAt": "2026-07-04T15:10:19.170Z",
+      "updatedAt": "2026-07-04T15:10:19.170Z"
+    },
+    {
+      "id": "t-45",
+      "externalId": "RAIL/IREPS/ENGG/31411",
+      "sourcePortal": "RAILWAYS",
+      "title": "Platform Drainage and Concrete Bed Overlay at Patna Station Yards",
+      "department": "East Central Railways (ECR)",
+      "state": "Bihar",
+      "category": "Construction",
+      "subCategory": "Drainage Work",
+      "tenderValue": 1.6,
+      "emdAmount": 3.2,
+      "publishedDate": "2026-07-04T11:00:00Z",
+      "bidSubmissionDeadline": "2026-07-22T15:10:21.179Z",
+      "openingDate": "2026-07-23T15:10:21.179Z",
+      "workDescription": "Civil engineering rebuild of rail track drainage lanes using high flow concrete base and robust discharge pathways.",
+      "eligibilityCriteria": {
+        "minTurnover": 1,
+        "minExperience": 4,
+        "requiredCertifications": [
+          "Indian Railways Registered Vendor",
+          "Class A Civil"
+        ],
+        "msmeOnly": false
+      },
+      "documents": [
+        {
+          "name": "PatnaYardsSpecs.pdf",
+          "url": "#",
+          "type": "DETAILED_NOTICE"
+        }
+      ],
+      "rawText": "ECR Platforms drainage refurbishment, budget 1.6 Crores.",
+      "aiSummary": null,
+      "aiEligibilityChecklist": null,
+      "status": "ACTIVE",
+      "location": "Patna, Bihar",
+      "pineconeVectorId": null,
+      "createdAt": "2026-07-04T15:10:21.179Z",
+      "updatedAt": "2026-07-04T15:10:21.179Z"
+    },
+    {
+      "id": "t-46",
+      "externalId": "CPPP/2026/CI/328",
+      "sourcePortal": "CPPP",
+      "title": "Rigging and Layout of Commercial Cold Storage Annex at Bihar Agricultural Complex",
+      "department": "Ministry of Agriculture (CPWD Central Ward)",
+      "state": "Bihar",
+      "category": "Construction",
+      "subCategory": "Refrigeration",
+      "tenderValue": 3.4,
+      "emdAmount": 6.8,
+      "publishedDate": "2026-07-04T10:00:00Z",
+      "bidSubmissionDeadline": "2026-07-29T15:10:21.181Z",
+      "openingDate": "2026-07-30T15:10:21.181Z",
+      "workDescription": "Layout, masonry construction, thermal proofing insulation, and allied refrigeration machinery setup of 1000MT capacity.",
+      "eligibilityCriteria": {
+        "minTurnover": 1.5,
+        "minExperience": 5,
+        "requiredCertifications": [
+          "Class A Contractor License"
+        ],
+        "msmeOnly": false
+      },
+      "technicalSpecs": "Polyurethane insulated panels, freon safety compressors, backup 125kVA generator setup.",
+      "documents": [
+        {
+          "name": "SBD_ColdStorage.pdf",
+          "url": "#",
+          "type": "NOTICE"
+        }
+      ],
+      "rawText": "CPWD Agricultural cold storage. Budget 3.4 Crores. Tender class A construction clearance.",
+      "aiSummary": null,
+      "aiEligibilityChecklist": null,
+      "status": "ACTIVE",
+      "location": "Muzaffarpur, Bihar",
+      "pineconeVectorId": null,
+      "createdAt": "2026-07-04T15:10:21.181Z",
+      "updatedAt": "2026-07-04T15:10:21.181Z"
+    },
+    {
+      "id": "t-47",
+      "externalId": "GEM/2026/B/89910",
+      "sourcePortal": "GEM",
+      "title": "Supply, Assembly, and Field Calibration of 45-Unit Acoustic Level Water Sensors",
+      "department": "Central Ground Water Board (CGWB) / GeM Cell",
+      "state": "Delhi",
+      "category": "Electrical",
+      "subCategory": "Sensors",
+      "tenderValue": 0.85,
+      "emdAmount": 1.7,
+      "publishedDate": "2026-07-04T09:00:00Z",
+      "bidSubmissionDeadline": "2026-07-16T15:10:23.194Z",
+      "openingDate": "2026-07-17T15:10:23.194Z",
+      "workDescription": "GeM marketplace request for smart electronic fluid sensors to deploy in watershed grids. Full terminal reporting systems included.",
+      "eligibilityCriteria": {
+        "minTurnover": 0.3,
+        "minExperience": 2,
+        "requiredCertifications": [
+          "MSME (Udyam)",
+          "ISO 9001"
+        ],
+        "msmeOnly": true,
+        "statesAllowed": [
+          "Delhi"
+        ]
+      },
+      "technicalSpecs": "IP68 waterproof shell, integrated LoRaWAN transmitter modules, 5 years maintenance contract.",
+      "documents": [
+        {
+          "name": "Notice_Specs.pdf",
+          "url": "#",
+          "type": "SPECS"
+        }
+      ],
+      "rawText": "CGWB fluid telemetry project. MSME registered. Average turnover above 30L INR.",
+      "aiSummary": null,
+      "aiEligibilityChecklist": null,
+      "status": "ACTIVE",
+      "location": "New Delhi",
+      "pineconeVectorId": null,
+      "createdAt": "2026-07-04T15:10:23.194Z",
+      "updatedAt": "2026-07-04T15:10:23.194Z"
+    },
+    {
+      "id": "t-48",
+      "externalId": "STATE/BH/RCD_ROAD/2026/963",
+      "sourcePortal": "STATE_PWD",
+      "title": "Pavement Milling and Re-carpeting of Darbhanga Radial Ring Road Stretch",
+      "department": "Road Construction Department (RCD) Bihar",
+      "state": "Bihar",
+      "category": "Construction",
+      "subCategory": "Road Recarpeting",
+      "tenderValue": 2.1,
+      "emdAmount": 4.2,
+      "publishedDate": "2026-07-04T10:30:00Z",
+      "bidSubmissionDeadline": "2026-07-19T15:25:19.840Z",
+      "openingDate": "2026-07-20T15:25:19.840Z",
+      "workDescription": "Controlled cold milling of deteriorated bitumen sheets, granular leveling, and heavy dense bituminous concrete layout over 4.8 km section.",
+      "eligibilityCriteria": {
+        "minTurnover": 1,
+        "minExperience": 3,
+        "requiredCertifications": [
+          "Class A Contractor License"
+        ],
+        "msmeOnly": false
+      },
+      "documents": [
+        {
+          "name": "SBD_DarbhangaRoad.pdf",
+          "url": "#",
+          "type": "NOTICE"
+        }
+      ],
+      "rawText": "RCD Darbhanga radial rings. Target budget 2.1 Crores. High-density asphalt concrete layout.",
+      "aiSummary": null,
+      "aiEligibilityChecklist": null,
+      "status": "ACTIVE",
+      "location": "Darbhanga, Bihar",
+      "pineconeVectorId": null,
+      "createdAt": "2026-07-04T15:25:19.856Z",
+      "updatedAt": "2026-07-04T15:25:19.856Z"
+    },
+    {
+      "id": "t-49",
+      "externalId": "PSU/PGCIL/BAY/2026/561",
+      "sourcePortal": "PSU",
+      "title": "Bay Extensions of 132kV Transformer Substations at Kishanganj Hub",
+      "department": "Power Grid Corporation of India (PowerGrid)",
+      "state": "Bihar",
+      "category": "Electrical",
+      "subCategory": "Substation Bay",
+      "tenderValue": 6.8,
+      "emdAmount": 13.6,
+      "publishedDate": "2026-07-04T07:15:00Z",
+      "bidSubmissionDeadline": "2026-08-01T15:25:21.330Z",
+      "openingDate": "2026-08-02T15:25:21.330Z",
+      "workDescription": "Supply, layout, civil foundation, electrical mounting, and grid telemetry integration of 1x fresh 132kV bay corridor.",
+      "eligibilityCriteria": {
+        "minTurnover": 3,
+        "minExperience": 6,
+        "requiredCertifications": [
+          "Class A Electrical License",
+          "PowerGrid Approved Vendor"
+        ],
+        "msmeOnly": false
+      },
+      "documents": [
+        {
+          "name": "PGCIL_Kishanganj_Layout.pdf",
+          "url": "#",
+          "type": "CIVIL_ELECTRICAL"
+        }
+      ],
+      "rawText": "PowerGrid substations bay layout additions Kishanganj Bihar, 6.8 Crore INR.",
+      "aiSummary": null,
+      "aiEligibilityChecklist": null,
+      "status": "ACTIVE",
+      "location": "Kishanganj, Bihar",
+      "pineconeVectorId": null,
+      "createdAt": "2026-07-04T15:25:21.353Z",
+      "updatedAt": "2026-07-04T15:25:21.353Z"
+    },
+    {
+      "id": "t-50",
+      "externalId": "PSU/ONGC/OFFSHORE/2026/656",
+      "sourcePortal": "PSU",
+      "title": "Precision Piping Welds and Rigging Supports at KG-Basin Deep Water Facility",
+      "department": "Oil and Natural Gas Corporation (ONGC)",
+      "state": "Andhra Pradesh",
+      "category": "Construction",
+      "subCategory": "Offshore Piping",
+      "tenderValue": 14.5,
+      "emdAmount": 29,
+      "publishedDate": "2026-07-04T09:45:00Z",
+      "bidSubmissionDeadline": "2026-08-08T15:25:23.375Z",
+      "openingDate": "2026-08-09T15:25:23.375Z",
+      "workDescription": "High pressure alloy welding operations, stress checking of risers and platform deck piping systems complying with API standards.",
+      "eligibilityCriteria": {
+        "minTurnover": 6,
+        "minExperience": 8,
+        "requiredCertifications": [
+          "PESO Safety License",
+          "ISO 9001",
+          "AWS Certified Welding Site Spec"
+        ],
+        "msmeOnly": false
+      },
+      "documents": [
+        {
+          "name": "ONGC_Offshore_KGSpecs.pdf",
+          "url": "#",
+          "type": "STANDARDS"
+        }
+      ],
+      "rawText": "ONGC KG Deepwater bay piping support, value Rs 14.5 Crore.",
+      "aiSummary": null,
+      "aiEligibilityChecklist": null,
+      "status": "ACTIVE",
+      "location": "Kakinada, Andhra Pradesh",
+      "pineconeVectorId": null,
+      "createdAt": "2026-07-04T15:25:23.375Z",
+      "updatedAt": "2026-07-04T15:25:23.375Z"
+    },
+    {
+      "id": "t-51",
+      "externalId": "PSU/NTPC/ASH/2026/442",
+      "sourcePortal": "PSU",
+      "title": "Ash Dyke Piping Upgradations and Concrete Laying at Barh Super Power Station",
+      "department": "National Thermal Power Corporation (NTPC)",
+      "state": "Bihar",
+      "category": "Water Supply",
+      "subCategory": "Slurry Transport",
+      "tenderValue": 5.9,
+      "emdAmount": 11.8,
+      "publishedDate": "2026-07-04T10:15:00Z",
+      "bidSubmissionDeadline": "2026-07-26T15:25:24.237Z",
+      "openingDate": "2026-07-27T15:25:24.237Z",
+      "workDescription": "Renewal of dynamic high wear steel alloy pipes, reinforcement of retaining concrete structures around slurry ash pond cells.",
+      "eligibilityCriteria": {
+        "minTurnover": 2.5,
+        "minExperience": 5,
+        "requiredCertifications": [
+          "Class A Civil",
+          "ISO 14001 Environment"
+        ],
+        "msmeOnly": false
+      },
+      "documents": [
+        {
+          "name": "NTPC_DykePipingspecs.pdf",
+          "url": "#",
+          "type": "SPECS"
+        }
+      ],
+      "rawText": "NTPC Barh power plant coal ash sludge transport corridors, estimate 5.9 Crores.",
+      "aiSummary": null,
+      "aiEligibilityChecklist": null,
+      "status": "ACTIVE",
+      "location": "Barh, Bihar",
+      "pineconeVectorId": null,
+      "createdAt": "2026-07-04T15:25:24.237Z",
+      "updatedAt": "2026-07-04T15:25:24.237Z"
+    },
+    {
+      "id": "t-52",
+      "externalId": "PSU/BHEL/GRID/2026/413",
+      "sourcePortal": "PSU",
+      "title": "Rigging and Panel Cable Layout of High Voltage Power Cabinets at Trichy Complex",
+      "department": "Bharat Heavy Electricals Limited (BHEL)",
+      "state": "Tamil Nadu",
+      "category": "Electrical",
+      "subCategory": "Switchgears",
+      "tenderValue": 4.2,
+      "emdAmount": 8.4,
+      "publishedDate": "2026-07-04T08:30:00Z",
+      "bidSubmissionDeadline": "2026-08-03T15:25:25.924Z",
+      "openingDate": "2026-08-04T15:25:25.924Z",
+      "workDescription": "Engineering switchgear bay panels assembly, insulation checkout, and armored copper connections laying within heavy manufacturing complex.",
+      "eligibilityCriteria": {
+        "minTurnover": 2,
+        "minExperience": 5,
+        "requiredCertifications": [
+          "Class A Electrical License",
+          "ISO 9001"
+        ],
+        "msmeOnly": false
+      },
+      "documents": [
+        {
+          "name": "BHEL_Switchgear_Layout.pdf",
+          "url": "#",
+          "type": "PLANS"
+        }
+      ],
+      "rawText": "BHEL switchgear engineering installation Trichy plant, value 4.2 Crore.",
+      "aiSummary": null,
+      "aiEligibilityChecklist": null,
+      "status": "ACTIVE",
+      "location": "Trichy, Tamil Nadu",
+      "pineconeVectorId": null,
+      "createdAt": "2026-07-04T15:25:25.924Z",
+      "updatedAt": "2026-07-04T15:25:25.924Z"
+    },
+    {
+      "id": "t-53",
+      "externalId": "NHAI/BH/EXP/2026/781",
+      "sourcePortal": "NHAI",
+      "title": "Deployment of Thermoplastic Road Marking Lines and Retroreflective Cat-Eyes on NH-31",
+      "department": "National Highways Authority of India (NHAI)",
+      "state": "Bihar",
+      "category": "Construction",
+      "subCategory": "Road Markings",
+      "tenderValue": 2.5,
+      "emdAmount": 5,
+      "publishedDate": "2026-07-04T12:00:00Z",
+      "bidSubmissionDeadline": "2026-07-24T15:25:26.383Z",
+      "openingDate": "2026-07-25T15:25:26.383Z",
+      "workDescription": "Full supply, safety layout, thermal paint coating, and dual aspect retroreflective stud indicators over 40km expressway stretch.",
+      "eligibilityCriteria": {
+        "minTurnover": 1,
+        "minExperience": 3,
+        "requiredCertifications": [
+          "Class A Contractor License"
+        ],
+        "msmeOnly": false
+      },
+      "documents": [
+        {
+          "name": "NH31_MarkingsSpecs.pdf",
+          "url": "#",
+          "type": "SPECS"
+        }
+      ],
+      "rawText": "NHAI lane markings contract, budget 2.5 Crore, EMD 5 Lakhs.",
+      "aiSummary": null,
+      "aiEligibilityChecklist": null,
+      "status": "ACTIVE",
+      "location": "Begusarai, Bihar",
+      "pineconeVectorId": null,
+      "createdAt": "2026-07-04T15:25:26.383Z",
+      "updatedAt": "2026-07-04T15:25:26.383Z"
+    },
+    {
+      "id": "t-54",
+      "externalId": "RAIL/IREPS/ENGG/31366",
+      "sourcePortal": "RAILWAYS",
+      "title": "Platform Drainage and Concrete Bed Overlay at Patna Station Yards",
+      "department": "East Central Railways (ECR)",
+      "state": "Bihar",
+      "category": "Construction",
+      "subCategory": "Drainage Work",
+      "tenderValue": 1.6,
+      "emdAmount": 3.2,
+      "publishedDate": "2026-07-04T11:00:00Z",
+      "bidSubmissionDeadline": "2026-07-22T15:25:28.421Z",
+      "openingDate": "2026-07-23T15:25:28.421Z",
+      "workDescription": "Civil engineering rebuild of rail track drainage lanes using high flow concrete base and robust discharge pathways.",
+      "eligibilityCriteria": {
+        "minTurnover": 1,
+        "minExperience": 4,
+        "requiredCertifications": [
+          "Indian Railways Registered Vendor",
+          "Class A Civil"
+        ],
+        "msmeOnly": false
+      },
+      "documents": [
+        {
+          "name": "PatnaYardsSpecs.pdf",
+          "url": "#",
+          "type": "DETAILED_NOTICE"
+        }
+      ],
+      "rawText": "ECR Platforms drainage refurbishment, budget 1.6 Crores.",
+      "aiSummary": null,
+      "aiEligibilityChecklist": null,
+      "status": "ACTIVE",
+      "location": "Patna, Bihar",
+      "pineconeVectorId": null,
+      "createdAt": "2026-07-04T15:25:28.421Z",
+      "updatedAt": "2026-07-04T15:25:28.421Z"
+    },
+    {
+      "id": "t-55",
+      "externalId": "CPPP/2026/CI/484",
+      "sourcePortal": "CPPP",
+      "title": "Rigging and Layout of Commercial Cold Storage Annex at Bihar Agricultural Complex",
+      "department": "Ministry of Agriculture (CPWD Central Ward)",
+      "state": "Bihar",
+      "category": "Construction",
+      "subCategory": "Refrigeration",
+      "tenderValue": 3.4,
+      "emdAmount": 6.8,
+      "publishedDate": "2026-07-04T10:00:00Z",
+      "bidSubmissionDeadline": "2026-07-29T15:25:28.852Z",
+      "openingDate": "2026-07-30T15:25:28.852Z",
+      "workDescription": "Layout, masonry construction, thermal proofing insulation, and allied refrigeration machinery setup of 1000MT capacity.",
+      "eligibilityCriteria": {
+        "minTurnover": 1.5,
+        "minExperience": 5,
+        "requiredCertifications": [
+          "Class A Contractor License"
+        ],
+        "msmeOnly": false
+      },
+      "technicalSpecs": "Polyurethane insulated panels, freon safety compressors, backup 125kVA generator setup.",
+      "documents": [
+        {
+          "name": "SBD_ColdStorage.pdf",
+          "url": "#",
+          "type": "NOTICE"
+        }
+      ],
+      "rawText": "CPWD Agricultural cold storage. Budget 3.4 Crores. Tender class A construction clearance.",
+      "aiSummary": null,
+      "aiEligibilityChecklist": null,
+      "status": "ACTIVE",
+      "location": "Muzaffarpur, Bihar",
+      "pineconeVectorId": null,
+      "createdAt": "2026-07-04T15:25:28.852Z",
+      "updatedAt": "2026-07-04T15:25:28.852Z"
+    },
+    {
+      "id": "t-56",
+      "externalId": "GEM/2026/B/89310",
+      "sourcePortal": "GEM",
+      "title": "Supply, Assembly, and Field Calibration of 45-Unit Acoustic Level Water Sensors",
+      "department": "Central Ground Water Board (CGWB) / GeM Cell",
+      "state": "Delhi",
+      "category": "Electrical",
+      "subCategory": "Sensors",
+      "tenderValue": 0.85,
+      "emdAmount": 1.7,
+      "publishedDate": "2026-07-04T09:00:00Z",
+      "bidSubmissionDeadline": "2026-07-16T15:25:30.872Z",
+      "openingDate": "2026-07-17T15:25:30.872Z",
+      "workDescription": "GeM marketplace request for smart electronic fluid sensors to deploy in watershed grids. Full terminal reporting systems included.",
+      "eligibilityCriteria": {
+        "minTurnover": 0.3,
+        "minExperience": 2,
+        "requiredCertifications": [
+          "MSME (Udyam)",
+          "ISO 9001"
+        ],
+        "msmeOnly": true,
+        "statesAllowed": [
+          "Delhi"
+        ]
+      },
+      "technicalSpecs": "IP68 waterproof shell, integrated LoRaWAN transmitter modules, 5 years maintenance contract.",
+      "documents": [
+        {
+          "name": "Notice_Specs.pdf",
+          "url": "#",
+          "type": "SPECS"
+        }
+      ],
+      "rawText": "CGWB fluid telemetry project. MSME registered. Average turnover above 30L INR.",
+      "aiSummary": null,
+      "aiEligibilityChecklist": null,
+      "status": "ACTIVE",
+      "location": "New Delhi",
+      "pineconeVectorId": null,
+      "createdAt": "2026-07-04T15:25:30.872Z",
+      "updatedAt": "2026-07-04T15:25:30.872Z"
+    }
+  ],
+  "tenderMatches": [
+    {
+      "id": "tm-cp-1-t-1",
+      "tenderId": "t-1",
+      "companyProfileId": "cp-1",
+      "matchScore": 90,
+      "matchBreakdown": {
+        "turnoverMatch": true,
+        "certMatch": true,
+        "categoryMatch": true,
+        "stateMatch": true,
+        "experienceMatch": true,
+        "missingItems": []
+      },
+      "isBookmarked": false,
+      "userStatus": "NEW",
+      "createdAt": "2026-07-04T14:18:59.070Z",
+      "updatedAt": "2026-07-04T14:18:59.070Z"
+    },
+    {
+      "id": "tm-cp-1-t-2",
+      "tenderId": "t-2",
+      "companyProfileId": "cp-1",
+      "matchScore": 95,
+      "matchBreakdown": {
+        "turnoverMatch": true,
+        "certMatch": true,
+        "categoryMatch": true,
+        "stateMatch": true,
+        "experienceMatch": true,
+        "missingItems": [
+          "Missing certified document: BREDA Empanelment"
+        ]
+      },
+      "isBookmarked": false,
+      "userStatus": "NEW",
+      "createdAt": "2026-07-04T14:18:59.070Z",
+      "updatedAt": "2026-07-04T14:18:59.070Z"
+    },
+    {
+      "id": "tm-cp-1-t-3",
+      "tenderId": "t-3",
+      "companyProfileId": "cp-1",
+      "matchScore": 83,
+      "matchBreakdown": {
+        "turnoverMatch": true,
+        "certMatch": true,
+        "categoryMatch": true,
+        "stateMatch": true,
+        "experienceMatch": true,
+        "missingItems": [
+          "Missing certified document: GST registration"
+        ]
+      },
+      "isBookmarked": false,
+      "userStatus": "NEW",
+      "createdAt": "2026-07-04T14:18:59.070Z",
+      "updatedAt": "2026-07-04T14:18:59.070Z"
+    },
+    {
+      "id": "tm-cp-1-t-4",
+      "tenderId": "t-4",
+      "companyProfileId": "cp-1",
+      "matchScore": 75,
+      "matchBreakdown": {
+        "turnoverMatch": true,
+        "certMatch": false,
+        "categoryMatch": true,
+        "stateMatch": true,
+        "experienceMatch": true,
+        "missingItems": [
+          "Missing certified document: Indian Railways Registered Vendor",
+          "Missing certified document: Class A Civil"
+        ]
+      },
+      "isBookmarked": false,
+      "userStatus": "NEW",
+      "createdAt": "2026-07-04T14:18:59.070Z",
+      "updatedAt": "2026-07-04T14:18:59.070Z"
+    },
+    {
+      "id": "tm-cp-1-t-5",
+      "tenderId": "t-5",
+      "companyProfileId": "cp-1",
+      "matchScore": 75,
+      "matchBreakdown": {
+        "turnoverMatch": true,
+        "certMatch": false,
+        "categoryMatch": true,
+        "stateMatch": true,
+        "experienceMatch": true,
+        "missingItems": [
+          "Missing certified document: Class A Civil License",
+          "Missing certified document: ISO 14001 Environment"
+        ]
+      },
+      "isBookmarked": false,
+      "userStatus": "NEW",
+      "createdAt": "2026-07-04T14:18:59.070Z",
+      "updatedAt": "2026-07-04T14:18:59.070Z"
+    },
+    {
+      "id": "tm-cp-1-t-6",
+      "tenderId": "t-6",
+      "companyProfileId": "cp-1",
+      "matchScore": 83,
+      "matchBreakdown": {
+        "turnoverMatch": true,
+        "certMatch": true,
+        "categoryMatch": true,
+        "stateMatch": true,
+        "experienceMatch": true,
+        "missingItems": [
+          "Missing certified document: PESO Safety License"
+        ]
+      },
+      "isBookmarked": false,
+      "userStatus": "NEW",
+      "createdAt": "2026-07-04T14:18:59.070Z",
+      "updatedAt": "2026-07-04T14:18:59.070Z"
+    },
+    {
+      "id": "tm-cp-1-t-7",
+      "tenderId": "t-7",
+      "companyProfileId": "cp-1",
+      "matchScore": 85,
+      "matchBreakdown": {
+        "turnoverMatch": true,
+        "certMatch": false,
+        "categoryMatch": true,
+        "stateMatch": true,
+        "experienceMatch": true,
+        "missingItems": [
+          "Missing certified document: MES Registered Contractor",
+          "Missing certified document: Class A Electrical License"
+        ]
+      },
+      "isBookmarked": false,
+      "userStatus": "NEW",
+      "createdAt": "2026-07-04T14:18:59.070Z",
+      "updatedAt": "2026-07-04T14:18:59.070Z"
+    },
+    {
+      "id": "tm-cp-1-t-8",
+      "tenderId": "t-8",
+      "companyProfileId": "cp-1",
+      "matchScore": 55,
+      "matchBreakdown": {
+        "turnoverMatch": false,
+        "certMatch": false,
+        "categoryMatch": true,
+        "stateMatch": true,
+        "experienceMatch": true,
+        "missingItems": [
+          "Turnover shortfall: Registered average 5.2 Cr, requires 8 Cr",
+          "Missing certified document: Class A civil License"
+        ]
+      },
+      "isBookmarked": false,
+      "userStatus": "NEW",
+      "createdAt": "2026-07-04T14:18:59.070Z",
+      "updatedAt": "2026-07-04T14:18:59.070Z"
+    },
+    {
+      "id": "tm-cp-1-t-9",
+      "tenderId": "t-9",
+      "companyProfileId": "cp-1",
+      "matchScore": 90,
+      "matchBreakdown": {
+        "turnoverMatch": true,
+        "certMatch": true,
+        "categoryMatch": true,
+        "stateMatch": false,
+        "experienceMatch": true,
+        "missingItems": [
+          "Operating territory constraints: Allowed states Odisha, registered state Bihar, Jharkhand, Uttar Pradesh"
+        ]
+      },
+      "isBookmarked": false,
+      "userStatus": "NEW",
+      "createdAt": "2026-07-04T14:18:59.070Z",
+      "updatedAt": "2026-07-04T14:18:59.070Z"
+    },
+    {
+      "id": "tm-cp-1-t-10",
+      "tenderId": "t-10",
+      "companyProfileId": "cp-1",
+      "matchScore": 90,
+      "matchBreakdown": {
+        "turnoverMatch": true,
+        "certMatch": true,
+        "categoryMatch": true,
+        "stateMatch": true,
+        "experienceMatch": true,
+        "missingItems": []
+      },
+      "isBookmarked": false,
+      "userStatus": "NEW",
+      "createdAt": "2026-07-04T14:18:59.070Z",
+      "updatedAt": "2026-07-04T14:18:59.070Z"
+    },
+    {
+      "id": "tm-cp-1-t-11",
+      "tenderId": "t-11",
+      "companyProfileId": "cp-1",
+      "matchScore": 90,
+      "matchBreakdown": {
+        "turnoverMatch": true,
+        "certMatch": true,
+        "categoryMatch": true,
+        "stateMatch": true,
+        "experienceMatch": true,
+        "missingItems": []
+      },
+      "isBookmarked": false,
+      "userStatus": "NEW",
+      "createdAt": "2026-07-04T14:18:59.070Z",
+      "updatedAt": "2026-07-04T14:18:59.070Z"
+    },
+    {
+      "id": "tm-cp-1-t-12",
+      "tenderId": "t-12",
+      "companyProfileId": "cp-1",
+      "matchScore": 70,
+      "matchBreakdown": {
+        "turnoverMatch": true,
+        "certMatch": true,
+        "categoryMatch": false,
+        "stateMatch": true,
+        "experienceMatch": true,
+        "missingItems": [
+          "Matching Work Category Category"
+        ]
+      },
+      "isBookmarked": false,
+      "userStatus": "NEW",
+      "createdAt": "2026-07-04T14:18:59.070Z",
+      "updatedAt": "2026-07-04T14:18:59.070Z"
+    },
+    {
+      "id": "tm-cp-1-t-13",
+      "tenderId": "t-13",
+      "companyProfileId": "cp-1",
+      "matchScore": 50,
+      "matchBreakdown": {
+        "turnoverMatch": true,
+        "certMatch": true,
+        "categoryMatch": false,
+        "stateMatch": false,
+        "experienceMatch": true,
+        "missingItems": [
+          "Matching Work Category Category",
+          "Operating territory constraints: Allowed states West Bengal, registered state Bihar, Jharkhand, Uttar Pradesh"
+        ]
+      },
+      "isBookmarked": false,
+      "userStatus": "NEW",
+      "createdAt": "2026-07-04T14:18:59.070Z",
+      "updatedAt": "2026-07-04T14:18:59.070Z"
+    },
+    {
+      "id": "tm-cp-1-t-14",
+      "tenderId": "t-14",
+      "companyProfileId": "cp-1",
+      "matchScore": 80,
+      "matchBreakdown": {
+        "turnoverMatch": true,
+        "certMatch": true,
+        "categoryMatch": true,
+        "stateMatch": false,
+        "experienceMatch": true,
+        "missingItems": [
+          "Operating territory constraints: Allowed states Odisha, registered state Bihar, Jharkhand, Uttar Pradesh"
+        ]
+      },
+      "isBookmarked": false,
+      "userStatus": "NEW",
+      "createdAt": "2026-07-04T14:18:59.070Z",
+      "updatedAt": "2026-07-04T14:18:59.070Z"
+    },
+    {
+      "id": "tm-cp-1-t-15",
+      "tenderId": "t-15",
+      "companyProfileId": "cp-1",
+      "matchScore": 100,
+      "matchBreakdown": {
+        "turnoverMatch": true,
+        "certMatch": true,
+        "categoryMatch": true,
+        "stateMatch": true,
+        "experienceMatch": true,
+        "missingItems": []
+      },
+      "isBookmarked": false,
+      "userStatus": "NEW",
+      "createdAt": "2026-07-04T14:18:59.070Z",
+      "updatedAt": "2026-07-04T14:18:59.070Z"
+    },
+    {
+      "id": "tm-cp-1-t-16",
+      "tenderId": "t-16",
+      "companyProfileId": "cp-1",
+      "matchScore": 90,
+      "matchBreakdown": {
+        "turnoverMatch": true,
+        "certMatch": true,
+        "categoryMatch": true,
+        "stateMatch": true,
+        "experienceMatch": true,
+        "missingItems": []
+      },
+      "isBookmarked": false,
+      "userStatus": "NEW",
+      "createdAt": "2026-07-04T14:18:59.070Z",
+      "updatedAt": "2026-07-04T14:18:59.070Z"
+    },
+    {
+      "id": "tm-cp-1-t-17",
+      "tenderId": "t-17",
+      "companyProfileId": "cp-1",
+      "matchScore": 60,
+      "matchBreakdown": {
+        "turnoverMatch": true,
+        "certMatch": true,
+        "categoryMatch": false,
+        "stateMatch": true,
+        "experienceMatch": true,
+        "missingItems": [
+          "Matching Work Category Category"
+        ]
+      },
+      "isBookmarked": false,
+      "userStatus": "NEW",
+      "createdAt": "2026-07-04T14:18:59.070Z",
+      "updatedAt": "2026-07-04T14:18:59.070Z"
+    },
+    {
+      "id": "tm-cp-1-t-18",
+      "tenderId": "t-18",
+      "companyProfileId": "cp-1",
+      "matchScore": 60,
+      "matchBreakdown": {
+        "turnoverMatch": true,
+        "certMatch": true,
+        "categoryMatch": false,
+        "stateMatch": false,
+        "experienceMatch": true,
+        "missingItems": [
+          "Matching Work Category Category",
+          "Operating territory constraints: Allowed states West Bengal, registered state Bihar, Jharkhand, Uttar Pradesh"
+        ]
+      },
+      "isBookmarked": false,
+      "userStatus": "NEW",
+      "createdAt": "2026-07-04T14:18:59.070Z",
+      "updatedAt": "2026-07-04T14:18:59.070Z"
+    },
+    {
+      "id": "tm-cp-1-t-19",
+      "tenderId": "t-19",
+      "companyProfileId": "cp-1",
+      "matchScore": 80,
+      "matchBreakdown": {
+        "turnoverMatch": true,
+        "certMatch": true,
+        "categoryMatch": true,
+        "stateMatch": false,
+        "experienceMatch": true,
+        "missingItems": [
+          "Operating territory constraints: Allowed states Odisha, registered state Bihar, Jharkhand, Uttar Pradesh"
+        ]
+      },
+      "isBookmarked": false,
+      "userStatus": "NEW",
+      "createdAt": "2026-07-04T14:18:59.070Z",
+      "updatedAt": "2026-07-04T14:18:59.070Z"
+    },
+    {
+      "id": "tm-cp-1-t-20",
+      "tenderId": "t-20",
+      "companyProfileId": "cp-1",
+      "matchScore": 90,
+      "matchBreakdown": {
+        "turnoverMatch": true,
+        "certMatch": true,
+        "categoryMatch": true,
+        "stateMatch": true,
+        "experienceMatch": true,
+        "missingItems": []
+      },
+      "isBookmarked": false,
+      "userStatus": "NEW",
+      "createdAt": "2026-07-04T14:18:59.070Z",
+      "updatedAt": "2026-07-04T14:18:59.070Z"
+    }
+  ],
+  "bidDocuments": [
+    {
+      "id": "bd-1",
+      "tenderId": "t-1",
+      "companyProfileId": "cp-1",
+      "userId": "u-1",
+      "type": "COVER_LETTER",
+      "content": "# COVER LETTER\n\n**To,**\nThe Executive Engineer (Civil), Central division,\nCentral Public Works Department (CPWD),\nPatna, Bihar.\n\n**Subject: Bid Submission for Construction of Academic Block and Hostel Building at IIT Patna (Tender Ref: CPPP/2026/BR/001)**\n\nRespected Sir,\n\nHaving analyzed the tender specifications and layout drawings for academic block and hostel building constructions at IIT Patna, we are pleased to present our technical bid document package for your considerations.\n\nSharma Construction & Infra, Pvt Ltd is a premier Class A engineering contractor licensed with state departments, operating actively in Bihar for over 8 years. We possess average annual financial turnovers of Rs. 5.2 Crores and are an MSME-registered (Udyam) company with certifications of ISO 9001.\n\nEnclosures with this application:\n1. Proof of earnest money deposit (EMD) of 17 Lakhs.\n2. Experience sheets of outer ring lane bypass roadways and substation utilities.\n3. Attested audited financials sheets for three preceding cycles.\n4. Active registration credentials of Category A contractor.\n\nWe declare all claims are accurate. Our staff and mechanical machinery are fully mobilizable for timely delivery.\n\nYours Faithfully,\n\n**Ramesh Sharma**\nManaging Director,\nSharma Construction & Infra, Pvt Ltd.\nDate: 02-Jun-2026",
+      "s3Url": null,
+      "version": 1,
+      "isAiGenerated": true,
+      "createdAt": "2026-07-04T14:18:59.070Z",
+      "updatedAt": "2026-07-04T14:18:59.070Z"
+    },
+    {
+      "id": "bd-2",
+      "tenderId": "t-2",
+      "companyProfileId": "cp-1",
+      "userId": "u-1",
+      "type": "TECHNICAL_PROPOSAL",
+      "content": "# TECHNICAL PROPOSAL & METHODOLOGY STATEMENT\n\n## Executive Summary\nThis proposal is presented by **Sharma Construction & Infra, Pvt Ltd** for the supply, testing, panel alignment, net-metering synchronization, and long-term grid commissioning of the 200kW Grid-Connected Solar Rooftop system at Hospital Ground Bettiah. As an ISO 9001 and MSME entity registered natively in Bihar, we offer complete site readiness and native engineers.\n\n## Proposed Implementation Plan\n* Phase 1: Grid Structural Inspection and Tilt Optimization (Days 1–7)\n* Phase 2: Anchored Substructure Mountings Installation (Days 8–18)\n* Phase 3: Poly-crystalline Modules Rigging and Inverter Wiring (Days 19–30)\n* Phase 4: Bi-Directional Net-Meter Activation with BREDA and DISCOM (Days 31–40)\n\n## Technical Compliance Checklist\n* PV Panel Warranty: 25 Years linear performance (Fully Compliant)\n* Inverter safety: IP65 cabinet protection with grid diagnostic (Fully Compliant)\n* Galvanized Structure: Capable of withstanding gusts up to 150 km/h (Fully Compliant)",
+      "s3Url": null,
+      "version": 1,
+      "isAiGenerated": true,
+      "createdAt": "2026-07-04T14:18:59.070Z",
+      "updatedAt": "2026-07-04T14:18:59.070Z"
+    }
+  ],
+  "documentVaults": [
+    {
+      "id": "dv-1",
+      "companyProfileId": "cp-1",
+      "userId": "u-1",
+      "documentType": "GST_CERTIFICATE",
+      "fileName": "GSTIN_Certificate_SharmaInfra.pdf",
+      "s3Url": "https://tenderai-docs.s3.ap-south-1.amazonaws.com/cp-1/GSTIN_Certificate_SharmaInfra.pdf",
+      "expiryDate": null,
+      "isVerified": true,
+      "year": null,
+      "createdAt": "2026-03-26T14:18:59.070Z",
+      "updatedAt": "2026-07-04T14:18:59.070Z"
+    },
+    {
+      "id": "dv-2",
+      "companyProfileId": "cp-1",
+      "userId": "u-1",
+      "documentType": "MSME_CERTIFICATE",
+      "fileName": "Udyam_MSME_Registration_Sharma.pdf",
+      "s3Url": "https://tenderai-docs.s3.ap-south-1.amazonaws.com/cp-1/Udyam_MSME_Registration_Sharma.pdf",
+      "expiryDate": "2030-12-31",
+      "isVerified": true,
+      "year": null,
+      "createdAt": "2026-04-15T14:18:59.070Z",
+      "updatedAt": "2026-07-04T14:18:59.070Z"
+    },
+    {
+      "id": "dv-3",
+      "companyProfileId": "cp-1",
+      "userId": "u-1",
+      "documentType": "PAN_CARD",
+      "fileName": "Company_PAN_AAACX1234F.pdf",
+      "s3Url": "https://tenderai-docs.s3.ap-south-1.amazonaws.com/cp-1/Company_PAN_AAACX1234F.pdf",
+      "expiryDate": null,
+      "isVerified": true,
+      "year": null,
+      "createdAt": "2026-03-26T14:18:59.070Z",
+      "updatedAt": "2026-07-04T14:18:59.070Z"
+    },
+    {
+      "id": "dv-4",
+      "companyProfileId": "cp-1",
+      "userId": "u-1",
+      "documentType": "AUDITED_FINANCIALS",
+      "fileName": "FY2024_25_Audited_BalanceSheet.pdf",
+      "s3Url": "https://tenderai-docs.s3.ap-south-1.amazonaws.com/cp-1/FY2024_25_Audited_BalanceSheet.pdf",
+      "expiryDate": null,
+      "isVerified": true,
+      "year": 2025,
+      "createdAt": "2026-07-04T14:18:59.070Z",
+      "updatedAt": "2026-07-04T14:18:59.070Z"
+    },
+    {
+      "id": "dv-5",
+      "companyProfileId": "cp-1",
+      "userId": "u-1",
+      "documentType": "EXPERIENCE_CERTIFICATE",
+      "fileName": "PatnaBypass_RCD_CompletionCert.pdf",
+      "s3Url": "https://tenderai-docs.s3.ap-south-1.amazonaws.com/cp-1/PatnaBypass_RCD_CompletionCert.pdf",
+      "expiryDate": null,
+      "isVerified": true,
+      "year": 2024,
+      "createdAt": "2026-07-04T14:18:59.070Z",
+      "updatedAt": "2026-07-04T14:18:59.070Z"
+    },
+    {
+      "id": "dv-6",
+      "companyProfileId": "cp-1",
+      "userId": "u-1",
+      "documentType": "ISO_CERTIFICATE",
+      "fileName": "ISO_9001_Compliance_ शर्मा.pdf",
+      "s3Url": "https://tenderai-docs.s3.ap-south-1.amazonaws.com/cp-1/ISO_9001_Compliance.pdf",
+      "expiryDate": "2026-07-15",
+      "isVerified": true,
+      "year": null,
+      "createdAt": "2026-07-04T14:18:59.070Z",
+      "updatedAt": "2026-07-04T14:18:59.070Z"
+    }
+  ],
+  "alerts": [
+    {
+      "id": "al-5jgur",
+      "userId": "u-1",
+      "tenderId": "t-2",
+      "type": "NEW_MATCH",
+      "channel": "IN_APP",
+      "message": "New high compatibility tender match generated! (95% Match Score) for \"Solar Rooftop Power Plants in Gaya Subdivisions\". Check details in criteria workspace.",
+      "isRead": false,
+      "sentAt": "2026-07-04T15:25:23.134Z",
+      "createdAt": "2026-07-04T15:25:23.134Z"
+    },
+    {
+      "id": "al-706gu",
+      "userId": "u-1",
+      "tenderId": "t-3",
+      "type": "NEW_MATCH",
+      "channel": "IN_APP",
+      "message": "New high compatibility tender match generated! (84% Match Score) for \"Sewerage Reinforcement & Excavation in Noida Sector 62\". Check details in criteria workspace.",
+      "isRead": false,
+      "sentAt": "2026-07-04T15:24:38.843Z",
+      "createdAt": "2026-07-04T15:24:39.464Z"
+    },
+    {
+      "id": "al-mwzbs",
+      "userId": "u-1",
+      "tenderId": "t-3",
+      "type": "DEADLINE_REMINDER",
+      "channel": "IN_APP",
+      "message": "Approaching Deadline: Bid submission for \"Hajipur-Mahua Roadway Section Bid Submission\" closes in 4 days! Ensure all EMD documents are ready.",
+      "isRead": false,
+      "sentAt": "2026-07-04T15:23:50.085Z",
+      "createdAt": "2026-07-04T15:23:50.085Z"
+    },
+    {
+      "id": "al-yfnlp",
+      "userId": "u-1",
+      "tenderId": "t-2",
+      "type": "NEW_MATCH",
+      "channel": "IN_APP",
+      "message": "New high compatibility tender match generated! (86% Match Score) for \"Solar Rooftop Power Plants in Gaya Subdivisions\". Check details in criteria workspace.",
+      "isRead": false,
+      "sentAt": "2026-07-04T15:23:05.074Z",
+      "createdAt": "2026-07-04T15:23:05.074Z"
+    },
+    {
+      "id": "al-rbq72",
+      "userId": "u-1",
+      "tenderId": "t-1",
+      "type": "DEADLINE_REMINDER",
+      "channel": "IN_APP",
+      "message": "Approaching Deadline: Bid submission for \"IIT Patna Academic Block G+4 Complex Structure\" closes in 3 days! Ensure all EMD documents are ready.",
+      "isRead": false,
+      "sentAt": "2026-07-04T15:22:20.071Z",
+      "createdAt": "2026-07-04T15:22:20.071Z"
+    },
+    {
+      "id": "al-hdbmd",
+      "userId": "u-1",
+      "tenderId": "t-1",
+      "type": "DEADLINE_REMINDER",
+      "channel": "IN_APP",
+      "message": "Approaching Deadline: Bid submission for \"IIT Patna Academic Block G+4 Complex Structure\" closes in 2 days! Ensure all EMD documents are ready.",
+      "isRead": false,
+      "sentAt": "2026-07-04T15:21:35.053Z",
+      "createdAt": "2026-07-04T15:21:35.053Z"
+    },
+    {
+      "id": "al-80m50",
+      "userId": "u-1",
+      "tenderId": "t-3",
+      "type": "NEW_MATCH",
+      "channel": "IN_APP",
+      "message": "New high compatibility tender match generated! (91% Match Score) for \"Sewerage Reinforcement & Excavation in Noida Sector 62\". Check details in criteria workspace.",
+      "isRead": false,
+      "sentAt": "2026-07-04T15:20:50.052Z",
+      "createdAt": "2026-07-04T15:20:50.052Z"
+    },
+    {
+      "id": "al-g7t7l",
+      "userId": "u-1",
+      "tenderId": "t-1",
+      "type": "NEW_MATCH",
+      "channel": "IN_APP",
+      "message": "New high compatibility tender match generated! (90% Match Score) for \"Construction of Academic Block and Hostel Building at IIT Patna\". Check details in criteria workspace.",
+      "isRead": false,
+      "sentAt": "2026-07-04T15:20:05.045Z",
+      "createdAt": "2026-07-04T15:20:05.045Z"
+    },
+    {
+      "id": "al-nffex",
+      "userId": "u-1",
+      "tenderId": "t-3",
+      "type": "DEADLINE_REMINDER",
+      "channel": "IN_APP",
+      "message": "Approaching Deadline: Bid submission for \"Hajipur-Mahua Roadway Section Bid Submission\" closes in 6 days! Ensure all EMD documents are ready.",
+      "isRead": false,
+      "sentAt": "2026-07-04T15:19:20.042Z",
+      "createdAt": "2026-07-04T15:19:20.042Z"
+    },
+    {
+      "id": "al-euk6r",
+      "userId": "u-1",
+      "tenderId": "t-1",
+      "type": "DEADLINE_REMINDER",
+      "channel": "IN_APP",
+      "message": "Approaching Deadline: Bid submission for \"IIT Patna Academic Block G+4 Complex Structure\" closes in 5 days! Ensure all EMD documents are ready.",
+      "isRead": false,
+      "sentAt": "2026-07-04T15:18:35.039Z",
+      "createdAt": "2026-07-04T15:18:35.040Z"
+    },
+    {
+      "id": "al-z5bmc",
+      "userId": "u-1",
+      "tenderId": "t-1",
+      "type": "NEW_MATCH",
+      "channel": "IN_APP",
+      "message": "New high compatibility tender match generated! (81% Match Score) for \"Construction of Academic Block and Hostel Building at IIT Patna\". Check details in criteria workspace.",
+      "isRead": false,
+      "sentAt": "2026-07-04T15:17:50.033Z",
+      "createdAt": "2026-07-04T15:17:50.033Z"
+    },
+    {
+      "id": "al-gfs3h",
+      "userId": "u-1",
+      "tenderId": "t-2",
+      "type": "NEW_MATCH",
+      "channel": "IN_APP",
+      "message": "New high compatibility tender match generated! (96% Match Score) for \"Solar Rooftop Power Plants in Gaya Subdivisions\". Check details in criteria workspace.",
+      "isRead": false,
+      "sentAt": "2026-07-04T15:17:05.034Z",
+      "createdAt": "2026-07-04T15:17:05.034Z"
+    },
+    {
+      "id": "al-ipb2m",
+      "userId": "u-1",
+      "tenderId": "t-1",
+      "type": "DEADLINE_REMINDER",
+      "channel": "IN_APP",
+      "message": "Approaching Deadline: Bid submission for \"IIT Patna Academic Block G+4 Complex Structure\" closes in 4 days! Ensure all EMD documents are ready.",
+      "isRead": false,
+      "sentAt": "2026-07-04T15:16:20.029Z",
+      "createdAt": "2026-07-04T15:16:20.029Z"
+    },
+    {
+      "id": "al-li5ix",
+      "userId": "u-1",
+      "tenderId": "t-2",
+      "type": "NEW_MATCH",
+      "channel": "IN_APP",
+      "message": "New high compatibility tender match generated! (91% Match Score) for \"Solar Rooftop Power Plants in Gaya Subdivisions\". Check details in criteria workspace.",
+      "isRead": false,
+      "sentAt": "2026-07-04T15:15:35.029Z",
+      "createdAt": "2026-07-04T15:15:35.029Z"
+    },
+    {
+      "id": "al-ect8f",
+      "userId": "u-1",
+      "tenderId": "t-3",
+      "type": "DEADLINE_REMINDER",
+      "channel": "IN_APP",
+      "message": "Approaching Deadline: Bid submission for \"Hajipur-Mahua Roadway Section Bid Submission\" closes in 5 days! Ensure all EMD documents are ready.",
+      "isRead": false,
+      "sentAt": "2026-07-04T15:14:50.015Z",
+      "createdAt": "2026-07-04T15:14:50.016Z"
+    },
+    {
+      "id": "al-w27pq",
+      "userId": "u-1",
+      "tenderId": "t-3",
+      "type": "NEW_MATCH",
+      "channel": "IN_APP",
+      "message": "New high compatibility tender match generated! (91% Match Score) for \"Sewerage Reinforcement & Excavation in Noida Sector 62\". Check details in criteria workspace.",
+      "isRead": false,
+      "sentAt": "2026-07-04T15:14:05.012Z",
+      "createdAt": "2026-07-04T15:14:05.012Z"
+    },
+    {
+      "id": "al-w58zg",
+      "userId": "u-1",
+      "tenderId": "t-3",
+      "type": "NEW_MATCH",
+      "channel": "IN_APP",
+      "message": "New high compatibility tender match generated! (91% Match Score) for \"Sewerage Reinforcement & Excavation in Noida Sector 62\". Check details in criteria workspace.",
+      "isRead": false,
+      "sentAt": "2026-07-04T15:13:19.997Z",
+      "createdAt": "2026-07-04T15:13:19.997Z"
+    },
+    {
+      "id": "al-cuy22",
+      "userId": "u-1",
+      "tenderId": "t-1",
+      "type": "DEADLINE_REMINDER",
+      "channel": "IN_APP",
+      "message": "Approaching Deadline: Bid submission for \"IIT Patna Academic Block G+4 Complex Structure\" closes in 6 days! Ensure all EMD documents are ready.",
+      "isRead": false,
+      "sentAt": "2026-07-04T15:12:34.984Z",
+      "createdAt": "2026-07-04T15:12:34.984Z"
+    },
+    {
+      "id": "al-2lwet",
+      "userId": "u-1",
+      "tenderId": "t-3",
+      "type": "NEW_MATCH",
+      "channel": "IN_APP",
+      "message": "New high compatibility tender match generated! (84% Match Score) for \"Sewerage Reinforcement & Excavation in Noida Sector 62\". Check details in criteria workspace.",
+      "isRead": false,
+      "sentAt": "2026-07-04T15:11:49.982Z",
+      "createdAt": "2026-07-04T15:11:49.982Z"
+    },
+    {
+      "id": "al-mjryx",
+      "userId": "u-1",
+      "tenderId": "t-3",
+      "type": "DEADLINE_REMINDER",
+      "channel": "IN_APP",
+      "message": "Approaching Deadline: Bid submission for \"Hajipur-Mahua Roadway Section Bid Submission\" closes in 2 days! Ensure all EMD documents are ready.",
+      "isRead": false,
+      "sentAt": "2026-07-04T15:11:04.970Z",
+      "createdAt": "2026-07-04T15:11:04.970Z"
+    },
+    {
+      "id": "al-hpofh",
+      "userId": "u-1",
+      "tenderId": "t-1",
+      "type": "NEW_MATCH",
+      "channel": "IN_APP",
+      "message": "New high compatibility tender match generated! (90% Match Score) for \"Construction of Academic Block and Hostel Building at IIT Patna\". Check details in criteria workspace.",
+      "isRead": false,
+      "sentAt": "2026-07-04T15:10:19.963Z",
+      "createdAt": "2026-07-04T15:10:19.963Z"
+    },
+    {
+      "id": "al-xfgrw",
+      "userId": "u-1",
+      "tenderId": "t-1",
+      "type": "DEADLINE_REMINDER",
+      "channel": "IN_APP",
+      "message": "Approaching Deadline: Bid submission for \"IIT Patna Academic Block G+4 Complex Structure\" closes in 3 days! Ensure all EMD documents are ready.",
+      "isRead": false,
+      "sentAt": "2026-07-04T15:09:34.956Z",
+      "createdAt": "2026-07-04T15:09:34.956Z"
+    },
+    {
+      "id": "al-tcjc7",
+      "userId": "u-1",
+      "tenderId": "t-3",
+      "type": "NEW_MATCH",
+      "channel": "IN_APP",
+      "message": "New high compatibility tender match generated! (82% Match Score) for \"Sewerage Reinforcement & Excavation in Noida Sector 62\". Check details in criteria workspace.",
+      "isRead": false,
+      "sentAt": "2026-07-04T15:08:49.948Z",
+      "createdAt": "2026-07-04T15:08:49.948Z"
+    },
+    {
+      "id": "al-s9at5",
+      "userId": "u-1",
+      "tenderId": "t-3",
+      "type": "NEW_MATCH",
+      "channel": "IN_APP",
+      "message": "New high compatibility tender match generated! (81% Match Score) for \"Sewerage Reinforcement & Excavation in Noida Sector 62\". Check details in criteria workspace.",
+      "isRead": false,
+      "sentAt": "2026-07-04T15:08:04.943Z",
+      "createdAt": "2026-07-04T15:08:04.943Z"
+    },
+    {
+      "id": "al-q186o",
+      "userId": "u-1",
+      "tenderId": "t-3",
+      "type": "DEADLINE_REMINDER",
+      "channel": "IN_APP",
+      "message": "Approaching Deadline: Bid submission for \"Hajipur-Mahua Roadway Section Bid Submission\" closes in 6 days! Ensure all EMD documents are ready.",
+      "isRead": false,
+      "sentAt": "2026-07-04T15:07:19.939Z",
+      "createdAt": "2026-07-04T15:07:19.939Z"
+    },
+    {
+      "id": "al-q7qg5",
+      "userId": "u-1",
+      "tenderId": "t-2",
+      "type": "DEADLINE_REMINDER",
+      "channel": "IN_APP",
+      "message": "Approaching Deadline: Bid submission for \"BREDA Commissioning SPV 200kW Bettiah Solar Grid\" closes in 5 days! Ensure all EMD documents are ready.",
+      "isRead": false,
+      "sentAt": "2026-07-04T15:06:34.926Z",
+      "createdAt": "2026-07-04T15:06:34.926Z"
+    },
+    {
+      "id": "al-x5qo3",
+      "userId": "u-1",
+      "tenderId": "t-1",
+      "type": "NEW_MATCH",
+      "channel": "IN_APP",
+      "message": "New high compatibility tender match generated! (82% Match Score) for \"Construction of Academic Block and Hostel Building at IIT Patna\". Check details in criteria workspace.",
+      "isRead": false,
+      "sentAt": "2026-07-04T15:05:49.921Z",
+      "createdAt": "2026-07-04T15:05:49.921Z"
+    },
+    {
+      "id": "al-tk4i4",
+      "userId": "u-1",
+      "tenderId": "t-2",
+      "type": "DEADLINE_REMINDER",
+      "channel": "IN_APP",
+      "message": "Approaching Deadline: Bid submission for \"BREDA Commissioning SPV 200kW Bettiah Solar Grid\" closes in 5 days! Ensure all EMD documents are ready.",
+      "isRead": false,
+      "sentAt": "2026-07-04T15:05:04.917Z",
+      "createdAt": "2026-07-04T15:05:04.917Z"
+    },
+    {
+      "id": "al-zj9d2",
+      "userId": "u-1",
+      "tenderId": "t-1",
+      "type": "NEW_MATCH",
+      "channel": "IN_APP",
+      "message": "New high compatibility tender match generated! (86% Match Score) for \"Construction of Academic Block and Hostel Building at IIT Patna\". Check details in criteria workspace.",
+      "isRead": false,
+      "sentAt": "2026-07-04T15:04:19.912Z",
+      "createdAt": "2026-07-04T15:04:19.912Z"
+    },
+    {
+      "id": "al-2vi83",
+      "userId": "u-1",
+      "tenderId": "t-1",
+      "type": "NEW_MATCH",
+      "channel": "IN_APP",
+      "message": "New high compatibility tender match generated! (84% Match Score) for \"Construction of Academic Block and Hostel Building at IIT Patna\". Check details in criteria workspace.",
+      "isRead": false,
+      "sentAt": "2026-07-04T15:03:34.908Z",
+      "createdAt": "2026-07-04T15:03:34.908Z"
+    },
+    {
+      "id": "al-m57y1",
+      "userId": "u-1",
+      "tenderId": "t-1",
+      "type": "NEW_MATCH",
+      "channel": "IN_APP",
+      "message": "New high compatibility tender match generated! (93% Match Score) for \"Construction of Academic Block and Hostel Building at IIT Patna\". Check details in criteria workspace.",
+      "isRead": false,
+      "sentAt": "2026-07-04T15:02:49.895Z",
+      "createdAt": "2026-07-04T15:02:49.895Z"
+    },
+    {
+      "id": "al-gikdz",
+      "userId": "u-1",
+      "tenderId": "t-2",
+      "type": "DEADLINE_REMINDER",
+      "channel": "IN_APP",
+      "message": "Approaching Deadline: Bid submission for \"BREDA Commissioning SPV 200kW Bettiah Solar Grid\" closes in 5 days! Ensure all EMD documents are ready.",
+      "isRead": false,
+      "sentAt": "2026-07-04T15:02:04.891Z",
+      "createdAt": "2026-07-04T15:02:04.891Z"
+    },
+    {
+      "id": "al-ymtj8",
+      "userId": "u-1",
+      "tenderId": "t-1",
+      "type": "DEADLINE_REMINDER",
+      "channel": "IN_APP",
+      "message": "Approaching Deadline: Bid submission for \"IIT Patna Academic Block G+4 Complex Structure\" closes in 2 days! Ensure all EMD documents are ready.",
+      "isRead": false,
+      "sentAt": "2026-07-04T15:01:19.887Z",
+      "createdAt": "2026-07-04T15:01:19.887Z"
+    },
+    {
+      "id": "al-vrv8u",
+      "userId": "u-1",
+      "tenderId": "t-3",
+      "type": "NEW_MATCH",
+      "channel": "IN_APP",
+      "message": "New high compatibility tender match generated! (88% Match Score) for \"Sewerage Reinforcement & Excavation in Noida Sector 62\". Check details in criteria workspace.",
+      "isRead": false,
+      "sentAt": "2026-07-04T15:00:34.878Z",
+      "createdAt": "2026-07-04T15:00:34.878Z"
+    },
+    {
+      "id": "al-e2rug",
+      "userId": "u-1",
+      "tenderId": "t-3",
+      "type": "DEADLINE_REMINDER",
+      "channel": "IN_APP",
+      "message": "Approaching Deadline: Bid submission for \"Hajipur-Mahua Roadway Section Bid Submission\" closes in 4 days! Ensure all EMD documents are ready.",
+      "isRead": false,
+      "sentAt": "2026-07-04T14:59:49.862Z",
+      "createdAt": "2026-07-04T14:59:49.862Z"
+    },
+    {
+      "id": "al-1h5ok",
+      "userId": "u-1",
+      "tenderId": "t-1",
+      "type": "DEADLINE_REMINDER",
+      "channel": "IN_APP",
+      "message": "Approaching Deadline: Bid submission for \"IIT Patna Academic Block G+4 Complex Structure\" closes in 6 days! Ensure all EMD documents are ready.",
+      "isRead": false,
+      "sentAt": "2026-07-04T14:59:04.856Z",
+      "createdAt": "2026-07-04T14:59:04.856Z"
+    },
+    {
+      "id": "al-frpzi",
+      "userId": "u-1",
+      "tenderId": "t-1",
+      "type": "NEW_MATCH",
+      "channel": "IN_APP",
+      "message": "New high compatibility tender match generated! (87% Match Score) for \"Construction of Academic Block and Hostel Building at IIT Patna\". Check details in criteria workspace.",
+      "isRead": false,
+      "sentAt": "2026-07-04T14:58:19.850Z",
+      "createdAt": "2026-07-04T14:58:19.850Z"
+    },
+    {
+      "id": "al-0bekk",
+      "userId": "u-1",
+      "tenderId": "t-2",
+      "type": "NEW_MATCH",
+      "channel": "IN_APP",
+      "message": "New high compatibility tender match generated! (95% Match Score) for \"Solar Rooftop Power Plants in Gaya Subdivisions\". Check details in criteria workspace.",
+      "isRead": false,
+      "sentAt": "2026-07-04T14:57:34.844Z",
+      "createdAt": "2026-07-04T14:57:34.844Z"
+    },
+    {
+      "id": "al-zko4f",
+      "userId": "u-1",
+      "tenderId": "t-3",
+      "type": "DEADLINE_REMINDER",
+      "channel": "IN_APP",
+      "message": "Approaching Deadline: Bid submission for \"Hajipur-Mahua Roadway Section Bid Submission\" closes in 2 days! Ensure all EMD documents are ready.",
+      "isRead": false,
+      "sentAt": "2026-07-04T14:56:49.832Z",
+      "createdAt": "2026-07-04T14:56:49.832Z"
+    },
+    {
+      "id": "al-t7p7l",
+      "userId": "u-1",
+      "tenderId": "t-3",
+      "type": "DEADLINE_REMINDER",
+      "channel": "IN_APP",
+      "message": "Approaching Deadline: Bid submission for \"Hajipur-Mahua Roadway Section Bid Submission\" closes in 2 days! Ensure all EMD documents are ready.",
+      "isRead": false,
+      "sentAt": "2026-07-04T14:56:04.821Z",
+      "createdAt": "2026-07-04T14:56:04.821Z"
+    },
+    {
+      "id": "al-c2xvv",
+      "userId": "u-1",
+      "tenderId": "t-1",
+      "type": "DEADLINE_REMINDER",
+      "channel": "IN_APP",
+      "message": "Approaching Deadline: Bid submission for \"IIT Patna Academic Block G+4 Complex Structure\" closes in 6 days! Ensure all EMD documents are ready.",
+      "isRead": false,
+      "sentAt": "2026-07-04T14:55:19.816Z",
+      "createdAt": "2026-07-04T14:55:19.816Z"
+    },
+    {
+      "id": "al-5khwx",
+      "userId": "u-1",
+      "tenderId": "t-3",
+      "type": "NEW_MATCH",
+      "channel": "IN_APP",
+      "message": "New high compatibility tender match generated! (93% Match Score) for \"Sewerage Reinforcement & Excavation in Noida Sector 62\". Check details in criteria workspace.",
+      "isRead": false,
+      "sentAt": "2026-07-04T14:54:34.813Z",
+      "createdAt": "2026-07-04T14:54:34.813Z"
+    },
+    {
+      "id": "al-9a0tt",
+      "userId": "u-1",
+      "tenderId": "t-3",
+      "type": "DEADLINE_REMINDER",
+      "channel": "IN_APP",
+      "message": "Approaching Deadline: Bid submission for \"Hajipur-Mahua Roadway Section Bid Submission\" closes in 4 days! Ensure all EMD documents are ready.",
+      "isRead": false,
+      "sentAt": "2026-07-04T14:53:49.799Z",
+      "createdAt": "2026-07-04T14:53:49.799Z"
+    },
+    {
+      "id": "al-1hsxz",
+      "userId": "u-1",
+      "tenderId": "t-2",
+      "type": "NEW_MATCH",
+      "channel": "IN_APP",
+      "message": "New high compatibility tender match generated! (91% Match Score) for \"Solar Rooftop Power Plants in Gaya Subdivisions\". Check details in criteria workspace.",
+      "isRead": false,
+      "sentAt": "2026-07-04T14:53:04.785Z",
+      "createdAt": "2026-07-04T14:53:04.785Z"
+    },
+    {
+      "id": "al-r3eb6",
+      "userId": "u-1",
+      "tenderId": "t-1",
+      "type": "DEADLINE_REMINDER",
+      "channel": "IN_APP",
+      "message": "Approaching Deadline: Bid submission for \"IIT Patna Academic Block G+4 Complex Structure\" closes in 6 days! Ensure all EMD documents are ready.",
+      "isRead": false,
+      "sentAt": "2026-07-04T14:52:19.773Z",
+      "createdAt": "2026-07-04T14:52:19.773Z"
+    },
+    {
+      "id": "al-xefda",
+      "userId": "u-1",
+      "tenderId": "t-1",
+      "type": "DEADLINE_REMINDER",
+      "channel": "IN_APP",
+      "message": "Approaching Deadline: Bid submission for \"IIT Patna Academic Block G+4 Complex Structure\" closes in 4 days! Ensure all EMD documents are ready.",
+      "isRead": false,
+      "sentAt": "2026-07-04T14:51:34.767Z",
+      "createdAt": "2026-07-04T14:51:34.767Z"
+    },
+    {
+      "id": "al-4uyw0",
+      "userId": "u-1",
+      "tenderId": "t-2",
+      "type": "NEW_MATCH",
+      "channel": "IN_APP",
+      "message": "New high compatibility tender match generated! (85% Match Score) for \"Solar Rooftop Power Plants in Gaya Subdivisions\". Check details in criteria workspace.",
+      "isRead": false,
+      "sentAt": "2026-07-04T14:50:49.753Z",
+      "createdAt": "2026-07-04T14:50:49.753Z"
+    },
+    {
+      "id": "al-3mpx8",
+      "userId": "u-1",
+      "tenderId": "t-2",
+      "type": "NEW_MATCH",
+      "channel": "IN_APP",
+      "message": "New high compatibility tender match generated! (87% Match Score) for \"Solar Rooftop Power Plants in Gaya Subdivisions\". Check details in criteria workspace.",
+      "isRead": false,
+      "sentAt": "2026-07-04T14:50:04.747Z",
+      "createdAt": "2026-07-04T14:50:04.747Z"
+    },
+    {
+      "id": "al-yuc9i",
+      "userId": "u-1",
+      "tenderId": "t-3",
+      "type": "DEADLINE_REMINDER",
+      "channel": "IN_APP",
+      "message": "Approaching Deadline: Bid submission for \"Hajipur-Mahua Roadway Section Bid Submission\" closes in 3 days! Ensure all EMD documents are ready.",
+      "isRead": false,
+      "sentAt": "2026-07-04T14:49:19.738Z",
+      "createdAt": "2026-07-04T14:49:19.738Z"
+    },
+    {
+      "id": "al-hcd75",
+      "userId": "u-1",
+      "tenderId": "t-3",
+      "type": "NEW_MATCH",
+      "channel": "IN_APP",
+      "message": "New high compatibility tender match generated! (98% Match Score) for \"Sewerage Reinforcement & Excavation in Noida Sector 62\". Check details in criteria workspace.",
+      "isRead": false,
+      "sentAt": "2026-07-04T14:48:34.723Z",
+      "createdAt": "2026-07-04T14:48:34.723Z"
+    },
+    {
+      "id": "al-qz83x",
+      "userId": "u-1",
+      "tenderId": "t-2",
+      "type": "DEADLINE_REMINDER",
+      "channel": "IN_APP",
+      "message": "Approaching Deadline: Bid submission for \"BREDA Commissioning SPV 200kW Bettiah Solar Grid\" closes in 4 days! Ensure all EMD documents are ready.",
+      "isRead": false,
+      "sentAt": "2026-07-04T14:47:49.721Z",
+      "createdAt": "2026-07-04T14:47:49.721Z"
+    },
+    {
+      "id": "al-894lx",
+      "userId": "u-1",
+      "tenderId": "t-3",
+      "type": "NEW_MATCH",
+      "channel": "IN_APP",
+      "message": "New high compatibility tender match generated! (99% Match Score) for \"Sewerage Reinforcement & Excavation in Noida Sector 62\". Check details in criteria workspace.",
+      "isRead": false,
+      "sentAt": "2026-07-04T14:47:04.706Z",
+      "createdAt": "2026-07-04T14:47:04.706Z"
+    },
+    {
+      "id": "al-0cghl",
+      "userId": "u-1",
+      "tenderId": "t-1",
+      "type": "NEW_MATCH",
+      "channel": "IN_APP",
+      "message": "New high compatibility tender match generated! (83% Match Score) for \"Construction of Academic Block and Hostel Building at IIT Patna\". Check details in criteria workspace.",
+      "isRead": false,
+      "sentAt": "2026-07-04T14:46:19.705Z",
+      "createdAt": "2026-07-04T14:46:19.705Z"
+    },
+    {
+      "id": "al-dhfa8",
+      "userId": "u-1",
+      "tenderId": "t-1",
+      "type": "DEADLINE_REMINDER",
+      "channel": "IN_APP",
+      "message": "Approaching Deadline: Bid submission for \"IIT Patna Academic Block G+4 Complex Structure\" closes in 5 days! Ensure all EMD documents are ready.",
+      "isRead": false,
+      "sentAt": "2026-07-04T14:45:34.699Z",
+      "createdAt": "2026-07-04T14:45:34.699Z"
+    },
+    {
+      "id": "al-5zgz0",
+      "userId": "u-1",
+      "tenderId": "t-2",
+      "type": "NEW_MATCH",
+      "channel": "IN_APP",
+      "message": "New high compatibility tender match generated! (81% Match Score) for \"Solar Rooftop Power Plants in Gaya Subdivisions\". Check details in criteria workspace.",
+      "isRead": false,
+      "sentAt": "2026-07-04T14:44:49.687Z",
+      "createdAt": "2026-07-04T14:44:49.687Z"
+    },
+    {
+      "id": "al-q27mh",
+      "userId": "u-1",
+      "tenderId": "t-1",
+      "type": "DEADLINE_REMINDER",
+      "channel": "IN_APP",
+      "message": "Approaching Deadline: Bid submission for \"IIT Patna Academic Block G+4 Complex Structure\" closes in 5 days! Ensure all EMD documents are ready.",
+      "isRead": false,
+      "sentAt": "2026-07-04T14:44:04.672Z",
+      "createdAt": "2026-07-04T14:44:04.672Z"
+    },
+    {
+      "id": "al-shkmd",
+      "userId": "u-1",
+      "tenderId": "t-2",
+      "type": "DEADLINE_REMINDER",
+      "channel": "IN_APP",
+      "message": "Approaching Deadline: Bid submission for \"BREDA Commissioning SPV 200kW Bettiah Solar Grid\" closes in 2 days! Ensure all EMD documents are ready.",
+      "isRead": false,
+      "sentAt": "2026-07-04T14:43:19.659Z",
+      "createdAt": "2026-07-04T14:43:19.659Z"
+    },
+    {
+      "id": "al-7491n",
+      "userId": "u-1",
+      "tenderId": "t-1",
+      "type": "DEADLINE_REMINDER",
+      "channel": "IN_APP",
+      "message": "Approaching Deadline: Bid submission for \"IIT Patna Academic Block G+4 Complex Structure\" closes in 2 days! Ensure all EMD documents are ready.",
+      "isRead": false,
+      "sentAt": "2026-07-04T14:42:34.655Z",
+      "createdAt": "2026-07-04T14:42:34.656Z"
+    },
+    {
+      "id": "al-boako",
+      "userId": "u-1",
+      "tenderId": "t-2",
+      "type": "NEW_MATCH",
+      "channel": "IN_APP",
+      "message": "New high compatibility tender match generated! (80% Match Score) for \"Solar Rooftop Power Plants in Gaya Subdivisions\". Check details in criteria workspace.",
+      "isRead": false,
+      "sentAt": "2026-07-04T14:41:49.650Z",
+      "createdAt": "2026-07-04T14:41:49.650Z"
+    },
+    {
+      "id": "al-qr6md",
+      "userId": "u-1",
+      "tenderId": "t-3",
+      "type": "DEADLINE_REMINDER",
+      "channel": "IN_APP",
+      "message": "Approaching Deadline: Bid submission for \"Hajipur-Mahua Roadway Section Bid Submission\" closes in 5 days! Ensure all EMD documents are ready.",
+      "isRead": false,
+      "sentAt": "2026-07-04T14:41:04.644Z",
+      "createdAt": "2026-07-04T14:41:04.644Z"
+    },
+    {
+      "id": "al-qixlf",
+      "userId": "u-1",
+      "tenderId": "t-1",
+      "type": "DEADLINE_REMINDER",
+      "channel": "IN_APP",
+      "message": "Approaching Deadline: Bid submission for \"IIT Patna Academic Block G+4 Complex Structure\" closes in 2 days! Ensure all EMD documents are ready.",
+      "isRead": false,
+      "sentAt": "2026-07-04T14:40:19.637Z",
+      "createdAt": "2026-07-04T14:40:19.637Z"
+    },
+    {
+      "id": "al-k59hu",
+      "userId": "u-1",
+      "tenderId": "t-3",
+      "type": "DEADLINE_REMINDER",
+      "channel": "IN_APP",
+      "message": "Approaching Deadline: Bid submission for \"Hajipur-Mahua Roadway Section Bid Submission\" closes in 6 days! Ensure all EMD documents are ready.",
+      "isRead": false,
+      "sentAt": "2026-07-04T14:39:34.637Z",
+      "createdAt": "2026-07-04T14:39:34.637Z"
+    },
+    {
+      "id": "al-aqucb",
+      "userId": "u-1",
+      "tenderId": "t-3",
+      "type": "DEADLINE_REMINDER",
+      "channel": "IN_APP",
+      "message": "Approaching Deadline: Bid submission for \"Hajipur-Mahua Roadway Section Bid Submission\" closes in 2 days! Ensure all EMD documents are ready.",
+      "isRead": false,
+      "sentAt": "2026-07-04T14:38:49.633Z",
+      "createdAt": "2026-07-04T14:38:49.633Z"
+    },
+    {
+      "id": "al-j4yxv",
+      "userId": "u-1",
+      "tenderId": "t-2",
+      "type": "DEADLINE_REMINDER",
+      "channel": "IN_APP",
+      "message": "Approaching Deadline: Bid submission for \"BREDA Commissioning SPV 200kW Bettiah Solar Grid\" closes in 5 days! Ensure all EMD documents are ready.",
+      "isRead": false,
+      "sentAt": "2026-07-04T14:38:04.628Z",
+      "createdAt": "2026-07-04T14:38:04.628Z"
+    },
+    {
+      "id": "al-lfzjr",
+      "userId": "u-1",
+      "tenderId": "t-2",
+      "type": "NEW_MATCH",
+      "channel": "IN_APP",
+      "message": "New high compatibility tender match generated! (83% Match Score) for \"Solar Rooftop Power Plants in Gaya Subdivisions\". Check details in criteria workspace.",
+      "isRead": false,
+      "sentAt": "2026-07-04T14:37:19.624Z",
+      "createdAt": "2026-07-04T14:37:19.624Z"
+    },
+    {
+      "id": "al-15ntw",
+      "userId": "u-1",
+      "tenderId": "t-2",
+      "type": "DEADLINE_REMINDER",
+      "channel": "IN_APP",
+      "message": "Approaching Deadline: Bid submission for \"BREDA Commissioning SPV 200kW Bettiah Solar Grid\" closes in 6 days! Ensure all EMD documents are ready.",
+      "isRead": false,
+      "sentAt": "2026-07-04T14:36:34.618Z",
+      "createdAt": "2026-07-04T14:36:34.618Z"
+    },
+    {
+      "id": "al-09y3t",
+      "userId": "u-1",
+      "tenderId": "t-2",
+      "type": "NEW_MATCH",
+      "channel": "IN_APP",
+      "message": "New high compatibility tender match generated! (84% Match Score) for \"Solar Rooftop Power Plants in Gaya Subdivisions\". Check details in criteria workspace.",
+      "isRead": false,
+      "sentAt": "2026-07-04T14:35:49.613Z",
+      "createdAt": "2026-07-04T14:35:49.613Z"
+    },
+    {
+      "id": "al-gkfox",
+      "userId": "u-1",
+      "tenderId": "t-3",
+      "type": "DEADLINE_REMINDER",
+      "channel": "IN_APP",
+      "message": "Approaching Deadline: Bid submission for \"Hajipur-Mahua Roadway Section Bid Submission\" closes in 5 days! Ensure all EMD documents are ready.",
+      "isRead": false,
+      "sentAt": "2026-07-04T14:35:04.607Z",
+      "createdAt": "2026-07-04T14:35:04.607Z"
+    },
+    {
+      "id": "al-z5eil",
+      "userId": "u-1",
+      "tenderId": "t-3",
+      "type": "DEADLINE_REMINDER",
+      "channel": "IN_APP",
+      "message": "Approaching Deadline: Bid submission for \"Hajipur-Mahua Roadway Section Bid Submission\" closes in 5 days! Ensure all EMD documents are ready.",
+      "isRead": false,
+      "sentAt": "2026-07-04T14:34:19.594Z",
+      "createdAt": "2026-07-04T14:34:19.594Z"
+    },
+    {
+      "id": "al-w1jnu",
+      "userId": "u-1",
+      "tenderId": "t-1",
+      "type": "NEW_MATCH",
+      "channel": "IN_APP",
+      "message": "New high compatibility tender match generated! (84% Match Score) for \"Construction of Academic Block and Hostel Building at IIT Patna\". Check details in criteria workspace.",
+      "isRead": false,
+      "sentAt": "2026-07-04T14:33:34.583Z",
+      "createdAt": "2026-07-04T14:33:34.583Z"
+    },
+    {
+      "id": "al-j0ljt",
+      "userId": "u-1",
+      "tenderId": "t-1",
+      "type": "NEW_MATCH",
+      "channel": "IN_APP",
+      "message": "New high compatibility tender match generated! (85% Match Score) for \"Construction of Academic Block and Hostel Building at IIT Patna\". Check details in criteria workspace.",
+      "isRead": false,
+      "sentAt": "2026-07-04T14:32:49.577Z",
+      "createdAt": "2026-07-04T14:32:49.577Z"
+    },
+    {
+      "id": "al-vx3a1",
+      "userId": "u-1",
+      "tenderId": "t-3",
+      "type": "DEADLINE_REMINDER",
+      "channel": "IN_APP",
+      "message": "Approaching Deadline: Bid submission for \"Hajipur-Mahua Roadway Section Bid Submission\" closes in 3 days! Ensure all EMD documents are ready.",
+      "isRead": false,
+      "sentAt": "2026-07-04T14:32:04.576Z",
+      "createdAt": "2026-07-04T14:32:04.576Z"
+    },
+    {
+      "id": "al-83cs9",
+      "userId": "u-1",
+      "tenderId": "t-1",
+      "type": "DEADLINE_REMINDER",
+      "channel": "IN_APP",
+      "message": "Approaching Deadline: Bid submission for \"IIT Patna Academic Block G+4 Complex Structure\" closes in 5 days! Ensure all EMD documents are ready.",
+      "isRead": false,
+      "sentAt": "2026-07-04T14:31:19.570Z",
+      "createdAt": "2026-07-04T14:31:19.570Z"
+    },
+    {
+      "id": "al-8xoz2",
+      "userId": "u-1",
+      "tenderId": "t-2",
+      "type": "DEADLINE_REMINDER",
+      "channel": "IN_APP",
+      "message": "Approaching Deadline: Bid submission for \"BREDA Commissioning SPV 200kW Bettiah Solar Grid\" closes in 2 days! Ensure all EMD documents are ready.",
+      "isRead": false,
+      "sentAt": "2026-07-04T14:30:34.562Z",
+      "createdAt": "2026-07-04T14:30:34.562Z"
+    },
+    {
+      "id": "al-b2wv8",
+      "userId": "u-1",
+      "tenderId": "t-2",
+      "type": "DEADLINE_REMINDER",
+      "channel": "IN_APP",
+      "message": "Approaching Deadline: Bid submission for \"BREDA Commissioning SPV 200kW Bettiah Solar Grid\" closes in 6 days! Ensure all EMD documents are ready.",
+      "isRead": false,
+      "sentAt": "2026-07-04T14:29:49.558Z",
+      "createdAt": "2026-07-04T14:29:49.558Z"
+    },
+    {
+      "id": "al-1qjql",
+      "userId": "u-1",
+      "tenderId": "t-2",
+      "type": "DEADLINE_REMINDER",
+      "channel": "IN_APP",
+      "message": "Approaching Deadline: Bid submission for \"BREDA Commissioning SPV 200kW Bettiah Solar Grid\" closes in 6 days! Ensure all EMD documents are ready.",
+      "isRead": false,
+      "sentAt": "2026-07-04T14:29:04.546Z",
+      "createdAt": "2026-07-04T14:29:04.546Z"
+    },
+    {
+      "id": "al-em02s",
+      "userId": "u-1",
+      "tenderId": "t-2",
+      "type": "NEW_MATCH",
+      "channel": "IN_APP",
+      "message": "New high compatibility tender match generated! (82% Match Score) for \"Solar Rooftop Power Plants in Gaya Subdivisions\". Check details in criteria workspace.",
+      "isRead": false,
+      "sentAt": "2026-07-04T14:28:19.543Z",
+      "createdAt": "2026-07-04T14:28:19.543Z"
+    },
+    {
+      "id": "al-hguiz",
+      "userId": "u-1",
+      "tenderId": "t-3",
+      "type": "NEW_MATCH",
+      "channel": "IN_APP",
+      "message": "New high compatibility tender match generated! (97% Match Score) for \"Sewerage Reinforcement & Excavation in Noida Sector 62\". Check details in criteria workspace.",
+      "isRead": false,
+      "sentAt": "2026-07-04T14:27:34.533Z",
+      "createdAt": "2026-07-04T14:27:34.533Z"
+    },
+    {
+      "id": "al-50lyj",
+      "userId": "u-1",
+      "tenderId": "t-1",
+      "type": "NEW_MATCH",
+      "channel": "IN_APP",
+      "message": "New high compatibility tender match generated! (95% Match Score) for \"Construction of Academic Block and Hostel Building at IIT Patna\". Check details in criteria workspace.",
+      "isRead": false,
+      "sentAt": "2026-07-04T14:26:49.529Z",
+      "createdAt": "2026-07-04T14:26:49.530Z"
+    },
+    {
+      "id": "al-578ev",
+      "userId": "u-1",
+      "tenderId": "t-2",
+      "type": "NEW_MATCH",
+      "channel": "IN_APP",
+      "message": "New high compatibility tender match generated! (99% Match Score) for \"Solar Rooftop Power Plants in Gaya Subdivisions\". Check details in criteria workspace.",
+      "isRead": false,
+      "sentAt": "2026-07-04T14:26:04.510Z",
+      "createdAt": "2026-07-04T14:26:04.510Z"
+    },
+    {
+      "id": "al-ilm60",
+      "userId": "u-1",
+      "tenderId": "t-3",
+      "type": "NEW_MATCH",
+      "channel": "IN_APP",
+      "message": "New high compatibility tender match generated! (88% Match Score) for \"Sewerage Reinforcement & Excavation in Noida Sector 62\". Check details in criteria workspace.",
+      "isRead": false,
+      "sentAt": "2026-07-04T14:25:24.901Z",
+      "createdAt": "2026-07-04T14:25:24.902Z"
+    },
+    {
+      "id": "al-c72ue",
+      "userId": "u-1",
+      "tenderId": "t-1",
+      "type": "NEW_MATCH",
+      "channel": "IN_APP",
+      "message": "New high compatibility tender match generated! (90% Match Score) for \"Construction of Academic Block and Hostel Building at IIT Patna\". Check details in criteria workspace.",
+      "isRead": false,
+      "sentAt": "2026-07-04T14:24:08.998Z",
+      "createdAt": "2026-07-04T14:24:08.998Z"
+    },
+    {
+      "id": "al-4bqic",
+      "userId": "u-1",
+      "tenderId": "t-2",
+      "type": "DEADLINE_REMINDER",
+      "channel": "IN_APP",
+      "message": "Approaching Deadline: Bid submission for \"BREDA Commissioning SPV 200kW Bettiah Solar Grid\" closes in 5 days! Ensure all EMD documents are ready.",
+      "isRead": false,
+      "sentAt": "2026-07-04T14:23:23.976Z",
+      "createdAt": "2026-07-04T14:23:23.976Z"
+    },
+    {
+      "id": "al-sxv2v",
+      "userId": "u-1",
+      "tenderId": "t-2",
+      "type": "NEW_MATCH",
+      "channel": "IN_APP",
+      "message": "New high compatibility tender match generated! (88% Match Score) for \"Solar Rooftop Power Plants in Gaya Subdivisions\". Check details in criteria workspace.",
+      "isRead": false,
+      "sentAt": "2026-07-04T14:22:38.972Z",
+      "createdAt": "2026-07-04T14:22:38.972Z"
+    },
+    {
+      "id": "al-jepfv",
+      "userId": "u-1",
+      "tenderId": "t-1",
+      "type": "DEADLINE_REMINDER",
+      "channel": "IN_APP",
+      "message": "Approaching Deadline: Bid submission for \"IIT Patna Academic Block G+4 Complex Structure\" closes in 2 days! Ensure all EMD documents are ready.",
+      "isRead": false,
+      "sentAt": "2026-07-04T14:21:53.968Z",
+      "createdAt": "2026-07-04T14:21:53.968Z"
+    },
+    {
+      "id": "al-7l935",
+      "userId": "u-1",
+      "tenderId": "t-1",
+      "type": "NEW_MATCH",
+      "channel": "IN_APP",
+      "message": "New high compatibility tender match generated! (86% Match Score) for \"Construction of Academic Block and Hostel Building at IIT Patna\". Check details in criteria workspace.",
+      "isRead": false,
+      "sentAt": "2026-07-04T14:21:18.965Z",
+      "createdAt": "2026-07-04T14:21:18.967Z"
+    },
+    {
+      "id": "al-1",
+      "userId": "u-1",
+      "tenderId": "t-1",
+      "type": "NEW_MATCH",
+      "channel": "IN_APP",
+      "message": "High match score (85%) identified for Academic Block Construction at IIT Patna. Deadline in 23 days.",
+      "isRead": false,
+      "sentAt": "2026-07-04T14:18:59.070Z",
+      "createdAt": "2026-07-04T14:18:59.070Z",
+      "channelsDispatched": {
+        "in_app": {
+          "sent": true,
+          "destination": "In-App Feed Station Panel",
+          "timestamp": "2026-07-04T14:18:59.070Z",
+          "content": "High match score (85%) identified for Academic Block Construction at IIT Patna. Deadline in 23 days."
+        },
+        "email": {
+          "sent": true,
+          "destination": "msvm220@gmail.com",
+          "timestamp": "2026-07-04T14:18:59.070Z",
+          "subject": "[TenderAI] High Compatibility Tender Match Discovered (85%)",
+          "content": "<div style=\"font-family: Inter, sans-serif; max-width: 600px; margin: 0 auto; padding: 24px; border: 1px solid #e2e8f0; border-radius: 16px; background-color: #ffffff; color: #1e293b;\">\n    <div style=\"display: flex; align-items: center; margin-bottom: 24px;\">\n      <span style=\"font-size: 20px; font-weight: 800; color: #2563eb;\">TenderAI</span>\n      <span style=\"font-size: 11px; margin-left: 8px; font-weight: bold; padding: 2px 8px; background-color: #eff6ff; border-radius: 9999px; color: #1d4ed8; text-transform: uppercase;\">Real-time Matching</span>\n    </div>\n    <h2 style=\"font-size: 18px; font-weight: 800; margin-bottom: 8px; color: #0f172a; tracking: -0.025em;\">Tender Match Alert</h2>\n    <p style=\"font-size: 13px; line-height: 1.6; margin-bottom: 20px; color: #475569;\">Greetings, we identified an extremely strong compliance alignment between your company credentials and a newly published public contract opportunity.</p>\n    <div style=\"padding: 16px; background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; margin-bottom: 24px;\">\n      <div style=\"font-size: 10px; font-weight: bold; text-transform: uppercase; color: #1e3a8a; margin-bottom: 4px;\">Tender Title</div>\n      <div style=\"font-size: 14px; font-weight: bold; color: #0f172a; margin-bottom: 12px;\">Construction of Academic Block and Hostel Building at IIT Patna</div>\n      <div style=\"display: flex; gap: 24px; font-size: 11px; font-family: monospace;\">\n        <div><strong>Value:</strong> ₹25.40 Cr</div>\n        <div style=\"margin-left: 16px;\"><strong>Match:</strong> 85% Compliant</div>\n      </div>\n    </div>\n    <a href=\"#\" style=\"display: inline-block; padding: 10px 20px; background-color: #2563eb; color: #ffffff; font-size: 12px; font-weight: bold; text-decoration: none; border-radius: 8px; text-transform: uppercase; text-align: center;\">Analyze tender document</a>\n    <hr style=\"margin-top: 24px; border: 0; border-top: 1px solid #e2e8f0;\" />\n    <span style=\"font-size: 10px; color: #94a3b8; display: block; margin-top: 12px;\">This is an automated dispatch from TenderAI Compliance Station because you registered msvm220@gmail.com for alert dispatches.</span>\n  </div>"
+        },
+        "whatsapp": {
+          "sent": true,
+          "destination": "+91 98765 43210",
+          "timestamp": "2026-07-04T14:18:59.070Z",
+          "content": "*TenderAI Match Alert* 🔔\n\nDear Bidder, we discovered a highly compatible tender matching your profile:\n\n*IIT Patna Academic Block*\n• Value: ₹25.40 Cr\n• Match Score: *85%*\n• Authority: Central Public Works\n\nClick to review and start smart bid drafting instantly:\n👉 https://ai.studio/build/tender/t-1"
+        },
+        "push": {
+          "sent": true,
+          "destination": "Active Browser Device Sessions",
+          "timestamp": "2026-07-04T14:18:59.070Z",
+          "content": "IIT Patna Academic Block (85% Match)"
+        },
+        "sms": {
+          "sent": false,
+          "destination": "+91 98765 43210",
+          "timestamp": "2026-07-04T14:18:59.070Z"
+        }
+      }
+    },
+    {
+      "id": "al-2",
+      "userId": "u-1",
+      "tenderId": "t-2",
+      "type": "NEW_MATCH",
+      "channel": "WHATSAPP",
+      "message": "Selected: BREDA Commissioning SPV 200kW Bettiah Solar Grid (90% Match Score). Double match for local state incentives.",
+      "isRead": true,
+      "sentAt": "2026-07-04T14:18:59.070Z",
+      "createdAt": "2026-07-04T14:18:59.070Z",
+      "channelsDispatched": {
+        "in_app": {
+          "sent": true,
+          "destination": "In-App Feed Station Panel",
+          "timestamp": "2026-07-04T14:18:59.070Z",
+          "content": "Selected: BREDA Commissioning SPV Bettiah Solar Grid."
+        },
+        "whatsapp": {
+          "sent": true,
+          "destination": "+91 98765 43210",
+          "timestamp": "2026-07-04T14:18:59.070Z",
+          "content": "*TenderAI Match Alert* 🔔\n\nDear Bidder, we discovered a highly compatible tender matching your profile:\n\n*BREDA Commissioning SPV*\n• Value: ₹4.80 Cr\n• Match Score: *90%*\n\nReview and start smart bid drafting instantly:\n👉 https://ai.studio/build/tender/t-2"
+        },
+        "email": {
+          "sent": true,
+          "destination": "msvm220@gmail.com",
+          "timestamp": "2026-07-04T14:18:59.070Z",
+          "subject": "[TenderAI] High Compatibility Tender Match Discovered (90%)",
+          "content": "<div style=\"font-family: Inter, sans-serif; max-width: 600px; margin: 0 auto; padding: 24px; border: 1px solid #e2e8f0; border-radius: 16px; background-color: #ffffff; color: #1e293b;\">\n    <div style=\"display: flex; align-items: center; margin-bottom: 24px;\">\n      <span style=\"font-size: 20px; font-weight: 800; color: #2563eb;\">TenderAI</span>\n      <span style=\"font-size: 11px; margin-left: 8px; font-weight: bold; padding: 2px 8px; background-color: #eff6ff; border-radius: 9999px; color: #1d4ed8; text-transform: uppercase;\">Real-time Matching</span>\n    </div>\n    <h2 style=\"font-size: 18px; font-weight: 800; margin-bottom: 8px; color: #0f172a; tracking: -0.025em;\">Tender Match Alert</h2>\n    <p style=\"font-size: 13px; line-height: 1.6; margin-bottom: 20px; color: #475569;\">Greetings, we identified an extremely strong compliance alignment between your company credentials and a newly published public contract opportunity.</p>\n    <div style=\"padding: 16px; background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; margin-bottom: 24px;\">\n      <div style=\"font-size: 10px; font-weight: bold; text-transform: uppercase; color: #1e3a8a; margin-bottom: 4px;\">Tender Title</div>\n      <div style=\"font-size: 14px; font-weight: bold; color: #0f172a; margin-bottom: 12px;\">BREDA Commissioning SPV 200kW Bettiah Solar Grid</div>\n      <div style=\"display: flex; gap: 24px; font-size: 11px; font-family: monospace;\">\n        <div><strong>Value:</strong> ₹4.80 Cr</div>\n        <div style=\"margin-left: 16px;\"><strong>Match:</strong> 90% Compliant</div>\n      </div>\n    </div>\n    <a href=\"#\" style=\"display: inline-block; padding: 10px 20px; background-color: #2563eb; color: #ffffff; font-size: 12px; font-weight: bold; text-decoration: none; border-radius: 8px; text-transform: uppercase; text-align: center;\">Analyze tender document</a>\n  </div>"
+        }
+      }
+    },
+    {
+      "id": "al-3",
+      "userId": "u-1",
+      "tenderId": "t-3",
+      "type": "DEADLINE_REMINDER",
+      "channel": "IN_APP",
+      "message": "Urgent: Hajipur-Mahua Roadway Section Bid submission deadline is in 8 days (19-Jun-2026). Ensure BOQ validation is completed.",
+      "isRead": false,
+      "sentAt": "2026-07-04T14:18:59.070Z",
+      "createdAt": "2026-07-04T14:18:59.070Z",
+      "channelsDispatched": {
+        "in_app": {
+          "sent": true,
+          "destination": "In-App Feed Station Panel",
+          "timestamp": "2026-07-04T14:18:59.070Z",
+          "content": "Urgent: Hajipur-Mahua Roadway Section Bid submission deadline is in 8 days (19-Jun-2026). Ensure BOQ validation is completed."
+        },
+        "email": {
+          "sent": true,
+          "destination": "msvm220@gmail.com",
+          "timestamp": "2026-07-04T14:18:59.070Z",
+          "subject": "⚠️ Urgent Notice: Bid submission closes in 8 Days",
+          "content": "<div style=\"font-family: Inter, sans-serif; max-width: 600px; margin: 0 auto; padding: 24px; border: 1px solid #fda4af; border-radius: 16px; background-color: #fffbfa; color: #1e293b;\">\n    <div style=\"display: flex; align-items: center; margin-bottom: 24px;\">\n      <span style=\"font-size: 20px; font-weight: 800; color: #e11d48;\">TenderAI</span>\n      <span style=\"font-size: 11px; margin-left: 8px; font-weight: bold; padding: 2px 8px; background-color: #ffe4e6; border-radius: 9999px; color: #e11d48; text-transform: uppercase;\">Closing Soon</span>\n    </div>\n    <h2 style=\"font-size: 18px; font-weight: 800; margin-bottom: 8px; color: #9f1239; tracking: -0.025em;\">⚠️ Submission Notice</h2>\n    <p style=\"font-size: 13px; line-height: 1.6; margin-bottom: 20px; color: #475569;\">Greetings, our e-procurement tracker registers that the bid submission window for the contract below closes in exactly 8 days.</p>\n    <div style=\"padding: 16px; background-color: #fff1f2; border: 1px solid #fecdd3; border-radius: 12px; margin-bottom: 24px;\">\n      <div style=\"font-size: 10px; font-weight: bold; text-transform: uppercase; color: #be123c; margin-bottom: 4px;\">Tender Title</div>\n      <div style=\"font-size: 14px; font-weight: bold; color: #0f172a; margin-bottom: 12px;\">Hajipur-Mahua Roadway Section Bid Submission</div>\n      <div style=\"font-size: 11px; font-family: monospace; color: #475569;\">\n        <strong>Deadline Time:</strong> 19-Jun-2026\n      </div>\n    </div>\n    <a href=\"#\" style=\"display: inline-block; padding: 10px 20px; background-color: #e11d48; color: #ffffff; font-size: 12px; font-weight: bold; text-decoration: none; border-radius: 8px; text-transform: uppercase; text-align: center;\">Finalize Draft Proposal</a>\n  </div>"
+        },
+        "sms": {
+          "sent": true,
+          "destination": "+91 98765 43210",
+          "timestamp": "2026-07-04T14:18:59.070Z",
+          "content": "[TenderAI URGENT] 8 Days left to submit bid for Hajipur-Mahua. Complete pre-audits and generate documentation now."
+        },
+        "whatsapp": {
+          "sent": true,
+          "destination": "+91 98765 43210",
+          "timestamp": "2026-07-04T14:18:59.070Z",
+          "content": "*TenderAI URGENT DEADLINE* ⏳\n\nDear Bidder, the submission window for Hajipur-Mahua Roadway Section closes in 8 days.\n\n👉 Review: https://ai.studio/build/tender/t-3"
+        },
+        "push": {
+          "sent": true,
+          "destination": "Active Browser Device Sessions",
+          "timestamp": "2026-07-04T14:18:59.070Z",
+          "content": "Submission Window closing in 8 days for Hajipur-Mahua Roadway."
+        }
+      }
+    },
+    {
+      "id": "al-4",
+      "userId": "u-1",
+      "tenderId": "",
+      "type": "DOCUMENT_MISSING",
+      "channel": "EMAIL",
+      "message": "Alert: Your ISO 9001 Certificate is expiring soon on 15-Jul-2026. Please upload a renewed certification to retain your A-class compliance rating.",
+      "isRead": false,
+      "sentAt": "2026-07-04T14:18:59.070Z",
+      "createdAt": "2026-07-04T14:18:59.070Z",
+      "channelsDispatched": {
+        "in_app": {
+          "sent": true,
+          "destination": "In-App Feed Station Panel",
+          "timestamp": "2026-07-04T14:18:59.070Z",
+          "content": "Alert: Your ISO 9001 Certificate is expiring soon on 15-Jul-2026."
+        },
+        "email": {
+          "sent": true,
+          "destination": "msvm220@gmail.com",
+          "timestamp": "2026-07-04T14:18:59.070Z",
+          "subject": "📄 [TenderAI] Compliance Notice: ISO-9001 Certificate Expiring Soon",
+          "content": "<div style=\"font-family: Inter, sans-serif; max-width: 600px; margin: 0 auto; padding: 24px; border: 1px solid #fde047; border-radius: 16px; background-color: #fefcf3; color: #1e293b;\">\n    <div style=\"display: flex; align-items: center; margin-bottom: 24px;\">\n      <span style=\"font-size: 20px; font-weight: 800; color: #ca8a04;\">TenderAI</span>\n      <span style=\"font-size: 11px; margin-left: 8px; font-weight: bold; padding: 2px 8px; background-color: #fef9c3; border-radius: 9999px; color: #ca8a04; text-transform: uppercase;\">Expirations</span>\n    </div>\n    <h2 style=\"font-size: 18px; font-weight: 800; margin-bottom: 8px; color: #854d0e; tracking: -0.025em;\">📄 Document Expiration Notice</h2>\n    <p style=\"font-size: 13px; line-height: 1.6; margin-bottom: 20px; color: #475569;\">Greetings, we detected a critical document in your Compliance Vault which is nearing its valid expiration bounds.</p>\n    <div style=\"padding: 16px; background-color: #fefef0; border: 1px solid #fef08a; border-radius: 12px; margin-bottom: 24px;\">\n      <div style=\"font-size: 10px; font-weight: bold; text-transform: uppercase; color: #854d0e; margin-bottom: 4px;\">Document Name</div>\n      <div style=\"font-size: 14px; font-weight: bold; color: #0f172a; margin-bottom: 12px;\">ISO-9001 Corporate Quality Compliance Standard Certificate</div>\n      <div style=\"font-size: 11px; font-family: monospace; color: #ca8a04;\">\n        <strong>Expiration Boundary:</strong> 15-Jul-2026\n      </div>\n    </div>\n    <a href=\"#\" style=\"display: inline-block; padding: 10px 20px; background-color: #ca8a04; color: #ffffff; font-size: 12px; font-weight: bold; text-decoration: none; border-radius: 8px; text-transform: uppercase; text-align: center;\">Upload To Vault</a>\n  </div>"
+        },
+        "push": {
+          "sent": true,
+          "destination": "Active Browser Device Sessions",
+          "timestamp": "2026-07-04T14:18:59.070Z",
+          "content": "Document Expiring soon: ISO-9001 Certificate validity limits check."
+        }
+      }
+    }
+  ],
+  "tenderQAs": [],
+  "paymentIntents": [
+    {
+      "id": "rzp_pay_999120",
+      "userId": "u-1",
+      "planId": "STARTER",
+      "amount": 1999,
+      "billingCycle": "MONTHLY",
+      "gateway": "RAZORPAY",
+      "method": "CARD",
+      "status": "CAPTURED",
+      "createdAt": "2026-06-04T14:18:59.070Z"
+    },
+    {
+      "id": "rzp_pay_failed_88849",
+      "userId": "u-1",
+      "planId": "PROFESSIONAL",
+      "amount": 4999,
+      "billingCycle": "MONTHLY",
+      "gateway": "RAZORPAY",
+      "method": "UPI",
+      "status": "FAILED",
+      "createdAt": "2026-07-04T12:18:59.070Z"
+    }
+  ],
+  "supportTickets": [
+    {
+      "id": "st-1",
+      "userId": "u-1",
+      "userEmail": "demo@tenderai.in",
+      "userName": "Ramesh Sharma",
+      "subject": "Razorpay payment got debited but plan didn't upgrade",
+      "message": "I selected the Professional plan and completed the payment of ₹4,999. The amount got debited from my bank account, but my account status here still shows STARTER. Please look into this urgently as I need to submit a bid today.",
+      "status": "OPEN",
+      "priority": "HIGH",
+      "category": "BILLING",
+      "replies": [
+        {
+          "sender": "USER",
+          "message": "I selected the Professional plan and completed the payment of ₹4,999.",
+          "timestamp": "2026-07-04T10:18:59.070Z"
+        }
+      ],
+      "createdAt": "2026-07-04T10:18:59.070Z",
+      "updatedAt": "2026-07-04T10:18:59.070Z"
+    },
+    {
+      "id": "st-2",
+      "userId": "u-1",
+      "userEmail": "demo@tenderai.in",
+      "userName": "Ramesh Sharma",
+      "subject": "How does the Joint Venture criteria matching work?",
+      "message": "Can you clarify how the system evaluates JV bids if we combine our turnovers? Do we need to upload the partner documents as well?",
+      "status": "RESOLVED",
+      "priority": "MEDIUM",
+      "category": "COMPLIANCE",
+      "replies": [
+        {
+          "sender": "USER",
+          "message": "Can you clarify how the system evaluates JV bids if we combine our turnovers?",
+          "timestamp": "2026-07-02T14:18:59.070Z"
+        },
+        {
+          "sender": "ADMIN",
+          "message": "Hello Ramesh! Yes, our JV builder combines turnovers of all consortium partners. You can add partners dynamically in the Joint Venture console and view a combined suitability score. Each partner's registered documents can be referenced together.",
+          "timestamp": "2026-07-02T19:06:59.070Z"
+        }
+      ],
+      "createdAt": "2026-07-02T14:18:59.070Z",
+      "updatedAt": "2026-07-02T19:06:59.070Z"
+    }
+  ],
+  "systemSettings": {
+    "liveGatewayActive": false,
+    "aiRateLimitPerMin": 60,
+    "customServiceFeeMultiplier": 1,
+    "sandboxMode": true,
+    "maintenanceMode": false
+  },
+  "auditLogs": [
+    {
+      "id": "audit-a6f18cac",
+      "userId": "system-limiter",
+      "userEmail": "security-guard@tenderai.in",
+      "action": "RATE_LIMIT_EXCEEDED",
+      "description": "IP 127.0.0.1 throttled on route /. Exceeded max 200 count.",
+      "status": "BLOCKED",
+      "ipAddress": "127.0.0.1",
+      "timestamp": "2026-07-04T14:40:25.280Z",
+      "metadata": {
+        "path": "/",
+        "headers": {
+          "host": "localhost:3000",
+          "connection": "keep-alive",
+          "cache-control": "max-age=0",
+          "sec-ch-ua": "\"Not;A=Brand\";v=\"8\", \"Chromium\";v=\"150\", \"Brave\";v=\"150\"",
+          "sec-ch-ua-mobile": "?0",
+          "sec-ch-ua-platform": "\"Windows\"",
+          "upgrade-insecure-requests": "1",
+          "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36",
+          "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8",
+          "sec-gpc": "1",
+          "accept-language": "en;q=0.6",
+          "sec-fetch-site": "same-origin",
+          "sec-fetch-mode": "navigate",
+          "sec-fetch-dest": "document",
+          "referer": "http://localhost:3000/",
+          "accept-encoding": "gzip, deflate, br, zstd",
+          "cookie": "sb-ygjtwscpcasyikmbwxef-auth-token=base64-eyJhY2Nlc3NfdG9rZW4iOiJleUpoYkdjaU9pSkZVekkxTmlJc0ltdHBaQ0k2SWpKbU9URTJNalE1TFRnM09UUXRORGc1T0MwNVpUTTNMVFF5WlRVM09Ea3pZakkxTXlJc0luUjVjQ0k2SWtwWFZDSjkuZXlKcGMzTWlPaUpvZEhSd2N6b3ZMM2xuYW5SM2MyTndZMkZ6ZVdscmJXSjNlR1ZtTG5OMWNHRmlZWE5sTG1OdkwyRjFkR2d2ZGpFaUxDSnpkV0lpT2lJeFltSTNZVGswWWkxaU5UWmpMVFEyTldFdE9HWm1NUzB3TlRVMVkySmlPVFptTnpNaUxDSmhkV1FpT2lKaGRYUm9aVzUwYVdOaGRHVmtJaXdpWlhod0lqb3hOemd3T1RRMk5qUXdMQ0pwWVhRaU9qRTNPREE1TkRNd05EQXNJbVZ0WVdsc0lqb2liWE4yYlRReU1FQm5iV0ZwYkM1amIyMGlMQ0p3YUc5dVpTSTZJaUlzSW1Gd2NGOXRaWFJoWkdGMFlTSTZleUp3Y205MmFXUmxjaUk2SW1WdFlXbHNJaXdpY0hKdmRtbGtaWEp6SWpwYkltVnRZV2xzSWwxOUxDSjFjMlZ5WDIxbGRHRmtZWFJoSWpwN0ltVnRZV2xzSWpvaWJYTjJiVFF5TUVCbmJXRnBiQzVqYjIwaUxDSmxiV0ZwYkY5MlpYSnBabWxsWkNJNmRISjFaU3dpY0dodmJtVmZkbVZ5YVdacFpXUWlPbVpoYkhObExDSnpkV0lpT2lJeFltSTNZVGswWWkxaU5UWmpMVFEyTldFdE9HWm1NUzB3TlRVMVkySmlPVFptTnpNaWZTd2ljbTlzWlNJNkltRjFkR2hsYm5ScFkyRjBaV1FpTENKaFlXd2lPaUpoWVd3eElpd2lZVzF5SWpwYmV5SnRaWFJvYjJRaU9pSndZWE56ZDI5eVpDSXNJblJwYldWemRHRnRjQ0k2TVRjNE1EZzJNVGcyTTMxZExDSnpaWE56YVc5dVgybGtJam9pTmpZeE9EVmtNemd0WTJSa1lTMDBPV00xTFdJNFpXSXRPRGd5WlRZd05EZzFZMll4SWl3aWFYTmZZVzV2Ym5sdGIzVnpJanBtWVd4elpYMC5rVlV2RXNsSjN3UlVBUm1vT0NpX3lkU3hDRXFkbVF1YmkxclJrYWw4d0d1TjFUYVJ1Vkt4TmtlU3VxTk9zVHpxcTNaamROd3VSaS1QUnhGeDBmdnJXdyIsInRva2VuX3R5cGUiOiJiZWFyZXIiLCJleHBpcmVzX2luIjozNjAwLCJleHBpcmVzX2F0IjoxNzgwOTQ2NjQwLCJyZWZyZXNoX3Rva2VuIjoidW93Y200NTNoc3l5IiwidXNlciI6eyJpZCI6IjFiYjdhOTRiLWI1NmMtNDY1YS04ZmYxLTA1NTVjYmI5NmY3MyIsImF1ZCI6ImF1dGhlbnRpY2F0ZWQiLCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImVtYWlsIjoibXN2bTQyMEBnbWFpbC5jb20iLCJlbWFpbF9jb25maXJtZWRfYXQiOiIyMDI2LTA2LTA3VDE5OjUxOjAzLjM3MzkzNVoiLCJwaG9uZSI6IiIsImNvbmZpcm1lZF9hdCI6IjIwMjYtMDYtMDdUMTk6NTE6MDMuMzczOTM1WiIsImxhc3Rfc2lnbl9pbl9hdCI6IjIwMjYtMDYtMDdUMTk6NTE6MDMuMzg0OTQ5WiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7ImVtYWlsIjoibXN2bTQyMEBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwicGhvbmVfdmVyaWZpZWQiOmZhbHNlLCJzdWIiOiIxYmI3YTk0Yi1iNTZjLTQ2NWEtOGZmMS0wNTU1Y2JiOTZmNzMifSwiaWRlbnRpdGllcyI6W3siaWRlbnRpdHlfaWQiOiI2ZTk5YTM2YS02MzM2LTRlOWMtOTI4ZC0zNmUwYmJmZTgyNzMiLCJpZCI6IjFiYjdhOTRiLWI1NmMtNDY1YS04ZmYxLTA1NTVjYmI5NmY3MyIsInVzZXJfaWQiOiIxYmI3YTk0Yi1iNTZjLTQ2NWEtOGZmMS0wNTU1Y2JiOTZmNzMiLCJpZGVudGl0eV9kYXRhIjp7ImVtYWlsIjoibXN2bTQyMEBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsInBob25lX3ZlcmlmaWVkIjpmYWxzZSwic3ViIjoiMWJiN2E5NGItYjU2Yy00NjVhLThmZjEtMDU1NWNiYjk2ZjczIn0sInByb3ZpZGVyIjoiZW1haWwiLCJsYXN0X3NpZ25faW5fYXQiOiIyMDI2LTA2LTA3VDE5OjUxOjAzLjM2NTU0WiIsImNyZWF0ZWRfYXQiOiIyMDI2LTA2LTA3VDE5OjUxOjAzLjM2NTYwNloiLCJ1cGRhdGVkX2F0IjoiMjAyNi0wNi0wN1QxOTo1MTowMy4zNjU2MDZaIiwiZW1haWwiOiJtc3ZtNDIwQGdtYWlsLmNvbSJ9XSwiY3JlYXRlZF9hdCI6IjIwMjYtMDYtMDdUMTk6NTE6MDMuMjk3MzRaIiwidXBkYXRlZF9hdCI6IjIwMjYtMDYtMDhUMTg6MjQ6MDAuMTUxNTA2WiIsImlzX2Fub255bW91cyI6ZmFsc2V9fQ",
+          "dnt": "1",
+          "if-none-match": "W/\"246-woBQgoECFzq6l0t0rfXK6DRDLd8\""
+        }
+      }
+    },
+    {
+      "id": "audit-03181c8b",
+      "userId": "system-limiter",
+      "userEmail": "security-guard@tenderai.in",
+      "action": "RATE_LIMIT_EXCEEDED",
+      "description": "IP 127.0.0.1 throttled on route /src/components/BidPricingTool.tsx. Exceeded max 200 count.",
+      "status": "BLOCKED",
+      "ipAddress": "127.0.0.1",
+      "timestamp": "2026-07-04T14:40:23.516Z",
+      "metadata": {
+        "path": "/src/components/BidPricingTool.tsx",
+        "headers": {
+          "host": "localhost:3000",
+          "connection": "keep-alive",
+          "origin": "http://localhost:3000",
+          "sec-ch-ua-platform": "\"Windows\"",
+          "if-none-match": "W/\"8a1b-4p6OnElaXcsQRfSyBvbo8nyT6jA\"",
+          "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36",
+          "sec-ch-ua": "\"Not;A=Brand\";v=\"8\", \"Chromium\";v=\"150\", \"Brave\";v=\"150\"",
+          "sec-ch-ua-mobile": "?0",
+          "accept": "*/*",
+          "sec-gpc": "1",
+          "accept-language": "en;q=0.6",
+          "sec-fetch-site": "same-origin",
+          "sec-fetch-mode": "cors",
+          "sec-fetch-dest": "script",
+          "referer": "http://localhost:3000/src/components/TenderDetailView.tsx",
+          "accept-encoding": "gzip, deflate, br, zstd",
+          "cookie": "sb-ygjtwscpcasyikmbwxef-auth-token=base64-eyJhY2Nlc3NfdG9rZW4iOiJleUpoYkdjaU9pSkZVekkxTmlJc0ltdHBaQ0k2SWpKbU9URTJNalE1TFRnM09UUXRORGc1T0MwNVpUTTNMVFF5WlRVM09Ea3pZakkxTXlJc0luUjVjQ0k2SWtwWFZDSjkuZXlKcGMzTWlPaUpvZEhSd2N6b3ZMM2xuYW5SM2MyTndZMkZ6ZVdscmJXSjNlR1ZtTG5OMWNHRmlZWE5sTG1OdkwyRjFkR2d2ZGpFaUxDSnpkV0lpT2lJeFltSTNZVGswWWkxaU5UWmpMVFEyTldFdE9HWm1NUzB3TlRVMVkySmlPVFptTnpNaUxDSmhkV1FpT2lKaGRYUm9aVzUwYVdOaGRHVmtJaXdpWlhod0lqb3hOemd3T1RRMk5qUXdMQ0pwWVhRaU9qRTNPREE1TkRNd05EQXNJbVZ0WVdsc0lqb2liWE4yYlRReU1FQm5iV0ZwYkM1amIyMGlMQ0p3YUc5dVpTSTZJaUlzSW1Gd2NGOXRaWFJoWkdGMFlTSTZleUp3Y205MmFXUmxjaUk2SW1WdFlXbHNJaXdpY0hKdmRtbGtaWEp6SWpwYkltVnRZV2xzSWwxOUxDSjFjMlZ5WDIxbGRHRmtZWFJoSWpwN0ltVnRZV2xzSWpvaWJYTjJiVFF5TUVCbmJXRnBiQzVqYjIwaUxDSmxiV0ZwYkY5MlpYSnBabWxsWkNJNmRISjFaU3dpY0dodmJtVmZkbVZ5YVdacFpXUWlPbVpoYkhObExDSnpkV0lpT2lJeFltSTNZVGswWWkxaU5UWmpMVFEyTldFdE9HWm1NUzB3TlRVMVkySmlPVFptTnpNaWZTd2ljbTlzWlNJNkltRjFkR2hsYm5ScFkyRjBaV1FpTENKaFlXd2lPaUpoWVd3eElpd2lZVzF5SWpwYmV5SnRaWFJvYjJRaU9pSndZWE56ZDI5eVpDSXNJblJwYldWemRHRnRjQ0k2TVRjNE1EZzJNVGcyTTMxZExDSnpaWE56YVc5dVgybGtJam9pTmpZeE9EVmtNemd0WTJSa1lTMDBPV00xTFdJNFpXSXRPRGd5WlRZd05EZzFZMll4SWl3aWFYTmZZVzV2Ym5sdGIzVnpJanBtWVd4elpYMC5rVlV2RXNsSjN3UlVBUm1vT0NpX3lkU3hDRXFkbVF1YmkxclJrYWw4d0d1TjFUYVJ1Vkt4TmtlU3VxTk9zVHpxcTNaamROd3VSaS1QUnhGeDBmdnJXdyIsInRva2VuX3R5cGUiOiJiZWFyZXIiLCJleHBpcmVzX2luIjozNjAwLCJleHBpcmVzX2F0IjoxNzgwOTQ2NjQwLCJyZWZyZXNoX3Rva2VuIjoidW93Y200NTNoc3l5IiwidXNlciI6eyJpZCI6IjFiYjdhOTRiLWI1NmMtNDY1YS04ZmYxLTA1NTVjYmI5NmY3MyIsImF1ZCI6ImF1dGhlbnRpY2F0ZWQiLCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImVtYWlsIjoibXN2bTQyMEBnbWFpbC5jb20iLCJlbWFpbF9jb25maXJtZWRfYXQiOiIyMDI2LTA2LTA3VDE5OjUxOjAzLjM3MzkzNVoiLCJwaG9uZSI6IiIsImNvbmZpcm1lZF9hdCI6IjIwMjYtMDYtMDdUMTk6NTE6MDMuMzczOTM1WiIsImxhc3Rfc2lnbl9pbl9hdCI6IjIwMjYtMDYtMDdUMTk6NTE6MDMuMzg0OTQ5WiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7ImVtYWlsIjoibXN2bTQyMEBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwicGhvbmVfdmVyaWZpZWQiOmZhbHNlLCJzdWIiOiIxYmI3YTk0Yi1iNTZjLTQ2NWEtOGZmMS0wNTU1Y2JiOTZmNzMifSwiaWRlbnRpdGllcyI6W3siaWRlbnRpdHlfaWQiOiI2ZTk5YTM2YS02MzM2LTRlOWMtOTI4ZC0zNmUwYmJmZTgyNzMiLCJpZCI6IjFiYjdhOTRiLWI1NmMtNDY1YS04ZmYxLTA1NTVjYmI5NmY3MyIsInVzZXJfaWQiOiIxYmI3YTk0Yi1iNTZjLTQ2NWEtOGZmMS0wNTU1Y2JiOTZmNzMiLCJpZGVudGl0eV9kYXRhIjp7ImVtYWlsIjoibXN2bTQyMEBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsInBob25lX3ZlcmlmaWVkIjpmYWxzZSwic3ViIjoiMWJiN2E5NGItYjU2Yy00NjVhLThmZjEtMDU1NWNiYjk2ZjczIn0sInByb3ZpZGVyIjoiZW1haWwiLCJsYXN0X3NpZ25faW5fYXQiOiIyMDI2LTA2LTA3VDE5OjUxOjAzLjM2NTU0WiIsImNyZWF0ZWRfYXQiOiIyMDI2LTA2LTA3VDE5OjUxOjAzLjM2NTYwNloiLCJ1cGRhdGVkX2F0IjoiMjAyNi0wNi0wN1QxOTo1MTowMy4zNjU2MDZaIiwiZW1haWwiOiJtc3ZtNDIwQGdtYWlsLmNvbSJ9XSwiY3JlYXRlZF9hdCI6IjIwMjYtMDYtMDdUMTk6NTE6MDMuMjk3MzRaIiwidXBkYXRlZF9hdCI6IjIwMjYtMDYtMDhUMTg6MjQ6MDAuMTUxNTA2WiIsImlzX2Fub255bW91cyI6ZmFsc2V9fQ",
+          "dnt": "1"
+        }
+      }
+    },
+    {
+      "id": "audit-ac9bbc55",
+      "userId": "system-limiter",
+      "userEmail": "security-guard@tenderai.in",
+      "action": "RATE_LIMIT_EXCEEDED",
+      "description": "IP 127.0.0.1 throttled on route /src/components/PortalIntegrationView.tsx. Exceeded max 200 count.",
+      "status": "BLOCKED",
+      "ipAddress": "127.0.0.1",
+      "timestamp": "2026-07-04T14:40:23.514Z",
+      "metadata": {
+        "path": "/src/components/PortalIntegrationView.tsx",
+        "headers": {
+          "host": "localhost:3000",
+          "connection": "keep-alive",
+          "origin": "http://localhost:3000",
+          "sec-ch-ua-platform": "\"Windows\"",
+          "if-none-match": "W/\"9f4a-1o6eql6IPCk0kX1mwhGPvU9UDn0\"",
+          "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36",
+          "sec-ch-ua": "\"Not;A=Brand\";v=\"8\", \"Chromium\";v=\"150\", \"Brave\";v=\"150\"",
+          "sec-ch-ua-mobile": "?0",
+          "accept": "*/*",
+          "sec-gpc": "1",
+          "accept-language": "en;q=0.6",
+          "sec-fetch-site": "same-origin",
+          "sec-fetch-mode": "cors",
+          "sec-fetch-dest": "script",
+          "referer": "http://localhost:3000/src/components/TenderDetailView.tsx",
+          "accept-encoding": "gzip, deflate, br, zstd",
+          "cookie": "sb-ygjtwscpcasyikmbwxef-auth-token=base64-eyJhY2Nlc3NfdG9rZW4iOiJleUpoYkdjaU9pSkZVekkxTmlJc0ltdHBaQ0k2SWpKbU9URTJNalE1TFRnM09UUXRORGc1T0MwNVpUTTNMVFF5WlRVM09Ea3pZakkxTXlJc0luUjVjQ0k2SWtwWFZDSjkuZXlKcGMzTWlPaUpvZEhSd2N6b3ZMM2xuYW5SM2MyTndZMkZ6ZVdscmJXSjNlR1ZtTG5OMWNHRmlZWE5sTG1OdkwyRjFkR2d2ZGpFaUxDSnpkV0lpT2lJeFltSTNZVGswWWkxaU5UWmpMVFEyTldFdE9HWm1NUzB3TlRVMVkySmlPVFptTnpNaUxDSmhkV1FpT2lKaGRYUm9aVzUwYVdOaGRHVmtJaXdpWlhod0lqb3hOemd3T1RRMk5qUXdMQ0pwWVhRaU9qRTNPREE1TkRNd05EQXNJbVZ0WVdsc0lqb2liWE4yYlRReU1FQm5iV0ZwYkM1amIyMGlMQ0p3YUc5dVpTSTZJaUlzSW1Gd2NGOXRaWFJoWkdGMFlTSTZleUp3Y205MmFXUmxjaUk2SW1WdFlXbHNJaXdpY0hKdmRtbGtaWEp6SWpwYkltVnRZV2xzSWwxOUxDSjFjMlZ5WDIxbGRHRmtZWFJoSWpwN0ltVnRZV2xzSWpvaWJYTjJiVFF5TUVCbmJXRnBiQzVqYjIwaUxDSmxiV0ZwYkY5MlpYSnBabWxsWkNJNmRISjFaU3dpY0dodmJtVmZkbVZ5YVdacFpXUWlPbVpoYkhObExDSnpkV0lpT2lJeFltSTNZVGswWWkxaU5UWmpMVFEyTldFdE9HWm1NUzB3TlRVMVkySmlPVFptTnpNaWZTd2ljbTlzWlNJNkltRjFkR2hsYm5ScFkyRjBaV1FpTENKaFlXd2lPaUpoWVd3eElpd2lZVzF5SWpwYmV5SnRaWFJvYjJRaU9pSndZWE56ZDI5eVpDSXNJblJwYldWemRHRnRjQ0k2TVRjNE1EZzJNVGcyTTMxZExDSnpaWE56YVc5dVgybGtJam9pTmpZeE9EVmtNemd0WTJSa1lTMDBPV00xTFdJNFpXSXRPRGd5WlRZd05EZzFZMll4SWl3aWFYTmZZVzV2Ym5sdGIzVnpJanBtWVd4elpYMC5rVlV2RXNsSjN3UlVBUm1vT0NpX3lkU3hDRXFkbVF1YmkxclJrYWw4d0d1TjFUYVJ1Vkt4TmtlU3VxTk9zVHpxcTNaamROd3VSaS1QUnhGeDBmdnJXdyIsInRva2VuX3R5cGUiOiJiZWFyZXIiLCJleHBpcmVzX2luIjozNjAwLCJleHBpcmVzX2F0IjoxNzgwOTQ2NjQwLCJyZWZyZXNoX3Rva2VuIjoidW93Y200NTNoc3l5IiwidXNlciI6eyJpZCI6IjFiYjdhOTRiLWI1NmMtNDY1YS04ZmYxLTA1NTVjYmI5NmY3MyIsImF1ZCI6ImF1dGhlbnRpY2F0ZWQiLCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImVtYWlsIjoibXN2bTQyMEBnbWFpbC5jb20iLCJlbWFpbF9jb25maXJtZWRfYXQiOiIyMDI2LTA2LTA3VDE5OjUxOjAzLjM3MzkzNVoiLCJwaG9uZSI6IiIsImNvbmZpcm1lZF9hdCI6IjIwMjYtMDYtMDdUMTk6NTE6MDMuMzczOTM1WiIsImxhc3Rfc2lnbl9pbl9hdCI6IjIwMjYtMDYtMDdUMTk6NTE6MDMuMzg0OTQ5WiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7ImVtYWlsIjoibXN2bTQyMEBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwicGhvbmVfdmVyaWZpZWQiOmZhbHNlLCJzdWIiOiIxYmI3YTk0Yi1iNTZjLTQ2NWEtOGZmMS0wNTU1Y2JiOTZmNzMifSwiaWRlbnRpdGllcyI6W3siaWRlbnRpdHlfaWQiOiI2ZTk5YTM2YS02MzM2LTRlOWMtOTI4ZC0zNmUwYmJmZTgyNzMiLCJpZCI6IjFiYjdhOTRiLWI1NmMtNDY1YS04ZmYxLTA1NTVjYmI5NmY3MyIsInVzZXJfaWQiOiIxYmI3YTk0Yi1iNTZjLTQ2NWEtOGZmMS0wNTU1Y2JiOTZmNzMiLCJpZGVudGl0eV9kYXRhIjp7ImVtYWlsIjoibXN2bTQyMEBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsInBob25lX3ZlcmlmaWVkIjpmYWxzZSwic3ViIjoiMWJiN2E5NGItYjU2Yy00NjVhLThmZjEtMDU1NWNiYjk2ZjczIn0sInByb3ZpZGVyIjoiZW1haWwiLCJsYXN0X3NpZ25faW5fYXQiOiIyMDI2LTA2LTA3VDE5OjUxOjAzLjM2NTU0WiIsImNyZWF0ZWRfYXQiOiIyMDI2LTA2LTA3VDE5OjUxOjAzLjM2NTYwNloiLCJ1cGRhdGVkX2F0IjoiMjAyNi0wNi0wN1QxOTo1MTowMy4zNjU2MDZaIiwiZW1haWwiOiJtc3ZtNDIwQGdtYWlsLmNvbSJ9XSwiY3JlYXRlZF9hdCI6IjIwMjYtMDYtMDdUMTk6NTE6MDMuMjk3MzRaIiwidXBkYXRlZF9hdCI6IjIwMjYtMDYtMDhUMTg6MjQ6MDAuMTUxNTA2WiIsImlzX2Fub255bW91cyI6ZmFsc2V9fQ",
+          "dnt": "1"
+        }
+      }
+    },
+    {
+      "id": "audit-7b84f25c",
+      "userId": "system-limiter",
+      "userEmail": "security-guard@tenderai.in",
+      "action": "RATE_LIMIT_EXCEEDED",
+      "description": "IP 127.0.0.1 throttled on route /src/components/ConsortiumBuilder.tsx. Exceeded max 200 count.",
+      "status": "BLOCKED",
+      "ipAddress": "127.0.0.1",
+      "timestamp": "2026-07-04T14:40:23.504Z",
+      "metadata": {
+        "path": "/src/components/ConsortiumBuilder.tsx",
+        "headers": {
+          "host": "localhost:3000",
+          "connection": "keep-alive",
+          "origin": "http://localhost:3000",
+          "sec-ch-ua-platform": "\"Windows\"",
+          "if-none-match": "W/\"9ae6-BEL7cGUmQWgyNMQMNBXck7kgjqE\"",
+          "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36",
+          "sec-ch-ua": "\"Not;A=Brand\";v=\"8\", \"Chromium\";v=\"150\", \"Brave\";v=\"150\"",
+          "sec-ch-ua-mobile": "?0",
+          "accept": "*/*",
+          "sec-gpc": "1",
+          "accept-language": "en;q=0.6",
+          "sec-fetch-site": "same-origin",
+          "sec-fetch-mode": "cors",
+          "sec-fetch-dest": "script",
+          "referer": "http://localhost:3000/src/components/TenderDetailView.tsx",
+          "accept-encoding": "gzip, deflate, br, zstd",
+          "cookie": "sb-ygjtwscpcasyikmbwxef-auth-token=base64-eyJhY2Nlc3NfdG9rZW4iOiJleUpoYkdjaU9pSkZVekkxTmlJc0ltdHBaQ0k2SWpKbU9URTJNalE1TFRnM09UUXRORGc1T0MwNVpUTTNMVFF5WlRVM09Ea3pZakkxTXlJc0luUjVjQ0k2SWtwWFZDSjkuZXlKcGMzTWlPaUpvZEhSd2N6b3ZMM2xuYW5SM2MyTndZMkZ6ZVdscmJXSjNlR1ZtTG5OMWNHRmlZWE5sTG1OdkwyRjFkR2d2ZGpFaUxDSnpkV0lpT2lJeFltSTNZVGswWWkxaU5UWmpMVFEyTldFdE9HWm1NUzB3TlRVMVkySmlPVFptTnpNaUxDSmhkV1FpT2lKaGRYUm9aVzUwYVdOaGRHVmtJaXdpWlhod0lqb3hOemd3T1RRMk5qUXdMQ0pwWVhRaU9qRTNPREE1TkRNd05EQXNJbVZ0WVdsc0lqb2liWE4yYlRReU1FQm5iV0ZwYkM1amIyMGlMQ0p3YUc5dVpTSTZJaUlzSW1Gd2NGOXRaWFJoWkdGMFlTSTZleUp3Y205MmFXUmxjaUk2SW1WdFlXbHNJaXdpY0hKdmRtbGtaWEp6SWpwYkltVnRZV2xzSWwxOUxDSjFjMlZ5WDIxbGRHRmtZWFJoSWpwN0ltVnRZV2xzSWpvaWJYTjJiVFF5TUVCbmJXRnBiQzVqYjIwaUxDSmxiV0ZwYkY5MlpYSnBabWxsWkNJNmRISjFaU3dpY0dodmJtVmZkbVZ5YVdacFpXUWlPbVpoYkhObExDSnpkV0lpT2lJeFltSTNZVGswWWkxaU5UWmpMVFEyTldFdE9HWm1NUzB3TlRVMVkySmlPVFptTnpNaWZTd2ljbTlzWlNJNkltRjFkR2hsYm5ScFkyRjBaV1FpTENKaFlXd2lPaUpoWVd3eElpd2lZVzF5SWpwYmV5SnRaWFJvYjJRaU9pSndZWE56ZDI5eVpDSXNJblJwYldWemRHRnRjQ0k2TVRjNE1EZzJNVGcyTTMxZExDSnpaWE56YVc5dVgybGtJam9pTmpZeE9EVmtNemd0WTJSa1lTMDBPV00xTFdJNFpXSXRPRGd5WlRZd05EZzFZMll4SWl3aWFYTmZZVzV2Ym5sdGIzVnpJanBtWVd4elpYMC5rVlV2RXNsSjN3UlVBUm1vT0NpX3lkU3hDRXFkbVF1YmkxclJrYWw4d0d1TjFUYVJ1Vkt4TmtlU3VxTk9zVHpxcTNaamROd3VSaS1QUnhGeDBmdnJXdyIsInRva2VuX3R5cGUiOiJiZWFyZXIiLCJleHBpcmVzX2luIjozNjAwLCJleHBpcmVzX2F0IjoxNzgwOTQ2NjQwLCJyZWZyZXNoX3Rva2VuIjoidW93Y200NTNoc3l5IiwidXNlciI6eyJpZCI6IjFiYjdhOTRiLWI1NmMtNDY1YS04ZmYxLTA1NTVjYmI5NmY3MyIsImF1ZCI6ImF1dGhlbnRpY2F0ZWQiLCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImVtYWlsIjoibXN2bTQyMEBnbWFpbC5jb20iLCJlbWFpbF9jb25maXJtZWRfYXQiOiIyMDI2LTA2LTA3VDE5OjUxOjAzLjM3MzkzNVoiLCJwaG9uZSI6IiIsImNvbmZpcm1lZF9hdCI6IjIwMjYtMDYtMDdUMTk6NTE6MDMuMzczOTM1WiIsImxhc3Rfc2lnbl9pbl9hdCI6IjIwMjYtMDYtMDdUMTk6NTE6MDMuMzg0OTQ5WiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7ImVtYWlsIjoibXN2bTQyMEBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwicGhvbmVfdmVyaWZpZWQiOmZhbHNlLCJzdWIiOiIxYmI3YTk0Yi1iNTZjLTQ2NWEtOGZmMS0wNTU1Y2JiOTZmNzMifSwiaWRlbnRpdGllcyI6W3siaWRlbnRpdHlfaWQiOiI2ZTk5YTM2YS02MzM2LTRlOWMtOTI4ZC0zNmUwYmJmZTgyNzMiLCJpZCI6IjFiYjdhOTRiLWI1NmMtNDY1YS04ZmYxLTA1NTVjYmI5NmY3MyIsInVzZXJfaWQiOiIxYmI3YTk0Yi1iNTZjLTQ2NWEtOGZmMS0wNTU1Y2JiOTZmNzMiLCJpZGVudGl0eV9kYXRhIjp7ImVtYWlsIjoibXN2bTQyMEBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsInBob25lX3ZlcmlmaWVkIjpmYWxzZSwic3ViIjoiMWJiN2E5NGItYjU2Yy00NjVhLThmZjEtMDU1NWNiYjk2ZjczIn0sInByb3ZpZGVyIjoiZW1haWwiLCJsYXN0X3NpZ25faW5fYXQiOiIyMDI2LTA2LTA3VDE5OjUxOjAzLjM2NTU0WiIsImNyZWF0ZWRfYXQiOiIyMDI2LTA2LTA3VDE5OjUxOjAzLjM2NTYwNloiLCJ1cGRhdGVkX2F0IjoiMjAyNi0wNi0wN1QxOTo1MTowMy4zNjU2MDZaIiwiZW1haWwiOiJtc3ZtNDIwQGdtYWlsLmNvbSJ9XSwiY3JlYXRlZF9hdCI6IjIwMjYtMDYtMDdUMTk6NTE6MDMuMjk3MzRaIiwidXBkYXRlZF9hdCI6IjIwMjYtMDYtMDhUMTg6MjQ6MDAuMTUxNTA2WiIsImlzX2Fub255bW91cyI6ZmFsc2V9fQ",
+          "dnt": "1"
+        }
+      }
+    },
+    {
+      "id": "audit-f92500b6",
+      "userId": "anonymous",
+      "userEmail": "anonymous@tenderai.in",
+      "action": "CSRF_BLOCK",
+      "description": "Rejected CSRF-invalid state transition. Header token missing or unverified on path /api/auth/login",
+      "status": "BLOCKED",
+      "ipAddress": "127.0.0.1",
+      "timestamp": "2026-07-04T14:27:44.164Z",
+      "metadata": {
+        "method": "POST",
+        "path": "/api/auth/login",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
+      }
+    }
+  ]
+}

@@ -1,0 +1,222 @@
+{
+  "entities": {
+    "User": {
+      "title": "User",
+      "description": "User profile with plan details",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "email": { "type": "string" },
+        "name": { "type": "string" },
+        "phone": { "type": "string" },
+        "plan": { "type": "string", "enum": ["FREE", "STARTER", "PROFESSIONAL", "ENTERPRISE"] }
+      },
+      "required": ["id", "email", "name"]
+    },
+    "CompanyProfile": {
+      "title": "CompanyProfile",
+      "description": "The professional details of a company applying for tenders",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "companyName": { "type": "string" },
+        "registrationNumber": { "type": "string" },
+        "gstNumber": { "type": "string" },
+        "panNumber": { "type": "string" },
+        "annualTurnover": { "type": "number" },
+        "yearsOfExperience": { "type": "number" },
+        "categories": { "type": "array" },
+        "certifications": { "type": "array" },
+        "states": { "type": "array" },
+        "msmeRegistered": { "type": "boolean" },
+        "employeeCount": { "type": "number" },
+        "pastProjects": { "type": "array" },
+        "isActive": { "type": "boolean" }
+      },
+      "required": ["id", "userId", "companyName", "annualTurnover", "yearsOfExperience"]
+    },
+    "Tender": {
+      "title": "Tender",
+      "description": "Tender posting details",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "externalId": { "type": "string" },
+        "sourcePortal": { "type": "string", "enum": ["CPPP", "GEM", "STATE_PWD", "RAILWAYS", "NHAI", "DEFENSE", "PSU", "OTHER"] },
+        "title": { "type": "string" },
+        "department": { "type": "string" },
+        "state": { "type": "string" },
+        "category": { "type": "string" },
+        "subCategory": { "type": "string" },
+        "tenderValue": { "type": "number" },
+        "emdAmount": { "type": "number" },
+        "publishedDate": { "type": "string" },
+        "bidSubmissionDeadline": { "type": "string" },
+        "openingDate": { "type": "string" },
+        "workDescription": { "type": "string" },
+        "eligibilityCriteria": { "type": "object" },
+        "technicalSpecs": { "type": "string" },
+        "documents": { "type": "array" },
+        "rawText": { "type": "string" },
+        "aiSummary": { "type": "string" },
+        "aiEligibilityChecklist": { "type": "object" },
+        "status": { "type": "string", "enum": ["ACTIVE", "CLOSED", "AWARDED", "CANCELLED"] },
+        "location": { "type": "string" }
+      },
+      "required": ["id", "sourcePortal", "title", "department", "state", "category", "bidSubmissionDeadline", "status"]
+    },
+    "TenderMatch": {
+      "title": "TenderMatch",
+      "description": "Matching outcome between a tender and a company profile",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "tenderId": { "type": "string" },
+        "companyProfileId": { "type": "string" },
+        "matchScore": { "type": "number" },
+        "matchBreakdown": { "type": "object" },
+        "isBookmarked": { "type": "boolean" },
+        "userStatus": { "type": "string", "enum": ["NEW", "REVIEWING", "BIDDING", "SUBMITTED", "WON", "LOST", "SKIPPED"] }
+      },
+      "required": ["id", "tenderId", "companyProfileId", "matchScore", "isBookmarked", "userStatus"]
+    },
+    "BidDocument": {
+      "title": "BidDocument",
+      "description": "AI generated bid document copy",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "tenderId": { "type": "string" },
+        "companyProfileId": { "type": "string" },
+        "userId": { "type": "string" },
+        "type": { "type": "string", "enum": ["TECHNICAL_PROPOSAL", "COVER_LETTER", "COMPLIANCE_MATRIX", "BOQ", "FULL_BID_PACKAGE"] },
+        "content": { "type": "string" },
+        "s3Url": { "type": "string" },
+        "version": { "type": "number" },
+        "isAiGenerated": { "type": "boolean" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["id", "tenderId", "companyProfileId", "userId", "type", "content", "version", "isAiGenerated", "createdAt"]
+    },
+    "DocumentVault": {
+      "title": "DocumentVault",
+      "description": "Company registration and experience files vault",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "companyProfileId": { "type": "string" },
+        "userId": { "type": "string" },
+        "documentType": { "type": "string", "enum": ["GST_CERTIFICATE", "PAN_CARD", "MSME_CERTIFICATE", "ISO_CERTIFICATE", "AUDITED_FINANCIALS", "EXPERIENCE_CERTIFICATE", "BANK_DETAILS", "EMD_INSTRUMENT", "OTHER"] },
+        "fileName": { "type": "string" },
+        "s3Url": { "type": "string" },
+        "expiryDate": { "type": "string" },
+        "isVerified": { "type": "boolean" },
+        "year": { "type": "number" }
+      },
+      "required": ["id", "companyProfileId", "userId", "documentType", "fileName", "s3Url", "isVerified"]
+    },
+    "Alert": {
+      "title": "Alert",
+      "description": "In-app or system alert notification",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "tenderId": { "type": "string" },
+        "type": { "type": "string", "enum": ["NEW_MATCH", "DEADLINE_REMINDER", "STATUS_CHANGE", "DOCUMENT_MISSING"] },
+        "channel": { "type": "string", "enum": ["EMAIL", "WHATSAPP", "SMS", "IN_APP"] },
+        "message": { "type": "string" },
+        "isRead": { "type": "boolean" },
+        "sentAt": { "type": "string" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["id", "userId", "tenderId", "type", "channel", "message", "isRead", "sentAt", "createdAt"]
+    },
+    "TenderQA": {
+      "title": "TenderQA",
+      "description": "AI Q&A queries history regarding a tender",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "tenderId": { "type": "string" },
+        "userId": { "type": "string" },
+        "question": { "type": "string" },
+        "answer": { "type": "string" },
+        "sourceCitations": { "type": "array" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["id", "tenderId", "userId", "question", "answer", "createdAt"]
+    },
+    "SavedFilterPreset": {
+      "title": "SavedFilterPreset",
+      "description": "Named presets for filtering tenders",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "filters": { "type": "object" }
+      },
+      "required": ["id", "name", "filters"]
+    },
+    "PaymentIntent": {
+      "title": "PaymentIntent",
+      "description": "Captured payment intent for premium subscriptions",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "planId": { "type": "string" },
+        "amount": { "type": "number" },
+        "billingCycle": { "type": "string" },
+        "gateway": { "type": "string" },
+        "method": { "type": "string" },
+        "status": { "type": "string" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["id", "userId", "planId", "amount", "billingCycle", "gateway", "method", "status", "createdAt"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "User",
+      "description": "User documents"
+    },
+    "/companyProfiles/{profileId}": {
+      "schema": "CompanyProfile",
+      "description": "Compnay Profiles of the user"
+    },
+    "/tenders/{tenderId}": {
+      "schema": "Tender",
+      "description": "Available global tenders list"
+    },
+    "/tenderMatches/{matchId}": {
+      "schema": "TenderMatch",
+      "description": "State of tender matches"
+    },
+    "/bidDocuments/{bidId}": {
+      "schema": "BidDocument",
+      "description": "Generated or in-progress bid documents"
+    },
+    "/documentVaults/{vaultId}": {
+      "schema": "DocumentVault",
+      "description": "Private doc vault files"
+    },
+    "/alerts/{alertId}": {
+      "schema": "Alert",
+      "description": "In-app notifications"
+    },
+    "/tenderQAs/{qaId}": {
+      "schema": "TenderQA",
+      "description": "Q&A chat logs for tender clarifying"
+    },
+    "/filterPresets/{presetId}": {
+      "schema": "SavedFilterPreset",
+      "description": "Named presets saved by the user"
+    },
+    "/paymentIntents/{intentId}": {
+      "schema": "PaymentIntent",
+      "description": "Captured subscription payment checkout attempts and completions"
+    }
+  }
+}

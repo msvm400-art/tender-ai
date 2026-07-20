@@ -1,0 +1,469 @@
+// This is your Prisma schema file for the TenderAI backend,
+// capturing the full relational architecture of procurement profiles, tenders, and compliance.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id             String          @id @default(uuid())
+  email          String          @unique
+  passwordHash   String
+  name           String
+  phone          String?
+  plan           Plan            @default(FREE)
+  role           Role            @default(USER)
+  emailVerified  Boolean         @default(false)
+  verificationToken String?
+  resetPasswordToken String?
+  resetPasswordExpires DateTime?
+  refreshToken   String?
+  profile      CompanyProfile? // One-to-one relationship with CompanyProfile
+  bidDocuments BidDocument[]
+  documentVaults DocumentVault[]
+  alerts       Alert[]
+  tenderQAs    TenderQA[]
+  
+  // Tenant and Team alignment
+  organizationId String?
+  organization   Organization?   @relation(fields: [organizationId], references: [id], onDelete: SetNull)
+  teams          Team[]          @relation("TeamMembers")
+  
+  // Monetization & Support
+  subscription   Subscription?
+  payments       Payment[]
+  savedTenders   SavedTender[]
+  notifications  Notification[]
+  auditLogs      AuditLog[]
+  activities     UserActivity[]
+  aiRequests     AIRequest[]
+  supportTickets SupportTicket[]
+
+  createdAt    DateTime        @default(now())
+  updatedAt    DateTime        @updatedAt
+}
+
+model Organization {
+  id             String          @id @default(uuid())
+  name           String
+  domain         String?
+  logoUrl        String?
+  users          User[]
+  teams          Team[]
+  companyProfile CompanyProfile?
+  createdAt      DateTime        @default(now())
+  updatedAt      DateTime        @updatedAt
+}
+
+model Team {
+  id             String       @id @default(uuid())
+  name           String
+  organizationId String
+  organization   Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  members        User[]       @relation("TeamMembers")
+  createdAt      DateTime     @default(now())
+  updatedAt      DateTime     @updatedAt
+}
+
+model Subscription {
+  id                   String             @id @default(uuid())
+  userId               String             @unique
+  user                 User               @relation(fields: [userId], references: [id], onDelete: Cascade)
+  plan                 Plan               @default(FREE)
+  stripeCustomerId     String?
+  stripeSubscriptionId String?
+  status               SubscriptionStatus @default(INACTIVE)
+  priceId              String?
+  currentPeriodStart   DateTime?
+  currentPeriodEnd     DateTime?
+  cancelAtPeriodEnd    Boolean            @default(false)
+  createdAt            DateTime           @default(now())
+  updatedAt            DateTime           @updatedAt
+}
+
+model Payment {
+  id                    String        @id @default(uuid())
+  userId                String
+  user                  User          @relation(fields: [userId], references: [id], onDelete: Cascade)
+  amount                Float
+  currency              String        @default("INR")
+  status                PaymentStatus @default(PENDING)
+  stripePaymentIntentId String?
+  invoiceNumber         String?
+  createdAt             DateTime      @default(now())
+}
+
+model CompanyProfile {
+  id                 String          @id @default(uuid())
+  userId             String          @unique
+  user               User            @relation(fields: [userId], references: [id], onDelete: Cascade)
+  companyName        String
+  registrationNumber String          @unique // CIN
+  gstNumber          String          @unique
+  panNumber          String          @unique
+  annualTurnover     Float           // in Crores
+  yearsOfExperience  Int
+  categories         String[]        // Array of operational industries (e.g., Civil, Electrical)
+  certifications     String[]        // Professional qualifications (e.g., ISO-9001)
+  states             String[]        // Territory active operation areas
+  msmeRegistered     Boolean         @default(false)
+  employeeCount      Int             @default(0)
+  pastProjects       Json            // JSON array of past projects: { name: string, value: number, client: string, year: number }[]
+  isActive           Boolean         @default(true)
+  matches            TenderMatch[]
+  bidDocuments       BidDocument[]
+  documentVaults     DocumentVault[]
+  
+  organizationId     String?         @unique
+  organization       Organization?   @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+
+  createdAt          DateTime        @default(now())
+  updatedAt          DateTime        @updatedAt
+}
+
+model Tender {
+  id                     String         @id @default(uuid())
+  externalId             String         @unique
+  sourcePortal           SourcePortal
+  title                  String
+  department             String
+  state                  String
+  category               String
+  subCategory            String
+  tenderValue            Float?         // in Crores
+  emdAmount              Float?         // in Lakhs
+  publishedDate          DateTime
+  bidSubmissionDeadline  DateTime
+  openingDate            DateTime?
+  workDescription        String         @db.Text
+  eligibilityCriteria    Json           // JSON containing { minTurnover: Float, minExperience: Int, requiredCertifications: String[], msmeOnly: Boolean, statesAllowed?: String[] }
+  technicalSpecs         String?        @db.Text
+  documents              Json           // JSON array of documents: { name: String, url: String, type: String }[]
+  rawText                String         @db.Text
+  aiSummary              String?        @db.Text
+  aiEligibilityChecklist Json?          // JSON check outline list
+  status                 TenderStatus   @default(ACTIVE)
+  location               String
+  pineconeVectorId       String?
+  matches                TenderMatch[]
+  bidDocuments           BidDocument[]
+  alerts                 Alert[]
+  tenderQAs              TenderQA[]
+  savedTenders           SavedTender[]
+
+  createdAt              DateTime       @default(now())
+  updatedAt              DateTime       @updatedAt
+}
+
+model TenderMatch {
+  id               String          @id @default(uuid())
+  tenderId         String
+  tender           Tender          @relation(fields: [tenderId], references: [id], onDelete: Cascade)
+  companyProfileId String
+  companyProfile   CompanyProfile  @relation(fields: [companyProfileId], references: [id], onDelete: Cascade)
+  matchScore       Int
+  matchBreakdown   Json            // JSON schema: { turnoverMatch: Boolean, certMatch: Boolean, categoryMatch: Boolean, stateMatch: Boolean, experienceMatch: Boolean, missingItems: String[] }
+  isBookmarked     Boolean         @default(false)
+  userStatus       UserStatus      @default(NEW)
+  createdAt        DateTime        @default(now())
+  updatedAt        DateTime        @updatedAt
+
+  @@unique([tenderId, companyProfileId])
+}
+
+model SavedTender {
+  id        String   @id @default(uuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  tenderId  String
+  tender    Tender   @relation(fields: [tenderId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now())
+
+  @@unique([userId, tenderId])
+}
+
+model BidDocument {
+  id               String          @id @default(uuid())
+  tenderId         String
+  tender           Tender          @relation(fields: [tenderId], references: [id], onDelete: Cascade)
+  companyProfileId String
+  companyProfile   CompanyProfile  @relation(fields: [companyProfileId], references: [id], onDelete: Cascade)
+  userId           String
+  user             User            @relation(fields: [userId], references: [id], onDelete: Cascade)
+  type             BidDocumentType
+  content          String          @db.Text
+  s3Url            String?
+  version          Int             @default(1)
+  isAiGenerated    Boolean         @default(false)
+  createdAt        DateTime        @default(now())
+  updatedAt        DateTime        @updatedAt
+}
+
+model DocumentVault {
+  id               String          @id @default(uuid())
+  companyProfileId String
+  companyProfile   CompanyProfile  @relation(fields: [companyProfileId], references: [id], onDelete: Cascade)
+  userId           String
+  user             User            @relation(fields: [userId], references: [id], onDelete: Cascade)
+  documentType     VaultDocType
+  fileName         String
+  s3Url            String
+  expiryDate       DateTime?
+  isVerified       Boolean         @default(false)
+  year             Int?
+  
+  expiryTracking   DocumentExpiryTracking?
+
+  createdAt        DateTime        @default(now())
+  updatedAt        DateTime        @updatedAt
+}
+
+model DocumentExpiryTracking {
+  id               String         @id @default(uuid())
+  documentVaultId  String         @unique
+  documentVault    DocumentVault  @relation(fields: [documentVaultId], references: [id], onDelete: Cascade)
+  expiryDate       DateTime
+  notifyBeforeDays Int            @default(30)
+  lastNotifiedAt   DateTime?
+  status           ExpiryStatus   @default(MONITORED)
+  createdAt        DateTime       @default(now())
+  updatedAt        DateTime       @updatedAt
+}
+
+model DocumentCategory {
+  id          String   @id @default(uuid())
+  name        String   @unique
+  description String?
+  createdAt   DateTime @default(now())
+}
+
+model TenderCategory {
+  id          String   @id @default(uuid())
+  name        String   @unique
+  description String?
+  createdAt   DateTime @default(now())
+}
+
+model TenderSource {
+  id          String       @id @default(uuid())
+  name        String       @unique
+  portalType  SourcePortal
+  url         String?
+  isActive    Boolean      @default(true)
+  createdAt   DateTime     @default(now())
+}
+
+model Alert {
+  id        String       @id @default(uuid())
+  userId    String
+  user      User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+  tenderId  String?
+  tender    Tender?      @relation(fields: [tenderId], references: [id], onDelete: SetNull)
+  type      AlertType
+  channel   AlertChannel
+  message   String       @db.Text
+  isRead    Boolean      @default(false)
+  sentAt    DateTime     @default(now())
+  createdAt DateTime     @default(now())
+}
+
+model Notification {
+  id        String           @id @default(uuid())
+  userId    String
+  user      User             @relation(fields: [userId], references: [id], onDelete: Cascade)
+  title     String
+  content   String           @db.Text
+  type      NotificationType @default(INFO)
+  isRead    Boolean          @default(false)
+  createdAt DateTime         @default(now())
+}
+
+model TenderQA {
+  id              String   @id @default(uuid())
+  tenderId        String
+  tender          Tender   @relation(fields: [tenderId], references: [id], onDelete: Cascade)
+  userId          String
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  question        String   @db.Text
+  answer          String   @db.Text
+  sourceCitations Json     // JSON array of: { text: String, pageNumber: Int, section: String }[]
+  createdAt       DateTime @default(now())
+}
+
+model AuditLog {
+  id        String   @id @default(uuid())
+  userId    String?
+  user      User?    @relation(fields: [userId], references: [id], onDelete: SetNull)
+  action    String
+  entity    String
+  entityId  String?
+  details   Json?
+  ipAddress String?
+  createdAt DateTime @default(now())
+}
+
+model UserActivity {
+  id        String   @id @default(uuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  activity  String
+  page      String?
+  metadata  Json?
+  createdAt DateTime @default(now())
+}
+
+model AIRequest {
+  id             String   @id @default(uuid())
+  userId         String
+  user           User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  serviceType    String   // e.g., "SMART_DRAFT", "SUMMARIZE", "QUERY_COMPLIANCE"
+  promptTokens   Int?
+  completionTokens Int?
+  responseTimeMs Int?
+  status         String   // e.g., "SUCCESS", "FAILED"
+  createdAt      DateTime @default(now())
+}
+
+model SupportTicket {
+  id        String         @id @default(uuid())
+  userId    String
+  user      User           @relation(fields: [userId], references: [id], onDelete: Cascade)
+  subject   String
+  message   String         @db.Text
+  status    TicketStatus   @default(OPEN)
+  priority  TicketPriority @default(MEDIUM)
+  createdAt DateTime       @default(now())
+  updatedAt DateTime       @updatedAt
+}
+
+model SystemSetting {
+  id          String   @id @default(uuid())
+  key         String   @unique
+  value       String
+  description String?
+  updatedAt   DateTime @updatedAt
+}
+
+enum Plan {
+  FREE
+  STARTER
+  PROFESSIONAL
+  ENTERPRISE
+}
+
+enum SubscriptionStatus {
+  ACTIVE
+  PAST_DUE
+  CANCELED
+  UNPAID
+  INACTIVE
+}
+
+enum PaymentStatus {
+  PENDING
+  SUCCESSFUL
+  FAILED
+  REFUNDED
+}
+
+enum SourcePortal {
+  CPPP
+  GEM
+  STATE_PWD
+  RAILWAYS
+  NHAI
+  DEFENSE
+  PSU
+  OTHER
+}
+
+enum TenderStatus {
+  ACTIVE
+  CLOSED
+  AWARDED
+  CANCELLED
+}
+
+enum UserStatus {
+  NEW
+  REVIEWING
+  BIDDING
+  SUBMITTED
+  WON
+  LOST
+  SKIPPED
+}
+
+enum BidDocumentType {
+  TECHNICAL_PROPOSAL
+  COVER_LETTER
+  COMPLIANCE_MATRIX
+  BOQ
+  FULL_BID_PACKAGE
+}
+
+enum VaultDocType {
+  GST_CERTIFICATE
+  PAN_CARD
+  MSME_CERTIFICATE
+  ISO_CERTIFICATE
+  AUDITED_FINANCIALS
+  EXPERIENCE_CERTIFICATE
+  BANK_DETAILS
+  EMD_INSTRUMENT
+  OTHER
+}
+
+enum AlertType {
+  NEW_MATCH
+  DEADLINE_REMINDER
+  STATUS_CHANGE
+  DOCUMENT_MISSING
+}
+
+enum AlertChannel {
+  EMAIL
+  WHATSAPP
+  SMS
+  IN_APP
+}
+
+enum ExpiryStatus {
+  MONITORED
+  WARNING
+  EXPIRED
+  RESOLVED
+}
+
+enum NotificationType {
+  INFO
+  SUCCESS
+  WARNING
+  DANGER
+}
+
+enum TicketStatus {
+  OPEN
+  IN_PROGRESS
+  RESOLVED
+  CLOSED
+}
+
+enum TicketPriority {
+  LOW
+  MEDIUM
+  HIGH
+  URGENT
+}
+
+enum Role {
+  ADMIN
+  USER
+  ORGANIZATION_ADMIN
+}
+

@@ -1,0 +1,254 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Global Safety Net (Strict Default Deny)
+    match /{document=**} {
+      allow read, write: if false;
+    }
+    
+    // Helper Primitives & Security Assertions
+    function isSignedIn() {
+      return request.auth != null;
+    }
+    
+    // Verified user required for standard workflow
+    function isVerifiedUser() {
+      return isSignedIn() && (request.auth.token.email_verified == true || request.auth.token.firebase.sign_in_provider == 'anonymous');
+    }
+    
+    function isOwner(userId) {
+      return isSignedIn() && request.auth.uid == userId;
+    }
+    
+    function isValidId(id) {
+      return id is string && id.size() <= 128 && id.matches('^[a-zA-Z0-9_\\-]+$');
+    }
+    
+    function incoming() {
+      return request.resource.data;
+    }
+    
+    function existing() {
+      return resource.data;
+    }
+
+    // Validation Blueprints
+    function isValidUser(data) {
+      return data.keys().hasAll(['id', 'email', 'name', 'phone', 'plan'])
+        && data.keys().size() == 5
+        && data.id is string && data.id.size() <= 128
+        && data.email is string && data.email.size() <= 256
+        && data.name is string && data.name.size() <= 256
+        && data.phone is string && data.phone.size() <= 32
+        && data.plan is string && (data.plan == 'FREE' || data.plan == 'STARTER' || data.plan == 'PROFESSIONAL' || data.plan == 'ENTERPRISE');
+    }
+    
+    function isValidCompanyProfile(data) {
+      return data.keys().hasAll(['id', 'userId', 'companyName', 'registrationNumber', 'gstNumber', 'panNumber', 'annualTurnover', 'yearsOfExperience', 'categories', 'certifications', 'states', 'msmeRegistered', 'employeeCount', 'pastProjects', 'isActive', 'createdAt', 'updatedAt'])
+        && data.keys().size() == 17
+        && data.id is string && data.id.size() <= 128
+        && data.userId is string && data.userId.size() <= 128
+        && data.companyName is string && data.companyName.size() <= 256
+        && data.registrationNumber is string && data.registrationNumber.size() <= 128
+        && data.gstNumber is string && data.gstNumber.size() <= 32
+        && data.panNumber is string && data.panNumber.size() <= 32
+        && data.annualTurnover is number && data.annualTurnover >= 0
+        && data.yearsOfExperience is number && data.yearsOfExperience >= 0
+        && data.categories is list && data.categories.size() <= 20
+        && data.certifications is list && data.certifications.size() <= 50
+        && data.states is list && data.states.size() <= 40
+        && data.msmeRegistered is bool
+        && data.employeeCount is number
+        && data.pastProjects is list && data.pastProjects.size() <= 100
+        && data.isActive is bool
+        && data.createdAt is string && data.createdAt.size() <= 64
+        && data.updatedAt is string && data.updatedAt.size() <= 64;
+    }
+    
+    function isValidTender(data) {
+      return data.id is string && data.id.size() <= 128
+        && data.sourcePortal is string && data.title is string && data.title.size() <= 512
+        && data.department is string && data.state is string && data.category is string
+        && data.status is string && (data.status == 'ACTIVE' || data.status == 'CLOSED' || data.status == 'AWARDED' || data.status == 'CANCELLED');
+    }
+    
+    function isValidTenderMatch(data) {
+      return data.keys().hasAll(['id', 'tenderId', 'companyProfileId', 'matchScore', 'matchBreakdown', 'isBookmarked', 'userStatus'])
+        && data.keys().size() == 7
+        && data.id is string && data.id.size() <= 128
+        && data.tenderId is string && data.tenderId.size() <= 128
+        && data.companyProfileId is string && data.companyProfileId.size() <= 128
+        && data.matchScore is number && data.matchScore >= 0 && data.matchScore <= 100
+        && data.matchBreakdown is map
+        && data.isBookmarked is bool
+        && data.userStatus is string && (data.userStatus == 'NEW' || data.userStatus == 'REVIEWING' || data.userStatus == 'BIDDING' || data.userStatus == 'SUBMITTED' || data.userStatus == 'WON' || data.userStatus == 'LOST' || data.userStatus == 'SKIPPED');
+    }
+    
+    function isValidBidDocument(data) {
+      return data.keys().hasAll(['id', 'tenderId', 'companyProfileId', 'userId', 'type', 'content', 's3Url', 'version', 'isAiGenerated', 'createdAt'])
+        && data.keys().size() == 10
+        && data.id is string && data.id.size() <= 128
+        && data.tenderId is string && data.tenderId.size() <= 128
+        && data.companyProfileId is string && data.companyProfileId.size() <= 128
+        && data.userId is string && data.userId.size() <= 128
+        && data.type is string && (data.type == 'TECHNICAL_PROPOSAL' || data.type == 'COVER_LETTER' || data.type == 'COMPLIANCE_MATRIX' || data.type == 'BOQ' || data.type == 'FULL_BID_PACKAGE')
+        && data.content is string && data.content.size() <= 1048576
+        && (data.s3Url == null || data.s3Url is string)
+        && data.version is number
+        && data.isAiGenerated is bool;
+    }
+    
+    function isValidDocumentVault(data) {
+      return data.keys().hasAll(['id', 'companyProfileId', 'userId', 'documentType', 'fileName', 's3Url', 'expiryDate', 'isVerified', 'year'])
+        && data.keys().size() == 9
+        && data.id is string && data.id.size() <= 128
+        && data.companyProfileId is string && data.companyProfileId.size() <= 128
+        && data.userId is string && data.userId.size() <= 128
+        && data.documentType is string
+        && data.fileName is string && data.fileName.size() <= 512
+        && data.s3Url is string && data.s3Url.size() <= 2048
+        && (data.expiryDate == null || data.expiryDate is string)
+        && data.isVerified is bool;
+    }
+    
+    function isValidAlert(data) {
+      return data.keys().hasAll(['id', 'userId', 'tenderId', 'type', 'channel', 'message', 'isRead', 'sentAt', 'createdAt'])
+        && data.keys().size() == 9
+        && data.id is string && data.id.size() <= 128
+        && data.userId is string && data.userId.size() <= 128
+        && data.tenderId is string && data.tenderId.size() <= 128
+        && data.type is string && (data.type == 'NEW_MATCH' || data.type == 'DEADLINE_REMINDER' || data.type == 'STATUS_CHANGE' || data.type == 'DOCUMENT_MISSING')
+        && data.channel is string && (data.channel == 'EMAIL' || data.channel == 'WHATSAPP' || data.channel == 'SMS' || data.channel == 'IN_APP')
+        && data.message is string && data.message.size() <= 1024
+        && data.isRead is bool
+        && data.sentAt is string && data.sentAt.size() <= 64
+        && data.createdAt is string && data.createdAt.size() <= 64;
+    }
+    
+    function isValidTenderQA(data) {
+      return data.id is string && data.id.size() <= 128
+        && data.tenderId is string && data.tenderId.size() <= 128
+        && data.userId is string && data.userId.size() <= 128
+        && data.question is string && data.question.size() <= 2048
+        && data.answer is string && data.answer.size() <= 1048576;
+    }
+    
+    function isValidSavedFilterPreset(data) {
+      return data.keys().hasAll(['id', 'userId', 'name', 'filters'])
+        && data.keys().size() == 4
+        && data.id is string && data.id.size() <= 128
+        && data.userId is string && data.userId.size() <= 128
+        && data.name is string && data.name.size() <= 100
+        && data.filters is map;
+    }
+
+    function isValidPaymentIntent(data) {
+      return data.keys().hasAll(['id', 'userId', 'planId', 'amount', 'billingCycle', 'gateway', 'method', 'status', 'createdAt'])
+        && data.keys().size() == 9
+        && data.id is string && data.id.size() <= 128
+        && data.userId is string && data.userId.size() <= 128
+        && data.planId is string && (data.planId == 'FREE' || data.planId == 'STARTER' || data.planId == 'PROFESSIONAL' || data.planId == 'ENTERPRISE')
+        && data.amount is number && data.amount >= 0
+        && data.billingCycle is string && (data.billingCycle == 'MONTHLY' || data.billingCycle == 'ANNUAL')
+        && data.gateway is string && (data.gateway == 'CASHFREE' || data.gateway == 'RAZORPAY')
+        && data.method is string && (data.method == 'CARD' || data.method == 'UPI' || data.method == 'NET_BANKING')
+        && data.status is string && data.status == 'CAPTURED'
+        && data.createdAt is string && data.createdAt.size() <= 64;
+    }
+
+    // Rules Definitions by Collection
+    
+    match /users/{userId} {
+      allow get: if isOwner(userId);
+      allow create: if isOwner(userId) && isValidUser(incoming());
+      allow update: if isOwner(userId) && isValidUser(incoming())
+        && incoming().diff(existing()).affectedKeys().hasOnly(['name', 'phone', 'plan']);
+      allow list, delete: if false;
+    }
+    
+    match /companyProfiles/{profileId} {
+      allow get: if isVerifiedUser() && existing().userId == request.auth.uid;
+      allow list: if isVerifiedUser() && resource.data.userId == request.auth.uid;
+      allow create: if isVerifiedUser() && incoming().userId == request.auth.uid && isValidId(profileId) && isValidCompanyProfile(incoming());
+      allow update: if isVerifiedUser() && existing().userId == request.auth.uid && incoming().userId == request.auth.uid && isValidCompanyProfile(incoming())
+        && incoming().diff(existing()).affectedKeys().hasOnly(['companyName', 'registrationNumber', 'gstNumber', 'panNumber', 'annualTurnover', 'yearsOfExperience', 'categories', 'certifications', 'states', 'msmeRegistered', 'employeeCount', 'pastProjects', 'isActive', 'updatedAt']);
+      allow delete: if isVerifiedUser() && existing().userId == request.auth.uid;
+    }
+    
+    match /tenders/{tenderId} {
+      allow read: if isSignedIn();
+      allow write: if false; // Tenders are loaded exclusively on the server / trusted backend ingestion
+    }
+    
+    match /tenderMatches/{matchId} {
+      // derive owner from related companyProfile
+      function isMatchOwner() {
+        return isSignedIn() && 
+          get(/databases/$(database)/documents/companyProfiles/$(existing().companyProfileId)).data.userId == request.auth.uid;
+      }
+      function isNewMatchOwner() {
+        return isSignedIn() && 
+          get(/databases/$(database)/documents/companyProfiles/$(incoming().companyProfileId)).data.userId == request.auth.uid;
+      }
+      allow get: if isMatchOwner();
+      allow list: if isSignedIn() && 
+        get(/databases/$(database)/documents/companyProfiles/$(resource.data.companyProfileId)).data.userId == request.auth.uid;
+      allow create: if isNewMatchOwner() && isValidId(matchId) && isValidTenderMatch(incoming());
+      allow update: if isMatchOwner() && isNewMatchOwner() && isValidTenderMatch(incoming())
+        && incoming().diff(existing()).affectedKeys().hasOnly(['isBookmarked', 'userStatus']);
+      allow delete: if isMatchOwner();
+    }
+    
+    match /bidDocuments/{bidId} {
+      allow get: if isSignedIn() && existing().userId == request.auth.uid;
+      allow list: if isSignedIn() && resource.data.userId == request.auth.uid;
+      allow create: if isSignedIn() && incoming().userId == request.auth.uid && isValidId(bidId) && isValidBidDocument(incoming());
+      allow update: if isSignedIn() && existing().userId == request.auth.uid && incoming().userId == request.auth.uid && isValidBidDocument(incoming())
+        && incoming().diff(existing()).affectedKeys().hasOnly(['content', 's3Url', 'version']);
+      allow delete: if isSignedIn() && existing().userId == request.auth.uid;
+    }
+    
+    match /documentVaults/{vaultId} {
+      allow get: if isSignedIn() && existing().userId == request.auth.uid;
+      allow list: if isSignedIn() && resource.data.userId == request.auth.uid;
+      allow create: if isSignedIn() && incoming().userId == request.auth.uid && isValidId(vaultId) && isValidDocumentVault(incoming());
+      allow update: if isSignedIn() && existing().userId == request.auth.uid && incoming().userId == request.auth.uid && isValidDocumentVault(incoming())
+        && incoming().diff(existing()).affectedKeys().hasOnly(['fileName', 's3Url', 'expiryDate', 'isVerified', 'year']);
+      allow delete: if isSignedIn() && existing().userId == request.auth.uid;
+    }
+    
+    match /alerts/{alertId} {
+      allow get: if isVerifiedUser() && existing().userId == request.auth.uid;
+      allow list: if isVerifiedUser() && resource.data.userId == request.auth.uid;
+      allow create: if isVerifiedUser() && incoming().userId == request.auth.uid && isValidId(alertId) && isValidAlert(incoming());
+      allow update: if isVerifiedUser() && existing().userId == request.auth.uid && incoming().userId == request.auth.uid && isValidAlert(incoming())
+        && incoming().diff(existing()).affectedKeys().hasOnly(['isRead']);
+      allow delete: if isVerifiedUser() && existing().userId == request.auth.uid;
+    }
+    
+    match /tenderQAs/{qaId} {
+      allow get: if isSignedIn() && existing().userId == request.auth.uid;
+      allow list: if isSignedIn() && resource.data.userId == request.auth.uid;
+      allow create: if isSignedIn() && incoming().userId == request.auth.uid && isValidId(qaId) && isValidTenderQA(incoming());
+      allow update, delete: if false;
+    }
+    
+    match /filterPresets/{presetId} {
+      allow get: if isSignedIn() && existing().userId == request.auth.uid;
+      allow list: if isSignedIn() && resource.data.userId == request.auth.uid;
+      allow create: if isSignedIn() && incoming().userId == request.auth.uid && isValidId(presetId) && isValidSavedFilterPreset(incoming());
+      allow update: if isSignedIn() && existing().userId == request.auth.uid && incoming().userId == request.auth.uid && isValidSavedFilterPreset(incoming())
+        && incoming().diff(existing()).affectedKeys().hasOnly(['name', 'filters']);
+      allow delete: if isSignedIn() && existing().userId == request.auth.uid;
+    }
+
+    match /paymentIntents/{intentId} {
+      allow get: if isSignedIn() && existing().userId == request.auth.uid;
+      allow list: if isSignedIn() && resource.data.userId == request.auth.uid;
+      allow create: if isSignedIn() && incoming().userId == request.auth.uid && isValidId(intentId) && isValidPaymentIntent(incoming());
+      allow update, delete: if false;
+    }
+    
+  }
+}

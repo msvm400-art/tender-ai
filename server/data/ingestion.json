@@ -1,0 +1,758 @@
+{
+  "config": {
+    "schedulerActive": true,
+    "intervalMinutes": 15,
+    "concurrencyLimit": 2
+  },
+  "stats": {
+    "totalScrapedDocs": 36,
+    "totalDeduplicated": 0,
+    "totalFailedAttempts": 0,
+    "totalRecoveries": 4
+  },
+  "portalCoverage": {
+    "gem": {
+      "portalKey": "gem",
+      "displayName": "Government e-Marketplace (GeM)",
+      "type": "GEM",
+      "status": "HEALTHY",
+      "successRate": 100,
+      "totalIngested": 7,
+      "lastCrawlAt": "2026-07-04T15:25:30.895Z"
+    },
+    "cppp": {
+      "portalKey": "cppp",
+      "displayName": "Central Public Procurement Portal (CPPP)",
+      "type": "CPPP",
+      "status": "HEALTHY",
+      "successRate": 100,
+      "totalIngested": 9,
+      "lastCrawlAt": "2026-07-04T15:25:29.050Z"
+    },
+    "railways": {
+      "portalKey": "railways",
+      "displayName": "Indian Railways (IREPS)",
+      "type": "RAILWAYS",
+      "status": "HEALTHY",
+      "successRate": 100,
+      "totalIngested": 7,
+      "lastCrawlAt": "2026-07-04T15:25:28.805Z"
+    },
+    "nhai": {
+      "portalKey": "nhai",
+      "displayName": "National Highways Authority (NHAI)",
+      "type": "NHAI",
+      "status": "HEALTHY",
+      "successRate": 100,
+      "totalIngested": 5,
+      "lastCrawlAt": "2026-07-04T15:25:26.535Z"
+    },
+    "bhel": {
+      "portalKey": "bhel",
+      "displayName": "Bharat Heavy Electricals (BHEL)",
+      "type": "PSU",
+      "status": "HEALTHY",
+      "successRate": 100,
+      "totalIngested": 8,
+      "lastCrawlAt": "2026-07-04T15:25:26.380Z"
+    },
+    "ntpc": {
+      "portalKey": "ntpc",
+      "displayName": "National Thermal Power Corp (NTPC)",
+      "type": "PSU",
+      "status": "HEALTHY",
+      "successRate": 100,
+      "totalIngested": 4,
+      "lastCrawlAt": "2026-07-04T15:25:24.244Z"
+    },
+    "ongc": {
+      "portalKey": "ongc",
+      "displayName": "Oil and Natural Gas Corp (ONGC)",
+      "type": "PSU",
+      "status": "HEALTHY",
+      "successRate": 100,
+      "totalIngested": 4,
+      "lastCrawlAt": "2026-07-04T15:25:23.795Z"
+    },
+    "powergrid": {
+      "portalKey": "powergrid",
+      "displayName": "Power Grid Corp of India (PowerGrid)",
+      "type": "PSU",
+      "status": "HEALTHY",
+      "successRate": 100,
+      "totalIngested": 4,
+      "lastCrawlAt": "2026-07-04T15:25:21.652Z"
+    },
+    "state_pwd": {
+      "portalKey": "state_pwd",
+      "displayName": "State Tender Portals (STATE_PWD)",
+      "type": "STATE_PWD",
+      "status": "HEALTHY",
+      "successRate": 100,
+      "totalIngested": 7,
+      "lastCrawlAt": "2026-07-04T15:25:21.181Z"
+    }
+  },
+  "jobs": [
+    {
+      "id": "job-PCSZG",
+      "portal": "state_pwd",
+      "status": "COMPLETED",
+      "retryCount": 0,
+      "maxRetries": 3,
+      "logs": [
+        "[Queue] Job created and scheduled for State Tender Portals (STATE_PWD).",
+        "[Worker] Started worker. Executing simulated scraper for portal: state_pwd.",
+        "[Resilience] Warning: Timeout: Dynamic DNS query returned NXDOMAIN for secure portal.",
+        "[Resilience] Triggering secure DNS fallback (DNS-over-HTTPS) via Primary Cloudflare (1.1.1.1) and Secondary Google (8.8.8.8) resolvents.",
+        "[Resilience] Hostname IP resolved successfully via backup DNS mesh tunnel: state_pwd.in -> 164.100.22.84",
+        "[Crawl] Connection established securely. Parsing landing index page.",
+        "[Crawl] Retrieved 1 prospective listings corresponding to current date.",
+        "[Database] INGESTED: Created fresh entry ID t-48 for STATE/BH/RCD_ROAD/2026/963.",
+        "[Finished] Job completed successfully. Ingested 1 fresh items."
+      ],
+      "recordsIngested": 1,
+      "startedAt": "2026-07-04T15:25:17.454Z",
+      "completedAt": "2026-07-04T15:25:21.181Z"
+    },
+    {
+      "id": "job-LGDGZ",
+      "portal": "powergrid",
+      "status": "COMPLETED",
+      "retryCount": 0,
+      "maxRetries": 3,
+      "logs": [
+        "[Queue] Job created and scheduled for Power Grid Corp of India (PowerGrid).",
+        "[Worker] Started worker. Executing simulated scraper for portal: powergrid.",
+        "[Crawl] Connection established securely. Parsing landing index page.",
+        "[Crawl] Retrieved 1 prospective listings corresponding to current date.",
+        "[Database] INGESTED: Created fresh entry ID t-49 for PSU/PGCIL/BAY/2026/561.",
+        "[Finished] Job completed successfully. Ingested 1 fresh items."
+      ],
+      "recordsIngested": 1,
+      "startedAt": "2026-07-04T15:25:17.494Z",
+      "completedAt": "2026-07-04T15:25:21.652Z"
+    },
+    {
+      "id": "job-52ED6",
+      "portal": "ongc",
+      "status": "COMPLETED",
+      "retryCount": 0,
+      "maxRetries": 3,
+      "logs": [
+        "[Queue] Job created and scheduled for Oil and Natural Gas Corp (ONGC).",
+        "[Worker] Started worker. Executing simulated scraper for portal: ongc.",
+        "[Crawl] Connection established securely. Parsing landing index page.",
+        "[Crawl] Retrieved 1 prospective listings corresponding to current date.",
+        "[Database] INGESTED: Created fresh entry ID t-50 for PSU/ONGC/OFFSHORE/2026/656.",
+        "[Finished] Job completed successfully. Ingested 1 fresh items."
+      ],
+      "recordsIngested": 1,
+      "startedAt": "2026-07-04T15:25:21.245Z",
+      "completedAt": "2026-07-04T15:25:23.795Z"
+    },
+    {
+      "id": "job-8FQLJ",
+      "portal": "ntpc",
+      "status": "COMPLETED",
+      "retryCount": 0,
+      "maxRetries": 3,
+      "logs": [
+        "[Queue] Job created and scheduled for National Thermal Power Corp (NTPC).",
+        "[Worker] Started worker. Executing simulated scraper for portal: ntpc.",
+        "[Crawl] Connection established securely. Parsing landing index page.",
+        "[Crawl] Retrieved 1 prospective listings corresponding to current date.",
+        "[Database] INGESTED: Created fresh entry ID t-51 for PSU/NTPC/ASH/2026/442.",
+        "[Finished] Job completed successfully. Ingested 1 fresh items."
+      ],
+      "recordsIngested": 1,
+      "startedAt": "2026-07-04T15:25:21.781Z",
+      "completedAt": "2026-07-04T15:25:24.244Z"
+    },
+    {
+      "id": "job-QTBGT",
+      "portal": "bhel",
+      "status": "COMPLETED",
+      "retryCount": 0,
+      "maxRetries": 3,
+      "logs": [
+        "[Queue] Job created and scheduled for Bharat Heavy Electricals (BHEL).",
+        "[Worker] Started worker. Executing simulated scraper for portal: bhel.",
+        "[Crawl] Connection established securely. Parsing landing index page.",
+        "[Crawl] Retrieved 1 prospective listings corresponding to current date.",
+        "[Database] INGESTED: Created fresh entry ID t-52 for PSU/BHEL/GRID/2026/413.",
+        "[Finished] Job completed successfully. Ingested 1 fresh items."
+      ],
+      "recordsIngested": 1,
+      "startedAt": "2026-07-04T15:25:23.840Z",
+      "completedAt": "2026-07-04T15:25:26.380Z"
+    },
+    {
+      "id": "job-CQ32Y",
+      "portal": "nhai",
+      "status": "COMPLETED",
+      "retryCount": 0,
+      "maxRetries": 3,
+      "logs": [
+        "[Queue] Job created and scheduled for National Highways Authority (NHAI).",
+        "[Worker] Started worker. Executing simulated scraper for portal: nhai.",
+        "[Crawl] Connection established securely. Parsing landing index page.",
+        "[Crawl] Retrieved 1 prospective listings corresponding to current date.",
+        "[Database] INGESTED: Created fresh entry ID t-53 for NHAI/BH/EXP/2026/781.",
+        "[Finished] Job completed successfully. Ingested 1 fresh items."
+      ],
+      "recordsIngested": 1,
+      "startedAt": "2026-07-04T15:25:24.247Z",
+      "completedAt": "2026-07-04T15:25:26.535Z"
+    },
+    {
+      "id": "job-T20OJ",
+      "portal": "railways",
+      "status": "COMPLETED",
+      "retryCount": 0,
+      "maxRetries": 3,
+      "logs": [
+        "[Queue] Job created and scheduled for Indian Railways (IREPS).",
+        "[Worker] Started worker. Executing simulated scraper for portal: railways.",
+        "[Crawl] Connection established securely. Parsing landing index page.",
+        "[Crawl] Retrieved 1 prospective listings corresponding to current date.",
+        "[Database] INGESTED: Created fresh entry ID t-54 for RAIL/IREPS/ENGG/31366.",
+        "[Finished] Job completed successfully. Ingested 1 fresh items."
+      ],
+      "recordsIngested": 1,
+      "startedAt": "2026-07-04T15:25:26.381Z",
+      "completedAt": "2026-07-04T15:25:28.805Z"
+    },
+    {
+      "id": "job-23JNE",
+      "portal": "cppp",
+      "status": "COMPLETED",
+      "retryCount": 0,
+      "maxRetries": 3,
+      "logs": [
+        "[Queue] Job created and scheduled for Central Public Procurement Portal (CPPP).",
+        "[Worker] Started worker. Executing simulated scraper for portal: cppp.",
+        "[Crawl] Connection established securely. Parsing landing index page.",
+        "[Crawl] Retrieved 1 prospective listings corresponding to current date.",
+        "[Database] INGESTED: Created fresh entry ID t-55 for CPPP/2026/CI/484.",
+        "[Finished] Job completed successfully. Ingested 1 fresh items."
+      ],
+      "recordsIngested": 1,
+      "startedAt": "2026-07-04T15:25:26.554Z",
+      "completedAt": "2026-07-04T15:25:29.050Z"
+    },
+    {
+      "id": "job-50LSI",
+      "portal": "gem",
+      "status": "COMPLETED",
+      "retryCount": 0,
+      "maxRetries": 3,
+      "logs": [
+        "[Queue] Job created and scheduled for Government e-Marketplace (GeM).",
+        "[Worker] Started worker. Executing simulated scraper for portal: gem.",
+        "[Crawl] Connection established securely. Parsing landing index page.",
+        "[Crawl] Retrieved 1 prospective listings corresponding to current date.",
+        "[Database] INGESTED: Created fresh entry ID t-56 for GEM/2026/B/89310.",
+        "[Finished] Job completed successfully. Ingested 1 fresh items."
+      ],
+      "recordsIngested": 1,
+      "startedAt": "2026-07-04T15:25:28.827Z",
+      "completedAt": "2026-07-04T15:25:30.895Z"
+    },
+    {
+      "id": "job-TR8KB",
+      "portal": "state_pwd",
+      "status": "COMPLETED",
+      "retryCount": 0,
+      "maxRetries": 3,
+      "logs": [
+        "[Queue] Job created and scheduled for State Tender Portals (STATE_PWD).",
+        "[Worker] Started worker. Executing simulated scraper for portal: state_pwd.",
+        "[Crawl] Connection established securely. Parsing landing index page.",
+        "[Crawl] Retrieved 1 prospective listings corresponding to current date.",
+        "[Database] INGESTED: Created fresh entry ID t-39 for STATE/BH/RCD_ROAD/2026/446.",
+        "[Finished] Job completed successfully. Ingested 1 fresh items."
+      ],
+      "recordsIngested": 1,
+      "startedAt": "2026-07-04T15:10:13.117Z",
+      "completedAt": "2026-07-04T15:10:15.131Z"
+    },
+    {
+      "id": "job-FQ7B0",
+      "portal": "powergrid",
+      "status": "COMPLETED",
+      "retryCount": 0,
+      "maxRetries": 3,
+      "logs": [
+        "[Queue] Job created and scheduled for Power Grid Corp of India (PowerGrid).",
+        "[Worker] Started worker. Executing simulated scraper for portal: powergrid.",
+        "[Crawl] Connection established securely. Parsing landing index page.",
+        "[Crawl] Retrieved 1 prospective listings corresponding to current date.",
+        "[Database] INGESTED: Created fresh entry ID t-40 for PSU/PGCIL/BAY/2026/142.",
+        "[Finished] Job completed successfully. Ingested 1 fresh items."
+      ],
+      "recordsIngested": 1,
+      "startedAt": "2026-07-04T15:10:13.118Z",
+      "completedAt": "2026-07-04T15:10:15.132Z"
+    },
+    {
+      "id": "job-RXHQF",
+      "portal": "ongc",
+      "status": "COMPLETED",
+      "retryCount": 0,
+      "maxRetries": 3,
+      "logs": [
+        "[Queue] Job created and scheduled for Oil and Natural Gas Corp (ONGC).",
+        "[Worker] Started worker. Executing simulated scraper for portal: ongc.",
+        "[Crawl] Connection established securely. Parsing landing index page.",
+        "[Crawl] Retrieved 1 prospective listings corresponding to current date.",
+        "[Database] INGESTED: Created fresh entry ID t-41 for PSU/ONGC/OFFSHORE/2026/977.",
+        "[Finished] Job completed successfully. Ingested 1 fresh items."
+      ],
+      "recordsIngested": 1,
+      "startedAt": "2026-07-04T15:10:15.132Z",
+      "completedAt": "2026-07-04T15:10:17.144Z"
+    },
+    {
+      "id": "job-TORK0",
+      "portal": "ntpc",
+      "status": "COMPLETED",
+      "retryCount": 0,
+      "maxRetries": 3,
+      "logs": [
+        "[Queue] Job created and scheduled for National Thermal Power Corp (NTPC).",
+        "[Worker] Started worker. Executing simulated scraper for portal: ntpc.",
+        "[Crawl] Connection established securely. Parsing landing index page.",
+        "[Crawl] Retrieved 1 prospective listings corresponding to current date.",
+        "[Database] INGESTED: Created fresh entry ID t-42 for PSU/NTPC/ASH/2026/499.",
+        "[Finished] Job completed successfully. Ingested 1 fresh items."
+      ],
+      "recordsIngested": 1,
+      "startedAt": "2026-07-04T15:10:15.133Z",
+      "completedAt": "2026-07-04T15:10:17.145Z"
+    },
+    {
+      "id": "job-ONRCJ",
+      "portal": "bhel",
+      "status": "COMPLETED",
+      "retryCount": 0,
+      "maxRetries": 3,
+      "logs": [
+        "[Queue] Job created and scheduled for Bharat Heavy Electricals (BHEL).",
+        "[Worker] Started worker. Executing simulated scraper for portal: bhel.",
+        "[Resilience] Warning: 502 Gateway Error: Connection pool exhausted. Upstream proxy connection timed out.",
+        "[Resilience] Reallocating socket pool. Activating backup upstream proxy routing cluster (node-de-srv04.tunnel-mesh.net)...",
+        "[Resilience] Handshake established with backup proxy node. Traffic successfully re-routed.",
+        "[Crawl] Connection established securely. Parsing landing index page.",
+        "[Crawl] Retrieved 1 prospective listings corresponding to current date.",
+        "[Database] INGESTED: Created fresh entry ID t-43 for PSU/BHEL/GRID/2026/747.",
+        "[Finished] Job completed successfully. Ingested 1 fresh items."
+      ],
+      "recordsIngested": 1,
+      "startedAt": "2026-07-04T15:10:17.145Z",
+      "completedAt": "2026-07-04T15:10:19.169Z"
+    },
+    {
+      "id": "job-5EO9O",
+      "portal": "nhai",
+      "status": "COMPLETED",
+      "retryCount": 0,
+      "maxRetries": 3,
+      "logs": [
+        "[Queue] Job created and scheduled for National Highways Authority (NHAI).",
+        "[Worker] Started worker. Executing simulated scraper for portal: nhai.",
+        "[Crawl] Connection established securely. Parsing landing index page.",
+        "[Crawl] Retrieved 1 prospective listings corresponding to current date.",
+        "[Database] INGESTED: Created fresh entry ID t-44 for NHAI/BH/EXP/2026/598.",
+        "[Finished] Job completed successfully. Ingested 1 fresh items."
+      ],
+      "recordsIngested": 1,
+      "startedAt": "2026-07-04T15:10:17.146Z",
+      "completedAt": "2026-07-04T15:10:19.170Z"
+    },
+    {
+      "id": "job-DW829",
+      "portal": "railways",
+      "status": "COMPLETED",
+      "retryCount": 0,
+      "maxRetries": 3,
+      "logs": [
+        "[Queue] Job created and scheduled for Indian Railways (IREPS).",
+        "[Worker] Started worker. Executing simulated scraper for portal: railways.",
+        "[Resilience] Warning: 503 Captcha Shield Block: Handshake refused. Session protection triggers.",
+        "[Resilience] Initializing AI-driven CAPTCHA bypass engine (OCR/Tess3 solver)...",
+        "[Resilience] CAPTCHA successfully deciphered. Session token generated successfully.",
+        "[Crawl] Connection established securely. Parsing landing index page.",
+        "[Crawl] Retrieved 1 prospective listings corresponding to current date.",
+        "[Database] INGESTED: Created fresh entry ID t-45 for RAIL/IREPS/ENGG/31411.",
+        "[Finished] Job completed successfully. Ingested 1 fresh items."
+      ],
+      "recordsIngested": 1,
+      "startedAt": "2026-07-04T15:10:19.169Z",
+      "completedAt": "2026-07-04T15:10:21.180Z"
+    },
+    {
+      "id": "job-EKVGV",
+      "portal": "cppp",
+      "status": "COMPLETED",
+      "retryCount": 0,
+      "maxRetries": 3,
+      "logs": [
+        "[Queue] Job created and scheduled for Central Public Procurement Portal (CPPP).",
+        "[Worker] Started worker. Executing simulated scraper for portal: cppp.",
+        "[Crawl] Connection established securely. Parsing landing index page.",
+        "[Crawl] Retrieved 1 prospective listings corresponding to current date.",
+        "[Database] INGESTED: Created fresh entry ID t-46 for CPPP/2026/CI/328.",
+        "[Finished] Job completed successfully. Ingested 1 fresh items."
+      ],
+      "recordsIngested": 1,
+      "startedAt": "2026-07-04T15:10:19.170Z",
+      "completedAt": "2026-07-04T15:10:21.181Z"
+    },
+    {
+      "id": "job-NPQZK",
+      "portal": "gem",
+      "status": "COMPLETED",
+      "retryCount": 0,
+      "maxRetries": 3,
+      "logs": [
+        "[Queue] Job created and scheduled for Government e-Marketplace (GeM).",
+        "[Worker] Started worker. Executing simulated scraper for portal: gem.",
+        "[Crawl] Connection established securely. Parsing landing index page.",
+        "[Crawl] Retrieved 1 prospective listings corresponding to current date.",
+        "[Database] INGESTED: Created fresh entry ID t-47 for GEM/2026/B/89910.",
+        "[Finished] Job completed successfully. Ingested 1 fresh items."
+      ],
+      "recordsIngested": 1,
+      "startedAt": "2026-07-04T15:10:21.180Z",
+      "completedAt": "2026-07-04T15:10:23.196Z"
+    },
+    {
+      "id": "job-GUSDV",
+      "portal": "state_pwd",
+      "status": "COMPLETED",
+      "retryCount": 0,
+      "maxRetries": 3,
+      "logs": [
+        "[Queue] Job created and scheduled for State Tender Portals (STATE_PWD).",
+        "[Worker] Started worker. Executing simulated scraper for portal: state_pwd.",
+        "[Resilience] Warning: Timeout: Dynamic DNS query returned NXDOMAIN for secure portal.",
+        "[Resilience] Triggering secure DNS fallback (DNS-over-HTTPS) via Primary Cloudflare (1.1.1.1) and Secondary Google (8.8.8.8) resolvents.",
+        "[Resilience] Hostname IP resolved successfully via backup DNS mesh tunnel: state_pwd.in -> 164.100.22.84",
+        "[Crawl] Connection established securely. Parsing landing index page.",
+        "[Crawl] Retrieved 1 prospective listings corresponding to current date.",
+        "[Database] INGESTED: Created fresh entry ID t-30 for STATE/BH/RCD_ROAD/2026/126.",
+        "[Finished] Job completed successfully. Ingested 1 fresh items."
+      ],
+      "recordsIngested": 1,
+      "startedAt": "2026-07-04T14:55:13.117Z",
+      "completedAt": "2026-07-04T14:55:15.123Z"
+    },
+    {
+      "id": "job-1REKM",
+      "portal": "powergrid",
+      "status": "COMPLETED",
+      "retryCount": 0,
+      "maxRetries": 3,
+      "logs": [
+        "[Queue] Job created and scheduled for Power Grid Corp of India (PowerGrid).",
+        "[Worker] Started worker. Executing simulated scraper for portal: powergrid.",
+        "[Crawl] Connection established securely. Parsing landing index page.",
+        "[Crawl] Retrieved 1 prospective listings corresponding to current date.",
+        "[Database] INGESTED: Created fresh entry ID t-31 for PSU/PGCIL/BAY/2026/925.",
+        "[Finished] Job completed successfully. Ingested 1 fresh items."
+      ],
+      "recordsIngested": 1,
+      "startedAt": "2026-07-04T14:55:13.117Z",
+      "completedAt": "2026-07-04T14:55:15.124Z"
+    },
+    {
+      "id": "job-0OSGR",
+      "portal": "ongc",
+      "status": "COMPLETED",
+      "retryCount": 0,
+      "maxRetries": 3,
+      "logs": [
+        "[Queue] Job created and scheduled for Oil and Natural Gas Corp (ONGC).",
+        "[Worker] Started worker. Executing simulated scraper for portal: ongc.",
+        "[Crawl] Connection established securely. Parsing landing index page.",
+        "[Crawl] Retrieved 1 prospective listings corresponding to current date.",
+        "[Database] INGESTED: Created fresh entry ID t-32 for PSU/ONGC/OFFSHORE/2026/166.",
+        "[Finished] Job completed successfully. Ingested 1 fresh items."
+      ],
+      "recordsIngested": 1,
+      "startedAt": "2026-07-04T14:55:15.123Z",
+      "completedAt": "2026-07-04T14:55:17.134Z"
+    },
+    {
+      "id": "job-SIXDG",
+      "portal": "ntpc",
+      "status": "COMPLETED",
+      "retryCount": 0,
+      "maxRetries": 3,
+      "logs": [
+        "[Queue] Job created and scheduled for National Thermal Power Corp (NTPC).",
+        "[Worker] Started worker. Executing simulated scraper for portal: ntpc.",
+        "[Crawl] Connection established securely. Parsing landing index page.",
+        "[Crawl] Retrieved 1 prospective listings corresponding to current date.",
+        "[Database] INGESTED: Created fresh entry ID t-33 for PSU/NTPC/ASH/2026/834.",
+        "[Finished] Job completed successfully. Ingested 1 fresh items."
+      ],
+      "recordsIngested": 1,
+      "startedAt": "2026-07-04T14:55:15.124Z",
+      "completedAt": "2026-07-04T14:55:17.135Z"
+    },
+    {
+      "id": "job-WDJLW",
+      "portal": "bhel",
+      "status": "COMPLETED",
+      "retryCount": 0,
+      "maxRetries": 3,
+      "logs": [
+        "[Queue] Job created and scheduled for Bharat Heavy Electricals (BHEL).",
+        "[Worker] Started worker. Executing simulated scraper for portal: bhel.",
+        "[Crawl] Connection established securely. Parsing landing index page.",
+        "[Crawl] Retrieved 1 prospective listings corresponding to current date.",
+        "[Database] INGESTED: Created fresh entry ID t-34 for PSU/BHEL/GRID/2026/525.",
+        "[Finished] Job completed successfully. Ingested 1 fresh items."
+      ],
+      "recordsIngested": 1,
+      "startedAt": "2026-07-04T14:55:17.134Z",
+      "completedAt": "2026-07-04T14:55:19.147Z"
+    },
+    {
+      "id": "job-MAXEW",
+      "portal": "nhai",
+      "status": "COMPLETED",
+      "retryCount": 0,
+      "maxRetries": 3,
+      "logs": [
+        "[Queue] Job created and scheduled for National Highways Authority (NHAI).",
+        "[Worker] Started worker. Executing simulated scraper for portal: nhai.",
+        "[Crawl] Connection established securely. Parsing landing index page.",
+        "[Crawl] Retrieved 1 prospective listings corresponding to current date.",
+        "[Database] INGESTED: Created fresh entry ID t-35 for NHAI/BH/EXP/2026/599.",
+        "[Finished] Job completed successfully. Ingested 1 fresh items."
+      ],
+      "recordsIngested": 1,
+      "startedAt": "2026-07-04T14:55:17.135Z",
+      "completedAt": "2026-07-04T14:55:19.148Z"
+    },
+    {
+      "id": "job-2AJ3A",
+      "portal": "railways",
+      "status": "COMPLETED",
+      "retryCount": 0,
+      "maxRetries": 3,
+      "logs": [
+        "[Queue] Job created and scheduled for Indian Railways (IREPS).",
+        "[Worker] Started worker. Executing simulated scraper for portal: railways.",
+        "[Crawl] Connection established securely. Parsing landing index page.",
+        "[Crawl] Retrieved 1 prospective listings corresponding to current date.",
+        "[Database] INGESTED: Created fresh entry ID t-36 for RAIL/IREPS/ENGG/31641.",
+        "[Finished] Job completed successfully. Ingested 1 fresh items."
+      ],
+      "recordsIngested": 1,
+      "startedAt": "2026-07-04T14:55:19.148Z",
+      "completedAt": "2026-07-04T14:55:21.165Z"
+    },
+    {
+      "id": "job-RXPOL",
+      "portal": "cppp",
+      "status": "COMPLETED",
+      "retryCount": 0,
+      "maxRetries": 3,
+      "logs": [
+        "[Queue] Job created and scheduled for Central Public Procurement Portal (CPPP).",
+        "[Worker] Started worker. Executing simulated scraper for portal: cppp.",
+        "[Crawl] Connection established securely. Parsing landing index page.",
+        "[Crawl] Retrieved 1 prospective listings corresponding to current date.",
+        "[Database] INGESTED: Created fresh entry ID t-37 for CPPP/2026/CI/248.",
+        "[Finished] Job completed successfully. Ingested 1 fresh items."
+      ],
+      "recordsIngested": 1,
+      "startedAt": "2026-07-04T14:55:19.149Z",
+      "completedAt": "2026-07-04T14:55:21.166Z"
+    },
+    {
+      "id": "job-S134M",
+      "portal": "gem",
+      "status": "COMPLETED",
+      "retryCount": 0,
+      "maxRetries": 3,
+      "logs": [
+        "[Queue] Job created and scheduled for Government e-Marketplace (GeM).",
+        "[Worker] Started worker. Executing simulated scraper for portal: gem.",
+        "[Crawl] Connection established securely. Parsing landing index page.",
+        "[Crawl] Retrieved 1 prospective listings corresponding to current date.",
+        "[Database] INGESTED: Created fresh entry ID t-38 for GEM/2026/B/89825.",
+        "[Finished] Job completed successfully. Ingested 1 fresh items."
+      ],
+      "recordsIngested": 1,
+      "startedAt": "2026-07-04T14:55:21.165Z",
+      "completedAt": "2026-07-04T14:55:23.181Z"
+    },
+    {
+      "id": "job-GAL6L",
+      "portal": "state_pwd",
+      "status": "COMPLETED",
+      "retryCount": 0,
+      "maxRetries": 3,
+      "logs": [
+        "[Queue] Job created and scheduled for State Tender Portals (STATE_PWD).",
+        "[Worker] Started worker. Executing simulated scraper for portal: state_pwd.",
+        "[Crawl] Connection established securely. Parsing landing index page.",
+        "[Crawl] Retrieved 1 prospective listings corresponding to current date.",
+        "[Database] INGESTED: Created fresh entry ID t-21 for STATE/BH/RCD_ROAD/2026/940.",
+        "[Finished] Job completed successfully. Ingested 1 fresh items."
+      ],
+      "recordsIngested": 1,
+      "startedAt": "2026-07-04T14:40:13.106Z",
+      "completedAt": "2026-07-04T14:40:15.121Z"
+    },
+    {
+      "id": "job-NKYXR",
+      "portal": "powergrid",
+      "status": "COMPLETED",
+      "retryCount": 0,
+      "maxRetries": 3,
+      "logs": [
+        "[Queue] Job created and scheduled for Power Grid Corp of India (PowerGrid).",
+        "[Worker] Started worker. Executing simulated scraper for portal: powergrid.",
+        "[Crawl] Connection established securely. Parsing landing index page.",
+        "[Crawl] Retrieved 1 prospective listings corresponding to current date.",
+        "[Database] INGESTED: Created fresh entry ID t-22 for PSU/PGCIL/BAY/2026/415.",
+        "[Finished] Job completed successfully. Ingested 1 fresh items."
+      ],
+      "recordsIngested": 1,
+      "startedAt": "2026-07-04T14:40:13.106Z",
+      "completedAt": "2026-07-04T14:40:15.122Z"
+    },
+    {
+      "id": "job-XVUP8",
+      "portal": "ongc",
+      "status": "COMPLETED",
+      "retryCount": 0,
+      "maxRetries": 3,
+      "logs": [
+        "[Queue] Job created and scheduled for Oil and Natural Gas Corp (ONGC).",
+        "[Worker] Started worker. Executing simulated scraper for portal: ongc.",
+        "[Crawl] Connection established securely. Parsing landing index page.",
+        "[Crawl] Retrieved 1 prospective listings corresponding to current date.",
+        "[Database] INGESTED: Created fresh entry ID t-23 for PSU/ONGC/OFFSHORE/2026/212.",
+        "[Finished] Job completed successfully. Ingested 1 fresh items."
+      ],
+      "recordsIngested": 1,
+      "startedAt": "2026-07-04T14:40:15.121Z",
+      "completedAt": "2026-07-04T14:40:17.125Z"
+    },
+    {
+      "id": "job-L4NJO",
+      "portal": "ntpc",
+      "status": "COMPLETED",
+      "retryCount": 0,
+      "maxRetries": 3,
+      "logs": [
+        "[Queue] Job created and scheduled for National Thermal Power Corp (NTPC).",
+        "[Worker] Started worker. Executing simulated scraper for portal: ntpc.",
+        "[Crawl] Connection established securely. Parsing landing index page.",
+        "[Crawl] Retrieved 1 prospective listings corresponding to current date.",
+        "[Database] INGESTED: Created fresh entry ID t-24 for PSU/NTPC/ASH/2026/529.",
+        "[Finished] Job completed successfully. Ingested 1 fresh items."
+      ],
+      "recordsIngested": 1,
+      "startedAt": "2026-07-04T14:40:15.122Z",
+      "completedAt": "2026-07-04T14:40:17.127Z"
+    },
+    {
+      "id": "job-XI3OB",
+      "portal": "bhel",
+      "status": "COMPLETED",
+      "retryCount": 0,
+      "maxRetries": 3,
+      "logs": [
+        "[Queue] Job created and scheduled for Bharat Heavy Electricals (BHEL).",
+        "[Worker] Started worker. Executing simulated scraper for portal: bhel.",
+        "[Crawl] Connection established securely. Parsing landing index page.",
+        "[Crawl] Retrieved 1 prospective listings corresponding to current date.",
+        "[Database] INGESTED: Created fresh entry ID t-25 for PSU/BHEL/GRID/2026/943.",
+        "[Finished] Job completed successfully. Ingested 1 fresh items."
+      ],
+      "recordsIngested": 1,
+      "startedAt": "2026-07-04T14:40:17.125Z",
+      "completedAt": "2026-07-04T14:40:19.132Z"
+    },
+    {
+      "id": "job-HX4ZQ",
+      "portal": "nhai",
+      "status": "COMPLETED",
+      "retryCount": 0,
+      "maxRetries": 3,
+      "logs": [
+        "[Queue] Job created and scheduled for National Highways Authority (NHAI).",
+        "[Worker] Started worker. Executing simulated scraper for portal: nhai.",
+        "[Crawl] Connection established securely. Parsing landing index page.",
+        "[Crawl] Retrieved 1 prospective listings corresponding to current date.",
+        "[Database] INGESTED: Created fresh entry ID t-26 for NHAI/BH/EXP/2026/442.",
+        "[Finished] Job completed successfully. Ingested 1 fresh items."
+      ],
+      "recordsIngested": 1,
+      "startedAt": "2026-07-04T14:40:17.127Z",
+      "completedAt": "2026-07-04T14:40:19.133Z"
+    },
+    {
+      "id": "job-N4GOQ",
+      "portal": "railways",
+      "status": "COMPLETED",
+      "retryCount": 0,
+      "maxRetries": 3,
+      "logs": [
+        "[Queue] Job created and scheduled for Indian Railways (IREPS).",
+        "[Worker] Started worker. Executing simulated scraper for portal: railways.",
+        "[Crawl] Connection established securely. Parsing landing index page.",
+        "[Crawl] Retrieved 1 prospective listings corresponding to current date.",
+        "[Database] INGESTED: Created fresh entry ID t-27 for RAIL/IREPS/ENGG/31497.",
+        "[Finished] Job completed successfully. Ingested 1 fresh items."
+      ],
+      "recordsIngested": 1,
+      "startedAt": "2026-07-04T14:40:19.132Z",
+      "completedAt": "2026-07-04T14:40:21.135Z"
+    },
+    {
+      "id": "job-4B00Y",
+      "portal": "cppp",
+      "status": "COMPLETED",
+      "retryCount": 0,
+      "maxRetries": 3,
+      "logs": [
+        "[Queue] Job created and scheduled for Central Public Procurement Portal (CPPP).",
+        "[Worker] Started worker. Executing simulated scraper for portal: cppp.",
+        "[Crawl] Connection established securely. Parsing landing index page.",
+        "[Crawl] Retrieved 1 prospective listings corresponding to current date.",
+        "[Database] INGESTED: Created fresh entry ID t-28 for CPPP/2026/CI/235.",
+        "[Finished] Job completed successfully. Ingested 1 fresh items."
+      ],
+      "recordsIngested": 1,
+      "startedAt": "2026-07-04T14:40:19.133Z",
+      "completedAt": "2026-07-04T14:40:21.137Z"
+    },
+    {
+      "id": "job-GE82A",
+      "portal": "gem",
+      "status": "COMPLETED",
+      "retryCount": 0,
+      "maxRetries": 3,
+      "logs": [
+        "[Queue] Job created and scheduled for Government e-Marketplace (GeM).",
+        "[Worker] Started worker. Executing simulated scraper for portal: gem.",
+        "[Crawl] Connection established securely. Parsing landing index page.",
+        "[Crawl] Retrieved 1 prospective listings corresponding to current date.",
+        "[Database] INGESTED: Created fresh entry ID t-29 for GEM/2026/B/89152.",
+        "[Finished] Job completed successfully. Ingested 1 fresh items."
+      ],
+      "recordsIngested": 1,
+      "startedAt": "2026-07-04T14:40:21.136Z",
+      "completedAt": "2026-07-04T14:40:23.144Z"
+    }
+  ]
+}
