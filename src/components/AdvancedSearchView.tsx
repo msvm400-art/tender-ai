@@ -54,6 +54,7 @@ export default function AdvancedSearchView() {
 
   // Search/Filters states
   const [q, setQ] = useState("");
+  const [isSemantic, setIsSemantic] = useState(false);
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
   const [selectedLocations, setSelectedLocations] = useState<string[]>([]);
   const [deptTerm, setDeptTerm] = useState("");
@@ -150,6 +151,7 @@ export default function AdvancedSearchView() {
       // Build search query params
       const qParams = new URLSearchParams();
       if (q.trim()) qParams.append("q", q.trim());
+      if (isSemantic) qParams.append("mode", "semantic");
       if (selectedCategories.length > 0) qParams.append("category", selectedCategories.join(","));
       if (selectedLocations.length > 0) qParams.append("location", selectedLocations.join(","));
       if (deptTerm.trim()) qParams.append("department", deptTerm.trim());
@@ -378,6 +380,30 @@ export default function AdvancedSearchView() {
                 />
                 <Search className="absolute left-3 top-3 w-4 h-4 text-slate-400" />
               </div>
+            </div>
+
+            {/* AI Semantic Search Toggle */}
+            <div className="flex items-center justify-between p-3 rounded-xl bg-gradient-to-r from-blue-50/50 to-indigo-50/50 border border-blue-100/50">
+              <div className="flex flex-col">
+                <span className="text-xs font-black text-slate-800 uppercase tracking-wider flex items-center gap-1">
+                  AI Semantic Search
+                  <span className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-[8px] px-1.5 py-0.2 rounded font-black tracking-widest uppercase">Gemini</span>
+                </span>
+                <span className="text-[10px] text-slate-500 font-medium">Use contextual meaning instead of keywords</span>
+              </div>
+              <button
+                type="button"
+                onClick={() => setIsSemantic(!isSemantic)}
+                className={`relative inline-flex h-5 w-10 shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none ${
+                  isSemantic ? "bg-indigo-600" : "bg-slate-200"
+                }`}
+              >
+                <span
+                  className={`pointer-events-none inline-block h-4 w-4 transform rounded-full bg-white shadow-sm ring-0 transition duration-200 ease-in-out ${
+                    isSemantic ? "translate-x-5" : "translate-x-0"
+                  }`}
+                />
+              </button>
             </div>
 
             {/* Department Match */}

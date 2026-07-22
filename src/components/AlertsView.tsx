@@ -33,6 +33,20 @@ export default function AlertsView() {
     SUBSCRIPTION_EVENT: { EMAIL: true, WHATSAPP: true, SMS: false, PUSH: true, IN_APP: true }
   });
 
+  const loadAlertMatrix = async () => {
+    try {
+      const res = await fetch("/api/user/alert-matrix", {
+        headers: getAuthHeaders()
+      });
+      if (res.ok) {
+        const data = await res.json();
+        setMatrix(data);
+      }
+    } catch (err) {
+      console.error("Failed to load alert matrix:", err);
+    }
+  };
+
   const loadAlerts = async () => {
     try {
       setLoading(true);
@@ -50,6 +64,7 @@ export default function AlertsView() {
 
   useEffect(() => {
     loadAlerts();
+    loadAlertMatrix();
   }, []);
 
   const displayedAlerts = firebaseUser ? firestoreAlerts : alerts;
@@ -61,14 +76,28 @@ export default function AlertsView() {
     }
   }, [firestoreAlerts]);
 
-  const toggleCheck = (trigger: TriggerType, channel: ChannelType) => {
-    setMatrix((prev) => ({
-      ...prev,
+  const toggleCheck = async (trigger: TriggerType, channel: ChannelType) => {
+    const updatedMatrix = {
+      ...matrix,
       [trigger]: {
-        ...prev[trigger],
-        [channel]: !prev[trigger][channel]
+        ...matrix[trigger],
+        [channel]: !matrix[trigger][channel]
       }
-    }));
+    };
+    setMatrix(updatedMatrix);
+
+    try {
+      await fetch("/api/user/alert-matrix", {
+        method: "PUT",
+        headers: {
+          ...getAuthHeaders(),
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(updatedMatrix)
+      });
+    } catch (err) {
+      console.error("Failed to save alert matrix:", err);
+    }
   };
 
   const requestPushPermission = async () => {

@@ -4,10 +4,21 @@ import { db } from "../db.js";
 import { authenticateJWT, requireRole, resolveUser, hashPassword, comparePassword, generateToken, generateAccessAndRefreshTokens } from "../authMiddleware.js";
 import { recordAuditLog, generateCSRFToken } from "../security.js";
 import { getGeminiAI, summarizeTender, analyzeEligibility, askTenderQuestion, generateBidDoc, generateSmartBidDraft, summarizeProcurementDocument, draftConsortiumAgreement, analyzeAndOCRDocument, chatAboutDocument } from "../ai.service.js";
+import multer from "multer";
+import { createRequire } from "module";
+const requireFunc = typeof require !== "undefined" ? require : createRequire(process.cwd() + "/package.json");
+const pdf = requireFunc("pdf-parse");
+import PDFDocument from "pdfkit";
+
+const upload = multer({
+  storage: multer.memoryStorage(),
+  limits: { fileSize: 10 * 1024 * 1024 }
+});
 
 
 import jwt from "jsonwebtoken";
 import { getPrismaClient } from "../prismaClient.js";
+import { storageService } from "../storage.service.js";
 import { validateRegistrationInput, validateUploadedFile } from "../security.js";
 import { routeCache, invalidateRouteCache } from "../performance.js";
 import { searchEngine } from "../search.service.js";
@@ -116,22 +127,55 @@ export const bidsRouter = express.Router();
   });
 
   bidsRouter.post("/api/bids/:id/export", (req, res) => {
-    const { format } = req.body;
     const doc = db.data.bidDocuments.find((b) => b.id === req.params.id);
     if (!doc) return res.status(404).json({ error: "Doc missing" });
-    const extension = format === "docx" ? "docx" : "pdf";
-    res.json({
-      success: true,
-      url: `https://tenderai-docs.s3.ap-south-1.amazonaws.com/exports/${doc.id}_v${doc.version}.${extension}`,
-      fileName: `${doc.type.toLowerCase().replace(/_/g, "-")}.${extension}`
+
+    res.setHeader("Content-Type", "application/pdf");
+    res.setHeader("Content-Disposition", `attachment; filename="${doc.type.toLowerCase().replace(/_/g, "-")}.pdf"`);
+
+    const pdfDoc = new PDFDocument();
+    pdfDoc.pipe(res);
+
+    pdfDoc.fontSize(20).font("Helvetica-Bold").text(doc.type.replace(/_/g, " "), { align: "center" });
+    pdfDoc.moveDown();
+
+    // Strip basic markdown formatting
+    const cleanText = doc.content
+      .replace(/#+\s+/g, "")
+      .replace(/\*\*/g, "")
+      .replace(/\*/g, "");
+
+    pdfDoc.fontSize(12).font("Helvetica").text(cleanText, {
+      align: "justify",
+      lineGap: 4
     });
+
+    pdfDoc.end();
   });
 
-  bidsRouter.post("/api/tenders/upload-custom", async (req, res) => {
+  bidsRouter.post("/api/tenders/upload-custom", upload.single("file"), async (req, res) => {
     const { title, department, state, category, tenderValue, emdAmount, workDescription, minTurnover, minExperience, textContext } = req.body;
     const user = resolveUser(req);
     if (!user) return res.status(401).json({ error: "Authentication required" });
     
+    let fileText = "";
+    let uploadedFileUrl = "";
+    if (req.file) {
+      try {
+        uploadedFileUrl = await storageService.uploadFile(
+          req.file.originalname,
+          req.file.buffer,
+          req.file.mimetype
+        );
+        if (req.file.mimetype === "application/pdf") {
+          const parsed = await pdf(req.file.buffer);
+          fileText = parsed.text || "";
+        }
+      } catch (err) {
+        console.error("Error processing file upload:", err);
+      }
+    }
+
     // Create new Tender object
     const newTender = {
       id: "tender-custom-" + Math.random().toString(36).substring(3, 8),
@@ -147,7 +191,7 @@ export const bidsRouter = express.Router();
       publishedDate: new Date().toISOString().split("T")[0],
       bidSubmissionDeadline: new Date(Date.now() + 15 * 24 * 60 * 60 * 1000).toISOString().split("T")[0], // 15 days out
       openingDate: new Date(Date.now() + 16 * 24 * 60 * 60 * 1000).toISOString().split("T")[0],
-      workDescription: workDescription || textContext || "Execution of requested civil, mechanical, or structural operations under statutory standards.",
+      workDescription: workDescription || fileText || textContext || "Execution of requested civil, mechanical, or structural operations under statutory standards.",
       eligibilityCriteria: {
         minTurnover: minTurnover ? Number(minTurnover) : 1.5,
         minExperience: minExperience ? Number(minExperience) : 3,
@@ -155,9 +199,11 @@ export const bidsRouter = express.Router();
         msmeOnly: false,
         statesAllowed: [state || "Delhi"]
       },
-      technicalSpecs: textContext || "All engineering items conform to standard CPWD or ISO benchmarks. Quality clearances are required before billing.",
-      documents: [] as { name: string; url: string; type: string }[],
-      rawText: workDescription || textContext || "None provided",
+      technicalSpecs: fileText || textContext || "All engineering items conform to standard CPWD or ISO benchmarks. Quality clearances are required before billing.",
+      documents: uploadedFileUrl
+        ? [{ name: req.file!.originalname, url: uploadedFileUrl, type: "TENDER_NOTICE" }]
+        : [] as { name: string; url: string; type: string }[],
+      rawText: fileText || workDescription || textContext || "None provided",
       aiSummary: "Analyzed custom uploaded tender. Fully compliant specifications.",
       aiEligibilityChecklist: null,
       status: "ACTIVE" as const,

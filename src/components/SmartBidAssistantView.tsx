@@ -46,6 +46,7 @@ export default function SmartBidAssistantView() {
   const [customEMD, setCustomEMD] = useState("10.5");
   const [customSpecs, setCustomSpecs] = useState("");
   const [uploadedFileName, setUploadedFileName] = useState("");
+  const [uploadedFile, setUploadedFile] = useState<File | null>(null);
 
   // Drafting options
   const [tone, setTone] = useState<string>("Formal & Administrative");
@@ -119,6 +120,7 @@ export default function SmartBidAssistantView() {
     if (e.dataTransfer.files && e.dataTransfer.files[0]) {
       const file = e.dataTransfer.files[0];
       setUploadedFileName(file.name);
+      setUploadedFile(file);
       // Auto-extract tender details from name to display smart defaults
       const titleCleaned = file.name
         .replace(/\.[^/.]+$/, "")
@@ -134,6 +136,7 @@ export default function SmartBidAssistantView() {
     if (e.target.files && e.target.files[0]) {
       const file = e.target.files[0];
       setUploadedFileName(file.name);
+      setUploadedFile(file);
       const titleCleaned = file.name
         .replace(/\.[^/.]+$/, "")
         .replace(/[_-]/g, " ")
@@ -149,21 +152,25 @@ export default function SmartBidAssistantView() {
     setUploadError(null);
 
     try {
+      const formData = new FormData();
+      if (uploadedFile) {
+        formData.append("file", uploadedFile);
+      }
+      formData.append("title", customTitle || "Custom Uploaded Tender Specifications");
+      formData.append("department", customDept || "Urban Development Division (UDD)");
+      formData.append("state", customState);
+      formData.append("category", "Civil Infrastructure");
+      formData.append("tenderValue", (parseFloat(customValue) || 4.5).toString());
+      formData.append("emdAmount", (parseFloat(customEMD) || 8.0).toString());
+      formData.append("workDescription", customSpecs || "Provision of turnkey engineering solutions.");
+      formData.append("minTurnover", "1.5");
+      formData.append("minExperience", "3");
+      formData.append("textContext", customSpecs);
+
       const res = await fetch("/api/tenders/upload-custom", {
         method: "POST",
-        headers: getAuthHeaders({ "Content-Type": "application/json" }),
-        body: JSON.stringify({
-          title: customTitle || "Custom Uploaded Tender Specifications",
-          department: customDept || "Urban Development Division (UDD)",
-          state: customState,
-          category: "Civil Infrastructure",
-          tenderValue: parseFloat(customValue) || 4.5,
-          emdAmount: parseFloat(customEMD) || 8.0,
-          workDescription: customSpecs || "Provision of turnkey engineering solutions.",
-          minTurnover: 1.5,
-          minExperience: 3,
-          textContext: customSpecs
-        })
+        headers: getAuthHeaders(),
+        body: formData
       });
 
       if (!res.ok) {
@@ -176,6 +183,7 @@ export default function SmartBidAssistantView() {
         setSelectedTender(data.tender);
         setShowUploadForm(false);
         setUploadedFileName("");
+        setUploadedFile(null);
         setCustomTitle("");
         setCustomDept("");
         setCustomSpecs("");
@@ -316,23 +324,21 @@ export default function SmartBidAssistantView() {
       });
 
       if (res.ok) {
-        const data = await res.json();
+        const blob = await res.blob();
+        const downloadUrl = URL.createObjectURL(blob);
+        const fileName = `${editingDocType.toLowerCase().replace(/_/g, "-")}.pdf`;
         setExportedFile({
-          url: data.url,
-          name: data.fileName || `bid_document.${exportFormat}`
+          url: downloadUrl,
+          name: fileName
         });
 
-        // Trigger real file download of the document text
-        const textPayload = draftDocs[editingDocType] || "No content generated.";
-        const blob = new Blob([textPayload], { type: "text/plain;charset=utf-8" });
-        const downloadUrl = URL.createObjectURL(blob);
+        // Trigger real file download of the PDF blob
         const a = document.createElement("a");
         a.href = downloadUrl;
-        a.download = data.fileName || `${editingDocType.toLowerCase().replace(/_/g, "-")}.${exportFormat}`;
+        a.download = fileName;
         document.body.appendChild(a);
         a.click();
         document.body.removeChild(a);
-        URL.revokeObjectURL(downloadUrl);
       }
     } catch (err) {
       console.error("Export error:", err);
@@ -397,7 +403,7 @@ export default function SmartBidAssistantView() {
             <div className="bg-slate-50/50 border border-slate-200 rounded-2xl p-6 space-y-6">
               <div className="flex justify-between items-center bg-white p-3 rounded-xl border border-slate-100">
                 <span className="text-xs font-extrabold text-slate-800 uppercase tracking-wide">Upload Custom Tender Document (RFP/NIT/BOQ)</span>
-                <span className="bg-indigo-100 text-indigo-800 text-[9px] font-black px-2 py-0.5 rounded-full uppercase">Instant OCR Parse</span>
+                <span className="bg-indigo-100 text-indigo-800 text-[9px] font-black px-2 py-0.5 rounded-full uppercase">AI PDF Parser</span>
               </div>
 
               <div className="grid md:grid-cols-2 gap-6">

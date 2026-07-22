@@ -98,7 +98,10 @@ export default function BillingView({
   useEffect(() => {
     if (user) {
       setTrialActive((user as any).isTrialActive !== false);
-      setTrialDays((user as any).trialDaysElapsed || 1);
+      const elapsed = (user as any).trialStartDate
+        ? Math.floor((Date.now() - new Date((user as any).trialStartDate).getTime()) / 86400000)
+        : ((user as any).trialDaysElapsed || 1);
+      setTrialDays(elapsed < 0 ? 0 : elapsed);
       fetchPaymentHistory();
     }
   }, [user]);
@@ -479,10 +482,13 @@ export default function BillingView({
       targetPlan = "STARTER"; // Maintain simulated trial plan
     }
 
+    const calculatedStartDate = new Date(Date.now() - days * 86400000).toISOString();
+
     const fields = {
       plan: targetPlan,
       isTrialActive: days < 10,
-      trialDaysElapsed: days
+      trialDaysElapsed: days,
+      trialStartDate: calculatedStartDate
     };
 
     // Trigger simulation notifications based on selected day checkpoints

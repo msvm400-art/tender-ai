@@ -3,7 +3,7 @@
     {
       "id": "u-1",
       "email": "demo@tenderai.in",
-      "passwordHash": "demo123",
+      "passwordHash": "$2b$10$V402DUf.WpeiD2rUtitczOUhlkqYApPRuP1LNr1DFCLDzXORGUkbq",
       "name": "Ramesh Sharma",
       "phone": "+91 98765 43210",
       "plan": "STARTER",
@@ -12,13 +12,30 @@
       "verificationToken": null,
       "resetPasswordToken": null,
       "resetPasswordExpires": null,
-      "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJ1LTEiLCJpYXQiOjE3ODMxNzUyNTgsImV4cCI6MTc4Mzc4MDA1OH0.j48AjVYPjOVCo1J4whsWOOLHWJErLuHyqzP2rQGavoA",
+      "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJ1LTEiLCJ0eXBlIjoicmVmcmVzaCIsImlhdCI6MTc4NDU3NzQwNCwiZXhwIjoxNzg1MTgyMjA0fQ.tIarZH5PcwiqzPsi4PZvxc3yAmnlO0GT7fKWL5avpQs",
       "organizationId": null,
       "trialDaysElapsed": 1,
       "isTrialActive": true,
       "trialStartDate": "2026-07-04T14:18:59.067Z",
       "createdAt": "2026-07-04T14:18:59.068Z",
       "updatedAt": "2026-07-04T14:18:59.068Z"
+    },
+    {
+      "id": "u-13092cc1-0706-4240-9a52-f17c439383a8",
+      "email": "msvm450@gmail.com",
+      "passwordHash": "$2b$10$5GSiWROSrtoKkn5a4KhjWee0atUAVkMT/T3kTbzDuY4nly.V.x8hu",
+      "name": ",nb",
+      "phone": "7903144532",
+      "plan": "STARTER",
+      "role": "USER",
+      "emailVerified": false,
+      "verificationToken": "d5dbe199d0a94f1c9d3cb75fa12daa9f0705f6e205ed098e52c2814063a9d219",
+      "resetPasswordToken": null,
+      "resetPasswordExpires": null,
+      "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJ1LTEzMDkyY2MxLTA3MDYtNDI0MC05YTUyLWYxN2M0MzkzODNhOCIsInR5cGUiOiJyZWZyZXNoIiwiaWF0IjoxNzg0NzI4NzEzLCJleHAiOjE3ODUzMzM1MTN9.bXqTpsphZf_c5nnm1aCgrHswwPZRQnJaYPRUvQ7Hg0Y",
+      "organizationId": "v hv",
+      "createdAt": "2026-07-20T20:03:47.188Z",
+      "updatedAt": "2026-07-20T20:03:47.188Z"
     }
   ],
   "companyProfiles": [
@@ -200,6 +217,43 @@
       "isActive": true,
       "createdAt": "2026-07-04T14:18:59.069Z",
       "updatedAt": "2026-07-04T14:18:59.069Z"
+    },
+    {
+      "id": "cp-47ead428-96de-4f85-982a-67b51ac165c0",
+      "userId": "u-13092cc1-0706-4240-9a52-f17c439383a8",
+      "companyName": "Sharma Construction & Infra, Pvt Ltd",
+      "registrationNumber": "U45201BR2015PTC024501",
+      "gstNumber": "10AAAXX0000Z1Z5",
+      "panNumber": "AAACX1234F",
+      "annualTurnover": 5.2,
+      "yearsOfExperience": 8,
+      "employeeCount": 50,
+      "categories": [
+        "Construction",
+        "Civil",
+        "Roads",
+        "Electrical"
+      ],
+      "certifications": [
+        "ISO 9001"
+      ],
+      "states": [
+        "Bihar",
+        "Jharkhand",
+        "Uttar Pradesh"
+      ],
+      "msmeRegistered": true,
+      "isActive": true,
+      "pastProjects": [
+        {
+          "name": "Patna Outer Bypass Expressway",
+          "value": 3.5,
+          "client": "PWD Bihar",
+          "year": 2024
+        }
+      ],
+      "createdAt": "2026-07-22T13:58:34.032Z",
+      "updatedAt": "2026-07-22T14:04:00.831Z"
     }
   ],
   "tenders": [
@@ -2501,6 +2555,369 @@
       "pineconeVectorId": null,
       "createdAt": "2026-07-04T15:25:30.872Z",
       "updatedAt": "2026-07-04T15:25:30.872Z"
+    },
+    {
+      "id": "t-57",
+      "externalId": "STATE/BH/RCD_ROAD/2026/777",
+      "sourcePortal": "STATE_PWD",
+      "title": "Pavement Milling and Re-carpeting of Darbhanga Radial Ring Road Stretch",
+      "department": "Road Construction Department (RCD) Bihar",
+      "state": "Bihar",
+      "category": "Construction",
+      "subCategory": "Road Recarpeting",
+      "tenderValue": 2.1,
+      "emdAmount": 4.2,
+      "publishedDate": "2026-07-21T10:30:00Z",
+      "bidSubmissionDeadline": "2026-08-05T06:58:31.803Z",
+      "openingDate": "2026-08-06T06:58:31.803Z",
+      "workDescription": "Controlled cold milling of deteriorated bitumen sheets, granular leveling, and heavy dense bituminous concrete layout over 4.8 km section.",
+      "eligibilityCriteria": {
+        "minTurnover": 1,
+        "minExperience": 3,
+        "requiredCertifications": [
+          "Class A Contractor License"
+        ],
+        "msmeOnly": false
+      },
+      "documents": [
+        {
+          "name": "SBD_DarbhangaRoad.pdf",
+          "url": "#",
+          "type": "NOTICE"
+        }
+      ],
+      "rawText": "RCD Darbhanga radial rings. Target budget 2.1 Crores. High-density asphalt concrete layout.",
+      "aiSummary": null,
+      "aiEligibilityChecklist": null,
+      "status": "ACTIVE",
+      "location": "Darbhanga, Bihar",
+      "pineconeVectorId": null,
+      "createdAt": "2026-07-21T06:58:31.803Z",
+      "updatedAt": "2026-07-21T06:58:31.803Z"
+    },
+    {
+      "id": "t-58",
+      "externalId": "PSU/PGCIL/BAY/2026/129",
+      "sourcePortal": "PSU",
+      "title": "Bay Extensions of 132kV Transformer Substations at Kishanganj Hub",
+      "department": "Power Grid Corporation of India (PowerGrid)",
+      "state": "Bihar",
+      "category": "Electrical",
+      "subCategory": "Substation Bay",
+      "tenderValue": 6.8,
+      "emdAmount": 13.6,
+      "publishedDate": "2026-07-21T07:15:00Z",
+      "bidSubmissionDeadline": "2026-08-18T06:58:32.196Z",
+      "openingDate": "2026-08-19T06:58:32.196Z",
+      "workDescription": "Supply, layout, civil foundation, electrical mounting, and grid telemetry integration of 1x fresh 132kV bay corridor.",
+      "eligibilityCriteria": {
+        "minTurnover": 3,
+        "minExperience": 6,
+        "requiredCertifications": [
+          "Class A Electrical License",
+          "PowerGrid Approved Vendor"
+        ],
+        "msmeOnly": false
+      },
+      "documents": [
+        {
+          "name": "PGCIL_Kishanganj_Layout.pdf",
+          "url": "#",
+          "type": "CIVIL_ELECTRICAL"
+        }
+      ],
+      "rawText": "PowerGrid substations bay layout additions Kishanganj Bihar, 6.8 Crore INR.",
+      "aiSummary": null,
+      "aiEligibilityChecklist": null,
+      "status": "ACTIVE",
+      "location": "Kishanganj, Bihar",
+      "pineconeVectorId": null,
+      "createdAt": "2026-07-21T06:58:32.196Z",
+      "updatedAt": "2026-07-21T06:58:32.196Z"
+    },
+    {
+      "id": "t-59",
+      "externalId": "PSU/ONGC/OFFSHORE/2026/571",
+      "sourcePortal": "PSU",
+      "title": "Precision Piping Welds and Rigging Supports at KG-Basin Deep Water Facility",
+      "department": "Oil and Natural Gas Corporation (ONGC)",
+      "state": "Andhra Pradesh",
+      "category": "Construction",
+      "subCategory": "Offshore Piping",
+      "tenderValue": 14.5,
+      "emdAmount": 29,
+      "publishedDate": "2026-07-21T09:45:00Z",
+      "bidSubmissionDeadline": "2026-08-25T06:58:34.119Z",
+      "openingDate": "2026-08-26T06:58:34.119Z",
+      "workDescription": "High pressure alloy welding operations, stress checking of risers and platform deck piping systems complying with API standards.",
+      "eligibilityCriteria": {
+        "minTurnover": 6,
+        "minExperience": 8,
+        "requiredCertifications": [
+          "PESO Safety License",
+          "ISO 9001",
+          "AWS Certified Welding Site Spec"
+        ],
+        "msmeOnly": false
+      },
+      "documents": [
+        {
+          "name": "ONGC_Offshore_KGSpecs.pdf",
+          "url": "#",
+          "type": "STANDARDS"
+        }
+      ],
+      "rawText": "ONGC KG Deepwater bay piping support, value Rs 14.5 Crore.",
+      "aiSummary": null,
+      "aiEligibilityChecklist": null,
+      "status": "ACTIVE",
+      "location": "Kakinada, Andhra Pradesh",
+      "pineconeVectorId": null,
+      "createdAt": "2026-07-21T06:58:34.119Z",
+      "updatedAt": "2026-07-21T06:58:34.119Z"
+    },
+    {
+      "id": "t-60",
+      "externalId": "PSU/NTPC/ASH/2026/514",
+      "sourcePortal": "PSU",
+      "title": "Ash Dyke Piping Upgradations and Concrete Laying at Barh Super Power Station",
+      "department": "National Thermal Power Corporation (NTPC)",
+      "state": "Bihar",
+      "category": "Water Supply",
+      "subCategory": "Slurry Transport",
+      "tenderValue": 5.9,
+      "emdAmount": 11.8,
+      "publishedDate": "2026-07-21T10:15:00Z",
+      "bidSubmissionDeadline": "2026-08-12T06:58:34.317Z",
+      "openingDate": "2026-08-13T06:58:34.317Z",
+      "workDescription": "Renewal of dynamic high wear steel alloy pipes, reinforcement of retaining concrete structures around slurry ash pond cells.",
+      "eligibilityCriteria": {
+        "minTurnover": 2.5,
+        "minExperience": 5,
+        "requiredCertifications": [
+          "Class A Civil",
+          "ISO 14001 Environment"
+        ],
+        "msmeOnly": false
+      },
+      "documents": [
+        {
+          "name": "NTPC_DykePipingspecs.pdf",
+          "url": "#",
+          "type": "SPECS"
+        }
+      ],
+      "rawText": "NTPC Barh power plant coal ash sludge transport corridors, estimate 5.9 Crores.",
+      "aiSummary": null,
+      "aiEligibilityChecklist": null,
+      "status": "ACTIVE",
+      "location": "Barh, Bihar",
+      "pineconeVectorId": null,
+      "createdAt": "2026-07-21T06:58:34.317Z",
+      "updatedAt": "2026-07-21T06:58:34.317Z"
+    },
+    {
+      "id": "t-61",
+      "externalId": "PSU/BHEL/GRID/2026/799",
+      "sourcePortal": "PSU",
+      "title": "Rigging and Panel Cable Layout of High Voltage Power Cabinets at Trichy Complex",
+      "department": "Bharat Heavy Electricals Limited (BHEL)",
+      "state": "Tamil Nadu",
+      "category": "Electrical",
+      "subCategory": "Switchgears",
+      "tenderValue": 4.2,
+      "emdAmount": 8.4,
+      "publishedDate": "2026-07-21T08:30:00Z",
+      "bidSubmissionDeadline": "2026-08-20T06:58:36.142Z",
+      "openingDate": "2026-08-21T06:58:36.142Z",
+      "workDescription": "Engineering switchgear bay panels assembly, insulation checkout, and armored copper connections laying within heavy manufacturing complex.",
+      "eligibilityCriteria": {
+        "minTurnover": 2,
+        "minExperience": 5,
+        "requiredCertifications": [
+          "Class A Electrical License",
+          "ISO 9001"
+        ],
+        "msmeOnly": false
+      },
+      "documents": [
+        {
+          "name": "BHEL_Switchgear_Layout.pdf",
+          "url": "#",
+          "type": "PLANS"
+        }
+      ],
+      "rawText": "BHEL switchgear engineering installation Trichy plant, value 4.2 Crore.",
+      "aiSummary": null,
+      "aiEligibilityChecklist": null,
+      "status": "ACTIVE",
+      "location": "Trichy, Tamil Nadu",
+      "pineconeVectorId": null,
+      "createdAt": "2026-07-21T06:58:36.142Z",
+      "updatedAt": "2026-07-21T06:58:36.142Z"
+    },
+    {
+      "id": "t-62",
+      "externalId": "NHAI/BH/EXP/2026/859",
+      "sourcePortal": "NHAI",
+      "title": "Deployment of Thermoplastic Road Marking Lines and Retroreflective Cat-Eyes on NH-31",
+      "department": "National Highways Authority of India (NHAI)",
+      "state": "Bihar",
+      "category": "Construction",
+      "subCategory": "Road Markings",
+      "tenderValue": 2.5,
+      "emdAmount": 5,
+      "publishedDate": "2026-07-21T12:00:00Z",
+      "bidSubmissionDeadline": "2026-08-10T06:58:36.327Z",
+      "openingDate": "2026-08-11T06:58:36.327Z",
+      "workDescription": "Full supply, safety layout, thermal paint coating, and dual aspect retroreflective stud indicators over 40km expressway stretch.",
+      "eligibilityCriteria": {
+        "minTurnover": 1,
+        "minExperience": 3,
+        "requiredCertifications": [
+          "Class A Contractor License"
+        ],
+        "msmeOnly": false
+      },
+      "documents": [
+        {
+          "name": "NH31_MarkingsSpecs.pdf",
+          "url": "#",
+          "type": "SPECS"
+        }
+      ],
+      "rawText": "NHAI lane markings contract, budget 2.5 Crore, EMD 5 Lakhs.",
+      "aiSummary": null,
+      "aiEligibilityChecklist": null,
+      "status": "ACTIVE",
+      "location": "Begusarai, Bihar",
+      "pineconeVectorId": null,
+      "createdAt": "2026-07-21T06:58:36.328Z",
+      "updatedAt": "2026-07-21T06:58:36.328Z"
+    },
+    {
+      "id": "t-63",
+      "externalId": "RAIL/IREPS/ENGG/31574",
+      "sourcePortal": "RAILWAYS",
+      "title": "Platform Drainage and Concrete Bed Overlay at Patna Station Yards",
+      "department": "East Central Railways (ECR)",
+      "state": "Bihar",
+      "category": "Construction",
+      "subCategory": "Drainage Work",
+      "tenderValue": 1.6,
+      "emdAmount": 3.2,
+      "publishedDate": "2026-07-21T11:00:00Z",
+      "bidSubmissionDeadline": "2026-08-08T06:58:38.157Z",
+      "openingDate": "2026-08-09T06:58:38.157Z",
+      "workDescription": "Civil engineering rebuild of rail track drainage lanes using high flow concrete base and robust discharge pathways.",
+      "eligibilityCriteria": {
+        "minTurnover": 1,
+        "minExperience": 4,
+        "requiredCertifications": [
+          "Indian Railways Registered Vendor",
+          "Class A Civil"
+        ],
+        "msmeOnly": false
+      },
+      "documents": [
+        {
+          "name": "PatnaYardsSpecs.pdf",
+          "url": "#",
+          "type": "DETAILED_NOTICE"
+        }
+      ],
+      "rawText": "ECR Platforms drainage refurbishment, budget 1.6 Crores.",
+      "aiSummary": null,
+      "aiEligibilityChecklist": null,
+      "status": "ACTIVE",
+      "location": "Patna, Bihar",
+      "pineconeVectorId": null,
+      "createdAt": "2026-07-21T06:58:38.157Z",
+      "updatedAt": "2026-07-21T06:58:38.157Z"
+    },
+    {
+      "id": "t-64",
+      "externalId": "CPPP/2026/CI/226",
+      "sourcePortal": "CPPP",
+      "title": "Rigging and Layout of Commercial Cold Storage Annex at Bihar Agricultural Complex",
+      "department": "Ministry of Agriculture (CPWD Central Ward)",
+      "state": "Bihar",
+      "category": "Construction",
+      "subCategory": "Refrigeration",
+      "tenderValue": 3.4,
+      "emdAmount": 6.8,
+      "publishedDate": "2026-07-21T10:00:00Z",
+      "bidSubmissionDeadline": "2026-08-15T06:58:38.332Z",
+      "openingDate": "2026-08-16T06:58:38.332Z",
+      "workDescription": "Layout, masonry construction, thermal proofing insulation, and allied refrigeration machinery setup of 1000MT capacity.",
+      "eligibilityCriteria": {
+        "minTurnover": 1.5,
+        "minExperience": 5,
+        "requiredCertifications": [
+          "Class A Contractor License"
+        ],
+        "msmeOnly": false
+      },
+      "technicalSpecs": "Polyurethane insulated panels, freon safety compressors, backup 125kVA generator setup.",
+      "documents": [
+        {
+          "name": "SBD_ColdStorage.pdf",
+          "url": "#",
+          "type": "NOTICE"
+        }
+      ],
+      "rawText": "CPWD Agricultural cold storage. Budget 3.4 Crores. Tender class A construction clearance.",
+      "aiSummary": null,
+      "aiEligibilityChecklist": null,
+      "status": "ACTIVE",
+      "location": "Muzaffarpur, Bihar",
+      "pineconeVectorId": null,
+      "createdAt": "2026-07-21T06:58:38.332Z",
+      "updatedAt": "2026-07-21T06:58:38.332Z"
+    },
+    {
+      "id": "t-65",
+      "externalId": "GEM/2026/B/89357",
+      "sourcePortal": "GEM",
+      "title": "Supply, Assembly, and Field Calibration of 45-Unit Acoustic Level Water Sensors",
+      "department": "Central Ground Water Board (CGWB) / GeM Cell",
+      "state": "Delhi",
+      "category": "Electrical",
+      "subCategory": "Sensors",
+      "tenderValue": 0.85,
+      "emdAmount": 1.7,
+      "publishedDate": "2026-07-21T09:00:00Z",
+      "bidSubmissionDeadline": "2026-08-02T06:58:40.179Z",
+      "openingDate": "2026-08-03T06:58:40.179Z",
+      "workDescription": "GeM marketplace request for smart electronic fluid sensors to deploy in watershed grids. Full terminal reporting systems included.",
+      "eligibilityCriteria": {
+        "minTurnover": 0.3,
+        "minExperience": 2,
+        "requiredCertifications": [
+          "MSME (Udyam)",
+          "ISO 9001"
+        ],
+        "msmeOnly": true,
+        "statesAllowed": [
+          "Delhi"
+        ]
+      },
+      "technicalSpecs": "IP68 waterproof shell, integrated LoRaWAN transmitter modules, 5 years maintenance contract.",
+      "documents": [
+        {
+          "name": "Notice_Specs.pdf",
+          "url": "#",
+          "type": "SPECS"
+        }
+      ],
+      "rawText": "CGWB fluid telemetry project. MSME registered. Average turnover above 30L INR.",
+      "aiSummary": null,
+      "aiEligibilityChecklist": null,
+      "status": "ACTIVE",
+      "location": "New Delhi",
+      "pineconeVectorId": null,
+      "createdAt": "2026-07-21T06:58:40.179Z",
+      "updatedAt": "2026-07-21T06:58:40.179Z"
     }
   ],
   "tenderMatches": [
@@ -2897,6 +3314,1383 @@
       "userStatus": "NEW",
       "createdAt": "2026-07-04T14:18:59.070Z",
       "updatedAt": "2026-07-04T14:18:59.070Z"
+    },
+    {
+      "id": "tm-cp-47ead428-96de-4f85-982a-67b51ac165c0-t-1",
+      "tenderId": "t-1",
+      "companyProfileId": "cp-47ead428-96de-4f85-982a-67b51ac165c0",
+      "matchScore": 83,
+      "matchBreakdown": {
+        "turnoverMatch": true,
+        "certMatch": true,
+        "categoryMatch": true,
+        "stateMatch": true,
+        "experienceMatch": true,
+        "missingItems": [
+          "Missing certified document: Class A Contractor License"
+        ]
+      },
+      "isBookmarked": false,
+      "userStatus": "NEW",
+      "createdAt": "2026-07-22T14:04:00.831Z",
+      "updatedAt": "2026-07-22T14:04:00.831Z"
+    },
+    {
+      "id": "tm-cp-47ead428-96de-4f85-982a-67b51ac165c0-t-2",
+      "tenderId": "t-2",
+      "companyProfileId": "cp-47ead428-96de-4f85-982a-67b51ac165c0",
+      "matchScore": 90,
+      "matchBreakdown": {
+        "turnoverMatch": true,
+        "certMatch": false,
+        "categoryMatch": true,
+        "stateMatch": true,
+        "experienceMatch": true,
+        "missingItems": [
+          "Missing certified document: MSME (Udyam)",
+          "Missing certified document: BREDA Empanelment"
+        ]
+      },
+      "isBookmarked": false,
+      "userStatus": "NEW",
+      "createdAt": "2026-07-22T14:04:00.831Z",
+      "updatedAt": "2026-07-22T14:04:00.831Z"
+    },
+    {
+      "id": "tm-cp-47ead428-96de-4f85-982a-67b51ac165c0-t-3",
+      "tenderId": "t-3",
+      "companyProfileId": "cp-47ead428-96de-4f85-982a-67b51ac165c0",
+      "matchScore": 75,
+      "matchBreakdown": {
+        "turnoverMatch": true,
+        "certMatch": false,
+        "categoryMatch": true,
+        "stateMatch": true,
+        "experienceMatch": true,
+        "missingItems": [
+          "Missing certified document: Class A Contractor License",
+          "Missing certified document: GST registration"
+        ]
+      },
+      "isBookmarked": false,
+      "userStatus": "NEW",
+      "createdAt": "2026-07-22T14:04:00.831Z",
+      "updatedAt": "2026-07-22T14:04:00.831Z"
+    },
+    {
+      "id": "tm-cp-47ead428-96de-4f85-982a-67b51ac165c0-t-4",
+      "tenderId": "t-4",
+      "companyProfileId": "cp-47ead428-96de-4f85-982a-67b51ac165c0",
+      "matchScore": 75,
+      "matchBreakdown": {
+        "turnoverMatch": true,
+        "certMatch": false,
+        "categoryMatch": true,
+        "stateMatch": true,
+        "experienceMatch": true,
+        "missingItems": [
+          "Missing certified document: Indian Railways Registered Vendor",
+          "Missing certified document: Class A Civil"
+        ]
+      },
+      "isBookmarked": false,
+      "userStatus": "NEW",
+      "createdAt": "2026-07-22T14:04:00.831Z",
+      "updatedAt": "2026-07-22T14:04:00.831Z"
+    },
+    {
+      "id": "tm-cp-47ead428-96de-4f85-982a-67b51ac165c0-t-5",
+      "tenderId": "t-5",
+      "companyProfileId": "cp-47ead428-96de-4f85-982a-67b51ac165c0",
+      "matchScore": 75,
+      "matchBreakdown": {
+        "turnoverMatch": true,
+        "certMatch": false,
+        "categoryMatch": true,
+        "stateMatch": true,
+        "experienceMatch": true,
+        "missingItems": [
+          "Missing certified document: Class A Civil License",
+          "Missing certified document: ISO 14001 Environment"
+        ]
+      },
+      "isBookmarked": false,
+      "userStatus": "NEW",
+      "createdAt": "2026-07-22T14:04:00.831Z",
+      "updatedAt": "2026-07-22T14:04:00.831Z"
+    },
+    {
+      "id": "tm-cp-47ead428-96de-4f85-982a-67b51ac165c0-t-6",
+      "tenderId": "t-6",
+      "companyProfileId": "cp-47ead428-96de-4f85-982a-67b51ac165c0",
+      "matchScore": 83,
+      "matchBreakdown": {
+        "turnoverMatch": true,
+        "certMatch": true,
+        "categoryMatch": true,
+        "stateMatch": true,
+        "experienceMatch": true,
+        "missingItems": [
+          "Missing certified document: PESO Safety License"
+        ]
+      },
+      "isBookmarked": false,
+      "userStatus": "NEW",
+      "createdAt": "2026-07-22T14:04:00.831Z",
+      "updatedAt": "2026-07-22T14:04:00.831Z"
+    },
+    {
+      "id": "tm-cp-47ead428-96de-4f85-982a-67b51ac165c0-t-7",
+      "tenderId": "t-7",
+      "companyProfileId": "cp-47ead428-96de-4f85-982a-67b51ac165c0",
+      "matchScore": 85,
+      "matchBreakdown": {
+        "turnoverMatch": true,
+        "certMatch": false,
+        "categoryMatch": true,
+        "stateMatch": true,
+        "experienceMatch": true,
+        "missingItems": [
+          "Missing certified document: MES Registered Contractor",
+          "Missing certified document: Class A Electrical License"
+        ]
+      },
+      "isBookmarked": false,
+      "userStatus": "NEW",
+      "createdAt": "2026-07-22T14:04:00.831Z",
+      "updatedAt": "2026-07-22T14:04:00.831Z"
+    },
+    {
+      "id": "tm-cp-47ead428-96de-4f85-982a-67b51ac165c0-t-8",
+      "tenderId": "t-8",
+      "companyProfileId": "cp-47ead428-96de-4f85-982a-67b51ac165c0",
+      "matchScore": 55,
+      "matchBreakdown": {
+        "turnoverMatch": false,
+        "certMatch": false,
+        "categoryMatch": true,
+        "stateMatch": true,
+        "experienceMatch": true,
+        "missingItems": [
+          "Turnover shortfall: Registered average 5.2 Cr, requires 8 Cr",
+          "Missing certified document: Class A civil License"
+        ]
+      },
+      "isBookmarked": false,
+      "userStatus": "NEW",
+      "createdAt": "2026-07-22T14:04:00.831Z",
+      "updatedAt": "2026-07-22T14:04:00.831Z"
+    },
+    {
+      "id": "tm-cp-47ead428-96de-4f85-982a-67b51ac165c0-t-9",
+      "tenderId": "t-9",
+      "companyProfileId": "cp-47ead428-96de-4f85-982a-67b51ac165c0",
+      "matchScore": 90,
+      "matchBreakdown": {
+        "turnoverMatch": true,
+        "certMatch": true,
+        "categoryMatch": true,
+        "stateMatch": false,
+        "experienceMatch": true,
+        "missingItems": [
+          "Operating territory constraints: Allowed states Odisha, registered state Bihar, Jharkhand, Uttar Pradesh"
+        ]
+      },
+      "isBookmarked": false,
+      "userStatus": "NEW",
+      "createdAt": "2026-07-22T14:04:00.831Z",
+      "updatedAt": "2026-07-22T14:04:00.831Z"
+    },
+    {
+      "id": "tm-cp-47ead428-96de-4f85-982a-67b51ac165c0-t-10",
+      "tenderId": "t-10",
+      "companyProfileId": "cp-47ead428-96de-4f85-982a-67b51ac165c0",
+      "matchScore": 75,
+      "matchBreakdown": {
+        "turnoverMatch": true,
+        "certMatch": false,
+        "categoryMatch": true,
+        "stateMatch": true,
+        "experienceMatch": true,
+        "missingItems": [
+          "Missing certified document: Class A Contractor License"
+        ]
+      },
+      "isBookmarked": false,
+      "userStatus": "NEW",
+      "createdAt": "2026-07-22T14:04:00.831Z",
+      "updatedAt": "2026-07-22T14:04:00.831Z"
+    },
+    {
+      "id": "tm-cp-47ead428-96de-4f85-982a-67b51ac165c0-t-11",
+      "tenderId": "t-11",
+      "companyProfileId": "cp-47ead428-96de-4f85-982a-67b51ac165c0",
+      "matchScore": 90,
+      "matchBreakdown": {
+        "turnoverMatch": true,
+        "certMatch": true,
+        "categoryMatch": true,
+        "stateMatch": true,
+        "experienceMatch": true,
+        "missingItems": []
+      },
+      "isBookmarked": false,
+      "userStatus": "NEW",
+      "createdAt": "2026-07-22T14:04:00.831Z",
+      "updatedAt": "2026-07-22T14:04:00.831Z"
+    },
+    {
+      "id": "tm-cp-47ead428-96de-4f85-982a-67b51ac165c0-t-12",
+      "tenderId": "t-12",
+      "companyProfileId": "cp-47ead428-96de-4f85-982a-67b51ac165c0",
+      "matchScore": 55,
+      "matchBreakdown": {
+        "turnoverMatch": true,
+        "certMatch": false,
+        "categoryMatch": false,
+        "stateMatch": true,
+        "experienceMatch": true,
+        "missingItems": [
+          "Matching Work Category Category",
+          "Missing certified document: Class A Contractor License"
+        ]
+      },
+      "isBookmarked": false,
+      "userStatus": "NEW",
+      "createdAt": "2026-07-22T14:04:00.831Z",
+      "updatedAt": "2026-07-22T14:04:00.831Z"
+    },
+    {
+      "id": "tm-cp-47ead428-96de-4f85-982a-67b51ac165c0-t-13",
+      "tenderId": "t-13",
+      "companyProfileId": "cp-47ead428-96de-4f85-982a-67b51ac165c0",
+      "matchScore": 50,
+      "matchBreakdown": {
+        "turnoverMatch": true,
+        "certMatch": true,
+        "categoryMatch": false,
+        "stateMatch": false,
+        "experienceMatch": true,
+        "missingItems": [
+          "Matching Work Category Category",
+          "Operating territory constraints: Allowed states West Bengal, registered state Bihar, Jharkhand, Uttar Pradesh"
+        ]
+      },
+      "isBookmarked": false,
+      "userStatus": "NEW",
+      "createdAt": "2026-07-22T14:04:00.831Z",
+      "updatedAt": "2026-07-22T14:04:00.831Z"
+    },
+    {
+      "id": "tm-cp-47ead428-96de-4f85-982a-67b51ac165c0-t-14",
+      "tenderId": "t-14",
+      "companyProfileId": "cp-47ead428-96de-4f85-982a-67b51ac165c0",
+      "matchScore": 65,
+      "matchBreakdown": {
+        "turnoverMatch": true,
+        "certMatch": false,
+        "categoryMatch": true,
+        "stateMatch": false,
+        "experienceMatch": true,
+        "missingItems": [
+          "Missing certified document: Class A Contractor License",
+          "Operating territory constraints: Allowed states Odisha, registered state Bihar, Jharkhand, Uttar Pradesh"
+        ]
+      },
+      "isBookmarked": false,
+      "userStatus": "NEW",
+      "createdAt": "2026-07-22T14:04:00.831Z",
+      "updatedAt": "2026-07-22T14:04:00.831Z"
+    },
+    {
+      "id": "tm-cp-47ead428-96de-4f85-982a-67b51ac165c0-t-15",
+      "tenderId": "t-15",
+      "companyProfileId": "cp-47ead428-96de-4f85-982a-67b51ac165c0",
+      "matchScore": 100,
+      "matchBreakdown": {
+        "turnoverMatch": true,
+        "certMatch": true,
+        "categoryMatch": true,
+        "stateMatch": true,
+        "experienceMatch": true,
+        "missingItems": []
+      },
+      "isBookmarked": false,
+      "userStatus": "NEW",
+      "createdAt": "2026-07-22T14:04:00.831Z",
+      "updatedAt": "2026-07-22T14:04:00.831Z"
+    },
+    {
+      "id": "tm-cp-47ead428-96de-4f85-982a-67b51ac165c0-t-16",
+      "tenderId": "t-16",
+      "companyProfileId": "cp-47ead428-96de-4f85-982a-67b51ac165c0",
+      "matchScore": 75,
+      "matchBreakdown": {
+        "turnoverMatch": true,
+        "certMatch": false,
+        "categoryMatch": true,
+        "stateMatch": true,
+        "experienceMatch": true,
+        "missingItems": [
+          "Missing certified document: Class A Contractor License"
+        ]
+      },
+      "isBookmarked": false,
+      "userStatus": "NEW",
+      "createdAt": "2026-07-22T14:04:00.831Z",
+      "updatedAt": "2026-07-22T14:04:00.831Z"
+    },
+    {
+      "id": "tm-cp-47ead428-96de-4f85-982a-67b51ac165c0-t-17",
+      "tenderId": "t-17",
+      "companyProfileId": "cp-47ead428-96de-4f85-982a-67b51ac165c0",
+      "matchScore": 60,
+      "matchBreakdown": {
+        "turnoverMatch": true,
+        "certMatch": true,
+        "categoryMatch": false,
+        "stateMatch": true,
+        "experienceMatch": true,
+        "missingItems": [
+          "Matching Work Category Category"
+        ]
+      },
+      "isBookmarked": false,
+      "userStatus": "NEW",
+      "createdAt": "2026-07-22T14:04:00.831Z",
+      "updatedAt": "2026-07-22T14:04:00.831Z"
+    },
+    {
+      "id": "tm-cp-47ead428-96de-4f85-982a-67b51ac165c0-t-18",
+      "tenderId": "t-18",
+      "companyProfileId": "cp-47ead428-96de-4f85-982a-67b51ac165c0",
+      "matchScore": 45,
+      "matchBreakdown": {
+        "turnoverMatch": true,
+        "certMatch": false,
+        "categoryMatch": false,
+        "stateMatch": false,
+        "experienceMatch": true,
+        "missingItems": [
+          "Matching Work Category Category",
+          "Missing certified document: Class A Contractor License",
+          "Operating territory constraints: Allowed states West Bengal, registered state Bihar, Jharkhand, Uttar Pradesh"
+        ]
+      },
+      "isBookmarked": false,
+      "userStatus": "NEW",
+      "createdAt": "2026-07-22T14:04:00.831Z",
+      "updatedAt": "2026-07-22T14:04:00.831Z"
+    },
+    {
+      "id": "tm-cp-47ead428-96de-4f85-982a-67b51ac165c0-t-19",
+      "tenderId": "t-19",
+      "companyProfileId": "cp-47ead428-96de-4f85-982a-67b51ac165c0",
+      "matchScore": 80,
+      "matchBreakdown": {
+        "turnoverMatch": true,
+        "certMatch": true,
+        "categoryMatch": true,
+        "stateMatch": false,
+        "experienceMatch": true,
+        "missingItems": [
+          "Operating territory constraints: Allowed states Odisha, registered state Bihar, Jharkhand, Uttar Pradesh"
+        ]
+      },
+      "isBookmarked": false,
+      "userStatus": "NEW",
+      "createdAt": "2026-07-22T14:04:00.831Z",
+      "updatedAt": "2026-07-22T14:04:00.831Z"
+    },
+    {
+      "id": "tm-cp-47ead428-96de-4f85-982a-67b51ac165c0-t-20",
+      "tenderId": "t-20",
+      "companyProfileId": "cp-47ead428-96de-4f85-982a-67b51ac165c0",
+      "matchScore": 75,
+      "matchBreakdown": {
+        "turnoverMatch": true,
+        "certMatch": false,
+        "categoryMatch": true,
+        "stateMatch": true,
+        "experienceMatch": true,
+        "missingItems": [
+          "Missing certified document: Class A Contractor License"
+        ]
+      },
+      "isBookmarked": false,
+      "userStatus": "NEW",
+      "createdAt": "2026-07-22T14:04:00.831Z",
+      "updatedAt": "2026-07-22T14:04:00.831Z"
+    },
+    {
+      "id": "tm-cp-47ead428-96de-4f85-982a-67b51ac165c0-t-21",
+      "tenderId": "t-21",
+      "companyProfileId": "cp-47ead428-96de-4f85-982a-67b51ac165c0",
+      "matchScore": 75,
+      "matchBreakdown": {
+        "turnoverMatch": true,
+        "certMatch": false,
+        "categoryMatch": true,
+        "stateMatch": true,
+        "experienceMatch": true,
+        "missingItems": [
+          "Missing certified document: Class A Contractor License"
+        ]
+      },
+      "isBookmarked": false,
+      "userStatus": "NEW",
+      "createdAt": "2026-07-22T14:04:00.831Z",
+      "updatedAt": "2026-07-22T14:04:00.831Z"
+    },
+    {
+      "id": "tm-cp-47ead428-96de-4f85-982a-67b51ac165c0-t-22",
+      "tenderId": "t-22",
+      "companyProfileId": "cp-47ead428-96de-4f85-982a-67b51ac165c0",
+      "matchScore": 75,
+      "matchBreakdown": {
+        "turnoverMatch": true,
+        "certMatch": false,
+        "categoryMatch": true,
+        "stateMatch": true,
+        "experienceMatch": true,
+        "missingItems": [
+          "Missing certified document: Class A Electrical License",
+          "Missing certified document: PowerGrid Approved Vendor"
+        ]
+      },
+      "isBookmarked": false,
+      "userStatus": "NEW",
+      "createdAt": "2026-07-22T14:04:00.831Z",
+      "updatedAt": "2026-07-22T14:04:00.831Z"
+    },
+    {
+      "id": "tm-cp-47ead428-96de-4f85-982a-67b51ac165c0-t-23",
+      "tenderId": "t-23",
+      "companyProfileId": "cp-47ead428-96de-4f85-982a-67b51ac165c0",
+      "matchScore": 60,
+      "matchBreakdown": {
+        "turnoverMatch": false,
+        "certMatch": false,
+        "categoryMatch": true,
+        "stateMatch": true,
+        "experienceMatch": true,
+        "missingItems": [
+          "Turnover shortfall: Registered average 5.2 Cr, requires 6 Cr",
+          "Missing certified document: PESO Safety License",
+          "Missing certified document: AWS Certified Welding Site Spec"
+        ]
+      },
+      "isBookmarked": false,
+      "userStatus": "NEW",
+      "createdAt": "2026-07-22T14:04:00.831Z",
+      "updatedAt": "2026-07-22T14:04:00.831Z"
+    },
+    {
+      "id": "tm-cp-47ead428-96de-4f85-982a-67b51ac165c0-t-24",
+      "tenderId": "t-24",
+      "companyProfileId": "cp-47ead428-96de-4f85-982a-67b51ac165c0",
+      "matchScore": 45,
+      "matchBreakdown": {
+        "turnoverMatch": true,
+        "certMatch": false,
+        "categoryMatch": false,
+        "stateMatch": true,
+        "experienceMatch": true,
+        "missingItems": [
+          "Matching Work Category Category",
+          "Missing certified document: Class A Civil",
+          "Missing certified document: ISO 14001 Environment"
+        ]
+      },
+      "isBookmarked": false,
+      "userStatus": "NEW",
+      "createdAt": "2026-07-22T14:04:00.831Z",
+      "updatedAt": "2026-07-22T14:04:00.831Z"
+    },
+    {
+      "id": "tm-cp-47ead428-96de-4f85-982a-67b51ac165c0-t-25",
+      "tenderId": "t-25",
+      "companyProfileId": "cp-47ead428-96de-4f85-982a-67b51ac165c0",
+      "matchScore": 83,
+      "matchBreakdown": {
+        "turnoverMatch": true,
+        "certMatch": true,
+        "categoryMatch": true,
+        "stateMatch": true,
+        "experienceMatch": true,
+        "missingItems": [
+          "Missing certified document: Class A Electrical License"
+        ]
+      },
+      "isBookmarked": false,
+      "userStatus": "NEW",
+      "createdAt": "2026-07-22T14:04:00.831Z",
+      "updatedAt": "2026-07-22T14:04:00.831Z"
+    },
+    {
+      "id": "tm-cp-47ead428-96de-4f85-982a-67b51ac165c0-t-26",
+      "tenderId": "t-26",
+      "companyProfileId": "cp-47ead428-96de-4f85-982a-67b51ac165c0",
+      "matchScore": 75,
+      "matchBreakdown": {
+        "turnoverMatch": true,
+        "certMatch": false,
+        "categoryMatch": true,
+        "stateMatch": true,
+        "experienceMatch": true,
+        "missingItems": [
+          "Missing certified document: Class A Contractor License"
+        ]
+      },
+      "isBookmarked": false,
+      "userStatus": "NEW",
+      "createdAt": "2026-07-22T14:04:00.831Z",
+      "updatedAt": "2026-07-22T14:04:00.831Z"
+    },
+    {
+      "id": "tm-cp-47ead428-96de-4f85-982a-67b51ac165c0-t-27",
+      "tenderId": "t-27",
+      "companyProfileId": "cp-47ead428-96de-4f85-982a-67b51ac165c0",
+      "matchScore": 75,
+      "matchBreakdown": {
+        "turnoverMatch": true,
+        "certMatch": false,
+        "categoryMatch": true,
+        "stateMatch": true,
+        "experienceMatch": true,
+        "missingItems": [
+          "Missing certified document: Indian Railways Registered Vendor",
+          "Missing certified document: Class A Civil"
+        ]
+      },
+      "isBookmarked": false,
+      "userStatus": "NEW",
+      "createdAt": "2026-07-22T14:04:00.831Z",
+      "updatedAt": "2026-07-22T14:04:00.831Z"
+    },
+    {
+      "id": "tm-cp-47ead428-96de-4f85-982a-67b51ac165c0-t-28",
+      "tenderId": "t-28",
+      "companyProfileId": "cp-47ead428-96de-4f85-982a-67b51ac165c0",
+      "matchScore": 75,
+      "matchBreakdown": {
+        "turnoverMatch": true,
+        "certMatch": false,
+        "categoryMatch": true,
+        "stateMatch": true,
+        "experienceMatch": true,
+        "missingItems": [
+          "Missing certified document: Class A Contractor License"
+        ]
+      },
+      "isBookmarked": false,
+      "userStatus": "NEW",
+      "createdAt": "2026-07-22T14:04:00.831Z",
+      "updatedAt": "2026-07-22T14:04:00.831Z"
+    },
+    {
+      "id": "tm-cp-47ead428-96de-4f85-982a-67b51ac165c0-t-29",
+      "tenderId": "t-29",
+      "companyProfileId": "cp-47ead428-96de-4f85-982a-67b51ac165c0",
+      "matchScore": 83,
+      "matchBreakdown": {
+        "turnoverMatch": true,
+        "certMatch": true,
+        "categoryMatch": true,
+        "stateMatch": false,
+        "experienceMatch": true,
+        "missingItems": [
+          "Missing certified document: MSME (Udyam)",
+          "Operating territory constraints: Allowed states Delhi, registered state Bihar, Jharkhand, Uttar Pradesh"
+        ]
+      },
+      "isBookmarked": false,
+      "userStatus": "NEW",
+      "createdAt": "2026-07-22T14:04:00.831Z",
+      "updatedAt": "2026-07-22T14:04:00.831Z"
+    },
+    {
+      "id": "tm-cp-47ead428-96de-4f85-982a-67b51ac165c0-t-30",
+      "tenderId": "t-30",
+      "companyProfileId": "cp-47ead428-96de-4f85-982a-67b51ac165c0",
+      "matchScore": 75,
+      "matchBreakdown": {
+        "turnoverMatch": true,
+        "certMatch": false,
+        "categoryMatch": true,
+        "stateMatch": true,
+        "experienceMatch": true,
+        "missingItems": [
+          "Missing certified document: Class A Contractor License"
+        ]
+      },
+      "isBookmarked": false,
+      "userStatus": "NEW",
+      "createdAt": "2026-07-22T14:04:00.831Z",
+      "updatedAt": "2026-07-22T14:04:00.831Z"
+    },
+    {
+      "id": "tm-cp-47ead428-96de-4f85-982a-67b51ac165c0-t-31",
+      "tenderId": "t-31",
+      "companyProfileId": "cp-47ead428-96de-4f85-982a-67b51ac165c0",
+      "matchScore": 75,
+      "matchBreakdown": {
+        "turnoverMatch": true,
+        "certMatch": false,
+        "categoryMatch": true,
+        "stateMatch": true,
+        "experienceMatch": true,
+        "missingItems": [
+          "Missing certified document: Class A Electrical License",
+          "Missing certified document: PowerGrid Approved Vendor"
+        ]
+      },
+      "isBookmarked": false,
+      "userStatus": "NEW",
+      "createdAt": "2026-07-22T14:04:00.831Z",
+      "updatedAt": "2026-07-22T14:04:00.831Z"
+    },
+    {
+      "id": "tm-cp-47ead428-96de-4f85-982a-67b51ac165c0-t-32",
+      "tenderId": "t-32",
+      "companyProfileId": "cp-47ead428-96de-4f85-982a-67b51ac165c0",
+      "matchScore": 60,
+      "matchBreakdown": {
+        "turnoverMatch": false,
+        "certMatch": false,
+        "categoryMatch": true,
+        "stateMatch": true,
+        "experienceMatch": true,
+        "missingItems": [
+          "Turnover shortfall: Registered average 5.2 Cr, requires 6 Cr",
+          "Missing certified document: PESO Safety License",
+          "Missing certified document: AWS Certified Welding Site Spec"
+        ]
+      },
+      "isBookmarked": false,
+      "userStatus": "NEW",
+      "createdAt": "2026-07-22T14:04:00.831Z",
+      "updatedAt": "2026-07-22T14:04:00.831Z"
+    },
+    {
+      "id": "tm-cp-47ead428-96de-4f85-982a-67b51ac165c0-t-33",
+      "tenderId": "t-33",
+      "companyProfileId": "cp-47ead428-96de-4f85-982a-67b51ac165c0",
+      "matchScore": 45,
+      "matchBreakdown": {
+        "turnoverMatch": true,
+        "certMatch": false,
+        "categoryMatch": false,
+        "stateMatch": true,
+        "experienceMatch": true,
+        "missingItems": [
+          "Matching Work Category Category",
+          "Missing certified document: Class A Civil",
+          "Missing certified document: ISO 14001 Environment"
+        ]
+      },
+      "isBookmarked": false,
+      "userStatus": "NEW",
+      "createdAt": "2026-07-22T14:04:00.831Z",
+      "updatedAt": "2026-07-22T14:04:00.831Z"
+    },
+    {
+      "id": "tm-cp-47ead428-96de-4f85-982a-67b51ac165c0-t-34",
+      "tenderId": "t-34",
+      "companyProfileId": "cp-47ead428-96de-4f85-982a-67b51ac165c0",
+      "matchScore": 83,
+      "matchBreakdown": {
+        "turnoverMatch": true,
+        "certMatch": true,
+        "categoryMatch": true,
+        "stateMatch": true,
+        "experienceMatch": true,
+        "missingItems": [
+          "Missing certified document: Class A Electrical License"
+        ]
+      },
+      "isBookmarked": false,
+      "userStatus": "NEW",
+      "createdAt": "2026-07-22T14:04:00.831Z",
+      "updatedAt": "2026-07-22T14:04:00.831Z"
+    },
+    {
+      "id": "tm-cp-47ead428-96de-4f85-982a-67b51ac165c0-t-35",
+      "tenderId": "t-35",
+      "companyProfileId": "cp-47ead428-96de-4f85-982a-67b51ac165c0",
+      "matchScore": 75,
+      "matchBreakdown": {
+        "turnoverMatch": true,
+        "certMatch": false,
+        "categoryMatch": true,
+        "stateMatch": true,
+        "experienceMatch": true,
+        "missingItems": [
+          "Missing certified document: Class A Contractor License"
+        ]
+      },
+      "isBookmarked": false,
+      "userStatus": "NEW",
+      "createdAt": "2026-07-22T14:04:00.831Z",
+      "updatedAt": "2026-07-22T14:04:00.831Z"
+    },
+    {
+      "id": "tm-cp-47ead428-96de-4f85-982a-67b51ac165c0-t-36",
+      "tenderId": "t-36",
+      "companyProfileId": "cp-47ead428-96de-4f85-982a-67b51ac165c0",
+      "matchScore": 75,
+      "matchBreakdown": {
+        "turnoverMatch": true,
+        "certMatch": false,
+        "categoryMatch": true,
+        "stateMatch": true,
+        "experienceMatch": true,
+        "missingItems": [
+          "Missing certified document: Indian Railways Registered Vendor",
+          "Missing certified document: Class A Civil"
+        ]
+      },
+      "isBookmarked": false,
+      "userStatus": "NEW",
+      "createdAt": "2026-07-22T14:04:00.831Z",
+      "updatedAt": "2026-07-22T14:04:00.831Z"
+    },
+    {
+      "id": "tm-cp-47ead428-96de-4f85-982a-67b51ac165c0-t-37",
+      "tenderId": "t-37",
+      "companyProfileId": "cp-47ead428-96de-4f85-982a-67b51ac165c0",
+      "matchScore": 75,
+      "matchBreakdown": {
+        "turnoverMatch": true,
+        "certMatch": false,
+        "categoryMatch": true,
+        "stateMatch": true,
+        "experienceMatch": true,
+        "missingItems": [
+          "Missing certified document: Class A Contractor License"
+        ]
+      },
+      "isBookmarked": false,
+      "userStatus": "NEW",
+      "createdAt": "2026-07-22T14:04:00.831Z",
+      "updatedAt": "2026-07-22T14:04:00.831Z"
+    },
+    {
+      "id": "tm-cp-47ead428-96de-4f85-982a-67b51ac165c0-t-38",
+      "tenderId": "t-38",
+      "companyProfileId": "cp-47ead428-96de-4f85-982a-67b51ac165c0",
+      "matchScore": 83,
+      "matchBreakdown": {
+        "turnoverMatch": true,
+        "certMatch": true,
+        "categoryMatch": true,
+        "stateMatch": false,
+        "experienceMatch": true,
+        "missingItems": [
+          "Missing certified document: MSME (Udyam)",
+          "Operating territory constraints: Allowed states Delhi, registered state Bihar, Jharkhand, Uttar Pradesh"
+        ]
+      },
+      "isBookmarked": false,
+      "userStatus": "NEW",
+      "createdAt": "2026-07-22T14:04:00.831Z",
+      "updatedAt": "2026-07-22T14:04:00.831Z"
+    },
+    {
+      "id": "tm-cp-47ead428-96de-4f85-982a-67b51ac165c0-t-39",
+      "tenderId": "t-39",
+      "companyProfileId": "cp-47ead428-96de-4f85-982a-67b51ac165c0",
+      "matchScore": 75,
+      "matchBreakdown": {
+        "turnoverMatch": true,
+        "certMatch": false,
+        "categoryMatch": true,
+        "stateMatch": true,
+        "experienceMatch": true,
+        "missingItems": [
+          "Missing certified document: Class A Contractor License"
+        ]
+      },
+      "isBookmarked": false,
+      "userStatus": "NEW",
+      "createdAt": "2026-07-22T14:04:00.831Z",
+      "updatedAt": "2026-07-22T14:04:00.831Z"
+    },
+    {
+      "id": "tm-cp-47ead428-96de-4f85-982a-67b51ac165c0-t-40",
+      "tenderId": "t-40",
+      "companyProfileId": "cp-47ead428-96de-4f85-982a-67b51ac165c0",
+      "matchScore": 75,
+      "matchBreakdown": {
+        "turnoverMatch": true,
+        "certMatch": false,
+        "categoryMatch": true,
+        "stateMatch": true,
+        "experienceMatch": true,
+        "missingItems": [
+          "Missing certified document: Class A Electrical License",
+          "Missing certified document: PowerGrid Approved Vendor"
+        ]
+      },
+      "isBookmarked": false,
+      "userStatus": "NEW",
+      "createdAt": "2026-07-22T14:04:00.831Z",
+      "updatedAt": "2026-07-22T14:04:00.831Z"
+    },
+    {
+      "id": "tm-cp-47ead428-96de-4f85-982a-67b51ac165c0-t-41",
+      "tenderId": "t-41",
+      "companyProfileId": "cp-47ead428-96de-4f85-982a-67b51ac165c0",
+      "matchScore": 60,
+      "matchBreakdown": {
+        "turnoverMatch": false,
+        "certMatch": false,
+        "categoryMatch": true,
+        "stateMatch": true,
+        "experienceMatch": true,
+        "missingItems": [
+          "Turnover shortfall: Registered average 5.2 Cr, requires 6 Cr",
+          "Missing certified document: PESO Safety License",
+          "Missing certified document: AWS Certified Welding Site Spec"
+        ]
+      },
+      "isBookmarked": false,
+      "userStatus": "NEW",
+      "createdAt": "2026-07-22T14:04:00.831Z",
+      "updatedAt": "2026-07-22T14:04:00.831Z"
+    },
+    {
+      "id": "tm-cp-47ead428-96de-4f85-982a-67b51ac165c0-t-42",
+      "tenderId": "t-42",
+      "companyProfileId": "cp-47ead428-96de-4f85-982a-67b51ac165c0",
+      "matchScore": 45,
+      "matchBreakdown": {
+        "turnoverMatch": true,
+        "certMatch": false,
+        "categoryMatch": false,
+        "stateMatch": true,
+        "experienceMatch": true,
+        "missingItems": [
+          "Matching Work Category Category",
+          "Missing certified document: Class A Civil",
+          "Missing certified document: ISO 14001 Environment"
+        ]
+      },
+      "isBookmarked": false,
+      "userStatus": "NEW",
+      "createdAt": "2026-07-22T14:04:00.831Z",
+      "updatedAt": "2026-07-22T14:04:00.831Z"
+    },
+    {
+      "id": "tm-cp-47ead428-96de-4f85-982a-67b51ac165c0-t-43",
+      "tenderId": "t-43",
+      "companyProfileId": "cp-47ead428-96de-4f85-982a-67b51ac165c0",
+      "matchScore": 83,
+      "matchBreakdown": {
+        "turnoverMatch": true,
+        "certMatch": true,
+        "categoryMatch": true,
+        "stateMatch": true,
+        "experienceMatch": true,
+        "missingItems": [
+          "Missing certified document: Class A Electrical License"
+        ]
+      },
+      "isBookmarked": false,
+      "userStatus": "NEW",
+      "createdAt": "2026-07-22T14:04:00.831Z",
+      "updatedAt": "2026-07-22T14:04:00.831Z"
+    },
+    {
+      "id": "tm-cp-47ead428-96de-4f85-982a-67b51ac165c0-t-44",
+      "tenderId": "t-44",
+      "companyProfileId": "cp-47ead428-96de-4f85-982a-67b51ac165c0",
+      "matchScore": 75,
+      "matchBreakdown": {
+        "turnoverMatch": true,
+        "certMatch": false,
+        "categoryMatch": true,
+        "stateMatch": true,
+        "experienceMatch": true,
+        "missingItems": [
+          "Missing certified document: Class A Contractor License"
+        ]
+      },
+      "isBookmarked": false,
+      "userStatus": "NEW",
+      "createdAt": "2026-07-22T14:04:00.831Z",
+      "updatedAt": "2026-07-22T14:04:00.831Z"
+    },
+    {
+      "id": "tm-cp-47ead428-96de-4f85-982a-67b51ac165c0-t-45",
+      "tenderId": "t-45",
+      "companyProfileId": "cp-47ead428-96de-4f85-982a-67b51ac165c0",
+      "matchScore": 75,
+      "matchBreakdown": {
+        "turnoverMatch": true,
+        "certMatch": false,
+        "categoryMatch": true,
+        "stateMatch": true,
+        "experienceMatch": true,
+        "missingItems": [
+          "Missing certified document: Indian Railways Registered Vendor",
+          "Missing certified document: Class A Civil"
+        ]
+      },
+      "isBookmarked": false,
+      "userStatus": "NEW",
+      "createdAt": "2026-07-22T14:04:00.831Z",
+      "updatedAt": "2026-07-22T14:04:00.831Z"
+    },
+    {
+      "id": "tm-cp-47ead428-96de-4f85-982a-67b51ac165c0-t-46",
+      "tenderId": "t-46",
+      "companyProfileId": "cp-47ead428-96de-4f85-982a-67b51ac165c0",
+      "matchScore": 75,
+      "matchBreakdown": {
+        "turnoverMatch": true,
+        "certMatch": false,
+        "categoryMatch": true,
+        "stateMatch": true,
+        "experienceMatch": true,
+        "missingItems": [
+          "Missing certified document: Class A Contractor License"
+        ]
+      },
+      "isBookmarked": false,
+      "userStatus": "NEW",
+      "createdAt": "2026-07-22T14:04:00.831Z",
+      "updatedAt": "2026-07-22T14:04:00.831Z"
+    },
+    {
+      "id": "tm-cp-47ead428-96de-4f85-982a-67b51ac165c0-t-47",
+      "tenderId": "t-47",
+      "companyProfileId": "cp-47ead428-96de-4f85-982a-67b51ac165c0",
+      "matchScore": 83,
+      "matchBreakdown": {
+        "turnoverMatch": true,
+        "certMatch": true,
+        "categoryMatch": true,
+        "stateMatch": false,
+        "experienceMatch": true,
+        "missingItems": [
+          "Missing certified document: MSME (Udyam)",
+          "Operating territory constraints: Allowed states Delhi, registered state Bihar, Jharkhand, Uttar Pradesh"
+        ]
+      },
+      "isBookmarked": false,
+      "userStatus": "NEW",
+      "createdAt": "2026-07-22T14:04:00.831Z",
+      "updatedAt": "2026-07-22T14:04:00.831Z"
+    },
+    {
+      "id": "tm-cp-47ead428-96de-4f85-982a-67b51ac165c0-t-48",
+      "tenderId": "t-48",
+      "companyProfileId": "cp-47ead428-96de-4f85-982a-67b51ac165c0",
+      "matchScore": 75,
+      "matchBreakdown": {
+        "turnoverMatch": true,
+        "certMatch": false,
+        "categoryMatch": true,
+        "stateMatch": true,
+        "experienceMatch": true,
+        "missingItems": [
+          "Missing certified document: Class A Contractor License"
+        ]
+      },
+      "isBookmarked": false,
+      "userStatus": "NEW",
+      "createdAt": "2026-07-22T14:04:00.831Z",
+      "updatedAt": "2026-07-22T14:04:00.831Z"
+    },
+    {
+      "id": "tm-cp-47ead428-96de-4f85-982a-67b51ac165c0-t-49",
+      "tenderId": "t-49",
+      "companyProfileId": "cp-47ead428-96de-4f85-982a-67b51ac165c0",
+      "matchScore": 75,
+      "matchBreakdown": {
+        "turnoverMatch": true,
+        "certMatch": false,
+        "categoryMatch": true,
+        "stateMatch": true,
+        "experienceMatch": true,
+        "missingItems": [
+          "Missing certified document: Class A Electrical License",
+          "Missing certified document: PowerGrid Approved Vendor"
+        ]
+      },
+      "isBookmarked": false,
+      "userStatus": "NEW",
+      "createdAt": "2026-07-22T14:04:00.831Z",
+      "updatedAt": "2026-07-22T14:04:00.831Z"
+    },
+    {
+      "id": "tm-cp-47ead428-96de-4f85-982a-67b51ac165c0-t-50",
+      "tenderId": "t-50",
+      "companyProfileId": "cp-47ead428-96de-4f85-982a-67b51ac165c0",
+      "matchScore": 60,
+      "matchBreakdown": {
+        "turnoverMatch": false,
+        "certMatch": false,
+        "categoryMatch": true,
+        "stateMatch": true,
+        "experienceMatch": true,
+        "missingItems": [
+          "Turnover shortfall: Registered average 5.2 Cr, requires 6 Cr",
+          "Missing certified document: PESO Safety License",
+          "Missing certified document: AWS Certified Welding Site Spec"
+        ]
+      },
+      "isBookmarked": false,
+      "userStatus": "NEW",
+      "createdAt": "2026-07-22T14:04:00.831Z",
+      "updatedAt": "2026-07-22T14:04:00.831Z"
+    },
+    {
+      "id": "tm-cp-47ead428-96de-4f85-982a-67b51ac165c0-t-51",
+      "tenderId": "t-51",
+      "companyProfileId": "cp-47ead428-96de-4f85-982a-67b51ac165c0",
+      "matchScore": 45,
+      "matchBreakdown": {
+        "turnoverMatch": true,
+        "certMatch": false,
+        "categoryMatch": false,
+        "stateMatch": true,
+        "experienceMatch": true,
+        "missingItems": [
+          "Matching Work Category Category",
+          "Missing certified document: Class A Civil",
+          "Missing certified document: ISO 14001 Environment"
+        ]
+      },
+      "isBookmarked": false,
+      "userStatus": "NEW",
+      "createdAt": "2026-07-22T14:04:00.831Z",
+      "updatedAt": "2026-07-22T14:04:00.831Z"
+    },
+    {
+      "id": "tm-cp-47ead428-96de-4f85-982a-67b51ac165c0-t-52",
+      "tenderId": "t-52",
+      "companyProfileId": "cp-47ead428-96de-4f85-982a-67b51ac165c0",
+      "matchScore": 83,
+      "matchBreakdown": {
+        "turnoverMatch": true,
+        "certMatch": true,
+        "categoryMatch": true,
+        "stateMatch": true,
+        "experienceMatch": true,
+        "missingItems": [
+          "Missing certified document: Class A Electrical License"
+        ]
+      },
+      "isBookmarked": false,
+      "userStatus": "NEW",
+      "createdAt": "2026-07-22T14:04:00.831Z",
+      "updatedAt": "2026-07-22T14:04:00.831Z"
+    },
+    {
+      "id": "tm-cp-47ead428-96de-4f85-982a-67b51ac165c0-t-53",
+      "tenderId": "t-53",
+      "companyProfileId": "cp-47ead428-96de-4f85-982a-67b51ac165c0",
+      "matchScore": 75,
+      "matchBreakdown": {
+        "turnoverMatch": true,
+        "certMatch": false,
+        "categoryMatch": true,
+        "stateMatch": true,
+        "experienceMatch": true,
+        "missingItems": [
+          "Missing certified document: Class A Contractor License"
+        ]
+      },
+      "isBookmarked": false,
+      "userStatus": "NEW",
+      "createdAt": "2026-07-22T14:04:00.831Z",
+      "updatedAt": "2026-07-22T14:04:00.832Z"
+    },
+    {
+      "id": "tm-cp-47ead428-96de-4f85-982a-67b51ac165c0-t-54",
+      "tenderId": "t-54",
+      "companyProfileId": "cp-47ead428-96de-4f85-982a-67b51ac165c0",
+      "matchScore": 75,
+      "matchBreakdown": {
+        "turnoverMatch": true,
+        "certMatch": false,
+        "categoryMatch": true,
+        "stateMatch": true,
+        "experienceMatch": true,
+        "missingItems": [
+          "Missing certified document: Indian Railways Registered Vendor",
+          "Missing certified document: Class A Civil"
+        ]
+      },
+      "isBookmarked": false,
+      "userStatus": "NEW",
+      "createdAt": "2026-07-22T14:04:00.832Z",
+      "updatedAt": "2026-07-22T14:04:00.832Z"
+    },
+    {
+      "id": "tm-cp-47ead428-96de-4f85-982a-67b51ac165c0-t-55",
+      "tenderId": "t-55",
+      "companyProfileId": "cp-47ead428-96de-4f85-982a-67b51ac165c0",
+      "matchScore": 75,
+      "matchBreakdown": {
+        "turnoverMatch": true,
+        "certMatch": false,
+        "categoryMatch": true,
+        "stateMatch": true,
+        "experienceMatch": true,
+        "missingItems": [
+          "Missing certified document: Class A Contractor License"
+        ]
+      },
+      "isBookmarked": false,
+      "userStatus": "NEW",
+      "createdAt": "2026-07-22T14:04:00.832Z",
+      "updatedAt": "2026-07-22T14:04:00.832Z"
+    },
+    {
+      "id": "tm-cp-47ead428-96de-4f85-982a-67b51ac165c0-t-56",
+      "tenderId": "t-56",
+      "companyProfileId": "cp-47ead428-96de-4f85-982a-67b51ac165c0",
+      "matchScore": 83,
+      "matchBreakdown": {
+        "turnoverMatch": true,
+        "certMatch": true,
+        "categoryMatch": true,
+        "stateMatch": false,
+        "experienceMatch": true,
+        "missingItems": [
+          "Missing certified document: MSME (Udyam)",
+          "Operating territory constraints: Allowed states Delhi, registered state Bihar, Jharkhand, Uttar Pradesh"
+        ]
+      },
+      "isBookmarked": false,
+      "userStatus": "NEW",
+      "createdAt": "2026-07-22T14:04:00.832Z",
+      "updatedAt": "2026-07-22T14:04:00.832Z"
+    },
+    {
+      "id": "tm-cp-47ead428-96de-4f85-982a-67b51ac165c0-t-57",
+      "tenderId": "t-57",
+      "companyProfileId": "cp-47ead428-96de-4f85-982a-67b51ac165c0",
+      "matchScore": 75,
+      "matchBreakdown": {
+        "turnoverMatch": true,
+        "certMatch": false,
+        "categoryMatch": true,
+        "stateMatch": true,
+        "experienceMatch": true,
+        "missingItems": [
+          "Missing certified document: Class A Contractor License"
+        ]
+      },
+      "isBookmarked": false,
+      "userStatus": "NEW",
+      "createdAt": "2026-07-22T14:04:00.832Z",
+      "updatedAt": "2026-07-22T14:04:00.832Z"
+    },
+    {
+      "id": "tm-cp-47ead428-96de-4f85-982a-67b51ac165c0-t-58",
+      "tenderId": "t-58",
+      "companyProfileId": "cp-47ead428-96de-4f85-982a-67b51ac165c0",
+      "matchScore": 75,
+      "matchBreakdown": {
+        "turnoverMatch": true,
+        "certMatch": false,
+        "categoryMatch": true,
+        "stateMatch": true,
+        "experienceMatch": true,
+        "missingItems": [
+          "Missing certified document: Class A Electrical License",
+          "Missing certified document: PowerGrid Approved Vendor"
+        ]
+      },
+      "isBookmarked": false,
+      "userStatus": "NEW",
+      "createdAt": "2026-07-22T14:04:00.832Z",
+      "updatedAt": "2026-07-22T14:04:00.832Z"
+    },
+    {
+      "id": "tm-cp-47ead428-96de-4f85-982a-67b51ac165c0-t-59",
+      "tenderId": "t-59",
+      "companyProfileId": "cp-47ead428-96de-4f85-982a-67b51ac165c0",
+      "matchScore": 60,
+      "matchBreakdown": {
+        "turnoverMatch": false,
+        "certMatch": false,
+        "categoryMatch": true,
+        "stateMatch": true,
+        "experienceMatch": true,
+        "missingItems": [
+          "Turnover shortfall: Registered average 5.2 Cr, requires 6 Cr",
+          "Missing certified document: PESO Safety License",
+          "Missing certified document: AWS Certified Welding Site Spec"
+        ]
+      },
+      "isBookmarked": false,
+      "userStatus": "NEW",
+      "createdAt": "2026-07-22T14:04:00.832Z",
+      "updatedAt": "2026-07-22T14:04:00.832Z"
+    },
+    {
+      "id": "tm-cp-47ead428-96de-4f85-982a-67b51ac165c0-t-60",
+      "tenderId": "t-60",
+      "companyProfileId": "cp-47ead428-96de-4f85-982a-67b51ac165c0",
+      "matchScore": 45,
+      "matchBreakdown": {
+        "turnoverMatch": true,
+        "certMatch": false,
+        "categoryMatch": false,
+        "stateMatch": true,
+        "experienceMatch": true,
+        "missingItems": [
+          "Matching Work Category Category",
+          "Missing certified document: Class A Civil",
+          "Missing certified document: ISO 14001 Environment"
+        ]
+      },
+      "isBookmarked": false,
+      "userStatus": "NEW",
+      "createdAt": "2026-07-22T14:04:00.832Z",
+      "updatedAt": "2026-07-22T14:04:00.832Z"
+    },
+    {
+      "id": "tm-cp-47ead428-96de-4f85-982a-67b51ac165c0-t-61",
+      "tenderId": "t-61",
+      "companyProfileId": "cp-47ead428-96de-4f85-982a-67b51ac165c0",
+      "matchScore": 83,
+      "matchBreakdown": {
+        "turnoverMatch": true,
+        "certMatch": true,
+        "categoryMatch": true,
+        "stateMatch": true,
+        "experienceMatch": true,
+        "missingItems": [
+          "Missing certified document: Class A Electrical License"
+        ]
+      },
+      "isBookmarked": false,
+      "userStatus": "NEW",
+      "createdAt": "2026-07-22T14:04:00.832Z",
+      "updatedAt": "2026-07-22T14:04:00.832Z"
+    },
+    {
+      "id": "tm-cp-47ead428-96de-4f85-982a-67b51ac165c0-t-62",
+      "tenderId": "t-62",
+      "companyProfileId": "cp-47ead428-96de-4f85-982a-67b51ac165c0",
+      "matchScore": 75,
+      "matchBreakdown": {
+        "turnoverMatch": true,
+        "certMatch": false,
+        "categoryMatch": true,
+        "stateMatch": true,
+        "experienceMatch": true,
+        "missingItems": [
+          "Missing certified document: Class A Contractor License"
+        ],
+        "eligibilityScore": 100,
+        "riskIndicators": [
+          "High bid competition expected in civil contracts.",
+          "Failing to submit certified declarations may cause instant technical dismissal."
+        ],
+        "improvementRecommendations": [
+          "Robust regional operating trace in operational state is beneficial.",
+          "Capitalize on past project delivery valued up to 3.5 Cr in final proposal.",
+          "Compile and attest ISO standard certification credentials to gain evaluation preference marks."
+        ],
+        "verdict": "GO",
+        "verdictReason": "Your match score is 75% and eligibility score is 100%. You comfortably satisfy the required turnover and registration class guidelines. High probability of qualifying technical rounds.",
+        "criteriaBreakdown": [
+          {
+            "criterion_name": "Annual Turnover",
+            "requirement": ">= 1 Crores",
+            "company_value": "5.2 Crores",
+            "status": "MATCH",
+            "explanation": "Comfortably meets requirement"
+          },
+          {
+            "criterion_name": "Years of Experience",
+            "requirement": ">= 3 Years",
+            "company_value": "8 Years",
+            "status": "MATCH",
+            "explanation": "Your company has active registration for 8 years"
+          },
+          {
+            "criterion_name": "MSME Priority Status",
+            "requirement": "Not restrictive",
+            "company_value": "MSME Registered (Udyam)",
+            "status": "MATCH",
+            "explanation": "Eligible for standard fee waivers and EMD exemption"
+          }
+        ]
+      },
+      "isBookmarked": false,
+      "userStatus": "NEW",
+      "createdAt": "2026-07-22T14:04:00.832Z",
+      "updatedAt": "2026-07-22T14:04:11.388Z"
+    },
+    {
+      "id": "tm-cp-47ead428-96de-4f85-982a-67b51ac165c0-t-63",
+      "tenderId": "t-63",
+      "companyProfileId": "cp-47ead428-96de-4f85-982a-67b51ac165c0",
+      "matchScore": 75,
+      "matchBreakdown": {
+        "turnoverMatch": true,
+        "certMatch": false,
+        "categoryMatch": true,
+        "stateMatch": true,
+        "experienceMatch": true,
+        "missingItems": [
+          "Missing certified document: Indian Railways Registered Vendor",
+          "Missing certified document: Class A Civil"
+        ]
+      },
+      "isBookmarked": false,
+      "userStatus": "NEW",
+      "createdAt": "2026-07-22T14:04:00.832Z",
+      "updatedAt": "2026-07-22T14:04:00.832Z"
+    },
+    {
+      "id": "tm-cp-47ead428-96de-4f85-982a-67b51ac165c0-t-64",
+      "tenderId": "t-64",
+      "companyProfileId": "cp-47ead428-96de-4f85-982a-67b51ac165c0",
+      "matchScore": 75,
+      "matchBreakdown": {
+        "turnoverMatch": true,
+        "certMatch": false,
+        "categoryMatch": true,
+        "stateMatch": true,
+        "experienceMatch": true,
+        "missingItems": [
+          "Missing certified document: Class A Contractor License"
+        ]
+      },
+      "isBookmarked": false,
+      "userStatus": "NEW",
+      "createdAt": "2026-07-22T14:04:00.832Z",
+      "updatedAt": "2026-07-22T14:04:00.832Z"
+    },
+    {
+      "id": "tm-cp-47ead428-96de-4f85-982a-67b51ac165c0-t-65",
+      "tenderId": "t-65",
+      "companyProfileId": "cp-47ead428-96de-4f85-982a-67b51ac165c0",
+      "matchScore": 83,
+      "matchBreakdown": {
+        "turnoverMatch": true,
+        "certMatch": true,
+        "categoryMatch": true,
+        "stateMatch": false,
+        "experienceMatch": true,
+        "missingItems": [
+          "Missing certified document: MSME (Udyam)",
+          "Operating territory constraints: Allowed states Delhi, registered state Bihar, Jharkhand, Uttar Pradesh"
+        ]
+      },
+      "isBookmarked": false,
+      "userStatus": "NEW",
+      "createdAt": "2026-07-22T14:04:00.832Z",
+      "updatedAt": "2026-07-22T14:04:00.832Z"
     }
   ],
   "bidDocuments": [
@@ -2925,6 +4719,58 @@
       "isAiGenerated": true,
       "createdAt": "2026-07-04T14:18:59.070Z",
       "updatedAt": "2026-07-04T14:18:59.070Z"
+    },
+    {
+      "id": "bid-2qlkg",
+      "tenderId": "t-62",
+      "companyProfileId": "cp-47ead428-96de-4f85-982a-67b51ac165c0",
+      "userId": "u-13092cc1-0706-4240-9a52-f17c439383a8",
+      "type": "COVER_LETTER",
+      "content": "# BID SUBMISSION COVER LETTER\n\n**To,**\nThe Tender Inviting Officer,\nNational Highways Authority of India (NHAI),\nBegusarai, Bihar, Bihar.\n\n**Subject: Technical Bid Envelope submission for Deployment of Thermoplastic Road Marking Lines and Retroreflective Cat-Eyes on NH-31 (Ref: NHAI/BH/EXP/2026/859)**\n\nDear Sir/Madam,\n\n1. Having examined the complete tender specifications, schedules of work, and special terms of contract, we, the undersigned, hereby offer to execute, complete, and maintain the whole of the said works in conformity with requirements.\n\n2. We are an registered **MSME Enterprise** under the Government of India holding valid Udyam registration certificates (*GST: 10AAAXX0000Z1Z5*, *PAN: AAACX1234F*).\n\n3. We have enclosed the requested Earnest Money Deposit (EMD) or applicable MSME declaration and confirm we possess more than 8 years of active construction background.\n\nThanking you.\n\nYours faithfully,\n**For Sharma Construction & Infra, Pvt Ltd**\n\n*(Authorized Signatory)*\nManaging Director",
+      "s3Url": null,
+      "version": 1,
+      "isAiGenerated": true,
+      "createdAt": "2026-07-22T14:05:09.047Z",
+      "updatedAt": "2026-07-22T14:05:09.047Z"
+    },
+    {
+      "id": "bid-rljnp",
+      "tenderId": "t-62",
+      "companyProfileId": "cp-47ead428-96de-4f85-982a-67b51ac165c0",
+      "userId": "u-13092cc1-0706-4240-9a52-f17c439383a8",
+      "type": "TECHNICAL_PROPOSAL",
+      "content": "# TECHNICAL PROPOSAL & DELIVERY STRATEGY\n\n## 1. Executive Summary\nThis proposal is submitted on behalf of **Sharma Construction & Infra, Pvt Ltd** in response to the public procurement invitation of *National Highways Authority of India (NHAI)* for \"Deployment of Thermoplastic Road Marking Lines and Retroreflective Cat-Eyes on NH-31\" (Tender Ref: *NHAI/BH/EXP/2026/859*). \n\nOur firm satisfies the eligibility prerequisites including an average turnover of **₹5.2 Cr** (Required: ₹1 Cr) and **8 Years** of technical execution history in similar categories.\n\n## 2. Methodology & Work Approach\nWe propose deploying a dedicated project manager directly in **Begusarai, Bihar** to coordinate work.\n- **Phase A**: Mobilization of electrical systems and site levelling.\n- **Phase B**: Core fabrication and civil erection using state-of-the-art graders.\n- **Phase C**: Third-party material testing and net-energy compliance clearances.\n\n## 3. Past Project Experience Catalog\n- **Project 1**: Patna Bypass Multi-Lane (Client: Bihar PWD | Value: ₹3.2 Cr)\n- **Project 2**: Regional Electrical Erection (Client: Power Grid Corp | Value: ₹1.1 Cr)\n\n## 4. Key Equipment & Personnel Fleet\nWe will deploy 4 core civil supervisors, 1 safety controller, and top-tier concrete mixing machines. No delays are expected.",
+      "s3Url": null,
+      "version": 1,
+      "isAiGenerated": true,
+      "createdAt": "2026-07-22T14:05:22.666Z",
+      "updatedAt": "2026-07-22T14:05:22.667Z"
+    },
+    {
+      "id": "bid-hwb0k",
+      "tenderId": "t-62",
+      "companyProfileId": "cp-47ead428-96de-4f85-982a-67b51ac165c0",
+      "userId": "u-13092cc1-0706-4240-9a52-f17c439383a8",
+      "type": "COMPLIANCE_MATRIX",
+      "content": "# TECHNICAL & ADMINISTRATIVE COMPLIANCE MATRIX\n\n| Clause No. | Section / Requirement | Our Response | Compliance Status | Remarks |\n| :--- | :--- | :--- | :--- | :--- |\n| **Section 1.1** | Submission of EMD of ₹5 Lakhs | EMD exemption claimed; valid MSME/Udyam certificate attached | **COMPLIANT** | Full fee waiver requested |\n| **Section 2.3** | Minimum Annual Turnover of ₹1 Cr | Certified turnover is ₹5.2 Cr | **COMPLIANT** | Exceeds minimum criteria |\n| **Section 3.5** | Local State Office Registration | Fully operating from state of Bihar | **COMPLIANT** | ISO certification annexed |\n| **Section 4.1** | Supply of BIS/IS Standard Materials | Complies strictly with Indian Standards | **COMPLIANT** | Test reports will be provided |",
+      "s3Url": null,
+      "version": 1,
+      "isAiGenerated": true,
+      "createdAt": "2026-07-22T14:05:36.705Z",
+      "updatedAt": "2026-07-22T14:05:36.705Z"
+    },
+    {
+      "id": "bid-zid3u",
+      "tenderId": "t-62",
+      "companyProfileId": "cp-47ead428-96de-4f85-982a-67b51ac165c0",
+      "userId": "u-13092cc1-0706-4240-9a52-f17c439383a8",
+      "type": "BOQ",
+      "content": "# BILL OF QUANTITIES (BOQ) WORK ESTIMATION\n\n| Item No. | Description | Unit | Quantity | Rate (Estimated ₹) | Amount (Estimated ₹) |\n| :--- | :--- | :--- | :--- | :--- | :--- |\n| **1.01** | Site levelling, core excavation, and structural preparation | Cub M | 1,500 | 450 | 6,75,000 |\n| **1.02** | Heavy structural grade pre-cast reinforced panels | Sq M | 420 | 1,200 | 5,04,000 |\n| **1.03** | Insulated copper wiring and control switches installation | Lot | 1 | 2,80,000 | 2,80,000 |\n| **1.04** | Landscaping, testing and trial commissioning operations | Job | 1 | 1,50,000 | 1,50,000 |\n| **TOTAL** | **Estimated Technical Cost Summary** | | | | **₹16,09,000** |",
+      "s3Url": null,
+      "version": 1,
+      "isAiGenerated": true,
+      "createdAt": "2026-07-22T14:05:57.180Z",
+      "updatedAt": "2026-07-22T14:05:57.180Z"
     }
   ],
   "documentVaults": [
@@ -3008,6 +4854,446 @@
     }
   ],
   "alerts": [
+    {
+      "id": "al-lt5ri",
+      "userId": "u-1",
+      "tenderId": "t-2",
+      "type": "DEADLINE_REMINDER",
+      "channel": "IN_APP",
+      "message": "Approaching Deadline: Bid submission for \"BREDA Commissioning SPV 200kW Bettiah Solar Grid\" closes in 3 days! Ensure all EMD documents are ready.",
+      "isRead": false,
+      "sentAt": "2026-07-22T14:09:54.373Z",
+      "createdAt": "2026-07-22T14:09:54.373Z"
+    },
+    {
+      "id": "al-1k4mu",
+      "userId": "u-1",
+      "tenderId": "t-3",
+      "type": "NEW_MATCH",
+      "channel": "IN_APP",
+      "message": "New high compatibility tender match generated! (84% Match Score) for \"Sewerage Reinforcement & Excavation in Noida Sector 62\". Check details in criteria workspace.",
+      "isRead": false,
+      "sentAt": "2026-07-22T14:09:09.364Z",
+      "createdAt": "2026-07-22T14:09:09.365Z"
+    },
+    {
+      "id": "al-kz2rc",
+      "userId": "u-1",
+      "tenderId": "t-3",
+      "type": "DEADLINE_REMINDER",
+      "channel": "IN_APP",
+      "message": "Approaching Deadline: Bid submission for \"Hajipur-Mahua Roadway Section Bid Submission\" closes in 3 days! Ensure all EMD documents are ready.",
+      "isRead": false,
+      "sentAt": "2026-07-22T14:08:24.355Z",
+      "createdAt": "2026-07-22T14:08:24.355Z"
+    },
+    {
+      "id": "al-nap12",
+      "userId": "u-1",
+      "tenderId": "t-3",
+      "type": "NEW_MATCH",
+      "channel": "IN_APP",
+      "message": "New high compatibility tender match generated! (86% Match Score) for \"Sewerage Reinforcement & Excavation in Noida Sector 62\". Check details in criteria workspace.",
+      "isRead": false,
+      "sentAt": "2026-07-22T14:07:39.347Z",
+      "createdAt": "2026-07-22T14:07:39.347Z"
+    },
+    {
+      "id": "al-wy64j",
+      "userId": "u-1",
+      "tenderId": "t-2",
+      "type": "NEW_MATCH",
+      "channel": "IN_APP",
+      "message": "New high compatibility tender match generated! (82% Match Score) for \"Solar Rooftop Power Plants in Gaya Subdivisions\". Check details in criteria workspace.",
+      "isRead": false,
+      "sentAt": "2026-07-22T14:06:54.341Z",
+      "createdAt": "2026-07-22T14:06:54.341Z"
+    },
+    {
+      "id": "al-kb7xr",
+      "userId": "u-1",
+      "tenderId": "t-3",
+      "type": "NEW_MATCH",
+      "channel": "IN_APP",
+      "message": "New high compatibility tender match generated! (91% Match Score) for \"Sewerage Reinforcement & Excavation in Noida Sector 62\". Check details in criteria workspace.",
+      "isRead": false,
+      "sentAt": "2026-07-22T14:06:09.328Z",
+      "createdAt": "2026-07-22T14:06:09.328Z"
+    },
+    {
+      "id": "al-o4yc5",
+      "userId": "u-1",
+      "tenderId": "t-3",
+      "type": "DEADLINE_REMINDER",
+      "channel": "IN_APP",
+      "message": "Approaching Deadline: Bid submission for \"Hajipur-Mahua Roadway Section Bid Submission\" closes in 6 days! Ensure all EMD documents are ready.",
+      "isRead": false,
+      "sentAt": "2026-07-22T14:05:24.324Z",
+      "createdAt": "2026-07-22T14:05:24.324Z"
+    },
+    {
+      "id": "al-3dhc5",
+      "userId": "u-1",
+      "tenderId": "t-1",
+      "type": "DEADLINE_REMINDER",
+      "channel": "IN_APP",
+      "message": "Approaching Deadline: Bid submission for \"IIT Patna Academic Block G+4 Complex Structure\" closes in 5 days! Ensure all EMD documents are ready.",
+      "isRead": false,
+      "sentAt": "2026-07-22T14:04:39.321Z",
+      "createdAt": "2026-07-22T14:04:39.321Z"
+    },
+    {
+      "id": "al-7zxxk",
+      "userId": "u-1",
+      "tenderId": "t-3",
+      "type": "NEW_MATCH",
+      "channel": "IN_APP",
+      "message": "New high compatibility tender match generated! (97% Match Score) for \"Sewerage Reinforcement & Excavation in Noida Sector 62\". Check details in criteria workspace.",
+      "isRead": false,
+      "sentAt": "2026-07-22T14:03:54.313Z",
+      "createdAt": "2026-07-22T14:03:54.313Z"
+    },
+    {
+      "id": "al-lc5cd",
+      "userId": "u-1",
+      "tenderId": "t-3",
+      "type": "DEADLINE_REMINDER",
+      "channel": "IN_APP",
+      "message": "Approaching Deadline: Bid submission for \"Hajipur-Mahua Roadway Section Bid Submission\" closes in 3 days! Ensure all EMD documents are ready.",
+      "isRead": false,
+      "sentAt": "2026-07-22T14:03:09.300Z",
+      "createdAt": "2026-07-22T14:03:09.300Z"
+    },
+    {
+      "id": "al-pi47j",
+      "userId": "u-1",
+      "tenderId": "t-3",
+      "type": "DEADLINE_REMINDER",
+      "channel": "IN_APP",
+      "message": "Approaching Deadline: Bid submission for \"Hajipur-Mahua Roadway Section Bid Submission\" closes in 6 days! Ensure all EMD documents are ready.",
+      "isRead": false,
+      "sentAt": "2026-07-22T14:02:24.294Z",
+      "createdAt": "2026-07-22T14:02:24.294Z"
+    },
+    {
+      "id": "al-yaiiq",
+      "userId": "u-1",
+      "tenderId": "t-2",
+      "type": "NEW_MATCH",
+      "channel": "IN_APP",
+      "message": "New high compatibility tender match generated! (82% Match Score) for \"Solar Rooftop Power Plants in Gaya Subdivisions\". Check details in criteria workspace.",
+      "isRead": false,
+      "sentAt": "2026-07-22T14:01:39.281Z",
+      "createdAt": "2026-07-22T14:01:39.281Z"
+    },
+    {
+      "id": "al-1wmqb",
+      "userId": "u-1",
+      "tenderId": "t-3",
+      "type": "DEADLINE_REMINDER",
+      "channel": "IN_APP",
+      "message": "Approaching Deadline: Bid submission for \"Hajipur-Mahua Roadway Section Bid Submission\" closes in 3 days! Ensure all EMD documents are ready.",
+      "isRead": false,
+      "sentAt": "2026-07-22T14:00:54.280Z",
+      "createdAt": "2026-07-22T14:00:54.280Z"
+    },
+    {
+      "id": "al-2qcld",
+      "userId": "u-1",
+      "tenderId": "t-3",
+      "type": "DEADLINE_REMINDER",
+      "channel": "IN_APP",
+      "message": "Approaching Deadline: Bid submission for \"Hajipur-Mahua Roadway Section Bid Submission\" closes in 3 days! Ensure all EMD documents are ready.",
+      "isRead": false,
+      "sentAt": "2026-07-22T14:00:09.274Z",
+      "createdAt": "2026-07-22T14:00:09.274Z"
+    },
+    {
+      "id": "al-uiq0g",
+      "userId": "u-1",
+      "tenderId": "t-1",
+      "type": "DEADLINE_REMINDER",
+      "channel": "IN_APP",
+      "message": "Approaching Deadline: Bid submission for \"IIT Patna Academic Block G+4 Complex Structure\" closes in 6 days! Ensure all EMD documents are ready.",
+      "isRead": false,
+      "sentAt": "2026-07-22T13:59:24.261Z",
+      "createdAt": "2026-07-22T13:59:24.261Z"
+    },
+    {
+      "id": "al-d607o",
+      "userId": "u-1",
+      "tenderId": "t-3",
+      "type": "DEADLINE_REMINDER",
+      "channel": "IN_APP",
+      "message": "Approaching Deadline: Bid submission for \"Hajipur-Mahua Roadway Section Bid Submission\" closes in 2 days! Ensure all EMD documents are ready.",
+      "isRead": false,
+      "sentAt": "2026-07-22T13:58:39.254Z",
+      "createdAt": "2026-07-22T13:58:39.254Z"
+    },
+    {
+      "id": "al-2ruxv",
+      "userId": "u-1",
+      "tenderId": "t-2",
+      "type": "NEW_MATCH",
+      "channel": "IN_APP",
+      "message": "New high compatibility tender match generated! (93% Match Score) for \"Solar Rooftop Power Plants in Gaya Subdivisions\". Check details in criteria workspace.",
+      "isRead": false,
+      "sentAt": "2026-07-22T13:58:04.254Z",
+      "createdAt": "2026-07-22T13:58:04.254Z"
+    },
+    {
+      "id": "al-w3yyp",
+      "userId": "u-1",
+      "tenderId": "t-2",
+      "type": "DEADLINE_REMINDER",
+      "channel": "IN_APP",
+      "message": "Approaching Deadline: Bid submission for \"BREDA Commissioning SPV 200kW Bettiah Solar Grid\" closes in 6 days! Ensure all EMD documents are ready.",
+      "isRead": false,
+      "sentAt": "2026-07-21T07:05:59.315Z",
+      "createdAt": "2026-07-21T07:05:59.315Z"
+    },
+    {
+      "id": "al-q8p4i",
+      "userId": "u-1",
+      "tenderId": "t-3",
+      "type": "DEADLINE_REMINDER",
+      "channel": "IN_APP",
+      "message": "Approaching Deadline: Bid submission for \"Hajipur-Mahua Roadway Section Bid Submission\" closes in 4 days! Ensure all EMD documents are ready.",
+      "isRead": false,
+      "sentAt": "2026-07-21T07:05:14.310Z",
+      "createdAt": "2026-07-21T07:05:14.310Z"
+    },
+    {
+      "id": "al-aabu9",
+      "userId": "u-1",
+      "tenderId": "t-2",
+      "type": "DEADLINE_REMINDER",
+      "channel": "IN_APP",
+      "message": "Approaching Deadline: Bid submission for \"BREDA Commissioning SPV 200kW Bettiah Solar Grid\" closes in 3 days! Ensure all EMD documents are ready.",
+      "isRead": false,
+      "sentAt": "2026-07-21T07:04:29.302Z",
+      "createdAt": "2026-07-21T07:04:29.302Z"
+    },
+    {
+      "id": "al-loqy2",
+      "userId": "u-1",
+      "tenderId": "t-3",
+      "type": "DEADLINE_REMINDER",
+      "channel": "IN_APP",
+      "message": "Approaching Deadline: Bid submission for \"Hajipur-Mahua Roadway Section Bid Submission\" closes in 6 days! Ensure all EMD documents are ready.",
+      "isRead": false,
+      "sentAt": "2026-07-21T07:03:44.289Z",
+      "createdAt": "2026-07-21T07:03:44.289Z"
+    },
+    {
+      "id": "al-424n7",
+      "userId": "u-1",
+      "tenderId": "t-3",
+      "type": "NEW_MATCH",
+      "channel": "IN_APP",
+      "message": "New high compatibility tender match generated! (80% Match Score) for \"Sewerage Reinforcement & Excavation in Noida Sector 62\". Check details in criteria workspace.",
+      "isRead": false,
+      "sentAt": "2026-07-21T07:02:59.278Z",
+      "createdAt": "2026-07-21T07:02:59.278Z"
+    },
+    {
+      "id": "al-5o00s",
+      "userId": "u-1",
+      "tenderId": "t-2",
+      "type": "DEADLINE_REMINDER",
+      "channel": "IN_APP",
+      "message": "Approaching Deadline: Bid submission for \"BREDA Commissioning SPV 200kW Bettiah Solar Grid\" closes in 5 days! Ensure all EMD documents are ready.",
+      "isRead": false,
+      "sentAt": "2026-07-21T07:02:14.263Z",
+      "createdAt": "2026-07-21T07:02:14.264Z"
+    },
+    {
+      "id": "al-t2pri",
+      "userId": "u-1",
+      "tenderId": "t-2",
+      "type": "NEW_MATCH",
+      "channel": "IN_APP",
+      "message": "New high compatibility tender match generated! (99% Match Score) for \"Solar Rooftop Power Plants in Gaya Subdivisions\". Check details in criteria workspace.",
+      "isRead": false,
+      "sentAt": "2026-07-21T07:01:29.259Z",
+      "createdAt": "2026-07-21T07:01:29.259Z"
+    },
+    {
+      "id": "al-awb2f",
+      "userId": "u-1",
+      "tenderId": "t-1",
+      "type": "NEW_MATCH",
+      "channel": "IN_APP",
+      "message": "New high compatibility tender match generated! (94% Match Score) for \"Construction of Academic Block and Hostel Building at IIT Patna\". Check details in criteria workspace.",
+      "isRead": false,
+      "sentAt": "2026-07-21T07:00:44.258Z",
+      "createdAt": "2026-07-21T07:00:44.258Z"
+    },
+    {
+      "id": "al-krnzm",
+      "userId": "u-1",
+      "tenderId": "t-3",
+      "type": "DEADLINE_REMINDER",
+      "channel": "IN_APP",
+      "message": "Approaching Deadline: Bid submission for \"Hajipur-Mahua Roadway Section Bid Submission\" closes in 3 days! Ensure all EMD documents are ready.",
+      "isRead": false,
+      "sentAt": "2026-07-21T06:59:59.258Z",
+      "createdAt": "2026-07-21T06:59:59.258Z"
+    },
+    {
+      "id": "al-h0a04",
+      "userId": "u-1",
+      "tenderId": "t-3",
+      "type": "NEW_MATCH",
+      "channel": "IN_APP",
+      "message": "New high compatibility tender match generated! (93% Match Score) for \"Sewerage Reinforcement & Excavation in Noida Sector 62\". Check details in criteria workspace.",
+      "isRead": false,
+      "sentAt": "2026-07-21T06:59:14.337Z",
+      "createdAt": "2026-07-21T06:59:14.337Z"
+    },
+    {
+      "id": "al-1g7r0",
+      "userId": "u-1",
+      "tenderId": "t-3",
+      "type": "DEADLINE_REMINDER",
+      "channel": "IN_APP",
+      "message": "Approaching Deadline: Bid submission for \"Hajipur-Mahua Roadway Section Bid Submission\" closes in 2 days! Ensure all EMD documents are ready.",
+      "isRead": false,
+      "sentAt": "2026-07-21T06:58:29.257Z",
+      "createdAt": "2026-07-21T06:58:29.257Z"
+    },
+    {
+      "id": "al-iawrl",
+      "userId": "u-1",
+      "tenderId": "t-2",
+      "type": "DEADLINE_REMINDER",
+      "channel": "IN_APP",
+      "message": "Approaching Deadline: Bid submission for \"BREDA Commissioning SPV 200kW Bettiah Solar Grid\" closes in 4 days! Ensure all EMD documents are ready.",
+      "isRead": false,
+      "sentAt": "2026-07-20T20:03:29.674Z",
+      "createdAt": "2026-07-20T20:03:29.674Z"
+    },
+    {
+      "id": "al-4qgoa",
+      "userId": "u-1",
+      "tenderId": "t-2",
+      "type": "NEW_MATCH",
+      "channel": "IN_APP",
+      "message": "New high compatibility tender match generated! (99% Match Score) for \"Solar Rooftop Power Plants in Gaya Subdivisions\". Check details in criteria workspace.",
+      "isRead": false,
+      "sentAt": "2026-07-20T20:02:44.665Z",
+      "createdAt": "2026-07-20T20:02:44.665Z"
+    },
+    {
+      "id": "al-bsqpb",
+      "userId": "u-1",
+      "tenderId": "t-1",
+      "type": "NEW_MATCH",
+      "channel": "IN_APP",
+      "message": "New high compatibility tender match generated! (90% Match Score) for \"Construction of Academic Block and Hostel Building at IIT Patna\". Check details in criteria workspace.",
+      "isRead": false,
+      "sentAt": "2026-07-20T20:01:59.663Z",
+      "createdAt": "2026-07-20T20:01:59.663Z"
+    },
+    {
+      "id": "al-q3qll",
+      "userId": "u-1",
+      "tenderId": "t-1",
+      "type": "DEADLINE_REMINDER",
+      "channel": "IN_APP",
+      "message": "Approaching Deadline: Bid submission for \"IIT Patna Academic Block G+4 Complex Structure\" closes in 5 days! Ensure all EMD documents are ready.",
+      "isRead": false,
+      "sentAt": "2026-07-20T20:01:14.657Z",
+      "createdAt": "2026-07-20T20:01:14.657Z"
+    },
+    {
+      "id": "al-qv8bp",
+      "userId": "u-1",
+      "tenderId": "t-3",
+      "type": "DEADLINE_REMINDER",
+      "channel": "IN_APP",
+      "message": "Approaching Deadline: Bid submission for \"Hajipur-Mahua Roadway Section Bid Submission\" closes in 4 days! Ensure all EMD documents are ready.",
+      "isRead": false,
+      "sentAt": "2026-07-20T20:00:29.653Z",
+      "createdAt": "2026-07-20T20:00:29.653Z"
+    },
+    {
+      "id": "al-3aza3",
+      "userId": "u-1",
+      "tenderId": "t-1",
+      "type": "DEADLINE_REMINDER",
+      "channel": "IN_APP",
+      "message": "Approaching Deadline: Bid submission for \"IIT Patna Academic Block G+4 Complex Structure\" closes in 3 days! Ensure all EMD documents are ready.",
+      "isRead": false,
+      "sentAt": "2026-07-20T19:59:44.650Z",
+      "createdAt": "2026-07-20T19:59:44.650Z"
+    },
+    {
+      "id": "al-f0rm1",
+      "userId": "u-1",
+      "tenderId": "t-2",
+      "type": "DEADLINE_REMINDER",
+      "channel": "IN_APP",
+      "message": "Approaching Deadline: Bid submission for \"BREDA Commissioning SPV 200kW Bettiah Solar Grid\" closes in 6 days! Ensure all EMD documents are ready.",
+      "isRead": false,
+      "sentAt": "2026-07-20T19:58:59.646Z",
+      "createdAt": "2026-07-20T19:58:59.646Z"
+    },
+    {
+      "id": "al-dq4dq",
+      "userId": "u-1",
+      "tenderId": "t-2",
+      "type": "NEW_MATCH",
+      "channel": "IN_APP",
+      "message": "New high compatibility tender match generated! (99% Match Score) for \"Solar Rooftop Power Plants in Gaya Subdivisions\". Check details in criteria workspace.",
+      "isRead": false,
+      "sentAt": "2026-07-20T19:58:24.651Z",
+      "createdAt": "2026-07-20T19:58:24.651Z"
+    },
+    {
+      "id": "al-uvonq",
+      "userId": "u-1",
+      "tenderId": "t-2",
+      "type": "DEADLINE_REMINDER",
+      "channel": "IN_APP",
+      "message": "Approaching Deadline: Bid submission for \"BREDA Commissioning SPV 200kW Bettiah Solar Grid\" closes in 6 days! Ensure all EMD documents are ready.",
+      "isRead": false,
+      "sentAt": "2026-07-20T19:57:38.826Z",
+      "createdAt": "2026-07-20T19:57:38.826Z"
+    },
+    {
+      "id": "al-ytjvh",
+      "userId": "u-1",
+      "tenderId": "t-1",
+      "type": "DEADLINE_REMINDER",
+      "channel": "IN_APP",
+      "message": "Approaching Deadline: Bid submission for \"IIT Patna Academic Block G+4 Complex Structure\" closes in 3 days! Ensure all EMD documents are ready.",
+      "isRead": false,
+      "sentAt": "2026-07-20T19:56:53.820Z",
+      "createdAt": "2026-07-20T19:56:53.820Z"
+    },
+    {
+      "id": "al-41fv3",
+      "userId": "u-1",
+      "tenderId": "t-1",
+      "type": "NEW_MATCH",
+      "channel": "IN_APP",
+      "message": "New high compatibility tender match generated! (86% Match Score) for \"Construction of Academic Block and Hostel Building at IIT Patna\". Check details in criteria workspace.",
+      "isRead": false,
+      "sentAt": "2026-07-20T19:56:08.812Z",
+      "createdAt": "2026-07-20T19:56:08.812Z"
+    },
+    {
+      "id": "al-yvk69",
+      "userId": "u-1",
+      "tenderId": "t-3",
+      "type": "NEW_MATCH",
+      "channel": "IN_APP",
+      "message": "New high compatibility tender match generated! (91% Match Score) for \"Sewerage Reinforcement & Excavation in Noida Sector 62\". Check details in criteria workspace.",
+      "isRead": false,
+      "sentAt": "2026-07-20T19:55:33.812Z",
+      "createdAt": "2026-07-20T19:55:33.812Z"
+    },
     {
       "id": "al-5jgur",
       "userId": "u-1",
@@ -4106,7 +6392,38 @@
       }
     }
   ],
-  "tenderQAs": [],
+  "tenderQAs": [
+    {
+      "id": "qa-eq9qr",
+      "tenderId": "t-62",
+      "userId": "u-1",
+      "question": "As Sharma Construction with 5.2 Cr turnover and 8 years experience, provide strategic tactical recommendation bidding advice on this tender needing 1 Cr turnover, 3 years exp. Give 3 professional bullet points for compliance/mitigation.",
+      "answer": "Paragraph 4.2 specifies that the minimum average turnover required is ₹1 Crores over the recent 3 financial years.",
+      "sourceCitations": [
+        {
+          "text": "Section 4.2. Annual financial turn-over of bidding contractor must exceed 1 Crores in three consecutive financial statements. Certifications from chartered accountant is mandatory.",
+          "pageNumber": 8,
+          "section": "Technical and Financial Standards"
+        }
+      ],
+      "createdAt": "2026-07-22T14:04:27.280Z"
+    },
+    {
+      "id": "qa-g4xdv",
+      "tenderId": "t-62",
+      "userId": "u-1",
+      "question": "As Sharma Construction with 5.2 Cr turnover and 8 years experience, provide strategic tactical recommendation bidding advice on this tender needing 1 Cr turnover, 3 years exp. Give 3 professional bullet points for compliance/mitigation.",
+      "answer": "Paragraph 4.2 specifies that the minimum average turnover required is ₹1 Crores over the recent 3 financial years.",
+      "sourceCitations": [
+        {
+          "text": "Section 4.2. Annual financial turn-over of bidding contractor must exceed 1 Crores in three consecutive financial statements. Certifications from chartered accountant is mandatory.",
+          "pageNumber": 8,
+          "section": "Technical and Financial Standards"
+        }
+      ],
+      "createdAt": "2026-07-22T14:04:27.291Z"
+    }
+  ],
   "paymentIntents": [
     {
       "id": "rzp_pay_999120",
@@ -4186,6 +6503,28 @@
     "maintenanceMode": false
   },
   "auditLogs": [
+    {
+      "id": "audit-b8d6cd76",
+      "userId": "u-13092cc1-0706-4240-9a52-f17c439383a8",
+      "userEmail": "msvm450@gmail.com",
+      "action": "USER_LOGIN_SUCCESS",
+      "description": "User successfully logged in and generated session token",
+      "status": "SUCCESS",
+      "ipAddress": "127.0.0.1",
+      "timestamp": "2026-07-22T13:58:33.915Z",
+      "metadata": {}
+    },
+    {
+      "id": "audit-dff88910",
+      "userId": "u-13092cc1-0706-4240-9a52-f17c439383a8",
+      "userEmail": "msvm450@gmail.com",
+      "action": "USER_REGISTERED",
+      "description": "User ,nb successfully registered a new profile",
+      "status": "SUCCESS",
+      "ipAddress": "127.0.0.1",
+      "timestamp": "2026-07-20T20:03:47.216Z",
+      "metadata": {}
+    },
     {
       "id": "audit-a6f18cac",
       "userId": "system-limiter",
@@ -4334,5 +6673,85 @@
         "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
       }
     }
-  ]
+  ],
+  "corrigenda": [
+    {
+      "id": "corr-t-62-1",
+      "tenderId": "t-62",
+      "title": "Corrigendum I: Extension of Tender Submission Date",
+      "publishedDate": "2026-07-19T14:04:11.442Z",
+      "description": "Due to server maintenance on CPPP portal, the closing date is extended by 5 days. Technical specs remain unaltered.",
+      "impactAnalysis": "CRITICAL: The original bid deadline has been extended by 5 days. You now have extra time to finish your technical compliance matrices and obtain your Bank Guarantee."
+    },
+    {
+      "id": "corr-t-62-2",
+      "tenderId": "t-62",
+      "title": "Pre-Bid Clarification Meeting Highlights",
+      "publishedDate": "2026-07-21T14:04:11.442Z",
+      "description": "Query 1: Joint Venture turnover criteria clarification. Answer: Joint Venture partner can contribute up to 40% of standard turnover requirements.",
+      "impactAnalysis": "HIGH: Joint Venture partnering is now much more flexible. Sharma Construction can easily partner with a local contractor to fulfill the 100% turnover criterion if needed."
+    }
+  ],
+  "comments": [
+    {
+      "id": "c-t-62-1",
+      "tenderId": "t-62",
+      "userName": "Anil Mehta (Senior Bid Manager)",
+      "text": "Double check the Class 3 DSC helper utility is active. CPPP portal has updated Java runtimes.",
+      "createdAt": "2026-07-20T14:04:11.469Z"
+    },
+    {
+      "id": "c-t-62-2",
+      "tenderId": "t-62",
+      "userName": "Vikram Sharma (Finance Lead)",
+      "text": "EMD is 2 Lakhs. We can request a waiver if we attach our MSME dynamic certificate. I've uploaded the certificate in the system document vault.",
+      "createdAt": "2026-07-22T02:04:11.469Z"
+    }
+  ],
+  "milestones": {
+    "tm-cp-47ead428-96de-4f85-982a-67b51ac165c0-t-62": [
+      {
+        "id": "m1",
+        "label": "Enroll/Verify Class 3 DSC Token",
+        "status": "completed",
+        "date": "2026-07-18T14:04:11.508Z"
+      },
+      {
+        "id": "m2",
+        "label": "Download Complete Tender Documents",
+        "status": "completed",
+        "date": "2026-07-19T14:04:11.508Z"
+      },
+      {
+        "id": "m3",
+        "label": "Request MSME/Udyam EMD Fee Waiver",
+        "status": "pending",
+        "date": null
+      },
+      {
+        "id": "m4",
+        "label": "Compile Technical Compliance Matrix",
+        "status": "pending",
+        "date": null
+      },
+      {
+        "id": "m5",
+        "label": "Draft BOQ Cost Estimation Formula",
+        "status": "pending",
+        "date": null
+      },
+      {
+        "id": "m6",
+        "label": "Validate Consortium JV Signatures",
+        "status": "pending",
+        "date": null
+      },
+      {
+        "id": "m7",
+        "label": "Verify Integrity check & Submit Bid",
+        "status": "pending",
+        "date": null
+      }
+    ]
+  }
 }

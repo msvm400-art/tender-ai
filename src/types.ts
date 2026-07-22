@@ -8,6 +8,7 @@ export interface User {
   trialDaysElapsed?: number;
   isTrialActive?: boolean;
   trialStartDate?: string;
+  alertMatrix?: Record<string, Record<string, boolean>>;
 }
 
 export interface CompanyProfile {

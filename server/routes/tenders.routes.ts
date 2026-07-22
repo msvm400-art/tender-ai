@@ -11,6 +11,7 @@ import { getPrismaClient } from "../prismaClient.js";
 import { validateRegistrationInput, validateUploadedFile } from "../security.js";
 import { routeCache, invalidateRouteCache } from "../performance.js";
 import { searchEngine } from "../search.service.js";
+import { searchTendersSemantic } from "../vector.service.js";
 import { ingestionService } from "../ingestion.service.js";
 import { executeDurableBackup, getBackupHistory } from "../backupService.js";
 
@@ -85,7 +86,7 @@ export const tendersRouter = express.Router();
   // -----------------------------------------------------------------
   // ADVANCED FAST INDEXED SEARCH API
   // -----------------------------------------------------------------
-  tendersRouter.get("/api/search", (req, res) => {
+  tendersRouter.get("/api/search", async (req, res) => {
     const { 
       q, 
       category, 
@@ -97,13 +98,56 @@ export const tendersRouter = express.Router();
       publishedBefore, 
       deadlineAfter, 
       deadlineBefore, 
-      status 
+      status,
+      mode
     } = req.query;
 
     const parsedCategories = category ? String(category).split(",").map(c => c.trim()).filter(Boolean) : undefined;
     const parsedLocations = location ? String(location).split(",").map(l => l.trim()).filter(Boolean) : undefined;
 
     try {
+      if (mode === "semantic" && q) {
+        console.log(`[Vector Search API] Executing semantic search for query: "${q}"`);
+        const semanticResults = await searchTendersSemantic(String(q));
+        
+        // Filter results based on other active metadata parameters if present
+        let filtered = semanticResults;
+        
+        if (parsedCategories && parsedCategories.length > 0) {
+          filtered = filtered.filter(r => parsedCategories.includes(r.tender.category));
+        }
+        if (parsedLocations && parsedLocations.length > 0) {
+          filtered = filtered.filter(r => parsedLocations.includes(r.tender.state));
+        }
+        if (department) {
+          const deptLower = String(department).toLowerCase();
+          filtered = filtered.filter(r => r.tender.department.toLowerCase().includes(deptLower));
+        }
+        if (minAmount) {
+          filtered = filtered.filter(r => (r.tender.tenderValue || 0) >= Number(minAmount));
+        }
+        if (maxAmount) {
+          filtered = filtered.filter(r => (r.tender.tenderValue || 0) <= Number(maxAmount));
+        }
+        if (status) {
+          filtered = filtered.filter(r => r.tender.status === status);
+        }
+
+        const scoreDetails: Record<string, number> = {};
+        for (const item of filtered) {
+          scoreDetails[item.tender.id] = Math.round(item.similarity * 100);
+        }
+
+        return res.json({
+          success: true,
+          tenders: filtered.map(r => r.tender),
+          scoreDetails,
+          totalCount: filtered.length,
+          timestamp: new Date().toISOString()
+        });
+      }
+
+      // Default inverted index keyword search
       const searchResult = searchEngine.search({
         q: q ? String(q) : undefined,
         category: parsedCategories,
@@ -127,7 +171,7 @@ export const tendersRouter = express.Router();
       });
     } catch (err: any) {
       console.error("Advanced search query error:", err);
-      res.status(500).json({ error: "Failed to query the fast search index", details: err.message });
+      res.status(500).json({ error: "Failed to query the search indexes", details: err.message });
     }
   });
 

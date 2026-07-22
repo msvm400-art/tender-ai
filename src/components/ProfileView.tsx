@@ -59,8 +59,14 @@ export default function ProfileView({ profile, onSave }: ProfileProps) {
 
   // States support in India
   const indianStates = [
-    "Bihar", "Jharkhand", "Uttar Pradesh", "West Bengal", "Odisha", 
-    "Delhi", "Maharashtra", "Karnataka", "Tamil Nadu", "Gujarat"
+    "Andhra Pradesh", "Arunachal Pradesh", "Assam", "Bihar", "Chhattisgarh", 
+    "Goa", "Gujarat", "Haryana", "Himachal Pradesh", "Jammu and Kashmir", 
+    "Jharkhand", "Karnataka", "Kerala", "Ladakh", "Madhya Pradesh", 
+    "Maharashtra", "Manipur", "Meghalaya", "Mizoram", "Nagaland", "Odisha", 
+    "Punjab", "Rajasthan", "Sikkim", "Tamil Nadu", "Telangana", "Tripura", 
+    "Uttar Pradesh", "Uttarakhand", "West Bengal", "Andaman and Nicobar Islands", 
+    "Chandigarh", "Dadra and Nagar Haveli and Daman and Diu", "Delhi", 
+    "Lakshadweep", "Puducherry"
   ];
   // Standard bidder categories
   const bidderCategories = [

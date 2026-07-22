@@ -1458,14 +1458,23 @@ export default function TenderDetailView({ tenderId, onBack, profile, user, onNa
                                 method: "POST",
                                 headers: getAuthHeaders()
                               });
-                              const data = await res.json();
-                              setExportUrl(data.url);
+                              const blob = await res.blob();
+                              const downloadUrl = URL.createObjectURL(blob);
+                              setExportUrl(downloadUrl);
+
+                              // Trigger real file download of the PDF blob
+                              const a = document.createElement("a");
+                              a.href = downloadUrl;
+                              a.download = `${activeBidType.toLowerCase().replace(/_/g, "-")}.pdf`;
+                              document.body.appendChild(a);
+                              a.click();
+                              document.body.removeChild(a);
 
                               // Log the successful export metric
                               window.logAnalyticsEvent("export_bid_document", {
                                 tenderId,
                                 bidId: activeBidId,
-                                exportUrl: data.url,
+                                exportUrl: downloadUrl,
                                 timestamp: new Date().toISOString()
                               });
                             }}

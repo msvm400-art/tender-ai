@@ -9,7 +9,9 @@ import crypto from "crypto";
 // Import local services
 import { db } from "./server/db.js";
 import { ingestionService } from "./server/ingestion.service.js";
+import { sendAlertEmail } from "./server/email.service.js";
 import { searchEngine } from "./server/search.service.js";
+import { storageService } from "./server/storage.service.js";
 import {
   getGeminiAI,
   summarizeTender,
@@ -70,9 +72,12 @@ if (!JWT_SECRET) {
 }
 
 
-const PORT = 3000;
+const PORT = process.env.PORT ? parseInt(process.env.PORT, 10) : 3005;
 
 async function startServer() {
+  // Sync memory DB cache with PostgreSQL database if configured
+  await db.syncFromPrisma();
+
   const app = express();
   app.use(express.json({ limit: "1mb" }));
   app.use(cookieParser());
@@ -135,6 +140,9 @@ async function startServer() {
   // Global IP Rate Limiter
   app.use(rateLimiter({ windowMs: 60 * 1000, maxRequests: 200, routeName: "global" }));
 
+  // Serve uploaded files securely
+  app.use("/api/storage/files", express.static(storageService.getLocalUploadDirectory()));
+
 app.use(authRouter);
 app.use(userRouter);
 app.use(tendersRouter);
@@ -173,7 +181,7 @@ app.use(systemRouter);
   // Socket.IO setup
   const io = new SocketIOServer(server, {
     cors: {
-      origin: process.env.ALLOWED_ORIGINS ? process.env.ALLOWED_ORIGINS.split(",") : ["http://localhost:3000"],
+      origin: process.env.ALLOWED_ORIGINS ? process.env.ALLOWED_ORIGINS.split(",") : [`http://localhost:${PORT}`],
       methods: ["GET", "POST"]
     }
   });
@@ -222,6 +230,12 @@ app.use(systemRouter);
     // Save to database
     db.data.alerts.unshift(newAlert);
     db.save();
+
+    // Send email alert
+    const targetUser = db.data.users.find((u) => u.id === newAlert.userId);
+    if (targetUser && targetUser.email) {
+      sendAlertEmail(targetUser.email, `TenderAI Alert: ${type}`, message).catch(console.error);
+    }
 
     // Broadcast update to sockets
     io.emit("tender_alert", newAlert);

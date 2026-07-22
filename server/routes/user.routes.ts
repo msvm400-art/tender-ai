@@ -4,6 +4,8 @@ import { db } from "../db.js";
 import { authenticateJWT, requireRole, resolveUser, hashPassword, comparePassword, generateToken, generateAccessAndRefreshTokens } from "../authMiddleware.js";
 import { recordAuditLog, generateCSRFToken } from "../security.js";
 import { getGeminiAI, summarizeTender, analyzeEligibility, askTenderQuestion, generateBidDoc, generateSmartBidDraft, summarizeProcurementDocument, draftConsortiumAgreement, analyzeAndOCRDocument, chatAboutDocument } from "../ai.service.js";
+// @ts-ignore
+import Razorpay from "razorpay";
 
 
 import jwt from "jsonwebtoken";
@@ -39,9 +41,12 @@ export const userRouter = express.Router();
       
       // Store dynamic trial properties for sandbox simulation
       (user as any).isTrialActive = isTrialActive !== undefined ? isTrialActive : true;
-      (user as any).trialDaysElapsed = trialDaysElapsed !== undefined ? Number(trialDaysElapsed) : 1;
       if (trialStartDate) {
         (user as any).trialStartDate = trialStartDate;
+        (user as any).trialDaysElapsed = Math.floor((Date.now() - new Date(trialStartDate).getTime()) / 86400000);
+      } else if (trialDaysElapsed !== undefined) {
+        (user as any).trialDaysElapsed = Number(trialDaysElapsed);
+        (user as any).trialStartDate = new Date(Date.now() - Number(trialDaysElapsed) * 86400000).toISOString();
       }
       
       db.save();
@@ -55,6 +60,9 @@ export const userRouter = express.Router();
     const user = resolveUser(req);
     if (!user) return res.status(401).json({ error: "Authentication required" });
     if (user) {
+      if (user.trialStartDate) {
+        user.trialDaysElapsed = Math.floor((Date.now() - new Date(user.trialStartDate).getTime()) / 86400000);
+      }
       res.json(user);
     } else {
       res.status(404).json({ error: "User not found" });
@@ -140,34 +148,25 @@ export const userRouter = express.Router();
       if (keyId && keySecret) {
         console.log(`[Payment Gateway] Processing real Razorpay Order creation for ${planId} (₹${amount})`);
         
-        const response = await fetch("https://api.razorpay.com/v1/orders", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            "Authorization": "Basic " + Buffer.from(`${keyId}:${keySecret}`).toString("base64"),
-          },
-          body: JSON.stringify({
-            amount: Math.round(Number(amount) * 100), // convert rupees to paise
-            currency: "INR",
-            receipt: `rcpt_plan_${planId.toLowerCase()}_${Date.now()}`.substring(0, 40),
-          }),
+        const razorpay = new Razorpay({
+          key_id: keyId,
+          key_secret: keySecret
         });
 
-        if (response.ok) {
-          const order = (await response.json()) as any;
-          return res.json({
-            success: true,
-            isLive: true,
-            razorpayKeyId: keyId,
-            orderId: order.id,
-            amount: order.amount,
-            currency: order.currency,
-          });
-        } else {
-          const errText = await response.text();
-          console.error("[Payment Gateway] Razorpay API return error:", errText);
-          return res.status(400).json({ error: `Razorpay API Order creation failed: ${errText}` });
-        }
+        const order = await razorpay.orders.create({
+          amount: Math.round(Number(amount) * 100), // convert rupees to paise
+          currency: "INR",
+          receipt: `rcpt_plan_${planId.toLowerCase()}_${Date.now()}`.substring(0, 40)
+        });
+
+        return res.json({
+          success: true,
+          isLive: true,
+          razorpayKeyId: keyId,
+          orderId: order.id,
+          amount: order.amount,
+          currency: order.currency,
+        });
       }
 
       // Live Simulator sandbox fallback mode
@@ -414,4 +413,31 @@ export const userRouter = express.Router();
     } else {
       res.status(404).json({ error: "Profile not found" });
     }
+  });
+
+  userRouter.get("/api/user/alert-matrix", (req, res) => {
+    const user = resolveUser(req);
+    if (!user) return res.status(401).json({ error: "Authentication required" });
+    const targetUser = db.data.users.find(u => u.id === user.id);
+    if (!targetUser) return res.status(404).json({ error: "User not found" });
+    
+    const defaultMatrix = {
+      NEW_MATCH: { EMAIL: true, WHATSAPP: true, SMS: false, PUSH: true, IN_APP: true },
+      DEADLINE_REMINDER: { EMAIL: true, WHATSAPP: true, SMS: true, PUSH: true, IN_APP: true },
+      DOCUMENT_MISSING: { EMAIL: true, WHATSAPP: false, SMS: false, PUSH: true, IN_APP: true },
+      SUBSCRIPTION_EVENT: { EMAIL: true, WHATSAPP: true, SMS: false, PUSH: true, IN_APP: true }
+    };
+    
+    res.json(targetUser.alertMatrix || defaultMatrix);
+  });
+
+  userRouter.put("/api/user/alert-matrix", (req, res) => {
+    const user = resolveUser(req);
+    if (!user) return res.status(401).json({ error: "Authentication required" });
+    const targetUser = db.data.users.find(u => u.id === user.id);
+    if (!targetUser) return res.status(404).json({ error: "User not found" });
+    
+    targetUser.alertMatrix = req.body;
+    db.save();
+    res.json({ success: true, alertMatrix: targetUser.alertMatrix });
   });

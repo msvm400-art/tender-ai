@@ -4,6 +4,7 @@ import { db } from "../db.js";
 import { authenticateJWT, requireRole, resolveUser, hashPassword, comparePassword, generateToken, generateAccessAndRefreshTokens } from "../authMiddleware.js";
 import { recordAuditLog, generateCSRFToken } from "../security.js";
 import { getGeminiAI, summarizeTender, analyzeEligibility, askTenderQuestion, generateBidDoc, generateSmartBidDraft, summarizeProcurementDocument, draftConsortiumAgreement, analyzeAndOCRDocument, chatAboutDocument } from "../ai.service.js";
+import { sendAlertEmail } from "../email.service.js";
 
 
 import jwt from "jsonwebtoken";
@@ -255,6 +256,10 @@ export const systemRouter = express.Router();
     
     db.data.alerts.unshift(newAlert);
     db.save();
+
+    if (isChannelEnabled("EMAIL")) {
+      sendAlertEmail(emailTo, dispatched.email.subject, emailHtml).catch(console.error);
+    }
     
     if (ioServerInstance) {
       ioServerInstance.emit("tender_alert", newAlert);
@@ -810,6 +815,9 @@ export const systemRouter = express.Router();
           };
           db.data.alerts.unshift(notificationAlert);
           db.save();
+          if (targetUser.email) {
+            sendAlertEmail(targetUser.email, "TenderAI: Subscription Upgraded", notificationAlert.message).catch(console.error);
+          }
         }
       } else if (event === "payment.failed") {
         const payment = payload?.payment?.entity;
@@ -846,6 +854,9 @@ export const systemRouter = express.Router();
           };
           db.data.alerts.unshift(notificationAlert);
           db.save();
+          if (targetUser.email) {
+            sendAlertEmail(targetUser.email, "TenderAI: Payment Failed Notice", notificationAlert.message).catch(console.error);
+          }
         }
       }
 
@@ -893,6 +904,9 @@ export const systemRouter = express.Router();
           createdAt: new Date().toISOString()
         };
         db.data.alerts.unshift(recoverAlert);
+        if (user.email) {
+          sendAlertEmail(user.email, "TenderAI: Payment Recovered Successfully", recoverAlert.message).catch(console.error);
+        }
       }
 
       db.save();

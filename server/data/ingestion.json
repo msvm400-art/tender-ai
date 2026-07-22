@@ -5,10 +5,10 @@
     "concurrencyLimit": 2
   },
   "stats": {
-    "totalScrapedDocs": 36,
+    "totalScrapedDocs": 45,
     "totalDeduplicated": 0,
     "totalFailedAttempts": 0,
-    "totalRecoveries": 4
+    "totalRecoveries": 5
   },
   "portalCoverage": {
     "gem": {
@@ -17,8 +17,8 @@
       "type": "GEM",
       "status": "HEALTHY",
       "successRate": 100,
-      "totalIngested": 7,
-      "lastCrawlAt": "2026-07-04T15:25:30.895Z"
+      "totalIngested": 8,
+      "lastCrawlAt": "2026-07-21T06:58:40.182Z"
     },
     "cppp": {
       "portalKey": "cppp",
@@ -26,8 +26,8 @@
       "type": "CPPP",
       "status": "HEALTHY",
       "successRate": 100,
-      "totalIngested": 9,
-      "lastCrawlAt": "2026-07-04T15:25:29.050Z"
+      "totalIngested": 10,
+      "lastCrawlAt": "2026-07-21T06:58:38.332Z"
     },
     "railways": {
       "portalKey": "railways",
@@ -35,8 +35,8 @@
       "type": "RAILWAYS",
       "status": "HEALTHY",
       "successRate": 100,
-      "totalIngested": 7,
-      "lastCrawlAt": "2026-07-04T15:25:28.805Z"
+      "totalIngested": 8,
+      "lastCrawlAt": "2026-07-21T06:58:38.161Z"
     },
     "nhai": {
       "portalKey": "nhai",
@@ -44,8 +44,8 @@
       "type": "NHAI",
       "status": "HEALTHY",
       "successRate": 100,
-      "totalIngested": 5,
-      "lastCrawlAt": "2026-07-04T15:25:26.535Z"
+      "totalIngested": 6,
+      "lastCrawlAt": "2026-07-21T06:58:36.328Z"
     },
     "bhel": {
       "portalKey": "bhel",
@@ -53,8 +53,8 @@
       "type": "PSU",
       "status": "HEALTHY",
       "successRate": 100,
-      "totalIngested": 8,
-      "lastCrawlAt": "2026-07-04T15:25:26.380Z"
+      "totalIngested": 9,
+      "lastCrawlAt": "2026-07-21T06:58:36.147Z"
     },
     "ntpc": {
       "portalKey": "ntpc",
@@ -62,8 +62,8 @@
       "type": "PSU",
       "status": "HEALTHY",
       "successRate": 100,
-      "totalIngested": 4,
-      "lastCrawlAt": "2026-07-04T15:25:24.244Z"
+      "totalIngested": 5,
+      "lastCrawlAt": "2026-07-21T06:58:34.318Z"
     },
     "ongc": {
       "portalKey": "ongc",
@@ -71,8 +71,8 @@
       "type": "PSU",
       "status": "HEALTHY",
       "successRate": 100,
-      "totalIngested": 4,
-      "lastCrawlAt": "2026-07-04T15:25:23.795Z"
+      "totalIngested": 5,
+      "lastCrawlAt": "2026-07-21T06:58:34.130Z"
     },
     "powergrid": {
       "portalKey": "powergrid",
@@ -80,8 +80,8 @@
       "type": "PSU",
       "status": "HEALTHY",
       "successRate": 100,
-      "totalIngested": 4,
-      "lastCrawlAt": "2026-07-04T15:25:21.652Z"
+      "totalIngested": 5,
+      "lastCrawlAt": "2026-07-21T06:58:32.236Z"
     },
     "state_pwd": {
       "portalKey": "state_pwd",
@@ -89,11 +89,176 @@
       "type": "STATE_PWD",
       "status": "HEALTHY",
       "successRate": 100,
-      "totalIngested": 7,
-      "lastCrawlAt": "2026-07-04T15:25:21.181Z"
+      "totalIngested": 8,
+      "lastCrawlAt": "2026-07-21T06:58:31.941Z"
     }
   },
   "jobs": [
+    {
+      "id": "job-LVV91",
+      "portal": "state_pwd",
+      "status": "COMPLETED",
+      "retryCount": 0,
+      "maxRetries": 3,
+      "logs": [
+        "[Queue] Job created and scheduled for State Tender Portals (STATE_PWD).",
+        "[Worker] Started worker. Executing simulated scraper for portal: state_pwd.",
+        "[Crawl] Connection established securely. Parsing landing index page.",
+        "[Crawl] Retrieved 1 prospective listings corresponding to current date.",
+        "[Database] INGESTED: Created fresh entry ID t-57 for STATE/BH/RCD_ROAD/2026/777.",
+        "[Finished] Job completed successfully. Ingested 1 fresh items."
+      ],
+      "recordsIngested": 1,
+      "startedAt": "2026-07-21T06:58:29.658Z",
+      "completedAt": "2026-07-21T06:58:31.941Z"
+    },
+    {
+      "id": "job-MEFSO",
+      "portal": "powergrid",
+      "status": "COMPLETED",
+      "retryCount": 0,
+      "maxRetries": 3,
+      "logs": [
+        "[Queue] Job created and scheduled for Power Grid Corp of India (PowerGrid).",
+        "[Worker] Started worker. Executing simulated scraper for portal: powergrid.",
+        "[Crawl] Connection established securely. Parsing landing index page.",
+        "[Crawl] Retrieved 1 prospective listings corresponding to current date.",
+        "[Database] INGESTED: Created fresh entry ID t-58 for PSU/PGCIL/BAY/2026/129.",
+        "[Finished] Job completed successfully. Ingested 1 fresh items."
+      ],
+      "recordsIngested": 1,
+      "startedAt": "2026-07-21T06:58:29.677Z",
+      "completedAt": "2026-07-21T06:58:32.236Z"
+    },
+    {
+      "id": "job-Z5J6R",
+      "portal": "ongc",
+      "status": "COMPLETED",
+      "retryCount": 0,
+      "maxRetries": 3,
+      "logs": [
+        "[Queue] Job created and scheduled for Oil and Natural Gas Corp (ONGC).",
+        "[Worker] Started worker. Executing simulated scraper for portal: ongc.",
+        "[Crawl] Connection established securely. Parsing landing index page.",
+        "[Crawl] Retrieved 1 prospective listings corresponding to current date.",
+        "[Database] INGESTED: Created fresh entry ID t-59 for PSU/ONGC/OFFSHORE/2026/571.",
+        "[Finished] Job completed successfully. Ingested 1 fresh items."
+      ],
+      "recordsIngested": 1,
+      "startedAt": "2026-07-21T06:58:32.044Z",
+      "completedAt": "2026-07-21T06:58:34.130Z"
+    },
+    {
+      "id": "job-SDJOL",
+      "portal": "ntpc",
+      "status": "COMPLETED",
+      "retryCount": 0,
+      "maxRetries": 3,
+      "logs": [
+        "[Queue] Job created and scheduled for National Thermal Power Corp (NTPC).",
+        "[Worker] Started worker. Executing simulated scraper for portal: ntpc.",
+        "[Crawl] Connection established securely. Parsing landing index page.",
+        "[Crawl] Retrieved 1 prospective listings corresponding to current date.",
+        "[Database] INGESTED: Created fresh entry ID t-60 for PSU/NTPC/ASH/2026/514.",
+        "[Finished] Job completed successfully. Ingested 1 fresh items."
+      ],
+      "recordsIngested": 1,
+      "startedAt": "2026-07-21T06:58:32.243Z",
+      "completedAt": "2026-07-21T06:58:34.318Z"
+    },
+    {
+      "id": "job-KVX6J",
+      "portal": "bhel",
+      "status": "COMPLETED",
+      "retryCount": 0,
+      "maxRetries": 3,
+      "logs": [
+        "[Queue] Job created and scheduled for Bharat Heavy Electricals (BHEL).",
+        "[Worker] Started worker. Executing simulated scraper for portal: bhel.",
+        "[Resilience] Warning: 502 Gateway Error: Connection pool exhausted. Upstream proxy connection timed out.",
+        "[Resilience] Reallocating socket pool. Activating backup upstream proxy routing cluster (node-de-srv04.tunnel-mesh.net)...",
+        "[Resilience] Handshake established with backup proxy node. Traffic successfully re-routed.",
+        "[Crawl] Connection established securely. Parsing landing index page.",
+        "[Crawl] Retrieved 1 prospective listings corresponding to current date.",
+        "[Database] INGESTED: Created fresh entry ID t-61 for PSU/BHEL/GRID/2026/799.",
+        "[Finished] Job completed successfully. Ingested 1 fresh items."
+      ],
+      "recordsIngested": 1,
+      "startedAt": "2026-07-21T06:58:34.134Z",
+      "completedAt": "2026-07-21T06:58:36.147Z"
+    },
+    {
+      "id": "job-K77SV",
+      "portal": "nhai",
+      "status": "COMPLETED",
+      "retryCount": 0,
+      "maxRetries": 3,
+      "logs": [
+        "[Queue] Job created and scheduled for National Highways Authority (NHAI).",
+        "[Worker] Started worker. Executing simulated scraper for portal: nhai.",
+        "[Crawl] Connection established securely. Parsing landing index page.",
+        "[Crawl] Retrieved 1 prospective listings corresponding to current date.",
+        "[Database] INGESTED: Created fresh entry ID t-62 for NHAI/BH/EXP/2026/859.",
+        "[Finished] Job completed successfully. Ingested 1 fresh items."
+      ],
+      "recordsIngested": 1,
+      "startedAt": "2026-07-21T06:58:34.319Z",
+      "completedAt": "2026-07-21T06:58:36.328Z"
+    },
+    {
+      "id": "job-4FHUO",
+      "portal": "railways",
+      "status": "COMPLETED",
+      "retryCount": 0,
+      "maxRetries": 3,
+      "logs": [
+        "[Queue] Job created and scheduled for Indian Railways (IREPS).",
+        "[Worker] Started worker. Executing simulated scraper for portal: railways.",
+        "[Crawl] Connection established securely. Parsing landing index page.",
+        "[Crawl] Retrieved 1 prospective listings corresponding to current date.",
+        "[Database] INGESTED: Created fresh entry ID t-63 for RAIL/IREPS/ENGG/31574.",
+        "[Finished] Job completed successfully. Ingested 1 fresh items."
+      ],
+      "recordsIngested": 1,
+      "startedAt": "2026-07-21T06:58:36.149Z",
+      "completedAt": "2026-07-21T06:58:38.161Z"
+    },
+    {
+      "id": "job-ZTEYT",
+      "portal": "cppp",
+      "status": "COMPLETED",
+      "retryCount": 0,
+      "maxRetries": 3,
+      "logs": [
+        "[Queue] Job created and scheduled for Central Public Procurement Portal (CPPP).",
+        "[Worker] Started worker. Executing simulated scraper for portal: cppp.",
+        "[Crawl] Connection established securely. Parsing landing index page.",
+        "[Crawl] Retrieved 1 prospective listings corresponding to current date.",
+        "[Database] INGESTED: Created fresh entry ID t-64 for CPPP/2026/CI/226.",
+        "[Finished] Job completed successfully. Ingested 1 fresh items."
+      ],
+      "recordsIngested": 1,
+      "startedAt": "2026-07-21T06:58:36.330Z",
+      "completedAt": "2026-07-21T06:58:38.332Z"
+    },
+    {
+      "id": "job-RWQ6F",
+      "portal": "gem",
+      "status": "COMPLETED",
+      "retryCount": 0,
+      "maxRetries": 3,
+      "logs": [
+        "[Queue] Job created and scheduled for Government e-Marketplace (GeM).",
+        "[Worker] Started worker. Executing simulated scraper for portal: gem.",
+        "[Crawl] Connection established securely. Parsing landing index page.",
+        "[Crawl] Retrieved 1 prospective listings corresponding to current date.",
+        "[Database] INGESTED: Created fresh entry ID t-65 for GEM/2026/B/89357.",
+        "[Finished] Job completed successfully. Ingested 1 fresh items."
+      ],
+      "recordsIngested": 1,
+      "startedAt": "2026-07-21T06:58:38.168Z",
+      "completedAt": "2026-07-21T06:58:40.182Z"
+    },
     {
       "id": "job-PCSZG",
       "portal": "state_pwd",

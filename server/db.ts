@@ -1,5 +1,7 @@
 import fs from "fs";
 import path from "path";
+import bcryptjs from "bcryptjs";
+import { getPrismaClient } from "./prismaClient.js";
 
 export interface User {
   id: string;
@@ -18,6 +20,7 @@ export interface User {
   trialDaysElapsed?: number;
   isTrialActive?: boolean;
   trialStartDate?: string;
+  alertMatrix?: Record<string, Record<string, boolean>>;
   createdAt: string;
   updatedAt: string;
 }
@@ -295,8 +298,469 @@ class LocalDB {
   private executeSave() {
     try {
       fs.writeFileSync(this.filePath, JSON.stringify(this.data, null, 2), "utf-8");
+      this.syncChangesToPrisma().catch((err) => {
+        console.error("[DB Sync] Background Prisma sync failed:", err);
+      });
     } catch (err) {
       console.error("Failed to write database file", err);
+    }
+  }
+
+  public async syncFromPrisma() {
+    const prisma = getPrismaClient();
+    if (!prisma) return;
+
+    try {
+      console.log("[DB Sync] Loading data from Prisma (PostgreSQL)...");
+      const users = await prisma.user.findMany();
+      const companyProfiles = await prisma.companyProfile.findMany();
+      const tenders = await prisma.tender.findMany();
+      const supportTickets = await prisma.supportTicket.findMany();
+      const payments = await prisma.payment.findMany();
+
+      if (users.length === 0) {
+        console.log("[DB Sync] PostgreSQL is empty. Seeding PostgreSQL...");
+        await this.syncAllToPrisma();
+        return;
+      }
+
+      this.data.users = users.map((u) => ({
+        id: u.id,
+        email: u.email,
+        passwordHash: u.passwordHash,
+        name: u.name,
+        phone: u.phone || "",
+        plan: u.plan as any,
+        role: u.role as any,
+        emailVerified: u.emailVerified,
+        verificationToken: u.verificationToken,
+        resetPasswordToken: u.resetPasswordToken,
+        resetPasswordExpires: u.resetPasswordExpires ? u.resetPasswordExpires.toISOString() : null,
+        refreshToken: u.refreshToken,
+        organizationId: u.organizationId,
+        createdAt: u.createdAt.toISOString(),
+        updatedAt: u.updatedAt.toISOString(),
+      }));
+
+      this.data.companyProfiles = companyProfiles.map((cp) => ({
+        id: cp.id,
+        userId: cp.userId,
+        companyName: cp.companyName,
+        registrationNumber: cp.registrationNumber,
+        gstNumber: cp.gstNumber,
+        panNumber: cp.panNumber,
+        annualTurnover: cp.annualTurnover,
+        yearsOfExperience: cp.yearsOfExperience,
+        categories: cp.categories,
+        certifications: cp.certifications,
+        states: cp.states,
+        msmeRegistered: cp.msmeRegistered,
+        employeeCount: cp.employeeCount,
+        pastProjects: cp.pastProjects as any[],
+        isActive: cp.isActive,
+        createdAt: cp.createdAt.toISOString(),
+        updatedAt: cp.updatedAt.toISOString(),
+      }));
+
+      this.data.tenders = tenders.map((t) => ({
+        id: t.id,
+        externalId: t.externalId,
+        sourcePortal: t.sourcePortal as any,
+        title: t.title,
+        department: t.department,
+        state: t.state,
+        category: t.category,
+        subCategory: t.subCategory,
+        tenderValue: t.tenderValue || 0,
+        emdAmount: t.emdAmount || 0,
+        publishedDate: t.publishedDate.toISOString().split("T")[0],
+        bidSubmissionDeadline: t.bidSubmissionDeadline.toISOString().split("T")[0],
+        openingDate: t.openingDate ? t.openingDate.toISOString().split("T")[0] : null,
+        workDescription: t.workDescription,
+        eligibilityCriteria: t.eligibilityCriteria as any,
+        technicalSpecs: t.technicalSpecs || "",
+        documents: t.documents as any[],
+        rawText: t.rawText,
+        aiSummary: t.aiSummary || "",
+        aiEligibilityChecklist: t.aiEligibilityChecklist as any,
+        status: t.status as any,
+        location: t.location,
+        pineconeVectorId: t.pineconeVectorId,
+        createdAt: t.createdAt.toISOString(),
+        updatedAt: t.updatedAt.toISOString(),
+      }));
+
+      this.data.supportTickets = supportTickets.map((st) => {
+        const u = users.find(usr => usr.id === st.userId);
+        return {
+          id: st.id,
+          userId: st.userId,
+          userEmail: u?.email || "demo@tenderai.in",
+          userName: u?.name || "Ramesh Sharma",
+          subject: st.subject,
+          message: st.message,
+          status: st.status === "CLOSED" ? "RESOLVED" : st.status as any,
+          priority: st.priority === "URGENT" ? "CRITICAL" : st.priority as any,
+          category: "TECHNICAL" as const,
+          replies: [] as any[],
+          createdAt: st.createdAt.toISOString(),
+          updatedAt: st.updatedAt.toISOString(),
+        };
+      });
+
+      this.data.paymentIntents = payments.map((p) => ({
+        id: p.id,
+        userId: p.userId,
+        planId: "PROFESSIONAL",
+        amount: p.amount,
+        billingCycle: "MONTHLY" as const,
+        gateway: "RAZORPAY" as const,
+        method: "UPI" as const,
+        status: p.status === "SUCCESSFUL" ? "CAPTURED" : p.status === "FAILED" ? "FAILED" : "PENDING",
+        createdAt: p.createdAt.toISOString(),
+      }));
+
+      console.log("[DB Sync] Successfully loaded memory DB from PostgreSQL.");
+    } catch (err) {
+      console.error("[DB Sync] Failed to load data from Prisma:", err);
+    }
+  }
+
+  public async syncAllToPrisma() {
+    const prisma = getPrismaClient();
+    if (!prisma) return;
+
+    try {
+      console.log("[DB Sync] Syncing database records to PostgreSQL...");
+      
+      await prisma.alert.deleteMany();
+      await prisma.tenderMatch.deleteMany();
+      await prisma.savedTender.deleteMany();
+      await prisma.bidDocument.deleteMany();
+      await prisma.documentVault.deleteMany();
+      await prisma.supportTicket.deleteMany();
+      await prisma.payment.deleteMany();
+      await prisma.companyProfile.deleteMany();
+      await prisma.tender.deleteMany();
+      await prisma.user.deleteMany();
+
+      for (const u of this.data.users) {
+        await prisma.user.create({
+          data: {
+            id: u.id,
+            email: u.email,
+            passwordHash: u.passwordHash,
+            name: u.name,
+            phone: u.phone || null,
+            plan: u.plan || "FREE",
+            role: u.role || "USER",
+            emailVerified: u.emailVerified || false,
+            verificationToken: u.verificationToken || null,
+            resetPasswordToken: u.resetPasswordToken || null,
+            resetPasswordExpires: u.resetPasswordExpires ? new Date(u.resetPasswordExpires) : null,
+            refreshToken: u.refreshToken || null,
+            organizationId: u.organizationId || null,
+            createdAt: new Date(u.createdAt),
+            updatedAt: new Date(u.updatedAt),
+          },
+        });
+      }
+
+      for (const cp of this.data.companyProfiles) {
+        const userExists = await prisma.user.findUnique({ where: { id: cp.userId } });
+        if (!userExists) {
+          await prisma.user.create({
+            data: {
+              id: cp.userId,
+              email: `${cp.userId}@dummypartner.in`,
+              passwordHash: "dummy-hash",
+              name: cp.companyName,
+              role: "USER",
+              plan: "FREE",
+              emailVerified: true,
+            }
+          });
+        }
+        await prisma.companyProfile.create({
+          data: {
+            id: cp.id,
+            userId: cp.userId,
+            companyName: cp.companyName,
+            registrationNumber: cp.registrationNumber,
+            gstNumber: cp.gstNumber,
+            panNumber: cp.panNumber,
+            annualTurnover: cp.annualTurnover || 0,
+            yearsOfExperience: cp.yearsOfExperience || 0,
+            categories: cp.categories || [],
+            certifications: cp.certifications || [],
+            states: cp.states || [],
+            msmeRegistered: cp.msmeRegistered || false,
+            employeeCount: cp.employeeCount || 0,
+            pastProjects: cp.pastProjects || [],
+            isActive: cp.isActive !== undefined ? cp.isActive : true,
+            createdAt: cp.createdAt ? new Date(cp.createdAt) : new Date(),
+            updatedAt: cp.updatedAt ? new Date(cp.updatedAt) : new Date(),
+          },
+        });
+      }
+
+      for (const t of this.data.tenders) {
+        await prisma.tender.create({
+          data: {
+            id: t.id,
+            externalId: t.externalId,
+            sourcePortal: t.sourcePortal || "OTHER",
+            title: t.title,
+            department: t.department,
+            state: t.state,
+            category: t.category,
+            subCategory: t.subCategory,
+            tenderValue: t.tenderValue || 0,
+            emdAmount: t.emdAmount || 0,
+            publishedDate: new Date(t.publishedDate),
+            bidSubmissionDeadline: new Date(t.bidSubmissionDeadline),
+            openingDate: t.openingDate ? new Date(t.openingDate) : null,
+            workDescription: t.workDescription || "",
+            eligibilityCriteria: t.eligibilityCriteria || {},
+            technicalSpecs: t.technicalSpecs || null,
+            documents: t.documents || [],
+            rawText: t.rawText || "",
+            aiSummary: t.aiSummary || null,
+            aiEligibilityChecklist: t.aiEligibilityChecklist || null,
+            status: t.status || "ACTIVE",
+            location: t.location,
+            pineconeVectorId: t.pineconeVectorId || null,
+            createdAt: t.createdAt ? new Date(t.createdAt) : new Date(),
+            updatedAt: t.updatedAt ? new Date(t.updatedAt) : new Date(),
+          },
+        });
+      }
+
+      for (const ticket of this.data.supportTickets) {
+        await prisma.supportTicket.create({
+          data: {
+            id: ticket.id,
+            userId: ticket.userId,
+            subject: ticket.subject,
+            message: ticket.message,
+            status: ticket.status === "RESOLVED" ? "RESOLVED" : ticket.status as any,
+            priority: ticket.priority === "CRITICAL" ? "URGENT" : ticket.priority as any,
+            createdAt: new Date(ticket.createdAt),
+            updatedAt: new Date(ticket.updatedAt),
+          },
+        });
+      }
+
+      if (this.data.paymentIntents) {
+        for (const pay of this.data.paymentIntents) {
+          await prisma.payment.create({
+            data: {
+              id: pay.id,
+              userId: pay.userId,
+              amount: pay.amount,
+              currency: "INR",
+              status: pay.status === "CAPTURED" ? "SUCCESSFUL" : pay.status === "FAILED" ? "FAILED" : "PENDING",
+              stripePaymentIntentId: pay.id,
+              invoiceNumber: `INV-${pay.id.substring(3, 8).toUpperCase()}`,
+              createdAt: new Date(pay.createdAt),
+            },
+          });
+        }
+      }
+
+      console.log("[DB Sync] Full synchronization to PostgreSQL complete.");
+    } catch (err) {
+      console.error("[DB Sync] Full synchronization to PostgreSQL failed:", err);
+    }
+  }
+
+  public async syncChangesToPrisma() {
+    const prisma = getPrismaClient();
+    if (!prisma) return;
+
+    try {
+      console.log("[DB Sync] Syncing local memory modifications to PostgreSQL...");
+      
+      for (const u of this.data.users) {
+        await prisma.user.upsert({
+          where: { id: u.id },
+          update: {
+            email: u.email,
+            passwordHash: u.passwordHash,
+            name: u.name,
+            phone: u.phone || null,
+            plan: u.plan || "FREE",
+            role: u.role || "USER",
+            emailVerified: u.emailVerified || false,
+            verificationToken: u.verificationToken || null,
+            resetPasswordToken: u.resetPasswordToken || null,
+            resetPasswordExpires: u.resetPasswordExpires ? new Date(u.resetPasswordExpires) : null,
+            refreshToken: u.refreshToken || null,
+            organizationId: u.organizationId || null,
+            updatedAt: new Date(),
+          },
+          create: {
+            id: u.id,
+            email: u.email,
+            passwordHash: u.passwordHash,
+            name: u.name,
+            phone: u.phone || null,
+            plan: u.plan || "FREE",
+            role: u.role || "USER",
+            emailVerified: u.emailVerified || false,
+            verificationToken: u.verificationToken || null,
+            resetPasswordToken: u.resetPasswordToken || null,
+            resetPasswordExpires: u.resetPasswordExpires ? new Date(u.resetPasswordExpires) : null,
+            refreshToken: u.refreshToken || null,
+            organizationId: u.organizationId || null,
+            createdAt: new Date(u.createdAt),
+            updatedAt: new Date(u.updatedAt),
+          }
+        });
+      }
+
+      for (const cp of this.data.companyProfiles) {
+        await prisma.companyProfile.upsert({
+          where: { id: cp.id },
+          update: {
+            companyName: cp.companyName,
+            registrationNumber: cp.registrationNumber,
+            gstNumber: cp.gstNumber,
+            panNumber: cp.panNumber,
+            annualTurnover: cp.annualTurnover || 0,
+            yearsOfExperience: cp.yearsOfExperience || 0,
+            categories: cp.categories || [],
+            certifications: cp.certifications || [],
+            states: cp.states || [],
+            msmeRegistered: cp.msmeRegistered || false,
+            employeeCount: cp.employeeCount || 0,
+            pastProjects: cp.pastProjects || [],
+            isActive: cp.isActive !== undefined ? cp.isActive : true,
+            updatedAt: new Date(),
+          },
+          create: {
+            id: cp.id,
+            userId: cp.userId,
+            companyName: cp.companyName,
+            registrationNumber: cp.registrationNumber,
+            gstNumber: cp.gstNumber,
+            panNumber: cp.panNumber,
+            annualTurnover: cp.annualTurnover || 0,
+            yearsOfExperience: cp.yearsOfExperience || 0,
+            categories: cp.categories || [],
+            certifications: cp.certifications || [],
+            states: cp.states || [],
+            msmeRegistered: cp.msmeRegistered || false,
+            employeeCount: cp.employeeCount || 0,
+            pastProjects: cp.pastProjects || [],
+            isActive: cp.isActive !== undefined ? cp.isActive : true,
+            createdAt: cp.createdAt ? new Date(cp.createdAt) : new Date(),
+            updatedAt: cp.updatedAt ? new Date(cp.updatedAt) : new Date(),
+          }
+        });
+      }
+
+      for (const t of this.data.tenders) {
+        await prisma.tender.upsert({
+          where: { id: t.id },
+          update: {
+            title: t.title,
+            department: t.department,
+            state: t.state,
+            category: t.category,
+            subCategory: t.subCategory,
+            tenderValue: t.tenderValue || 0,
+            emdAmount: t.emdAmount || 0,
+            publishedDate: new Date(t.publishedDate),
+            bidSubmissionDeadline: new Date(t.bidSubmissionDeadline),
+            openingDate: t.openingDate ? new Date(t.openingDate) : null,
+            workDescription: t.workDescription || "",
+            eligibilityCriteria: t.eligibilityCriteria || {},
+            technicalSpecs: t.technicalSpecs || null,
+            documents: t.documents || [],
+            rawText: t.rawText || "",
+            aiSummary: t.aiSummary || null,
+            aiEligibilityChecklist: t.aiEligibilityChecklist || null,
+            status: t.status || "ACTIVE",
+            location: t.location,
+            pineconeVectorId: t.pineconeVectorId || null,
+            updatedAt: new Date(),
+          },
+          create: {
+            id: t.id,
+            externalId: t.externalId,
+            sourcePortal: t.sourcePortal || "OTHER",
+            title: t.title,
+            department: t.department,
+            state: t.state,
+            category: t.category,
+            subCategory: t.subCategory,
+            tenderValue: t.tenderValue || 0,
+            emdAmount: t.emdAmount || 0,
+            publishedDate: new Date(t.publishedDate),
+            bidSubmissionDeadline: new Date(t.bidSubmissionDeadline),
+            openingDate: t.openingDate ? new Date(t.openingDate) : null,
+            workDescription: t.workDescription || "",
+            eligibilityCriteria: t.eligibilityCriteria || {},
+            technicalSpecs: t.technicalSpecs || null,
+            documents: t.documents || [],
+            rawText: t.rawText || "",
+            aiSummary: t.aiSummary || null,
+            aiEligibilityChecklist: t.aiEligibilityChecklist || null,
+            status: t.status || "ACTIVE",
+            location: t.location,
+            pineconeVectorId: t.pineconeVectorId || null,
+            createdAt: t.createdAt ? new Date(t.createdAt) : new Date(),
+            updatedAt: t.updatedAt ? new Date(t.updatedAt) : new Date(),
+          }
+        });
+      }
+
+      for (const ticket of this.data.supportTickets) {
+        await prisma.supportTicket.upsert({
+          where: { id: ticket.id },
+          update: {
+            status: ticket.status === "RESOLVED" ? "RESOLVED" : ticket.status as any,
+            priority: ticket.priority === "CRITICAL" ? "URGENT" : ticket.priority as any,
+            updatedAt: new Date(),
+          },
+          create: {
+            id: ticket.id,
+            userId: ticket.userId,
+            subject: ticket.subject,
+            message: ticket.message,
+            status: ticket.status === "RESOLVED" ? "RESOLVED" : ticket.status as any,
+            priority: ticket.priority === "CRITICAL" ? "URGENT" : ticket.priority as any,
+            createdAt: new Date(ticket.createdAt),
+            updatedAt: new Date(ticket.updatedAt),
+          }
+        });
+      }
+
+      if (this.data.paymentIntents) {
+        for (const pay of this.data.paymentIntents) {
+          await prisma.payment.upsert({
+            where: { id: pay.id },
+            update: {
+              status: pay.status === "CAPTURED" ? "SUCCESSFUL" : pay.status === "FAILED" ? "FAILED" : "PENDING",
+            },
+            create: {
+              id: pay.id,
+              userId: pay.userId,
+              amount: pay.amount,
+              currency: "INR",
+              status: pay.status === "CAPTURED" ? "SUCCESSFUL" : pay.status === "FAILED" ? "FAILED" : "PENDING",
+              stripePaymentIntentId: pay.id,
+              invoiceNumber: `INV-${pay.id.substring(3, 8).toUpperCase()}`,
+              createdAt: new Date(pay.createdAt),
+            }
+          });
+        }
+      }
+
+      console.log("[DB Sync] Incremental update successful.");
+    } catch (err) {
+      console.error("[DB Sync] Incremental sync update failed:", err);
     }
   }
 
@@ -307,7 +771,7 @@ class LocalDB {
     const user: User = {
       id: "u-1",
       email: "demo@tenderai.in",
-      passwordHash: "demo123", // For this demo, simple check
+      passwordHash: bcryptjs.hashSync("demo123", 10), // For this demo, simple check
       name: "Ramesh Sharma",
       phone: "+91 98765 43210",
       plan: "STARTER",
